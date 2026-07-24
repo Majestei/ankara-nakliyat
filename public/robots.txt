@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ankaraozdemirnakliyat.com
+
+# Sitemaps
+Sitemap: https://ankaraozdemirnakliyat.com/sitemap.xml
