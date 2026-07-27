@@ -2,6 +2,25 @@
 const nextConfig = {
     trailingSlash: false,
     compress: true,
+    async redirects() {
+        return [
+            {
+                source: '/blog/:path*',
+                destination: '/makaleler/:path*',
+                permanent: true,
+            },
+            {
+                source: '/hizmetler/evden-eve-nakliyat',
+                destination: '/islemler/ankara/evden-eve-nakliyat',
+                permanent: true,
+            },
+            {
+                source: '/islemler/sancaktepe/:path*',
+                destination: '/islemler', // Or wherever is appropriate, maybe redirecting obsolete Istanbul links to main islemler page
+                permanent: true,
+            }
+        ];
+    },
     async headers() {
         return [
             {

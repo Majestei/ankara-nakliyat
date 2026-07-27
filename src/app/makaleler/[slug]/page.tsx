@@ -95,6 +95,43 @@ export default async function MakaleDetail({ params }: { params: { slug: string 
                 }}
             />
             
+            {/* FAQ JSON-LD Structured Data */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        mainEntity: [
+                            {
+                                "@type": "Question",
+                                name: `${post.location} nakliyat fiyatları ne kadar?`,
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: `${post.location} bölgesinde evden eve nakliyat fiyatları eşya yoğunluğu, kat durumu ve asansör gereksinimine göre belirlenmektedir. En net fiyatı almak için ücretsiz ekspertiz talep edebilirsiniz.`
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: `${post.location} asansörlü taşıma hizmetiniz var mı?`,
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: `Evet, ${post.location} ilçesinde ve mahallelerinde yüksek katlı binalar için güvenli ve hızlı asansörlü nakliyat hizmetimiz mevcuttur.`
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: `Eşyalarım sigortalanıyor mu?`,
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: `Tüm taşıma işlemlerimiz sigortalı olarak gerçekleştirilmektedir. Eşyalarınız profesyonel ekibimiz tarafından ambalajlanıp güvenle taşınmaktadır.`
+                                }
+                            }
+                        ]
+                    }),
+                }}
+            />
+
             {/* HERO */}
             <header className="max-w-4xl mx-auto px-6 mb-16 mt-10">
                 <nav className="mb-10">
@@ -152,6 +189,31 @@ export default async function MakaleDetail({ params }: { params: { slug: string 
                             .replace(/\n\n/g, '<br/><br/>')
                     }} />
                 </article>
+
+                {/* FAQ UI Block */}
+                <div className="mt-16 bg-[#050813] border border-white/5 rounded-3xl p-8 md:p-12">
+                    <h2 className="text-2xl font-bold text-white mb-8">Sıkça Sorulan Sorular</h2>
+                    <div className="space-y-6">
+                        <div className="border-b border-white/10 pb-6">
+                            <h3 className="text-lg font-bold text-[#F5B913] mb-3">{post.location} nakliyat fiyatları ne kadar?</h3>
+                            <p className="text-[#8892B0] leading-relaxed">
+                                {post.location} bölgesinde evden eve nakliyat fiyatları eşya yoğunluğu, kat durumu ve asansör gereksinimine göre belirlenmektedir. En net fiyatı almak için ücretsiz ekspertiz talep edebilirsiniz.
+                            </p>
+                        </div>
+                        <div className="border-b border-white/10 pb-6">
+                            <h3 className="text-lg font-bold text-[#F5B913] mb-3">{post.location} asansörlü taşıma hizmetiniz var mı?</h3>
+                            <p className="text-[#8892B0] leading-relaxed">
+                                Evet, {post.location} ilçesinde ve mahallelerinde yüksek katlı binalar için güvenli ve hızlı asansörlü nakliyat hizmetimiz mevcuttur.
+                            </p>
+                        </div>
+                        <div className="pb-2">
+                            <h3 className="text-lg font-bold text-[#F5B913] mb-3">Eşyalarım sigortalanıyor mu?</h3>
+                            <p className="text-[#8892B0] leading-relaxed">
+                                Tüm taşıma işlemlerimiz sigortalı olarak gerçekleştirilmektedir. Eşyalarınız profesyonel ekibimiz tarafından ambalajlanıp güvenle taşınmaktadır.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
                 {/* Premium Tags Area */}
                 <div className="mt-20 pt-10 border-t border-white/10">

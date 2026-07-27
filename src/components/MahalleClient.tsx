@@ -167,7 +167,11 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                         <h1 className="text-5xl md:text-8xl lg:text-[10rem] font-heading font-black text-white leading-[0.9] md:leading-[0.85] tracking-tighter mb-10 md:mb-16">
                             <span className="text-white/10">{ilce.name} {mahalle.name}</span> <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-orange-500 to-primary-600 animate-gradient-x italic">
-                                NAKLİYAT
+                                {(() => {
+                                    const options = ["NAKLİYAT", "TAŞIMACILIK", "LOJİSTİK", "EVDEN EVE"];
+                                    const hash = mahalle.name.split('').reduce((acc: number, char: string) => acc + char.charCodeAt(0), 0);
+                                    return options[hash % options.length];
+                                })()}
                             </span>
                         </h1>
 
@@ -212,7 +216,17 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                         </div>
                         <div className="w-full lg:w-1/3 p-6 md:p-10 bg-white/5 border border-white/10 rounded-2xl md:rounded-[3rem] backdrop-blur-3xl">
                             <p className="text-white/50 text-base md:text-xl font-medium leading-relaxed">
-                                {ilceIcerikleri[ilce.slug as keyof typeof ilceIcerikleri] || `Sokağınızı biliyoruz. ${ilce.name} ${mahalle.name}'da asansörlü ve sigortalı profesyonel nakliyat hizmeti.`}
+                                {ilceIcerikleri[ilce.slug as keyof typeof ilceIcerikleri] || (() => {
+                                    const options = [
+                                        `Sokağınızı biliyoruz. ${ilce.name} ${mahalle.name}'da asansörlü ve sigortalı profesyonel nakliyat hizmeti.`,
+                                        `${ilce.name} ilçesinin gözdesi ${mahalle.name} bölgesinde uzman ekibimizle kusursuz evden eve nakliyat deneyimi yaşıyorsunuz.`,
+                                        `${mahalle.name} mahallesinde yeni evinize taşınırken eşyalarınız bize emanet. Sigortalı ve ambalajlı nakliye çözümleri.`,
+                                        `${ilce.name}, ${mahalle.name} için özel tasarlanmış asansörlü nakliyat hizmetimizle yüksek katlara güvenle taşıyoruz.`,
+                                        `${mahalle.name} sakinleri için %100 müşteri memnuniyeti garantili, profesyonel paketlemeli evden eve taşımacılık.`
+                                    ];
+                                    const hash = mahalle.name.split('').reduce((acc: number, char: string) => acc + char.charCodeAt(0), 0);
+                                    return options[hash % options.length];
+                                })()}
                             </p>
                         </div>
                     </div>
