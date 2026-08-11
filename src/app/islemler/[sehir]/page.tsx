@@ -15,10 +15,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const il = civarIller.find((i) => i.slug === params.sehir);
     if (!il) return {};
 
+    const title = `🥇 Ankara ${il.name} Evden Eve Nakliyat Şirketi | Müşteri Memnuniyeti %100 ✅`;
+    const description = `📦 Ankara - ${il.name} arası şehirler arası profesyonel evden eve nakliyat. Asansörlü, ambalajlı ve sigortalı taşımacılık ile eşyalarınız güvende. ☎ Bizi Arayın!`;
+    const url = `https://ankaraozdemirnakliyat.com/islemler/${params.sehir}`;
+
     return {
-        title: `🥇 Ankara ${il.name} Evden Eve Nakliyat Şirketi | Müşteri Memnuniyeti %100 ✅`,
-        description: `📦 Ankara - ${il.name} arası şehirler arası profesyonel evden eve nakliyat. Asansörlü, ambalajlı ve sigortalı taşımacılık ile eşyalarınız güvende. ☎ Bizi Arayın!`,
-        alternates: { canonical: `https://ankaraozdemirnakliyat.com/islemler/${params.sehir}` },
+        title,
+        description,
+        alternates: { canonical: url },
+        openGraph: {
+            title,
+            description,
+            url,
+            type: "website",
+            images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: title }],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description,
+            images: ["/og-image.jpg"],
+        },
     };
 }
 

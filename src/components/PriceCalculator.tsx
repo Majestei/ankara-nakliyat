@@ -147,7 +147,7 @@ export default function PriceCalculator() {
                                         }`}
                                     >
                                         <div className="flex items-center gap-4">
-                                            <div className={`p-3 rounded-xl transition-colors ${elevator ? "bg-primary-500 text-white" : "bg-white text-slate-400 shadow-sm"}`}>
+                                            <div className={`p-3 rounded-xl transition-colors ${elevator ? "bg-primary-500 text-slate-900" : "bg-white text-slate-400 shadow-sm"}`}>
                                                 <IconCog className="w-6 h-6 animate-spin-slow" />
                                             </div>
                                             <div className="text-left">

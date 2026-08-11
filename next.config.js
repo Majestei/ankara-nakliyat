@@ -2,11 +2,20 @@
 const nextConfig = {
     trailingSlash: false,
     compress: true,
+    images: {
+        formats: ['image/avif', 'image/webp'],
+    },
+    experimental: {
+        optimizePackageImports: ['react-icons', 'framer-motion'],
+    },
+    compiler: {
+        removeConsole: process.env.NODE_ENV === 'production',
+    },
     async redirects() {
         return [
             {
                 source: '/hizmetler/evden-eve-nakliyat',
-                destination: '/islemler/ankara/evden-eve-nakliyat',
+                destination: '/evden-eve-nakliyat',
                 permanent: true,
             },
             {
@@ -22,6 +31,18 @@ const nextConfig = {
         ];
     },
     async headers() {
+        const cspHeader = `
+          default-src 'self';
+          script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+          style-src 'self' 'unsafe-inline';
+          img-src 'self' data: https:;
+          font-src 'self' data:;
+          connect-src 'self' https://formsubmit.co https://www.google-analytics.com https://*.google-analytics.com https://stats.g.doubleclick.net;
+          object-src 'none';
+          base-uri 'self';
+          frame-ancestors 'self';
+        `.replace(/\s{2,}/g, ' ').trim();
+
         return [
             {
                 source: '/(.*)',
@@ -44,7 +65,7 @@ const nextConfig = {
                     },
                     {
                         key: 'Content-Security-Policy',
-                        value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://formsubmit.co https://www.google-analytics.com;",
+                        value: cspHeader,
                     },
                     {
                         key: 'Permissions-Policy',

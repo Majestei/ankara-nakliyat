@@ -300,7 +300,7 @@ export default function BlogPostClient({ post, relatedPosts, toc }: Props) {
                                 <div className="pl-6 border-l-4 border-white shadow-[inset_2px_0_0_rgba(255,255,255,0.5)]">
                                     <h3 className="text-[11px] font-black uppercase tracking-[0.3em] text-slate-400 mb-8">Hizmetlerimiz</h3>
                                     <div className="flex flex-col gap-8">
-                                        <Link href="/hizmetler/evden-eve-nakliyat" className="group block">
+                                        <Link href="/evden-eve-nakliyat" className="group block">
                                             <span className="text-[10px] font-black text-[#0055FF] uppercase tracking-[0.2em] block mb-2">Popüler</span>
                                             <h4 className="text-sm font-black text-slate-800 group-hover:text-[#0055FF] transition-colors leading-tight tracking-tight">Ankara Evden Eve Nakliyat</h4>
                                             <div className="h-0.5 w-0 group-hover:w-full bg-gradient-to-r from-[#0055FF] to-cyan-400 transition-all duration-700 mt-3 rounded-full"></div>

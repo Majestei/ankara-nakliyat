@@ -68,7 +68,7 @@ export default async function MakaleDetail({ params }: { params: { slug: string 
                             name: "Ankara Özdemir Nakliyat",
                             logo: {
                                 "@type": "ImageObject",
-                                url: "https://ankaraozdemirnakliyat.com/logo.png",
+                                url: "https://ankaraozdemirnakliyat.com/logo.svg",
                             },
                         },
                         mainEntityOfPage: {
@@ -230,7 +230,7 @@ export default async function MakaleDetail({ params }: { params: { slug: string 
                 <div className="mt-16 bg-[#050813] border border-white/5 rounded-3xl p-8 md:p-12">
                     <h3 className="text-xl font-bold text-white mb-6 uppercase tracking-wider">İlgili Hizmetlerimiz</h3>
                     <div className="grid md:grid-cols-2 gap-4">
-                        <Link href="/hizmetler/evden-eve-nakliyat" className="group flex items-center justify-between p-4 bg-white/5 rounded-2xl hover:bg-[#F5B913]/20 transition-all border border-white/5">
+                        <Link href="/evden-eve-nakliyat" className="group flex items-center justify-between p-4 bg-white/5 rounded-2xl hover:bg-[#F5B913]/20 transition-all border border-white/5">
                             <span className="text-[#E2E8F0] font-medium group-hover:text-white">Ankara Evden Eve Nakliyat</span>
                             <span className="text-[#F5B913]">&rarr;</span>
                         </Link>

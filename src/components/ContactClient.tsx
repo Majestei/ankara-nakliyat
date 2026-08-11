@@ -76,10 +76,31 @@ function MagneticPod({ children, className }: { children: React.ReactNode, class
 
 function SmartLogisticsForm() {
     const [step, setStep] = useState(1);
+    const [formData, setFormData] = useState({
+        name: "",
+        phone: "",
+        from: "",
+        to: "",
+        service: "Evden Eve",
+        message: ""
+    });
     const [isSubmitting, setIsSubmitting] = useState(false);
     
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
     const nextStep = (e: React.MouseEvent) => {
         e.preventDefault();
+        // Basit validasyon
+        if (step === 1 && (!formData.name || !formData.phone)) {
+            alert("Lütfen adınızı ve telefonunuzu giriniz.");
+            return;
+        }
+        if (step === 2 && (!formData.from || !formData.to)) {
+            alert("Lütfen nereden nereye taşınacağınızı belirtiniz.");
+            return;
+        }
         setStep(s => Math.min(s + 1, 3));
     };
     const prevStep = () => setStep(s => Math.max(s - 1, 1));
@@ -110,12 +131,24 @@ function SmartLogisticsForm() {
 
                 <form 
                     onKeyDown={(e) => { if (e.key === 'Enter' && step < 3) e.preventDefault(); }}
-                    onSubmit={(e) => { if (step < 3) e.preventDefault(); }}
+                    onSubmit={(e) => { 
+                        if (step < 3) {
+                            e.preventDefault();
+                        } else {
+                            setIsSubmitting(true);
+                        }
+                    }}
                     action="https://formsubmit.co/bilgi@ankaraozdemirnakliyat.com" 
                     method="POST" 
                     className="min-h-[400px] md:min-h-[450px] flex flex-col justify-between"
                 >
                     <input type="hidden" name="_subject" value="Holographic Command Lead!" />
+                    {/* DOM'dan silinen verilerin FormSubmit'e gidebilmesi için gizli alanlar */}
+                    <input type="hidden" name="name" value={formData.name} />
+                    <input type="hidden" name="phone" value={formData.phone} />
+                    <input type="hidden" name="from" value={formData.from} />
+                    <input type="hidden" name="to" value={formData.to} />
+                    <input type="hidden" name="service" value={formData.service} />
                     
                     <AnimatePresence mode="wait">
                         {step === 1 && (
@@ -132,11 +165,11 @@ function SmartLogisticsForm() {
                                 </div>
                                 <div className="space-y-8 md:space-y-12">
                                     <div className="group/field relative">
-                                        <input type="text" name="name" required aria-label="Ad Soyad veya Kurum" className="w-full bg-transparent border-b-2 border-white/10 py-4 md:py-6 focus:border-primary-500 outline-none text-xl md:text-2xl font-black text-white transition-all placeholder:text-white/10" placeholder="Ad Soyad veya Kurum" />
+                                        <input type="text" name="name" required value={formData.name} onChange={handleInputChange} aria-label="Ad Soyad veya Kurum" className="w-full bg-transparent border-b-2 border-white/10 py-4 md:py-6 focus:border-primary-500 outline-none text-xl md:text-2xl font-black text-white transition-all placeholder:text-white/10" placeholder="Ad Soyad veya Kurum" />
                                         <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-500 group-focus-within/field:w-full transition-all duration-700" />
                                     </div>
                                     <div className="group/field relative">
-                                        <input type="tel" name="phone" required aria-label="İletişim Numarası" className="w-full bg-transparent border-b-2 border-white/10 py-4 md:py-6 focus:border-primary-500 outline-none text-xl md:text-2xl font-black text-white transition-all placeholder:text-white/10" placeholder="İletişim Numarası" />
+                                        <input type="tel" name="phone" required value={formData.phone} onChange={handleInputChange} aria-label="İletişim Numarası" className="w-full bg-transparent border-b-2 border-white/10 py-4 md:py-6 focus:border-primary-500 outline-none text-xl md:text-2xl font-black text-white transition-all placeholder:text-white/10" placeholder="İletişim Numarası" />
                                         <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-500 group-focus-within/field:w-full transition-all duration-700" />
                                     </div>
                                 </div>
@@ -157,19 +190,19 @@ function SmartLogisticsForm() {
                                 </div>
                                 <div className="grid sm:grid-cols-2 gap-10">
                                     <div className="group/field relative">
-                                        <input type="text" name="from" required aria-label="Nereden" className="w-full bg-transparent border-b-2 border-white/10 py-6 focus:border-primary-500 outline-none text-xl font-black text-white transition-all placeholder:text-white/10" placeholder="Nereden" />
+                                        <input type="text" name="from" required value={formData.from} onChange={handleInputChange} aria-label="Nereden" className="w-full bg-transparent border-b-2 border-white/10 py-6 focus:border-primary-500 outline-none text-xl font-black text-white transition-all placeholder:text-white/10" placeholder="Nereden" />
                                         <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-500 group-focus-within/field:w-full transition-all duration-700" />
                                     </div>
                                     <div className="group/field relative">
-                                        <input type="text" name="to" required aria-label="Nereye" className="w-full bg-transparent border-b-2 border-white/10 py-6 focus:border-primary-500 outline-none text-xl font-black text-white transition-all placeholder:text-white/10" placeholder="Nereye" />
+                                        <input type="text" name="to" required value={formData.to} onChange={handleInputChange} aria-label="Nereye" className="w-full bg-transparent border-b-2 border-white/10 py-6 focus:border-primary-500 outline-none text-xl font-black text-white transition-all placeholder:text-white/10" placeholder="Nereye" />
                                         <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-500 group-focus-within/field:w-full transition-all duration-700" />
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-2 gap-4">
                                     {["Evden Eve", "Ofis"].map((type) => (
                                         <label key={type} className="cursor-pointer group/radio">
-                                            <input type="radio" name="service" value={type} className="peer sr-only" defaultChecked={type === "Evden Eve"} />
-                                            <div className="p-6 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 bg-white/5 text-white/40 font-black text-[10px] md:text-xs uppercase tracking-widest group-hover/radio:bg-white/10 transition-all peer-checked:bg-primary-500 peer-checked:text-white peer-checked:border-primary-500 text-center">
+                                            <input type="radio" name="service" value={type} checked={formData.service === type} onChange={handleInputChange} className="peer sr-only" />
+                                            <div className="p-6 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 bg-white/5 text-white/40 font-black text-[10px] md:text-xs uppercase tracking-widest group-hover/radio:bg-white/10 transition-all peer-checked:bg-primary-500 peer-checked:text-slate-900 peer-checked:border-primary-500 text-center">
                                                 {type}
                                             </div>
                                         </label>
@@ -191,7 +224,7 @@ function SmartLogisticsForm() {
                                     <p className="text-white/40 text-sm font-medium">Eklemek istediğiniz özel bir not var mı?</p>
                                 </div>
                                 <div className="group/field relative">
-                                    <textarea name="message" rows={4} aria-label="Notlarınız veya Tarih Tercihiniz" className="w-full bg-transparent border-b-2 border-white/10 py-6 focus:border-primary-500 outline-none text-xl font-black text-white transition-all placeholder:text-white/10 resize-none" placeholder="Notlarınız veya Tarih Tercihiniz"></textarea>
+                                    <textarea name="message" value={formData.message} onChange={handleInputChange} rows={4} aria-label="Notlarınız veya Tarih Tercihiniz" className="w-full bg-transparent border-b-2 border-white/10 py-6 focus:border-primary-500 outline-none text-xl font-black text-white transition-all placeholder:text-white/10 resize-none" placeholder="Notlarınız veya Tarih Tercihiniz"></textarea>
                                     <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-500 group-focus-within/field:w-full transition-all duration-700" />
                                 </div>
                                 <div className="flex items-center gap-4 md:gap-6 p-6 md:p-8 bg-white/5 border border-white/10 rounded-2xl md:rounded-[2.5rem]">
@@ -220,9 +253,10 @@ function SmartLogisticsForm() {
                         ) : (
                             <button 
                                 type="submit"
-                                className="px-8 md:px-16 py-5 md:py-8 bg-primary-500 text-white rounded-2xl md:rounded-[2.5rem] font-black uppercase tracking-[0.4em] text-[10px] hover:bg-slate-900 transition-all duration-500 shadow-2xl flex items-center gap-4 md:gap-6"
+                                disabled={isSubmitting}
+                                className="px-8 md:px-16 py-5 md:py-8 bg-primary-500 text-slate-900 rounded-2xl md:rounded-[2.5rem] font-black uppercase tracking-[0.4em] text-[10px] hover:bg-slate-900 hover:text-white transition-all duration-500 shadow-2xl flex items-center gap-4 md:gap-6 disabled:opacity-50"
                             >
-                                Sisteme Gönder <IconArrow className="w-5 h-5" />
+                                {isSubmitting ? "Gönderiliyor..." : "Sisteme Gönder"} <IconArrow className="w-5 h-5" />
                             </button>
                         )}
                     </div>

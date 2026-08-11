@@ -41,7 +41,7 @@ export function HizmetInternalLinks({ currentId }: { currentId?: string }) {
             {filteredHizmetler.map((hizmet) => (
                 <Link
                     key={hizmet.id}
-                    href={`/hizmetler#${hizmet.id}`}
+                    href={hizmet.id === "evden-eve-nakliyat" ? "/evden-eve-nakliyat" : `/hizmetler/${hizmet.id}`}
                     className="text-sm text-primary-600 hover:text-primary-800 hover:underline transition-colors p-3 bg-primary-50 rounded-lg"
                     title={`Ankara ${hizmet.title} Hizmetleri`}
                 >
@@ -120,7 +120,7 @@ export function FooterSeoLinks() {
                     {hizmetler.map((hizmet) => (
                         <Link
                             key={hizmet.id}
-                            href={`/hizmetler#${hizmet.id}`}
+                            href={hizmet.id === "evden-eve-nakliyat" ? "/evden-eve-nakliyat" : `/hizmetler/${hizmet.id}`}
                             className="text-xs text-slate-600 hover:text-primary-600 transition-colors py-1"
                             title={`Ankara ${hizmet.title} Çözümleri`}
                         >

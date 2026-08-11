@@ -280,7 +280,7 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
                                 </p>
                                 <div className="mt-8 md:mt-16 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                                     <Link href="/iletisim" className="w-full sm:w-auto">
-                                        <MagneticButton className="w-full sm:w-auto px-6 md:px-10 py-4 md:py-5 bg-primary-500 text-white rounded-2xl md:rounded-full text-sm md:text-lg font-black flex items-center justify-center gap-3 md:gap-4 hover:bg-primary-600 transition-all shadow-2xl shadow-primary-500/30 group">
+                                        <MagneticButton className="w-full sm:w-auto px-6 md:px-10 py-4 md:py-5 bg-primary-500 text-slate-900 rounded-2xl md:rounded-full text-sm md:text-lg font-black flex items-center justify-center gap-3 md:gap-4 hover:bg-primary-600 transition-all shadow-2xl shadow-primary-500/30 group">
                                             Ücretsiz Teklif Al <IconArrow className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-4 transition-transform" />
                                         </MagneticButton>
                                     </Link>

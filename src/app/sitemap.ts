@@ -26,6 +26,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
 
     hizmetler.forEach(h => {
+        if (h.id === "evden-eve-nakliyat") return; // 301 redirected to /islemler/ankara/evden-eve-nakliyat
         urls.push({
             url: `${BASE_URL}/hizmetler/${h.id}`,
             lastModified: today,
@@ -34,7 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         });
     });
 
-    const ilceHizmetSlugs = ["evden-eve-nakliyat", "ofis-tasima", "asansorlu-tasima", "parca-esya-tasima", "esya-depolama", "sehir-ici-nakliyat", "sigortali-tasima", "nakliyat-fiyatlari"];
+    const ilceHizmetSlugs = ["evden-eve-nakliyat", "ofis-tasima", "nakliyat-fiyatlari"];
     
     ankaraIlceleri.forEach(ilce => {
         urls.push({ url: `${BASE_URL}/islemler/ankara/${ilce.slug}`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 });

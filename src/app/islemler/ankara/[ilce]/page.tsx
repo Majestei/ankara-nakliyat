@@ -11,10 +11,27 @@ export async function generateStaticParams() { return ankaraIlceleri.map((ilce) 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const ilce = ankaraIlceleri.find((i) => i.slug === params.ilce);
     if (!ilce) return {};
+    const title = `🥇 ${ilce.name} Evden Eve Nakliyat | %20 İndirimli ve Sigortalı 🚀`;
+    const description = `📦 ${ilce.name} bölgesinde güvenilir nakliyat firması mı arıyorsunuz? Kırılma garantili, asansörlü ve marangozlu taşıma hizmeti ile tanışın. ☎ Ücretsiz fiyat alın!`;
+    const url = `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}`;
+
     return {
-        title: `🥇 ${ilce.name} Evden Eve Nakliyat | %20 İndirimli ve Sigortalı 🚀`,
-        description: `📦 ${ilce.name} bölgesinde güvenilir nakliyat firması mı arıyorsunuz? Kırılma garantili, asansörlü ve marangozlu taşıma hizmeti ile tanışın. ☎ Ücretsiz fiyat alın!`,
-        alternates: { canonical: `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}` },
+        title,
+        description,
+        alternates: { canonical: url },
+        openGraph: {
+            title,
+            description,
+            url,
+            type: "website",
+            images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: title }],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description,
+            images: ["/og-image.jpg"],
+        },
     };
 }
 
@@ -42,7 +59,7 @@ export default function AnkaraIlcePage({ params }: Props) {
         itemListElement: [
             { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: "https://ankaraozdemirnakliyat.com" },
             { "@type": "ListItem", position: 2, name: "İşlemler", item: "https://ankaraozdemirnakliyat.com/islemler" },
-            { "@type": "ListItem", position: 3, name: "Ankara", item: "https://ankaraozdemirnakliyat.com/islemler" },
+            { "@type": "ListItem", position: 3, name: "Ankara", item: "https://ankaraozdemirnakliyat.com/islemler/ankara" },
             { "@type": "ListItem", position: 4, name: `${ilce.name} Nakliyat`, item: `https://ankaraozdemirnakliyat.com/islemler/ankara/${ilce.slug}` },
         ],
     };

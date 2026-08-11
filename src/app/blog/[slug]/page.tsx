@@ -69,7 +69,7 @@ export default function BlogPostPage({ params }: Props) {
             name: "Ankara Özdemir Nakliyat",
             logo: {
                 "@type": "ImageObject",
-                url: "https://ankaraozdemirnakliyat.com/og-image.jpg",
+                url: "https://ankaraozdemirnakliyat.com/logo.svg",
             },
         },
         mainEntityOfPage: {

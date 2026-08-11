@@ -103,7 +103,7 @@ export default function Footer() {
                         </div>
 
                         {/* Services */}
-                        <div className="lg:col-span-3">
+                        <nav aria-label="Hizmetlerimiz" className="lg:col-span-3">
                             <h4 className="text-slate-900 font-black text-xs uppercase tracking-[0.4em] mb-8 flex items-center gap-2">
                                 <span className="w-6 h-[2px] bg-primary-500 rounded-full" />
                                 Hizmetlerimiz
@@ -112,7 +112,7 @@ export default function Footer() {
                                 {hizmetler.map((hizmet) => (
                                     <li key={hizmet.id}>
                                         <Link
-                                            href={`/hizmetler#${hizmet.id}`}
+                                            href={hizmet.id === "evden-eve-nakliyat" ? "/evden-eve-nakliyat" : `/hizmetler/${hizmet.id}`}
                                             className="text-sm text-slate-600 hover:text-primary-600 transition-colors flex items-center gap-2 group py-2"
                                             title={`Ankara ${hizmet.title} Hizmetleri`}
                                         >
@@ -122,34 +122,35 @@ export default function Footer() {
                                     </li>
                                 ))}
                             </ul>
-                        </div>
+                        </nav>
 
                         {/* Regions */}
-                        <div className="lg:col-span-3">
+                        <nav aria-label="Hizmet Bölgeleri" className="lg:col-span-3">
                             <h4 className="text-slate-900 font-black text-xs uppercase tracking-[0.4em] mb-8 flex items-center gap-2">
                                 <span className="w-6 h-[2px] bg-primary-500 rounded-full" />
                                 Hizmet Bölgeleri
                             </h4>
-                            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-2">
+                            <ul className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-2">
                                 {ankaraIlceleri.slice(0, 12).map((ilce) => (
-                                    <Link
-                                        key={ilce.slug}
-                                        href={`/islemler/ankara/${ilce.slug}`}
-                                        className="text-xs md:text-sm text-slate-600 hover:text-primary-600 transition-colors flex items-center gap-1.5 group py-1"
-                                        title={`${ilce.name} Nakliyat Çözümleri`}
-                                    >
-                                        <IconMapPin className="w-2.5 h-2.5 text-slate-400 group-hover:text-primary-500 transition-colors" />
-                                        {ilce.name}
-                                    </Link>
+                                    <li key={ilce.slug}>
+                                        <Link
+                                            href={`/islemler/ankara/${ilce.slug}`}
+                                            className="text-xs md:text-sm text-slate-600 hover:text-primary-600 transition-colors flex items-center gap-1.5 group py-2"
+                                            title={`${ilce.name} Nakliyat Çözümleri`}
+                                        >
+                                            <IconMapPin className="w-2.5 h-2.5 text-slate-400 group-hover:text-primary-500 transition-colors" />
+                                            {ilce.name}
+                                        </Link>
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
                             <Link href="/islemler" className="inline-flex items-center gap-2 text-xs font-bold text-primary-500 hover:text-primary-600 mt-6 uppercase tracking-widest transition-colors" title="Tüm Bölgeleri Gör">
                                 Tümünü Gör <IconArrow className="w-3 h-3" />
                             </Link>
-                        </div>
+                        </nav>
 
                         {/* Trust / Quick Links */}
-                        <div className="lg:col-span-2">
+                        <nav aria-label="Kurumsal Bağlantılar" className="lg:col-span-2">
                             <h4 className="text-slate-900 font-black text-xs uppercase tracking-[0.4em] mb-8 flex items-center gap-2">
                                 <span className="w-6 h-[2px] bg-primary-500 rounded-full" />
                                 Kurumsal
@@ -157,7 +158,7 @@ export default function Footer() {
                             <ul className="space-y-3">
                                 {navLinks.map((link) => (
                                     <li key={link.href}>
-                                        <Link href={link.href} className="text-sm text-slate-600 hover:text-primary-600 transition-colors" title={link.name}>
+                                        <Link href={link.href} className="text-sm text-slate-600 hover:text-primary-600 transition-colors block py-2" title={link.name}>
                                             {link.name}
                                         </Link>
                                     </li>
@@ -177,7 +178,7 @@ export default function Footer() {
                                     </div>
                                 ))}
                             </div>
-                        </div>
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -194,12 +195,12 @@ export default function Footer() {
                                 {[1,2,3,4,5].map(s => <IconStar key={s} className="w-2.5 h-2.5" />)}
                             </div>
                         </div>
-                        <div className="flex gap-3 md:gap-6 text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-500 flex-wrap justify-center">
-                            <Link href="/gizlilik-politikasi" className="hover:text-primary-500 transition-colors" title="Gizlilik Politikası">Gizlilik</Link>
-                            <Link href="/kullanim-sartlari" className="hover:text-primary-500 transition-colors" title="Kullanım Şartları">Şartlar</Link>
-                            <Link href="/kvkk" className="hover:text-primary-500 transition-colors" title="KVKK Metni">KVKK</Link>
-                            <Link href="/site-haritasi" className="hover:text-primary-500 transition-colors" title="Site Haritası">Site Haritası</Link>
-                        </div>
+                        <nav aria-label="Yasal Bağlantılar" className="flex gap-3 md:gap-6 text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-500 flex-wrap justify-center">
+                            <Link href="/gizlilik-politikasi" className="hover:text-primary-500 transition-colors py-2" title="Gizlilik Politikası">Gizlilik</Link>
+                            <Link href="/kullanim-sartlari" className="hover:text-primary-500 transition-colors py-2" title="Kullanım Şartları">Şartlar</Link>
+                            <Link href="/kvkk" className="hover:text-primary-500 transition-colors py-2" title="KVKK Metni">KVKK</Link>
+                            <Link href="/site-haritasi" className="hover:text-primary-500 transition-colors py-2" title="Site Haritası">Site Haritası</Link>
+                        </nav>
                     </div>
                 </div>
             </div>

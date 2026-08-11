@@ -110,16 +110,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const hizmet = ilceHizmetler.find((h) => h.slug === params.slug);
     if (hizmet) {
         const content = hizmet.getContent(ilce.name);
+        const title = `🏆 ${content.h1} | %20 İndirimli Garantili Hizmet 🚀`;
+        const description = `📦 ${content.description} ☎ Ücretsiz Ekspertiz ve Fiyat Alın!`;
+        const url = `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}/${params.slug}`;
+
         return {
-            title: `🏆 ${content.h1} | %20 İndirimli Garantili Hizmet 🚀`,
-            description: `📦 ${content.description} ☎ Ücretsiz Ekspertiz ve Fiyat Alın!`,
-            alternates: {
-                canonical: `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}/${params.slug}`,
-            },
+            title,
+            description,
+            alternates: { canonical: url },
             openGraph: {
-                title: `🏆 ${content.h1} | %20 İndirimli Garantili Hizmet 🚀`,
-                description: `📦 ${content.description} ☎ Ücretsiz Ekspertiz ve Fiyat Alın!`,
+                title,
+                description,
+                url,
                 type: "website",
+                images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: title }],
+            },
+            twitter: {
+                card: "summary_large_image",
+                title,
+                description,
+                images: ["/og-image.jpg"],
             },
         };
     }
@@ -128,21 +138,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const mahalleler = neighborhoodsByDistrict[ilce.slug] || [];
     const mahalle = mahalleler.find(m => m.slug === params.slug);
     if (mahalle) {
+        const title = `🥇 Ankara ${ilce.name} ${mahalle.name} Evden Eve Nakliyat | %20 İndirimli Sigortalı Taşıma ✅`;
+        const description = `🚚 Ankara ${ilce.name} ${mahalle.name} mahallesinde asansörlü, ambalajlı ve sigortalı profesyonel evden eve nakliyat. Hemen arayın, uygun fiyatları kaçırmayın!`;
+        const url = `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}/${params.slug}`;
+
         return {
-            title: `🥇 Ankara ${ilce.name} ${mahalle.name} Evden Eve Nakliyat | %20 İndirimli Sigortalı Taşıma ✅`,
-            description: `🚚 Ankara ${ilce.name} ${mahalle.name} mahallesinde asansörlü, ambalajlı ve sigortalı profesyonel evden eve nakliyat. Hemen arayın, uygun fiyatları kaçırmayın!`,
-            alternates: { canonical: `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}/${params.slug}` },
+            title,
+            description,
+            alternates: { canonical: url },
             openGraph: {
-                title: `🥇 Ankara ${ilce.name} ${mahalle.name} Evden Eve Nakliyat`,
-                description: `🚚 Ankara ${ilce.name} ${mahalle.name} mahallesinde asansörlü, ambalajlı ve sigortalı profesyonel nakliyat.`,
-                url: `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}/${params.slug}`,
+                title,
+                description,
+                url,
                 type: "website",
-                images: [{ url: "/og-image.jpg" }]
+                images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: title }]
             },
             twitter: {
                 card: "summary_large_image",
-                title: `🥇 Ankara ${ilce.name} ${mahalle.name} Nakliyat`,
-                description: `🚚 Ankara ${ilce.name} ${mahalle.name} mahallesinde sigortalı nakliyat.`,
+                title,
+                description,
                 images: ["/og-image.jpg"]
             }
         };

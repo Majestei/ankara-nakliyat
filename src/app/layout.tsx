@@ -10,20 +10,20 @@ import Script from "next/script";
 import { firmaBilgileri } from "@/data/siteData";
 
 const inter = Inter({
-    subsets: ["latin"],
+    subsets: ["latin", "latin-ext"],
     display: "swap",
     variable: "--font-inter",
 });
 
 const poppins = Poppins({
-    subsets: ["latin"],
-    weight: ["400", "500", "600", "700", "800", "900"],
+    subsets: ["latin", "latin-ext"],
+    weight: ["400", "500", "600", "700", "900"],
     display: "swap",
     variable: "--font-poppins",
 });
 
 const playfair = Playfair_Display({
-    subsets: ["latin"],
+    subsets: ["latin", "latin-ext"],
     style: ["italic", "normal"],
     weight: ["400", "600", "700", "900"],
     display: "swap",
@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     title: {
         default: "🥇 Ankara Özdemir Nakliyat | 20% İndirimli Sigortalı Taşıma 🚀",
         template: "%s | Ankara Özdemir Nakliyat",
+    },
+    alternates: {
+        canonical: "./",
     },
     description:
         "📦 Ankara'da garantili ve asansörlü evden eve nakliyat hizmeti. Kırılmaya karşı sigortalı taşıma, ücretsiz ekspertiz ve uzman kadro. ☎ Hemen Ücretsiz Fiyat Alın!",
@@ -229,20 +232,18 @@ const websiteJsonLd = {
 
 const siteNavigationJsonLd = {
     "@context": "https://schema.org",
-    "@type": "SiteNavigationElement",
-    name: ["Ana Sayfa", "Hizmetler", "Evden Eve Nakliyat", "İşlemler", "Galeri", "Blog", "Makaleler", "SSS", "İletişim", "Hakkımızda"],
-    url: [
-        "https://ankaraozdemirnakliyat.com",
-        "https://ankaraozdemirnakliyat.com/hizmetler",
-        "https://ankaraozdemirnakliyat.com/evden-eve-nakliyat",
-        "https://ankaraozdemirnakliyat.com/islemler",
-        "https://ankaraozdemirnakliyat.com/galeri",
-        "https://ankaraozdemirnakliyat.com/blog",
-        "https://ankaraozdemirnakliyat.com/makaleler",
-        "https://ankaraozdemirnakliyat.com/sss",
-        "https://ankaraozdemirnakliyat.com/iletisim",
-        "https://ankaraozdemirnakliyat.com/hakkimizda",
-    ],
+    "@graph": [
+        { "@type": "SiteNavigationElement", name: "Ana Sayfa", url: "https://ankaraozdemirnakliyat.com" },
+        { "@type": "SiteNavigationElement", name: "Hizmetler", url: "https://ankaraozdemirnakliyat.com/hizmetler" },
+        { "@type": "SiteNavigationElement", name: "Evden Eve Nakliyat", url: "https://ankaraozdemirnakliyat.com/evden-eve-nakliyat" },
+        { "@type": "SiteNavigationElement", name: "İşlemler", url: "https://ankaraozdemirnakliyat.com/islemler" },
+        { "@type": "SiteNavigationElement", name: "Galeri", url: "https://ankaraozdemirnakliyat.com/galeri" },
+        { "@type": "SiteNavigationElement", name: "Blog", url: "https://ankaraozdemirnakliyat.com/blog" },
+        { "@type": "SiteNavigationElement", name: "Makaleler", url: "https://ankaraozdemirnakliyat.com/makaleler" },
+        { "@type": "SiteNavigationElement", name: "SSS", url: "https://ankaraozdemirnakliyat.com/sss" },
+        { "@type": "SiteNavigationElement", name: "İletişim", url: "https://ankaraozdemirnakliyat.com/iletisim" },
+        { "@type": "SiteNavigationElement", name: "Hakkımızda", url: "https://ankaraozdemirnakliyat.com/hakkimizda" },
+    ]
 };
 
 export default function RootLayout({
@@ -255,8 +256,6 @@ export default function RootLayout({
             <head>
                 <link rel="dns-prefetch" href="https://www.google-analytics.com" />
                 <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                 <meta name="geo.region" content="TR-06" />
                 <meta name="geo.placename" content="Ankara" />
                 <meta name="geo.position" content="39.9208;32.8541" />

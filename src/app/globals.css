@@ -11,29 +11,13 @@
     --glass: rgba(255, 255, 255, 0.7);
     --glass-border: rgba(0, 0, 0, 0.05);
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 html {
     scroll-behavior: smooth;
     font-size: 16px;
 }
-
-@media (max-width: 768px) {
-    html {
-        font-size: 16px;
-    }
-}
-
 body {
     font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #334155;
     overflow-x: hidden;
-    background: #ffffff;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -509,21 +493,24 @@ h6 {
 /* Underline animation for links */
 .animated-underline {
     position: relative;
+    display: inline-block;
 }
 
 .animated-underline::after {
     content: '';
     position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
+    width: 100%;
+    transform: scaleX(0);
     height: 2px;
-    background: linear-gradient(to right, #f97316, #facc15);
-    transition: width 0.4s ease;
+    bottom: -4px;
+    left: 0;
+    background-color: currentColor;
+    transform-origin: left;
+    transition: transform 0.4s ease;
 }
 
 .animated-underline:hover::after {
-    width: 100%;
+    transform: scaleX(1);
 }
 
 /* Phone link styles */

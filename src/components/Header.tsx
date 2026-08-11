@@ -58,18 +58,21 @@ export default function Header() {
                             </Link>
 
                             {/* Desktop Navigation */}
-                            <nav className="hidden lg:flex items-center gap-1">
-                                {navLinks.map((link) => (
-                                    <Link
-                                        key={link.href}
-                                        href={link.href}
-                                        className="group relative px-4 py-2 text-[13px] font-semibold text-slate-600 hover:text-primary-600 transition-colors duration-300"
-                                        title={`Ankara Özdemir ${link.name}`}
-                                    >
-                                        {link.name}
-                                        <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full group-hover:w-3/4 transition-all duration-300" />
-                                    </Link>
-                                ))}
+                            <nav aria-label="Ana Menü" className="hidden lg:flex items-center gap-1">
+                                <ul className="flex items-center gap-1 m-0 p-0 list-none">
+                                    {navLinks.map((link) => (
+                                        <li key={link.href}>
+                                            <Link
+                                                href={link.href}
+                                                className="group relative px-4 py-2 block text-[13px] font-semibold text-slate-600 hover:text-primary-600 transition-colors duration-300"
+                                                title={`Ankara Özdemir ${link.name}`}
+                                            >
+                                                {link.name}
+                                                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full group-hover:w-3/4 transition-all duration-300" />
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
                             </nav>
 
                             {/* Right Side */}
@@ -134,27 +137,29 @@ export default function Header() {
                             </button>
 
                             {/* Navigation Links */}
-                            <nav className="flex flex-col gap-2 mt-6">
-                                {navLinks.map((link, i) => (
-                                    <motion.div
-                                        key={link.href}
-                                        initial={{ opacity: 0, x: -30 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: i * 0.08 }}
-                                    >
-                                        <Link
-                                            href={link.href}
-                                            onClick={() => setIsMenuOpen(false)}
-                                            className="group flex items-center justify-between py-3.5 md:py-4 border-b border-white/5"
-                                            title={`Ankara Özdemir ${link.name}`}
+                            <nav aria-label="Mobil Menü" className="flex flex-col mt-6">
+                                <ul className="flex flex-col gap-2 m-0 p-0 list-none">
+                                    {navLinks.map((link, i) => (
+                                        <motion.li
+                                            key={link.href}
+                                            initial={{ opacity: 0, x: -30 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: i * 0.08 }}
                                         >
-                                            <span className="text-xl sm:text-3xl font-heading font-black text-slate-900 group-hover:text-primary-500 transition-colors">
-                                                {link.name}
-                                            </span>
-                                            <IconArrow className="w-4 h-4 md:w-5 md:h-5 text-slate-400 group-hover:text-primary-500 group-hover:translate-x-1 transition-all" />
-                                        </Link>
-                                    </motion.div>
-                                ))}
+                                            <Link
+                                                href={link.href}
+                                                onClick={() => setIsMenuOpen(false)}
+                                                className="group flex items-center justify-between py-3.5 md:py-4 border-b border-white/5"
+                                                title={`Ankara Özdemir ${link.name}`}
+                                            >
+                                                <span className="text-xl sm:text-3xl font-heading font-black text-slate-900 group-hover:text-primary-500 transition-colors">
+                                                    {link.name}
+                                                </span>
+                                                <IconArrow className="w-4 h-4 md:w-5 md:h-5 text-slate-400 group-hover:text-primary-500 group-hover:translate-x-1 transition-all" />
+                                            </Link>
+                                        </motion.li>
+                                    ))}
+                                </ul>
                             </nav>
 
                             {/* Bottom Info */}

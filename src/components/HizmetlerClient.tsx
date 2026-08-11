@@ -319,17 +319,19 @@ export default function HizmetlerClient() {
 
 
             {/* ── STICKY CAPSULE NAVIGATION ── */}
-            <div className="sticky top-20 md:top-24 z-50 px-4">
+            <nav aria-label="Hızlı Hizmet Menüsü" className="sticky top-20 md:top-24 z-50 px-4">
                 <div className="container-custom max-w-5xl">
-                    <div className="bg-white/80 backdrop-blur-2xl border border-slate-200/60 rounded-2xl md:rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.12)] p-4 flex justify-start md:justify-between items-center overflow-x-auto hide-scrollbar gap-8 md:gap-10">
+                    <ul className="bg-white/80 backdrop-blur-2xl border border-slate-200/60 rounded-2xl md:rounded-[3rem] shadow-[0_30px_60px_rgba(0,0,0,0.12)] p-4 flex justify-start md:justify-between items-center overflow-x-auto hide-scrollbar gap-8 md:gap-10 m-0 list-none">
                         {hizmetler.map((hizmet) => (
-                            <Link key={hizmet.id} href={`#${hizmet.id}`} className="whitespace-nowrap text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-primary-500 transition-all hover:scale-110">
-                                {hizmet.title}
-                            </Link>
+                            <li key={hizmet.id} className="shrink-0">
+                                <Link href={`#${hizmet.id}`} className="whitespace-nowrap text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 hover:text-primary-500 transition-all hover:scale-110 block py-2">
+                                    {hizmet.title}
+                                </Link>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
                 </div>
-            </div>
+            </nav>
 
             {/* ── SERVICES CONTENT ── */}
             {hizmetler.map((hizmet, i) => (
