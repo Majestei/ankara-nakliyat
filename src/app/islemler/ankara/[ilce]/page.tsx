@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 import { ankaraIlceleri, firmaBilgileri, hizmetler, ilceIcerikleri } from "@/data/siteData";
 import { IconPhone, IconMail, IconMobile, IconShield, IconMoney, IconTruck, IconUsers, IconBox, IconCog, IconHeadset, IconCheck, IconMapPin } from "@/components/Icons";
 
@@ -31,7 +31,7 @@ import AnkaraIlceClient from "@/components/AnkaraIlceClient";
 
 export default function AnkaraIlcePage({ params }: Props) {
     const ilce = ankaraIlceleri.find((i) => i.slug === params.ilce);
-    if (!ilce) notFound();
+    if (!ilce) permanentRedirect('/islemler');
 
     const digerIlceler = ankaraIlceleri.filter((i) => i.slug !== ilce.slug);
 

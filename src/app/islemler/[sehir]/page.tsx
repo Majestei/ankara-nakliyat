@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 import { turkiyeIlleri, civarIller, firmaBilgileri, hizmetler } from "@/data/siteData";
 import { IconPhone, IconMobile, IconTruck, IconShield, IconMoney, IconBox, IconSearch, IconHeadset, IconMapPin, IconCog } from "@/components/Icons";
 import AnkaraIlceClient from "@/components/AnkaraIlceClient";
@@ -30,7 +30,7 @@ const serviceIconMap: Record<string, React.ReactNode> = {
 
 export default function SehirPage({ params }: Props) {
     const il = civarIller.find((i) => i.slug === params.sehir);
-    if (!il) notFound();
+    if (!il) permanentRedirect('/islemler');
 
     const digerIlceler = civarIller.filter(i => i.slug !== params.sehir).slice(0, 12);
 

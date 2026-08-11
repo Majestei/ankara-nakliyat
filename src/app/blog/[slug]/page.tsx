@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 import { blogPosts } from "@/data/blogData";
 import BlogPostClient from "@/components/BlogPostClient";
 
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default function BlogPostPage({ params }: Props) {
     const post = blogPosts.find((p) => p.slug === params.slug);
-    if (!post) notFound();
+    if (!post) permanentRedirect('/blog');
 
     const relatedPosts = blogPosts.filter((p) => p.id !== post.id && p.category === post.category).slice(0, 3);
 

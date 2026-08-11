@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 import { Metadata } from "next";
 import Link from "next/link";
 import makalelerData from "@/data/makalelerData.json";
@@ -40,7 +40,7 @@ export default async function MakaleDetail({ params }: { params: { slug: string 
     const post = makalelerData.find((m) => m.slug === slug);
 
     if (!post) {
-        notFound();
+        permanentRedirect('/makaleler');
     }
 
     return (
