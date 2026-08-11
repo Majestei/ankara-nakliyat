@@ -5,8 +5,13 @@ const nextConfig = {
     async redirects() {
         return [
             {
-                source: '/blog/:path*',
-                destination: '/makaleler/:path*',
+                source: '/makaleler',
+                destination: '/blog',
+                permanent: true,
+            },
+            {
+                source: '/makaleler/:path*',
+                destination: '/blog',
                 permanent: true,
             },
             {

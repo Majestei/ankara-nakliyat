@@ -1,7 +1,6 @@
 import { MetadataRoute } from 'next';
 import { istanbulIlceleri, ankaraIlceleri, hizmetler } from '@/data/siteData';
 import { neighborhoodsByDistrict } from '@/data/neighborhoodData';
-import makalelerData from '@/data/makalelerData.json';
 import blogDataGen from '@/data/blogDataGen.json';
 
 // Constants
@@ -11,7 +10,7 @@ const CHUNK_SIZE = 2500;
 // Calculate total URLs
 const staticUrls = [
   '/', '/hakkimizda', '/iletisim', '/galeri', '/referanslar', '/sss',
-  '/hizmetler', '/evden-eve-nakliyat', '/blog', '/makaleler',
+  '/hizmetler', '/evden-eve-nakliyat', '/blog',
   '/gizlilik-politikasi', '/kullanim-sartlari', '/kvkk'
 ];
 

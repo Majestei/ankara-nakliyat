@@ -346,7 +346,6 @@ export const navLinks = [
     { name: "İşlemler", href: "/islemler" },
     { name: "Galeri", href: "/galeri" },
     { name: "Blog", href: "/blog" },
-    { name: "Makaleler", href: "/makaleler" },
     { name: "SSS", href: "/sss" },
     { name: "Hakkımızda", href: "/hakkimizda" },
     { name: "Referanslar", href: "/referanslar" },
