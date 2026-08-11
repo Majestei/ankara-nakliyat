@@ -1,10 +1,9 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { istanbulIlceleri, firmaBilgileri } from "@/data/siteData";
 import { neighborhoodsByDistrict } from "@/data/neighborhoodData";
-import { IconPhone, IconCheck, IconMapPin } from "@/components/Icons";
-import MahalleClient from "@/components/MahalleClient";
+import { IconCheck } from "@/components/Icons";
 
 // Hizmet alt sayfa tanımları
 const ilceHizmetler = [
@@ -60,32 +59,22 @@ export async function generateStaticParams() {
     const params: { ilce: string, slug: string }[] = [];
     
     istanbulIlceleri.forEach(ilce => {
-        // Hizmetler
+        // Hizmetler (Pruned neighborhood generation for Istanbul)
         ilceHizmetler.forEach(hizmet => {
             params.push({
                 ilce: ilce.slug,
                 slug: hizmet.slug
             });
         });
-
-        // Mahalleler
-        const mahalleler = neighborhoodsByDistrict[ilce.slug] || [];
-        mahalleler.forEach(mahalle => {
-            params.push({
-                ilce: ilce.slug,
-                slug: mahalle.slug
-            });
-        });
     });
 
-    return params.slice(0, 100);
+    return params;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const ilce = istanbulIlceleri.find((i) => i.slug === params.ilce);
     if (!ilce) return {};
 
-    // Check if it's a hizmet
     const hizmet = ilceHizmetler.find((h) => h.slug === params.slug);
     if (hizmet) {
         const content = hizmet.getContent(ilce.name);
@@ -95,30 +84,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             alternates: {
                 canonical: `https://ankaraozdemirnakliyat.com/islemler/istanbul/${params.ilce}/${params.slug}`,
             },
-        };
-    }
-
-    // Check if it's a mahalle
-    const mahalleler = neighborhoodsByDistrict[ilce.slug] || [];
-    const mahalle = mahalleler.find(m => m.slug === params.slug);
-    if (mahalle) {
-        return {
-            title: `🥇 İstanbul ${ilce.name} ${mahalle.name} Evden Eve Nakliyat | Sigortalı Taşıma ✅`,
-            description: `🚚 İstanbul ${ilce.name} ${mahalle.name} mahallesinde sigortalı, asansörlü, ambalajlı ve profesyonel evden eve nakliyat. Hemen ücretsiz teklif alın!`,
-            alternates: { canonical: `https://ankaraozdemirnakliyat.com/islemler/istanbul/${params.ilce}/${params.slug}` },
-            openGraph: {
-                title: `🥇 İstanbul ${ilce.name} ${mahalle.name} Evden Eve Nakliyat`,
-                description: `🚚 İstanbul ${ilce.name} ${mahalle.name} mahallesinde sigortalı, asansörlü, ambalajlı ve profesyonel evden eve nakliyat.`,
-                url: `https://ankaraozdemirnakliyat.com/islemler/istanbul/${params.ilce}/${params.slug}`,
-                type: "website",
-                images: [{ url: "/og-image.jpg" }]
-            },
-            twitter: {
-                card: "summary_large_image",
-                title: `🥇 İstanbul ${ilce.name} ${mahalle.name} Nakliyat`,
-                description: `🚚 İstanbul ${ilce.name} ${mahalle.name} mahallesinde sigortalı nakliyat.`,
-                images: ["/og-image.jpg"]
-            }
         };
     }
 
@@ -133,11 +98,9 @@ export default function IstanbulCombinedSubPage({ params }: Props) {
     const mahalleler = neighborhoodsByDistrict[ilce.slug] || [];
     const mahalle = mahalleler.find(m => m.slug === params.slug);
 
-    if (!hizmet && !mahalle) notFound();
-
+    // If it's a neighborhood in Istanbul, 301 redirect to parent district page for SEO pruning
     if (mahalle) {
-        const digerMahalleler = mahalleler.filter(m => m.slug !== params.slug);
-        return <MahalleClient ilce={ilce} mahalle={mahalle} digerMahalleler={digerMahalleler} isIstanbul={true} />;
+        redirect(`/islemler/istanbul/${ilce.slug}`);
     }
 
     if (hizmet) {
