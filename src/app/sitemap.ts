@@ -16,14 +16,19 @@ const staticUrls = [
 ];
 
 export async function generateSitemaps() {
+    const topBlogCount = Math.min(50, blogDataGen.length);
+    const topMakaleCount = Math.min(50, makalelerData.length);
+    
     let allUrlsCount = staticUrls.length + hizmetler.length;
     allUrlsCount += ankaraIlceleri.length + istanbulIlceleri.length;
-    allUrlsCount += blogDataGen.length + makalelerData.length;
+    allUrlsCount += topBlogCount + topMakaleCount;
 
-    istanbulIlceleri.forEach(ilce => {
-        allUrlsCount += 8; 
-        allUrlsCount += (neighborhoodsByDistrict[ilce.slug] || []).length;
+    // Istanbul districts get 8 service pages (no neighborhood inflation)
+    istanbulIlceleri.forEach(() => {
+        allUrlsCount += 8;
     });
+
+    // Ankara districts get 8 service pages + Ankara neighborhoods
     ankaraIlceleri.forEach(ilce => {
         allUrlsCount += 8;
         allUrlsCount += (neighborhoodsByDistrict[ilce.slug] || []).length;
@@ -44,18 +49,20 @@ export default async function sitemap({ id }: { id: number }): Promise<MetadataR
 
     const ilceHizmetSlugs = ["evden-eve-nakliyat", "ofis-tasima", "asansorlu-tasima", "parca-esya-tasima", "esya-depolama", "sehir-ici-nakliyat", "sigortali-tasima", "nakliyat-fiyatlari"];
     
+    // Ankara: full coverage (districts, services, neighborhoods)
     ankaraIlceleri.forEach(ilce => {
         ilceHizmetSlugs.forEach(h => urls.push(`/islemler/ankara/${ilce.slug}/${h}`));
         (neighborhoodsByDistrict[ilce.slug] || []).forEach(m => urls.push(`/islemler/ankara/${ilce.slug}/${m.slug}`));
     });
 
+    // Istanbul: high-level district & service coverage only (pruned neighborhoods)
     istanbulIlceleri.forEach(ilce => {
         ilceHizmetSlugs.forEach(h => urls.push(`/islemler/istanbul/${ilce.slug}/${h}`));
-        (neighborhoodsByDistrict[ilce.slug] || []).forEach(m => urls.push(`/islemler/istanbul/${ilce.slug}/${m.slug}`));
     });
 
-    blogDataGen.forEach((b: any) => urls.push(`/blog/${b.slug}`));
-    makalelerData.forEach((m: any) => urls.push(`/makaleler/${m.slug}`));
+    // Top curated blogs and articles
+    blogDataGen.slice(0, 50).forEach((b: any) => urls.push(`/blog/${b.slug}`));
+    makalelerData.slice(0, 50).forEach((m: any) => urls.push(`/makaleler/${m.slug}`));
 
     const start = id * CHUNK_SIZE;
     const end = start + CHUNK_SIZE;
