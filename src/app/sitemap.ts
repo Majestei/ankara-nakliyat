@@ -15,31 +15,7 @@ const staticUrls = [
   '/gizlilik-politikasi', '/kullanim-sartlari', '/kvkk'
 ];
 
-export async function generateSitemaps() {
-    const topBlogCount = Math.min(50, blogDataGen.length);
-    const topMakaleCount = Math.min(50, makalelerData.length);
-    
-    let allUrlsCount = staticUrls.length + hizmetler.length;
-    allUrlsCount += ankaraIlceleri.length + istanbulIlceleri.length;
-    allUrlsCount += topBlogCount + topMakaleCount;
-
-    // Istanbul districts get 8 service pages (no neighborhood inflation)
-    istanbulIlceleri.forEach(() => {
-        allUrlsCount += 8;
-    });
-
-    // Ankara districts get 8 service pages + Ankara neighborhoods
-    ankaraIlceleri.forEach(ilce => {
-        allUrlsCount += 8;
-        allUrlsCount += (neighborhoodsByDistrict[ilce.slug] || []).length;
-    });
-
-    const totalChunks = Math.ceil(allUrlsCount / CHUNK_SIZE);
-    
-    return Array.from({ length: totalChunks }).map((_, i) => ({ id: i }));
-}
-
-export default async function sitemap({ id }: { id: number }): Promise<MetadataRoute.Sitemap> {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const urls: string[] = [...staticUrls];
 
     hizmetler.forEach(h => urls.push(`/hizmetler/${h.id}`));
@@ -64,11 +40,7 @@ export default async function sitemap({ id }: { id: number }): Promise<MetadataR
     blogDataGen.slice(0, 50).forEach((b: any) => urls.push(`/blog/${b.slug}`));
     makalelerData.slice(0, 50).forEach((m: any) => urls.push(`/makaleler/${m.slug}`));
 
-    const start = id * CHUNK_SIZE;
-    const end = start + CHUNK_SIZE;
-    const chunk = urls.slice(start, end);
-
-    return chunk.map(url => ({
+    return urls.map(url => ({
         url: `${BASE_URL}${url}`,
         lastModified: new Date(),
         changeFrequency: 'weekly',

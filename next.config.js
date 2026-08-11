@@ -16,7 +16,12 @@ const nextConfig = {
             },
             {
                 source: '/islemler/sancaktepe/:path*',
-                destination: '/islemler', // Or wherever is appropriate, maybe redirecting obsolete Istanbul links to main islemler page
+                destination: '/islemler', // Redirect obsolete Istanbul links
+                permanent: true,
+            },
+            {
+                source: '/islemler/istanbul/:ilce/:slug((?!evden-eve-nakliyat|ofis-tasima|asansorlu-tasima|parca-esya-tasima|esya-depolama|sehir-ici-nakliyat|sigortali-tasima|nakliyat-fiyatlari$).*)',
+                destination: '/islemler/istanbul/:ilce',
                 permanent: true,
             }
         ];
