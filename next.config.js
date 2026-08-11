@@ -5,16 +5,6 @@ const nextConfig = {
     async redirects() {
         return [
             {
-                source: '/makaleler',
-                destination: '/blog',
-                permanent: true,
-            },
-            {
-                source: '/makaleler/:path*',
-                destination: '/blog',
-                permanent: true,
-            },
-            {
                 source: '/hizmetler/evden-eve-nakliyat',
                 destination: '/islemler/ankara/evden-eve-nakliyat',
                 permanent: true,
