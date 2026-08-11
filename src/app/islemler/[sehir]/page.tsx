@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { turkiyeIlleri, istanbulIlceleri, civarIller, firmaBilgileri, hizmetler } from "@/data/siteData";
+import { turkiyeIlleri, civarIller, firmaBilgileri, hizmetler } from "@/data/siteData";
 import { IconPhone, IconMobile, IconTruck, IconShield, IconMoney, IconBox, IconSearch, IconHeadset, IconMapPin, IconCog } from "@/components/Icons";
 import AnkaraIlceClient from "@/components/AnkaraIlceClient";
 

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring, useMotionValue, AnimatePresence } from "framer-motion";
-import { ankaraIlceleri, turkiyeIlleri, istanbulIlceleri, civarIller, firmaBilgileri } from "@/data/siteData";
+import { ankaraIlceleri, turkiyeIlleri, civarIller, firmaBilgileri } from "@/data/siteData";
 import {
     IconMapPin,
     IconTruck,
@@ -182,47 +182,7 @@ export default function IslemlerClient() {
                 </div>
             </section>
 
-            {/* ── ISTANBUL NETWORK: DISTRICTS & METROPOL ── */}
-            <section className="py-24 md:py-40 lg:py-60 bg-slate-50 relative overflow-hidden">
-                <div className="container-custom">
-                    <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between mb-16 md:mb-40 gap-8 md:gap-20">
-                        <div className="max-w-4xl">
-                            <span className="text-primary-500 font-black text-[10px] md:text-xs uppercase tracking-[0.5em] md:tracking-[0.8em] mb-4 md:mb-10 block">İstanbul Operasyon</span>
-                            <h2 className="text-4xl md:text-7xl lg:text-9xl font-heading font-black text-slate-950 tracking-tighter leading-none">
-                                İstanbul <br /> <span className="text-slate-200">Bölgeler.</span>
-                            </h2>
-                        </div>
-                        <div className="w-full lg:w-1/3 p-6 md:p-12 bg-white rounded-2xl md:rounded-[3rem] border border-slate-100 shadow-xl">
-                            <p className="text-slate-500 text-base md:text-xl font-medium leading-relaxed">
-                                İstanbul&apos;un tüm ilçelerinde 39 noktada <br />
-                                <span className="text-slate-950 font-black underline decoration-primary-500 decoration-4">7/24 aktif</span> lojistik destek sağlıyoruz.
-                            </p>
-                        </div>
-                    </div>
 
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                        {istanbulIlceleri.map((ilce, i) => (
-                            <motion.div
-                                key={ilce.slug}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.01 }}
-                            >
-                                <Link
-                                    href={`/islemler/istanbul/${ilce.slug}`}
-                                    className="group relative h-24 bg-white border border-slate-100 rounded-2xl p-6 flex flex-col justify-center hover:bg-slate-950 transition-all duration-500 overflow-hidden"
-                                >
-                                    <h3 className="text-[10px] font-black text-slate-700 group-hover:text-white transition-colors uppercase tracking-[0.2em] relative z-10 text-center">
-                                        {ilce.name}
-                                    </h3>
-                                    <div className="absolute inset-0 bg-primary-500 opacity-0 group-hover:opacity-10 transition-opacity" />
-                                </Link>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* ── SURROUNDING CITIES: ANKARA-ISTANBUL AXIS ── */}
             <section className="py-24 md:py-40 lg:py-60 bg-white relative overflow-hidden">

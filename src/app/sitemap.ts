@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { istanbulIlceleri, ankaraIlceleri, hizmetler } from '@/data/siteData';
+import { ankaraIlceleri, hizmetler } from '@/data/siteData';
 import { neighborhoodsByDistrict } from '@/data/neighborhoodData';
 import makalelerData from '@/data/makalelerData.json';
 import blogDataGen from '@/data/blogDataGen.json';
@@ -46,14 +46,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         const neighborhoods = neighborhoodsByDistrict[ilce.slug] || [];
         neighborhoods.forEach(m => {
             urls.push({ url: `${BASE_URL}/islemler/ankara/${ilce.slug}/${m.slug}`, lastModified: today, changeFrequency: 'weekly', priority: 0.6 });
-        });
-    });
-
-    istanbulIlceleri.forEach(ilce => {
-        urls.push({ url: `${BASE_URL}/islemler/istanbul/${ilce.slug}`, lastModified: today, changeFrequency: 'weekly', priority: 0.7 });
-        
-        ilceHizmetSlugs.forEach(h => {
-            urls.push({ url: `${BASE_URL}/islemler/istanbul/${ilce.slug}/${h}`, lastModified: today, changeFrequency: 'weekly', priority: 0.6 });
         });
     });
 

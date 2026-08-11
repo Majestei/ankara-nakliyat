@@ -28,47 +28,7 @@ export const ankaraIlceleri = [
 ];
 
 // İstanbul İlçeleri
-export const istanbulIlceleri = [
-    { name: "Adalar", slug: "adalar" },
-    { name: "Arnavutköy", slug: "arnavutkoy" },
-    { name: "Ataşehir", slug: "atasehir" },
-    { name: "Avcılar", slug: "avcilar" },
-    { name: "Bağcılar", slug: "bagcilar" },
-    { name: "Bahçelievler", slug: "bahcelievler" },
-    { name: "Bakırköy", slug: "bakirkoy" },
-    { name: "Başakşehir", slug: "basaksehir" },
-    { name: "Bayrampaşa", slug: "bayrampasa" },
-    { name: "Beşiktaş", slug: "besiktas" },
-    { name: "Beykoz", slug: "beykoz" },
-    { name: "Beylikdüzü", slug: "beylikduzu" },
-    { name: "Beyoğlu", slug: "beyoglu" },
-    { name: "Büyükçekmece", slug: "buyukcekmece" },
-    { name: "Çatalca", slug: "catalca" },
-    { name: "Çekmeköy", slug: "cekmekoy" },
-    { name: "Esenler", slug: "esenler" },
-    { name: "Esenyurt", slug: "esenyurt" },
-    { name: "Eyüpsultan", slug: "eyupsultan" },
-    { name: "Fatih", slug: "fatih" },
-    { name: "Gaziosmanpaşa", slug: "gaziosmanpasa" },
-    { name: "Güngören", slug: "gungoren" },
-    { name: "Kadıköy", slug: "kadikoy" },
-    { name: "Kağıthane", slug: "kagithane" },
-    { name: "Kartal", slug: "kartal" },
-    { name: "Küçükçekmece", slug: "kucukcekmece" },
-    { name: "Maltepe", slug: "maltepe" },
-    { name: "Pendik", slug: "pendik" },
-    { name: "Sancaktepe", slug: "sancaktepe" },
-    { name: "Sarıyer", slug: "sariyer" },
-    { name: "Silivri", slug: "silivri" },
-    { name: "Sultanbeyli", slug: "sultanbeyli" },
-    { name: "Sultangazi", slug: "sultangazi" },
-    { name: "Şile", slug: "sile" },
-    { name: "Şişli", slug: "sisli" },
-    { name: "Tuzla", slug: "tuzla" },
-    { name: "Ümraniye", slug: "umraniye" },
-    { name: "Üsküdar", slug: "uskudar" },
-    { name: "Zeytinburnu", slug: "zeytinburnu" },
-];
+
 
 // Çevre İller (Ankara & İstanbul Komşuları)
 export const civarIller = [

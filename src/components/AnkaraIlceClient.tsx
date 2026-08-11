@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring, useMotionValue, AnimatePresence } from "framer-motion";
-import { firmaBilgileri, hizmetler, ilceIcerikleri, istanbulIlceleri, ankaraIlceleri } from "@/data/siteData";
+import { firmaBilgileri, hizmetler, ilceIcerikleri, ankaraIlceleri } from "@/data/siteData";
 import { neighborhoodsByDistrict } from "@/data/neighborhoodData";
 import { 
     IconPhone, IconShield, IconMoney, IconTruck, 
@@ -145,7 +145,7 @@ export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, di
     ];
 
     const isAnkara = ankaraIlceleri.some(i => i.slug === ilce.slug);
-    const isIstanbul = istanbulIlceleri.some(i => i.slug === ilce.slug);
+    const isIstanbul = false; // Istanbul is completely removed
     const cityName = isAnkara ? "Ankara" : (isIstanbul ? "İstanbul" : ilce.name);
 
     return (
@@ -244,7 +244,7 @@ export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, di
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                             {neighborhoodsByDistrict[ilce.slug].map((mahalle, i) => {
-                                const isIstanbul = istanbulIlceleri.some(item => item.slug === ilce.slug);
+                                const isIstanbul = false;
                                 const baseUrl = isIstanbul ? "/islemler/istanbul" : "/islemler/ankara";
                                 return (
                                     <Link href={`${baseUrl}/${ilce.slug}/${mahalle.slug}`} key={mahalle.slug} className="block group">
