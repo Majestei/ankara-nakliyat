@@ -4,58 +4,58 @@ import { neighborhoodsByDistrict } from '@/data/neighborhoodData';
 import makalelerData from '@/data/makalelerData.json';
 import blogDataGen from '@/data/blogDataGen.json';
 
-// Constants
 const BASE_URL = 'https://ankaraozdemirnakliyat.com';
-const CHUNK_SIZE = 2500;
-
-// Calculate total URLs
-const staticUrls = [
-  '/', '/hakkimizda', '/iletisim', '/galeri', '/referanslar', '/sss',
-  '/hizmetler', '/evden-eve-nakliyat', '/blog', '/makaleler',
-  '/gizlilik-politikasi', '/kullanim-sartlari', '/kvkk'
-];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const urls: string[] = [...staticUrls];
+    const urls: MetadataRoute.Sitemap = [];
+    const today = new Date().toISOString();
 
-    hizmetler.forEach(h => urls.push(`/hizmetler/${h.id}`));
+    const staticUrls = [
+      '/', '/hakkimizda', '/iletisim', '/galeri', '/referanslar', '/sss',
+      '/hizmetler', '/evden-eve-nakliyat', '/blog', '/makaleler',
+      '/gizlilik-politikasi', '/kullanim-sartlari', '/kvkk'
+    ];
 
-    ankaraIlceleri.forEach(i => urls.push(`/islemler/ankara/${i.slug}`));
-    istanbulIlceleri.forEach(i => urls.push(`/islemler/istanbul/${i.slug}`));
+    staticUrls.forEach(url => {
+        urls.push({
+            url: `${BASE_URL}${url}`,
+            lastModified: today,
+            changeFrequency: 'weekly',
+            priority: url === '/' ? 1.0 : 0.8
+        });
+    });
+
+    hizmetler.forEach(h => {
+        urls.push({
+            url: `${BASE_URL}/hizmetler/${h.id}`,
+            lastModified: today,
+            changeFrequency: 'weekly',
+            priority: 0.8
+        });
+    });
 
     const ilceHizmetSlugs = ["evden-eve-nakliyat", "ofis-tasima", "asansorlu-tasima", "parca-esya-tasima", "esya-depolama", "sehir-ici-nakliyat", "sigortali-tasima", "nakliyat-fiyatlari"];
     
-    // Ankara: full coverage (districts, services, neighborhoods)
     ankaraIlceleri.forEach(ilce => {
-        ilceHizmetSlugs.forEach(h => urls.push(`/islemler/ankara/${ilce.slug}/${h}`));
-        (neighborhoodsByDistrict[ilce.slug] || []).forEach(m => urls.push(`/islemler/ankara/${ilce.slug}/${m.slug}`));
-    });
-
-    // Istanbul: high-level district & service coverage only (pruned neighborhoods)
-        ilceHizmetSlugs.forEach(h => urls.push({
-            url: `${BASE_URL}/islemler/ankara/${ilce.slug}/${h}`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.7
-        }));
-        (neighborhoodsByDistrict[ilce.slug] || []).forEach(m => urls.push({
-            url: `${BASE_URL}/islemler/ankara/${ilce.slug}/${m.slug}`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.7
-        }));
+        urls.push({ url: `${BASE_URL}/islemler/ankara/${ilce.slug}`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 });
+        
+        ilceHizmetSlugs.forEach(h => {
+            urls.push({ url: `${BASE_URL}/islemler/ankara/${ilce.slug}/${h}`, lastModified: today, changeFrequency: 'weekly', priority: 0.7 });
+        });
+        
+        const neighborhoods = neighborhoodsByDistrict[ilce.slug] || [];
+        neighborhoods.forEach(m => {
+            urls.push({ url: `${BASE_URL}/islemler/ankara/${ilce.slug}/${m.slug}`, lastModified: today, changeFrequency: 'weekly', priority: 0.6 });
+        });
     });
 
     istanbulIlceleri.forEach(ilce => {
-        ilceHizmetSlugs.forEach(h => urls.push({
-            url: `${BASE_URL}/islemler/istanbul/${ilce.slug}/${h}`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.7
-        }));
+        urls.push({ url: `${BASE_URL}/islemler/istanbul/${ilce.slug}`, lastModified: today, changeFrequency: 'weekly', priority: 0.7 });
+        
+        ilceHizmetSlugs.forEach(h => {
+            urls.push({ url: `${BASE_URL}/islemler/istanbul/${ilce.slug}/${h}`, lastModified: today, changeFrequency: 'weekly', priority: 0.6 });
+        });
     });
-
-    const today = new Date().toISOString();
 
     if (Array.isArray(blogDataGen)) {
       blogDataGen.slice(0, 50).forEach((b: any) => {

@@ -151,8 +151,8 @@ export default async function MakaleDetail({ params }: { params: { slug: string 
                     <span className="text-[#8892B0] text-sm font-mono tracking-widest">
                         {new Date(post.date).toLocaleDateString('tr-TR')}
                     </span>
-                    <span className="text-white/20">â€¢</span>
-                    <span className="text-[#8892B0] text-sm font-mono tracking-widest">{post.readTime} okuma</span>
+                    <span className="text-white/20">•</span>
+                    <span className="text-[#8892B0] text-sm font-mono tracking-widest">{(post as any).readTime || '3 dk'} okuma</span>
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-[1.1] tracking-tight mb-8">
@@ -218,7 +218,7 @@ export default async function MakaleDetail({ params }: { params: { slug: string 
                 {/* Premium Tags Area */}
                 <div className="mt-20 pt-10 border-t border-white/10">
                     <div className="flex flex-wrap gap-3">
-                        {post.tags && post.tags.map((tag: string, i: number) => (
+                        {(post as any).tags && (post as any).tags.map((tag: string, i: number) => (
                             <span key={i} className="bg-white/5 backdrop-blur-md text-[#E2E8F0] px-6 py-3 rounded-2xl text-[10px] font-bold uppercase tracking-wider hover:bg-[#F5B913] hover:text-black transition-all duration-300 cursor-default border border-white/10 shadow-sm hover:shadow-[0_5px_15px_rgba(245,185,19,0.3)] hover:-translate-y-1">
                                 #{tag}
                             </span>
