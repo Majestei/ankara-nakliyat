@@ -31,59 +31,6 @@ const faqJsonLd = {
     })),
 };
 
-// AggregateRating JSON-LD Schema
-const reviewJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "MovingCompany",
-    "@id": "https://ankaraozdemirnakliyat.com/#organization",
-    name: "Ankara Özdemir Nakliyat",
-    image: "https://ankaraozdemirnakliyat.com/og-image.jpg",
-    url: "https://ankaraozdemirnakliyat.com/",
-    telephone: firmaBilgileri.phone.replace(/\s/g, ""),
-    address: {
-        "@type": "PostalAddress",
-        streetAddress: firmaBilgileri.address,
-        addressLocality: "Sincan",
-        addressRegion: "Ankara",
-        postalCode: "06420",
-        addressCountry: "TR",
-    },
-    aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        bestRating: "5",
-        worstRating: "1",
-        ratingCount: "1250",
-        reviewCount: "1250",
-    },
-    review: musterıYorumlari.slice(0, 5).map((yorum) => ({
-        "@type": "Review",
-        itemReviewed: {
-            "@type": "MovingCompany",
-            name: "Ankara Özdemir Nakliyat",
-            image: "https://ankaraozdemirnakliyat.com/og-image.jpg",
-            telephone: "05456568103",
-            priceRange: "$$",
-            address: {
-                "@type": "PostalAddress",
-                addressLocality: "Ankara",
-                addressCountry: "TR"
-            }
-        },
-        reviewRating: {
-            "@type": "Rating",
-            ratingValue: String(yorum.rating),
-            bestRating: "5",
-            worstRating: "1"
-        },
-        author: {
-            "@type": "Person",
-            name: yorum.name,
-        },
-        reviewBody: yorum.comment,
-    })),
-};
-
 export default function HomePage() {
     return (
         <>
@@ -91,10 +38,6 @@ export default function HomePage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }}
             />
 
             <HeroSection phone={firmaBilgileri.phone} stats={istatistikler} />

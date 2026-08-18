@@ -23,47 +23,12 @@ export const metadata: Metadata = {
 };
 
 export default function ReferanslarPage() {
-    const reviewJsonLd = {
-        "@context": "https://schema.org",
-        "@type": "MovingCompany",
-        "@id": "https://ankaraozdemirnakliyat.com/#organization",
-        name: "Ankara Özdemir Nakliyat",
-        url: "https://ankaraozdemirnakliyat.com/",
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            bestRating: "5",
-            worstRating: "1",
-            ratingCount: "1250",
-            reviewCount: "1250",
-        },
-        review: musterıYorumlari.map((yorum) => ({
-            "@type": "Review",
-            itemReviewed: {
-                "@type": "MovingCompany",
-                name: "Ankara Özdemir Nakliyat",
-                image: "https://ankaraozdemirnakliyat.com/og-image.jpg",
-                telephone: "05456568103",
-                priceRange: "$$",
-                address: {
-                    "@type": "PostalAddress",
-                    addressLocality: "Ankara",
-                    addressCountry: "TR"
-                }
-            },
-            reviewRating: { "@type": "Rating", ratingValue: String(yorum.rating), bestRating: "5", worstRating: "1" },
-            author: { "@type": "Person", name: yorum.name },
-            reviewBody: yorum.comment,
-        })),
-    };
-
     return (
         <>
             <BreadcrumbSchema items={[
                 { name: "Ana Sayfa", href: "/" },
                 { name: "Referanslar", href: "/referanslar" },
             ]} />
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewJsonLd) }} />
 
             {/* Hero */}
             <section className="bg-slate-50 border-b border-slate-200 py-20 md:py-28 relative overflow-hidden">
