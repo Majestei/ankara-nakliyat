@@ -84,11 +84,6 @@ export default function AnkaraIlcePage({ params }: Props) {
             containedInPlace: { "@type": "State", name: "Ankara" },
         },
         priceRange: "$$",
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "1250",
-        },
         hasOfferCatalog: {
             "@type": "OfferCatalog",
             name: `${ilce.name} Nakliyat Hizmetleri`,

@@ -198,14 +198,6 @@ const jsonLd = {
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Nakliyat Sigortası", description: "Tam kapsamlı nakliyat sigortası" } },
         ],
     },
-    aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        bestRating: "5",
-        worstRating: "1",
-        ratingCount: "1250",
-        reviewCount: "1250",
-    },
     slogan: "Ankara'da Nakliyat Denince Akla İlk Gelen Firma",
 };
 
