@@ -3,9 +3,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 import makalelerData from "@/data/makalelerData.json";
 
-// Bu fonksiyon Next.js'in 1500 makaleyi derleme aşamasında (build time) statik olarak oluşturmasını sağlar
 export async function generateStaticParams() {
-    return makalelerData.slice(0, 100).map((makale) => ({
+    return makalelerData.map((makale) => ({
         slug: makale.slug,
     }));
 }
