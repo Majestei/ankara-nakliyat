@@ -1,9 +1,9 @@
-import { permanentRedirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import Link from "next/link";
 import makalelerData from "@/data/makalelerData.json";
 
-// Bu fonksiyon Next.js'in 1500 makaleyi derleme aÅŸamasÄ±nda (build time) statik olarak oluÅŸturmasÄ±nÄ± saÄŸlar
+// Bu fonksiyon Next.js'in 1500 makaleyi derleme aşamasında (build time) statik olarak oluşturmasını sağlar
 export async function generateStaticParams() {
     return makalelerData.slice(0, 100).map((makale) => ({
         slug: makale.slug,
@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
     const { slug } = await params;
     const post = makalelerData.find((m) => m.slug === slug);
-    if (!post) return { title: "BulunamadÄ±" };
+    if (!post) return { title: "Bulunamadı" };
 
     return {
         title: `🏆 ${post.title} | %20 İndirimli & Sigortalı ✅`,
@@ -40,7 +40,7 @@ export default async function MakaleDetail({ params }: { params: { slug: string 
     const post = makalelerData.find((m) => m.slug === slug);
 
     if (!post) {
-        permanentRedirect('/makaleler');
+        notFound();
     }
 
     return (

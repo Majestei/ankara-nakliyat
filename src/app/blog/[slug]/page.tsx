@@ -1,33 +1,37 @@
 import { Metadata } from "next";
-import { permanentRedirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { blogPosts } from "@/data/blogData";
 import BlogPostClient from "@/components/BlogPostClient";
 
 interface Props {
-    params: { slug: string };
+    params: {
+        slug: string;
+    };
 }
 
 export async function generateStaticParams() {
-    return blogPosts.slice(0, 100).map((post) => ({ slug: post.slug }));
+    return blogPosts.map((post) => ({
+        slug: post.slug,
+    }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const post = blogPosts.find((p) => p.slug === params.slug);
     if (!post) return {};
+
     return {
-        title: `✅ ${post.title} | En İyi Nakliyat Tavsiyeleri 🚀`,
-        description: `📦 ${post.excerpt} | Evden eve nakliyat hakkında bilmeniz gereken her şey ve profesyonel taşıma rehberi.`,
+        title: `${post.title} | Ankara Özdemir Nakliyat`,
+        description: post.excerpt,
         alternates: {
             canonical: `https://ankaraozdemirnakliyat.com/blog/${post.slug}`,
         },
         openGraph: {
-            title: `✅ ${post.title} | En İyi Nakliyat Tavsiyeleri 🚀`,
-            description: `📦 ${post.excerpt} | Evden eve nakliyat hakkında bilmeniz gereken her şey ve profesyonel taşıma rehberi.`,
+            title: post.title,
+            description: post.excerpt,
+            url: `https://ankaraozdemirnakliyat.com/blog/${post.slug}`,
             type: "article",
             publishedTime: post.date,
-            tags: post.tags,
-            url: `https://ankaraozdemirnakliyat.com/blog/${post.slug}`,
-            images: [{ url: "/og-image.jpg" }]
+            images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: post.title }],
         },
         twitter: {
             card: "summary_large_image",
@@ -40,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default function BlogPostPage({ params }: Props) {
     const post = blogPosts.find((p) => p.slug === params.slug);
-    if (!post) permanentRedirect('/blog');
+    if (!post) notFound();
 
     const relatedPosts = blogPosts.filter((p) => p.id !== post.id && p.category === post.category).slice(0, 3);
 

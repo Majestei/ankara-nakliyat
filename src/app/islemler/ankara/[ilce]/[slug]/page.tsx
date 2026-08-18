@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { permanentRedirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { ankaraIlceleri, firmaBilgileri } from "@/data/siteData";
 import { neighborhoodsByDistrict } from "@/data/neighborhoodData";
 import { IconPhone, IconCheck, IconMapPin } from "@/components/Icons";
@@ -167,7 +167,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default function CombinedIlceSubPage({ params }: Props) {
     const ilce = ankaraIlceleri.find((i) => i.slug === params.ilce);
-    if (!ilce) permanentRedirect('/islemler');
+    if (!ilce) notFound();
 
     // Check if it's a hizmet
     const hizmet = ilceHizmetler.find((h) => h.slug === params.slug);
@@ -176,7 +176,7 @@ export default function CombinedIlceSubPage({ params }: Props) {
     const mahalleler = neighborhoodsByDistrict[ilce.slug] || [];
     const mahalle = mahalleler.find(m => m.slug === params.slug);
 
-    if (!hizmet && !mahalle) permanentRedirect(`/islemler/ankara/${params.ilce}`);
+    if (!hizmet && !mahalle) notFound();
 
     // If it's a mahalle, return the MahalleClient
     if (mahalle) {
