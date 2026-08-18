@@ -39,7 +39,19 @@ export default function ReferanslarPage() {
         },
         review: musterıYorumlari.map((yorum) => ({
             "@type": "Review",
-            reviewRating: { "@type": "Rating", ratingValue: String(yorum.rating), bestRating: "5" },
+            itemReviewed: {
+                "@type": "MovingCompany",
+                name: "Ankara Özdemir Nakliyat",
+                image: "https://ankaraozdemirnakliyat.com/og-image.jpg",
+                telephone: "05456568103",
+                priceRange: "$$",
+                address: {
+                    "@type": "PostalAddress",
+                    addressLocality: "Ankara",
+                    addressCountry: "TR"
+                }
+            },
+            reviewRating: { "@type": "Rating", ratingValue: String(yorum.rating), bestRating: "5", worstRating: "1" },
             author: { "@type": "Person", name: yorum.name },
             reviewBody: yorum.comment,
         })),

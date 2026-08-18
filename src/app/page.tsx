@@ -56,12 +56,25 @@ const reviewJsonLd = {
         ratingCount: "1250",
         reviewCount: "1250",
     },
-    review: musterıYorumlari.slice(0, 3).map((yorum) => ({
+    review: musterıYorumlari.slice(0, 5).map((yorum) => ({
         "@type": "Review",
+        itemReviewed: {
+            "@type": "MovingCompany",
+            name: "Ankara Özdemir Nakliyat",
+            image: "https://ankaraozdemirnakliyat.com/og-image.jpg",
+            telephone: "05456568103",
+            priceRange: "$$",
+            address: {
+                "@type": "PostalAddress",
+                addressLocality: "Ankara",
+                addressCountry: "TR"
+            }
+        },
         reviewRating: {
             "@type": "Rating",
             ratingValue: String(yorum.rating),
             bestRating: "5",
+            worstRating: "1"
         },
         author: {
             "@type": "Person",

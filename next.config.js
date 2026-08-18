@@ -17,16 +17,6 @@ const nextConfig = {
                 source: '/hizmetler/evden-eve-nakliyat',
                 destination: '/evden-eve-nakliyat',
                 permanent: true,
-            },
-            {
-                source: '/islemler/istanbul/:path*',
-                destination: '/islemler',
-                permanent: true,
-            },
-            {
-                source: '/islemler/sancaktepe/:path*',
-                destination: '/islemler', // Redirect obsolete Istanbul links
-                permanent: true,
             }
         ];
     },
