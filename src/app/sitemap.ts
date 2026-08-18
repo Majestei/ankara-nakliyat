@@ -51,7 +51,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
 
     if (Array.isArray(blogDataGen)) {
-      blogDataGen.slice(0, 50).forEach((b: any) => {
+      blogDataGen.forEach((b: any) => {
         urls.push({
           url: `${BASE_URL}/blog/${b.slug}`,
           lastModified: b.date || today,
@@ -62,7 +62,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
 
     if (Array.isArray(makalelerData)) {
-      makalelerData.slice(0, 50).forEach((m: any) => {
+      makalelerData.forEach((m: any) => {
         urls.push({
           url: `${BASE_URL}/makaleler/${m.slug}`,
           lastModified: m.date || today,
