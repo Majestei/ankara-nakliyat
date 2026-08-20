@@ -54,7 +54,7 @@ const config: Config = {
             fontFamily: {
                 sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
                 heading: ['var(--font-poppins)', 'Poppins', 'system-ui', 'sans-serif'],
-                serif: ['var(--font-playfair)', 'Playfair Display', 'serif'],
+                serif: ['var(--font-poppins)', 'Poppins', 'Georgia', 'serif'],
             },
             animation: {
                 'fade-in': 'fadeIn 0.5s ease-in-out',

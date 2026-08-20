@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     openGraph: {
         type: "website",
         locale: "tr_TR",
-        url: "https://ankaraozdemirnakliyat.com/",
+        url: "https://ankaraozdemirnakliyat.com",
         siteName: "Ankara Özdemir Nakliyat",
         title: "Ankara Özdemir Nakliyat | Sigortalı Evden Eve Nakliyat",
         description:
@@ -96,7 +96,7 @@ const jsonLd = {
     name: "Ankara Özdemir Nakliyat",
     alternateName: "Ankara Özdemir - Profesyonel Evden Eve Taşımacılık",
     description: "Ankara evden eve nakliyat, şehirler arası nakliyat, ofis taşıma ve depolama hizmetleri. 15+ yıllık deneyim, sigortalı taşımacılık.",
-    url: "https://ankaraozdemirnakliyat.com/",
+    url: "https://ankaraozdemirnakliyat.com",
     telephone: firmaBilgileri.phone.replace(/\s+/g, ''),
     email: firmaBilgileri.email,
     foundingDate: "2009",
@@ -197,7 +197,7 @@ const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": "https://ankaraozdemirnakliyat.com/#website",
-    url: "https://ankaraozdemirnakliyat.com/",
+    url: "https://ankaraozdemirnakliyat.com",
     name: "Ankara Özdemir Nakliyat",
     description: "Ankara evden eve nakliyat, şehirler arası nakliyat, ofis taşıma hizmetleri",
     publisher: {

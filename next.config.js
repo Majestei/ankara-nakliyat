@@ -17,6 +17,11 @@ const nextConfig = {
                 source: '/hizmetler/evden-eve-nakliyat',
                 destination: '/evden-eve-nakliyat',
                 permanent: true,
+            },
+            {
+                source: '/hizmetler/sigorta',
+                destination: '/hizmetler/nakliyat-sigortasi',
+                permanent: true,
             }
         ];
     },
