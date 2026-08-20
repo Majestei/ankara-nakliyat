@@ -96,6 +96,7 @@ function getServiceIcon(id: string) {
         case "asansorlu-tasima": return <IconCog className={cls} />;
         case "depolama": return <IconShield className={cls} />;
         case "paketleme": return <IconBox className={cls} />;
+        case "nakliyat-sigortasi":
         case "sigorta": return <IconShield className={cls} />;
         case "uluslararasi-tasimacilik": return <IconGlobe className={cls} />;
         default: return <IconTruck className={cls} />;

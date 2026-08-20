@@ -24,8 +24,9 @@ export default function WhatsAppSticky() {
         };
     }, []);
 
-    const phoneClean = firmaBilgileri.phone.replace(/\s/g, "");
-    const whatsappUrl = `https://wa.me/9${phoneClean}?text=${encodeURIComponent("Merhaba, nakliyat teklifi almak istiyorum.")}`;
+    const phoneClean = firmaBilgileri.phone.replace(/\D/g, "");
+    const whatsappNumber = phoneClean.startsWith("0") ? `90${phoneClean.slice(1)}` : (phoneClean.startsWith("90") ? phoneClean : `90${phoneClean}`);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Merhaba, nakliyat teklifi almak istiyorum.")}`;
 
     return (
         <>

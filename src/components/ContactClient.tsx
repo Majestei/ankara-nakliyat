@@ -309,15 +309,15 @@ export default function ContactClient() {
                                 <MagneticPod className="p-8 md:p-10 bg-white/5 border border-white/10 rounded-3xl md:rounded-[4rem] group hover:bg-primary-500 transition-all duration-700 shadow-2xl backdrop-blur-xl">
                                     <IconPhone className="w-10 h-10 md:w-12 md:h-12 text-primary-500 group-hover:text-white mb-8 md:mb-10 transition-transform duration-500 group-hover:scale-110" />
                                     <h4 className="text-[10px] font-black text-white/20 uppercase tracking-widest mb-2 group-hover:text-white/60">Operasyon Hattı</h4>
-                                    <div className="flex flex-col">
-                                        <p className="text-xl md:text-2xl font-black text-white">{firmaBilgileri.phone}</p>
-                                        <p className="text-xl md:text-2xl font-black text-white">{firmaBilgileri.phoneSecondary}</p>
+                                    <div className="flex flex-col gap-1">
+                                        <a href={`tel:${firmaBilgileri.phone.replace(/\s/g, "")}`} className="text-xl md:text-2xl font-black text-white hover:underline">{firmaBilgileri.phone}</a>
+                                        <a href={`tel:${firmaBilgileri.phoneSecondary.replace(/\s/g, "")}`} className="text-xl md:text-2xl font-black text-white hover:underline">{firmaBilgileri.phoneSecondary}</a>
                                     </div>
                                 </MagneticPod>
                                 <MagneticPod className="p-8 md:p-10 bg-white/5 border border-white/10 rounded-3xl md:rounded-[4rem] group hover:bg-primary-500 transition-all duration-700 shadow-2xl backdrop-blur-xl">
                                     <IconMail className="w-10 h-10 md:w-12 md:h-12 text-primary-500 group-hover:text-white mb-8 md:mb-10 transition-transform duration-500 group-hover:scale-110" />
                                     <h4 className="text-[10px] font-black text-white/20 uppercase tracking-widest mb-2 group-hover:text-white/60">Dijital Yazışma</h4>
-                                    <p className="text-xs md:text-sm font-black text-white break-all">{firmaBilgileri.email}</p>
+                                    <a href={`mailto:${firmaBilgileri.email}`} className="text-xs md:text-sm font-black text-white break-all hover:underline">{firmaBilgileri.email}</a>
                                 </MagneticPod>
                             </div>
                         </motion.div>
@@ -436,8 +436,8 @@ export default function ContactClient() {
                                         </div>
                                         <div>
                                             <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Telefon</p>
-                                            <p className="text-sm font-bold text-slate-700">{firmaBilgileri.phone}</p>
-                                            <p className="text-sm font-bold text-slate-700">{firmaBilgileri.phoneSecondary}</p>
+                                            <a href={`tel:${firmaBilgileri.phone.replace(/\s/g, "")}`} className="text-sm font-bold text-slate-700 hover:text-primary-600 block">{firmaBilgileri.phone}</a>
+                                            <a href={`tel:${firmaBilgileri.phoneSecondary.replace(/\s/g, "")}`} className="text-sm font-bold text-slate-700 hover:text-primary-600 block">{firmaBilgileri.phoneSecondary}</a>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">

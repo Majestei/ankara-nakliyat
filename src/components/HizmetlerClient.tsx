@@ -14,13 +14,14 @@ import { AnimatePresence } from "framer-motion";
 
 const serviceImages: Record<string, string> = {
     "evden-eve-nakliyat": "/images/hizmetler/evden-eve-nakliyat.webp",
-    "sehir-ici-nakliyat": "/images/hizmetler/sehir-ici-nakliya.webp",
+    "sehir-ici-nakliyat": "/images/hizmetler/sehir-ici-nakliyat.webp",
     "sehirler-arasi-nakliyat": "/images/hizmetler/sehirler-arasi-nakliyat.webp",
     "ofis-tasima": "/images/hizmetler/ofis-tasima.webp",
     "parca-esya-tasima": "/images/hizmetler/parca-esya-tasima.webp",
     "asansorlu-tasima": "/images/hizmetler/asansorlu-tasima.webp",
     "depolama": "/images/hizmetler/paketleme.webp",
     "paketleme": "/images/hizmetler/paketleme.webp",
+    "nakliyat-sigortasi": "/images/hizmetler/sigorta.webp",
     "sigorta": "/images/hizmetler/sigorta.webp",
 };
 
@@ -35,6 +36,7 @@ function getServiceIcon(id: string) {
         case "asansorlu-tasima": return <IconCog className={cls} />;
         case "depolama": return <IconShield className={cls} />;
         case "paketleme": return <IconBox className={cls} />;
+        case "nakliyat-sigortasi":
         case "sigorta": return <IconShield className={cls} />;
         default: return <IconTruck className={cls} />;
     }
@@ -91,6 +93,7 @@ function getServiceDetails(id: string) {
             return { tag: "Dikey Lojistik Çözümü", badgeTitle: "15. Kat Erişimi", badgeDesc: "Dar Merdivenlere Modern Çözüm" };
         case "paketleme":
             return { tag: "Sıfır Hasar Politikası", badgeTitle: "Ultra Koruma", badgeDesc: "Profesyonel Ambalaj Teknikleri" };
+        case "nakliyat-sigortasi":
         case "sigorta":
             return { tag: "Maddi Risk Koruması", badgeTitle: "Kapsamlı Poliçe", badgeDesc: "Taşıma Boyunca %100 Teminat" };
         default:

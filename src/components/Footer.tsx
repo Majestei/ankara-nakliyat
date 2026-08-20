@@ -216,7 +216,7 @@ export default function Footer() {
             {/* Floating Contact Buttons - Desktop Only */}
             <div className="hidden md:flex fixed bottom-6 right-6 flex-col gap-3 z-[150]">
                 <a
-                    href={`https://wa.me/${firmaBilgileri.phone.replace(/\s/g, "")}`}
+                    href={`https://wa.me/${firmaBilgileri.phone.replace(/\D/g, "").replace(/^0/, "90")}`}
                     target="_blank"
                     rel="noopener noreferrer nofollow"
                     className="w-14 h-14 bg-[#25D366] text-white rounded-2xl flex items-center justify-center shadow-2xl shadow-[#25D366]/30 hover:scale-110 hover:-translate-y-1 transition-all"

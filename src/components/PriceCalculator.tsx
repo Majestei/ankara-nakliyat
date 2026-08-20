@@ -231,7 +231,7 @@ export default function PriceCalculator() {
                                     <motion.a 
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
-                                        href="https://wa.me/9005456568103" 
+                                        href="https://wa.me/905456568103" 
                                         target="_blank"
                                         rel="noopener noreferrer nofollow"
                                         className="w-full py-7 bg-white text-primary-600 rounded-2xl font-black text-sm uppercase tracking-[0.3em] flex items-center justify-center gap-4 shadow-xl hover:bg-slate-50 transition-colors"
