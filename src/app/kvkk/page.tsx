@@ -3,9 +3,20 @@ import Link from "next/link";
 import { firmaBilgileri } from "@/data/siteData";
 
 export const metadata: Metadata = {
-    title: "KVKK Aydınlatma Metni | Ankara Özdemir Nakliyat",
+    title: "KVKK Aydınlatma Metni",
     description: "Ankara Özdemir Nakliyat KVKK aydınlatma metni. 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamındaki haklarınız.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/kvkk" },
+    openGraph: {
+        title: "KVKK Aydınlatma Metni",
+        description: "Ankara Özdemir Nakliyat KVKK aydınlatma metni. 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamındaki haklarınız.",
+        url: "https://ankaraozdemirnakliyat.com/kvkk",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "KVKK Aydınlatma Metni",
+        description: "Ankara Özdemir Nakliyat KVKK aydınlatma metni. 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamındaki haklarınız.",
+    }
 };
 
 export default function KvkkPage() {

@@ -5,20 +5,20 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { firmaBilgileri } from "@/data/siteData";
 
 export const metadata: Metadata = {
-    title: "İletişim | Ankara Özdemir Nakliyat - Profesyonel Nakliye Teklifi Alın",
-    description: `Ankara nakliyat iletişim ve ücretsiz teklif formu. Evden eve nakliyat, asansörlü taşıma ve şehirler arası taşımacılık için bize ulaşın. ☎ ${firmaBilgileri.phone}`,
+    title: "İletişim - Profesyonel Nakliye Teklifi Alın",
+    description: "Ankara nakliyat iletişim ve ücretsiz teklif formu. Evden eve nakliyat, asansörlü taşıma ve şehirler arası taşımacılık için bize ulaşın.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/iletisim" },
     openGraph: {
-        title: "İletişim | Ankara Özdemir Nakliyat - Profesyonel Nakliye Teklifi Alın",
-        description: `Ankara nakliyat iletişim ve ücretsiz teklif formu. Evden eve nakliyat, asansörlü taşıma ve şehirler arası taşımacılık için bize ulaşın.`,
+        title: "İletişim - Profesyonel Nakliye Teklifi Alın",
+        description: "Ankara nakliyat iletişim ve ücretsiz teklif formu. Evden eve nakliyat, asansörlü taşıma ve şehirler arası taşımacılık için bize ulaşın.",
         url: "https://ankaraozdemirnakliyat.com/iletisim",
         type: "website",
         images: [{ url: "https://ankaraozdemirnakliyat.com/og-image.jpg" }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "İletişim | Ankara Özdemir Nakliyat - Profesyonel Nakliye Teklifi Alın",
-        description: `Ankara nakliyat iletişim ve ücretsiz teklif formu. Evden eve nakliyat, asansörlü taşıma ve şehirler arası taşımacılık için bize ulaşın.`,
+        title: "İletişim - Profesyonel Nakliye Teklifi Alın",
+        description: "Ankara nakliyat iletişim ve ücretsiz teklif formu. Evden eve nakliyat, asansörlü taşıma ve şehirler arası taşımacılık için bize ulaşın.",
         images: ["https://ankaraozdemirnakliyat.com/og-image.jpg"],
     }
 };

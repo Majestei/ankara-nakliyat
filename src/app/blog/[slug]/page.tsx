@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!post) return {};
 
     return {
-        title: `${post.title} | Ankara Özdemir Nakliyat`,
+        title: post.title,
         description: post.excerpt,
         alternates: {
             canonical: `https://ankaraozdemirnakliyat.com/blog/${post.slug}`,

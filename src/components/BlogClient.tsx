@@ -261,6 +261,18 @@ export default function BlogClient() {
                 </div>
             </section>
 
+            {/* Tüm Blog Yazıları - SEO */}
+            <section className="mt-16 border-t border-slate-200 pt-8 max-w-[100rem] mx-auto px-6 md:px-12 lg:px-24 pb-16 relative z-10">
+                <h2 className="text-xl font-semibold text-slate-400 mb-4">Tüm Blog Yazıları</h2>
+                <div className="columns-2 md:columns-3 lg:columns-4 gap-2">
+                    {blogPosts.map((post) => (
+                        <Link key={`all-${post.slug}`} href={`/blog/${post.slug}`} className="block text-sm text-slate-500 hover:text-white py-1 break-inside-avoid transition-colors">
+                            {post.title}
+                        </Link>
+                    ))}
+                </div>
+            </section>
+
         </div>
     );
 }

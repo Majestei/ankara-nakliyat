@@ -4,9 +4,20 @@ import Image from "next/image";
 import { firmaBilgileri } from "@/data/siteData";
 
 export const metadata: Metadata = {
-    title: "Uluslararası Evden Eve Nakliyat - Ankara Özdemir",
-    description: "Uluslararası evden eve nakliyat, gümrükleme, zati eşya taşımacılığı ve global lojistik çözümleri hakkında detaylı rehber. Ankara Özdemir güvencesiyle yurtdışına taşının.",
+    title: "Uluslararası Evden Eve Nakliyat",
+    description: "Uluslararası evden eve nakliyat, gümrükleme, zati eşya taşımacılığı ve global lojistik çözümleri. Güvenceyle yurtdışına taşının.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler/uluslararasi-tasimacilik" },
+    openGraph: {
+        title: "Uluslararası Evden Eve Nakliyat",
+        description: "Uluslararası evden eve nakliyat, gümrükleme, zati eşya taşımacılığı ve global lojistik çözümleri. Güvenceyle yurtdışına taşının.",
+        url: "https://ankaraozdemirnakliyat.com/hizmetler/uluslararasi-tasimacilik",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Uluslararası Evden Eve Nakliyat",
+        description: "Uluslararası evden eve nakliyat, gümrükleme, zati eşya taşımacılığı ve global lojistik çözümleri. Güvenceyle yurtdışına taşının.",
+    }
 };
 
 export default function UluslararasiTasimacilikPage() {

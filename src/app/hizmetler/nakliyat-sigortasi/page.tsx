@@ -4,10 +4,20 @@ import ServiceSchema from "@/components/ServiceSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Nakliyat Sigortası Ankara | Tam Kapsamlı Eşya Güvencesi",
-    description: "Nakliyat sigortası ile eşyalarınız tam güvende ✓ Tam kapsamlı koruma ✓ Hızlı hasar tespit ✓ Adil tazminat. Sigortalı taşımacılık için arayın! ☎ 0545 656 81 03",
+    title: "Nakliyat Sigortası Ankara - Tam Kapsamlı Güvence",
+    description: "Nakliyat sigortası ile eşyalarınız güvende. Tam kapsamlı koruma, hızlı hasar tespit, adil tazminat. Sigortalı taşımacılık için arayın!",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler/nakliyat-sigortasi" },
-    openGraph: { title: "Nakliyat Sigortası - Ankara Özdemir", description: "Tam kapsamlı nakliyat sigortası ile eşyalarınızı güvence altına alın.", url: "https://ankaraozdemirnakliyat.com/hizmetler/nakliyat-sigortasi/", type: "website" },
+    openGraph: {
+        title: "Nakliyat Sigortası Ankara - Tam Kapsamlı Güvence",
+        description: "Nakliyat sigortası ile eşyalarınız güvende. Tam kapsamlı koruma, hızlı hasar tespit, adil tazminat. Sigortalı taşımacılık için arayın!",
+        url: "https://ankaraozdemirnakliyat.com/hizmetler/nakliyat-sigortasi",
+        type: "website"
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Nakliyat Sigortası Ankara - Tam Kapsamlı Güvence",
+        description: "Nakliyat sigortası ile eşyalarınız güvende. Tam kapsamlı koruma, hızlı hasar tespit, adil tazminat. Sigortalı taşımacılık için arayın!"
+    }
 };
 
 export default function NakliyatSigortasiPage() {

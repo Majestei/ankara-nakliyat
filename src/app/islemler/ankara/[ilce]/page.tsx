@@ -11,8 +11,8 @@ export async function generateStaticParams() { return ankaraIlceleri.map((ilce) 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const ilce = ankaraIlceleri.find((i) => i.slug === params.ilce);
     if (!ilce) return {};
-    const title = `🥇 ${ilce.name} Evden Eve Nakliyat | %20 İndirimli ve Sigortalı 🚀`;
-    const description = `📦 ${ilce.name} bölgesinde güvenilir nakliyat firması mı arıyorsunuz? Kırılma garantili, asansörlü ve marangozlu taşıma hizmeti ile tanışın. ☎ Ücretsiz fiyat alın!`;
+    const title = `${ilce.name} Evden Eve Nakliyat | Sigortalı Taşıma`;
+    const description = `${ilce.name} bölgesinde güvenilir nakliyat firması mı arıyorsunuz? Kırılma garantili, asansörlü ve marangozlu taşıma hizmeti ile tanışın. Ücretsiz fiyat alın!`;
     const url = `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}`;
 
     return {

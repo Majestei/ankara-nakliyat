@@ -239,34 +239,7 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                 </div>
             </section>
 
-            {/* ── KEYWORD GARDEN ── */}
-            <section className="py-24 md:py-40 bg-white">
-                <div className="container-custom">
-                    <div className="text-center mb-16 md:mb-24 space-y-6 md:space-y-8">
-                        <span className="text-primary-500 font-black text-xs uppercase tracking-[0.5em] lg:tracking-[1em] mb-4 block">Popüler Aramalar</span>
-                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-black text-slate-950 leading-none tracking-tighter">
-                            {mahalle.name} <br /> <span className="text-slate-200">İşlem Rehberi.</span>
-                        </h2>
-                    </div>
-                    <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
-                        {[
-                            `${mahalle.name} nakliyat`, `${ilce.name} ${mahalle.name} nakliyat`, `${mahalle.name} evden eve nakliyat`, 
-                            `${mahalle.name} nakliyat fiyatları`, `${mahalle.name} nakliyat firmaları`, `${mahalle.name} ucuz nakliyat`,
-                            `${mahalle.name} ofis taşıma`, `${mahalle.name} asansörlü nakliyat`, `${mahalle.name} eşya taşıma`,
-                            `${ilce.name} ${mahalle.name} evden eve`, `${cityName} ${mahalle.name} nakliyat`, 
-                            `en iyi ${mahalle.name.toLowerCase()} nakliyat firması`
-                        ].map((keyword, i) => (
-                            <motion.span
-                                key={i}
-                                whileHover={{ scale: 1.1, backgroundColor: "#f97316", color: "#fff", borderColor: "#f97316" }}
-                                className="px-6 py-3 bg-slate-50 border border-slate-200 rounded-full text-[10px] font-black uppercase tracking-widest text-slate-500 cursor-default transition-all duration-300"
-                            >
-                                {keyword}
-                            </motion.span>
-                        ))}
-                    </div>
-                </div>
-            </section>
+
 
             {/* ── THE KINETIC HUB (Diğer Mahalleler) ── */}
             <section className="py-24 md:py-40 bg-white border-t border-slate-100">
@@ -291,42 +264,7 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                 </div>
             </section>
 
-            {/* ── TESTIMONIALS SECTION ── */}
-            <section className="py-24 md:py-40 bg-slate-50 overflow-hidden">
-                <div className="container-custom">
-                    <div className="text-center mb-12 md:mb-24 px-4">
-                        <span className="text-primary-500 font-black text-[10px] md:text-xs uppercase tracking-[0.5em] lg:tracking-[1em] mb-4 md:mb-10 block">Müşteri Deneyimi</span>
-                        <h2 className="text-4xl md:text-6xl font-heading font-black text-slate-950 tracking-tighter italic">Referanslarımız.</h2>
-                    </div>
-                    
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-                        {[
-                            { name: "Ayşe K.", comment: `${mahalle.name} bölgesinde asansörlü taşımacılık ile harikalar yarattılar. Eşyalarım hiç zarar görmedi.`, img: "/images/testimonials/selin_demir.webp" },
-                            { name: "Mustafa B.", comment: "Eşyalarım çok özenli paketlendi. Ekip çok güler yüzlü ve profesyoneldi. Kesinlikle tavsiye ederim.", img: "/images/testimonials/ahmet_yilmaz.webp" },
-                            { name: "Kemal Y.", comment: "Fiyat/performans olarak mükemmel. Zamanında gelip, hızlıca işlemi tamamladılar.", img: "/images/testimonials/mehmet_kaya.webp" }
-                        ].map((review, i) => (
-                            <motion.div 
-                                key={i}
-                                whileHover={{ y: -10 }}
-                                className="p-8 lg:p-12 bg-white border border-slate-100 rounded-[2rem] md:rounded-[2.5rem] lg:rounded-[4rem] space-y-6 lg:space-y-8"
-                            >
-                                <div className="flex items-center gap-4 lg:gap-6">
-                                    <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full overflow-hidden border-4 border-slate-50 shadow-xl">
-                                        <Image src={review.img} alt={review.name} width={80} height={80} className="object-cover" />
-                                    </div>
-                                    <div>
-                                        <p className="font-black text-slate-950 text-lg lg:text-xl">{review.name}</p>
-                                        <div className="flex text-primary-500">
-                                            {[1,2,3,4,5].map(s => <IconStar key={s} className="w-3 h-3 lg:w-4 lg:h-4 fill-current" />)}
-                                        </div>
-                                    </div>
-                                </div>
-                                <p className="text-slate-500 text-base md:text-lg font-medium leading-relaxed italic px-2">&ldquo;{review.comment}&rdquo;</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+
 
             {/* ── FINAL SPATIAL CTA ── */}
             <section className="py-24 md:py-40 text-center relative overflow-hidden bg-white">

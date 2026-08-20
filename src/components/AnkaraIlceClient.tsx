@@ -10,6 +10,7 @@ import {
     IconPhone, IconShield, IconMoney, IconTruck, 
     IconBox, IconCog, IconMapPin, IconArrow, IconPlus, IconStar, IconCheck 
 } from "@/components/Icons";
+import { IlceInternalLinks, HizmetInternalLinks } from "@/components/InternalLinks";
 
 // ── SPATIAL UI COMPONENTS ──
 
@@ -76,7 +77,7 @@ function MagneticElement({ children, strength = 0.3, className }: { children: Re
     );
 }
 
-function PodCard({ item, ilceName, index }: { item: any, ilceName: string, index: number }) {
+function PodCard({ item, ilceName, ilceSlug, index }: { item: any, ilceName: string, ilceSlug: string, index: number }) {
     const podRef = useRef<HTMLDivElement>(null);
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
@@ -102,7 +103,8 @@ function PodCard({ item, ilceName, index }: { item: any, ilceName: string, index
             style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
             className="group relative h-[380px] md:h-[450px] bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl md:rounded-[4rem] p-8 md:p-12 hover:bg-white/10 transition-colors duration-500 overflow-hidden flex flex-col justify-between"
         >
-            <div style={{ transform: "translateZ(60px)" }}>
+            <Link href={`/islemler/ankara/${ilceSlug}/${item.id}`} className="absolute inset-0 z-20" aria-label={`${ilceName} ${item.title}`} />
+            <div style={{ transform: "translateZ(60px)" }} className="relative z-10 pointer-events-none">
                 <div className="w-16 h-16 md:w-20 md:h-20 bg-primary-500 rounded-2xl md:rounded-3xl flex items-center justify-center text-white mb-6 md:mb-10 shadow-[0_0_40px_rgba(249,115,22,0.4)]">
                     <IconBox className="w-8 h-8 md:w-10 md:h-10" />
                 </div>
@@ -112,7 +114,7 @@ function PodCard({ item, ilceName, index }: { item: any, ilceName: string, index
                 </h3>
             </div>
             
-            <div style={{ transform: "translateZ(40px)" }}>
+            <div style={{ transform: "translateZ(40px)" }} className="relative z-10 pointer-events-none">
                 <p className="text-white/40 text-lg font-medium leading-relaxed italic mb-8">
                     &ldquo;{ilceName}&apos;da {item.shortDesc.toLowerCase()}&rdquo;
                 </p>
@@ -223,7 +225,7 @@ export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, di
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12">
                         {hizmetler.slice(0, 6).map((hizmet, i) => (
-                            <PodCard key={hizmet.id} item={hizmet} ilceName={ilce.name} index={i} />
+                            <PodCard key={hizmet.id} item={hizmet} ilceName={ilce.name} ilceSlug={ilce.slug} index={i} />
                         ))}
                     </div>
                 </div>
@@ -266,40 +268,7 @@ export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, di
                 </section>
             )}
 
-            {/* ── KEYWORD GARDEN ── */}
-            <section className="py-24 md:py-40 bg-white">
-                <div className="container-custom">
-                    <div className="text-center mb-16 md:mb-24 space-y-6 md:space-y-8">
-                        <span className="text-primary-500 font-black text-xs uppercase tracking-[0.5em] lg:tracking-[1em] mb-4 block">Popüler Aramalar</span>
-                        <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-black text-slate-950 leading-none tracking-tighter">
-                            {ilce.name} <br /> <span className="text-slate-200">İşlem Rehberi.</span>
-                        </h2>
-                    </div>
-                    <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
-                        {[
-                            `${ilce.name} nakliyat`, `${ilce.name} evden eve nakliyat`, `${ilce.name} nakliyat fiyatları`,
-                            `${ilce.name} nakliyat firmaları`, `${ilce.name} nakliyat firması`, `${ilce.name} ucuz nakliyat`,
-                            `${ilce.name} güvenilir nakliyat`, `${ilce.name} ofis taşıma`, `${ilce.name} ev taşıma`,
-                            `${ilce.name} asansörlü nakliyat`, `${ilce.name} asansörlü taşıma`, `${ilce.name} eşya taşıma`,
-                            `${ilce.name} parça eşya taşıma`, `${ilce.name} şehir içi nakliyat`, `${ilce.name} şehirler arası nakliyat`,
-                            `${ilce.name} depolama`, `${ilce.name} paketleme hizmeti`, `${ilce.name} sigortalı nakliyat`,
-                            `${ilce.name} taşımacılık`, `${ilce.name} nakliye`, `${ilce.name} taşıma fiyatları`,
-                            `${ilce.name} ev nakliyat`, `${ilce.name} mobilya taşıma`, `${ilce.name} beyaz eşya taşıma`,
-                            `ankara ${ilce.name.toLowerCase()} nakliyat`, `ankara ${ilce.name.toLowerCase()} evden eve`,
-                            `ankara ${ilce.name.toLowerCase()} taşıma`, `${ilce.name}'da nakliyat firması`,
-                            `${ilce.name} nakliyat telefon`, `en iyi ${ilce.name.toLowerCase()} nakliyat`,
-                        ].map((keyword, i) => (
-                            <motion.span
-                                key={i}
-                                whileHover={{ scale: 1.1, backgroundColor: "#f97316", color: "#fff", borderColor: "#f97316" }}
-                                className="px-6 py-3 bg-slate-50 border border-slate-200 rounded-full text-[10px] font-black uppercase tracking-widest text-slate-500 cursor-default transition-all duration-300"
-                            >
-                                {keyword}
-                            </motion.span>
-                        ))}
-                    </div>
-                </div>
-            </section>
+
 
             {/* ── DIGITAL TERMINAL DASHBOARD ── */}
             <section className="py-24 md:py-40 bg-white rounded-t-[2.5rem] md:rounded-t-[5rem] lg:rounded-[10rem] relative z-10 shadow-[0_-50px_100px_rgba(0,0,0,0.1)]">
@@ -441,6 +410,20 @@ export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, di
                                 <p className="text-slate-500 text-base lg:text-lg font-medium leading-relaxed italic">&ldquo;{review.comment}&rdquo;</p>
                             </motion.div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── INTERNAL LINKS (SEO) ── */}
+            <section className="py-24 bg-white border-t border-slate-100 relative z-10">
+                <div className="container-custom">
+                    <div className="mb-16">
+                        <h3 className="text-2xl md:text-4xl font-heading font-black text-slate-900 mb-8 tracking-tight">Ankara'nın Diğer İlçeleri</h3>
+                        <IlceInternalLinks currentSlug={ilce.slug} maxItems={25} />
+                    </div>
+                    <div>
+                        <h3 className="text-2xl md:text-4xl font-heading font-black text-slate-900 mb-8 tracking-tight">Nakliyat Hizmetlerimiz</h3>
+                        <HizmetInternalLinks />
                     </div>
                 </div>
             </section>

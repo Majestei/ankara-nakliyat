@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Poppins, Playfair_Display } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -17,30 +17,22 @@ const inter = Inter({
 
 const poppins = Poppins({
     subsets: ["latin", "latin-ext"],
-    weight: ["400", "500", "600", "700", "900"],
+    weight: ["400", "600", "700"],
     display: "swap",
     variable: "--font-poppins",
-});
-
-const playfair = Playfair_Display({
-    subsets: ["latin", "latin-ext"],
-    style: ["italic", "normal"],
-    weight: ["400", "600", "700", "900"],
-    display: "swap",
-    variable: "--font-playfair",
 });
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://ankaraozdemirnakliyat.com"),
     title: {
-        default: "🥇 Ankara Özdemir Nakliyat | 20% İndirimli Sigortalı Taşıma 🚀",
+        default: "Ankara Özdemir Nakliyat | Sigortalı Evden Eve Nakliyat",
         template: "%s | Ankara Özdemir Nakliyat",
     },
     alternates: {
-        canonical: "./",
+        canonical: "https://ankaraozdemirnakliyat.com",
     },
     description:
-        "📦 Ankara'da garantili ve asansörlü evden eve nakliyat hizmeti. Kırılmaya karşı sigortalı taşıma, ücretsiz ekspertiz ve uzman kadro. ☎ Hemen Ücretsiz Fiyat Alın!",
+        "Ankara'da garantili ve asansörlü evden eve nakliyat hizmeti. Kırılmaya karşı sigortalı taşıma, ücretsiz ekspertiz ve uzman kadro. Hemen Ücretsiz Fiyat Alın",
     authors: [{ name: "Ankara Özdemir Nakliyat" }],
     creator: "Ankara Özdemir Nakliyat",
     publisher: "Ankara Özdemir Nakliyat",
@@ -60,9 +52,9 @@ export const metadata: Metadata = {
         locale: "tr_TR",
         url: "https://ankaraozdemirnakliyat.com/",
         siteName: "Ankara Özdemir Nakliyat",
-        title: "🥇 Ankara Özdemir Nakliyat | 20% İndirimli Sigortalı Taşıma 🚀",
+        title: "Ankara Özdemir Nakliyat | Sigortalı Evden Eve Nakliyat",
         description:
-            "📦 Ankara'da garantili ve asansörlü evden eve nakliyat hizmeti. Kırılmaya karşı sigortalı taşıma, ücretsiz ekspertiz ve uzman kadro. ☎ Hemen Ücretsiz Fiyat Alın!",
+            "Ankara'da garantili ve asansörlü evden eve nakliyat hizmeti. Kırılmaya karşı sigortalı taşıma, ücretsiz ekspertiz ve uzman kadro. Hemen Ücretsiz Fiyat Alın",
         images: [
             {
                 url: "/og-image.jpg",
@@ -74,8 +66,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "🥇 Ankara Özdemir Nakliyat | 20% İndirimli Sigortalı Taşıma 🚀",
-        description: "📦 Ankara'da garantili ve asansörlü evden eve nakliyat hizmeti. Kırılmaya karşı sigortalı taşıma, ücretsiz ekspertiz ve uzman kadro. ☎ Hemen Ücretsiz Fiyat Alın!",
+        title: "Ankara Özdemir Nakliyat | Sigortalı Evden Eve Nakliyat",
+        description: "Ankara'da garantili ve asansörlü evden eve nakliyat hizmeti. Kırılmaya karşı sigortalı taşıma, ücretsiz ekspertiz ve uzman kadro. Hemen Ücretsiz Fiyat Alın",
         images: ["/og-image.jpg"],
     },
     verification: {
@@ -118,7 +110,7 @@ const jsonLd = {
         streetAddress: firmaBilgileri.address,
         addressLocality: "Sincan",
         addressRegion: "Ankara",
-        postalCode: "06420",
+        postalCode: "06930",
         addressCountry: "TR",
     },
     geo: {
@@ -211,31 +203,7 @@ const websiteJsonLd = {
     publisher: {
         "@id": "https://ankaraozdemirnakliyat.com/#organization",
     },
-    inLanguage: "tr-TR",
-    potentialAction: {
-        "@type": "SearchAction",
-        target: {
-            "@type": "EntryPoint",
-            urlTemplate: "https://ankaraozdemirnakliyat.com/aramasonuclari?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-    }
-};
-
-const siteNavigationJsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-        { "@type": "SiteNavigationElement", name: "Ana Sayfa", url: "https://ankaraozdemirnakliyat.com" },
-        { "@type": "SiteNavigationElement", name: "Hizmetler", url: "https://ankaraozdemirnakliyat.com/hizmetler" },
-        { "@type": "SiteNavigationElement", name: "Evden Eve Nakliyat", url: "https://ankaraozdemirnakliyat.com/evden-eve-nakliyat" },
-        { "@type": "SiteNavigationElement", name: "İşlemler", url: "https://ankaraozdemirnakliyat.com/islemler" },
-        { "@type": "SiteNavigationElement", name: "Galeri", url: "https://ankaraozdemirnakliyat.com/galeri" },
-        { "@type": "SiteNavigationElement", name: "Blog", url: "https://ankaraozdemirnakliyat.com/blog" },
-        { "@type": "SiteNavigationElement", name: "Makaleler", url: "https://ankaraozdemirnakliyat.com/makaleler" },
-        { "@type": "SiteNavigationElement", name: "SSS", url: "https://ankaraozdemirnakliyat.com/sss" },
-        { "@type": "SiteNavigationElement", name: "İletişim", url: "https://ankaraozdemirnakliyat.com/iletisim" },
-        { "@type": "SiteNavigationElement", name: "Hakkımızda", url: "https://ankaraozdemirnakliyat.com/hakkimizda" },
-    ]
+    inLanguage: "tr-TR"
 };
 
 export default function RootLayout({
@@ -244,7 +212,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="tr" className={`${inter.variable} ${poppins.variable} ${playfair.variable}`}>
+        <html lang="tr" className={`${inter.variable} ${poppins.variable}`}>
             <head>
                 <link rel="dns-prefetch" href="https://www.google-analytics.com" />
                 <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
@@ -264,11 +232,8 @@ export default function RootLayout({
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
                 />
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavigationJsonLd) }}
-                />
-                
+            </head>
+            <body className="min-h-screen flex flex-col font-sans overflow-x-hidden bg-slate-50 text-slate-900">
                 {/* Google Tag (gtag.js) */}
                 <Script
                     src={`https://www.googletagmanager.com/gtag/js?id=AW-18174545380`}
@@ -282,8 +247,6 @@ export default function RootLayout({
                         gtag('config', 'AW-18174545380');
                     `}
                 </Script>
-            </head>
-            <body className="min-h-screen flex flex-col font-sans overflow-x-hidden bg-slate-50 text-slate-900">
                 <CustomCursor />
                 <Header />
                 <main className="flex-grow">{children}</main>

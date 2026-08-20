@@ -8,12 +8,13 @@ const BASE_URL = 'https://ankaraozdemirnakliyat.com';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const urls: MetadataRoute.Sitemap = [];
-    const today = new Date().toISOString();
+    const today = '2026-08-18';
 
     const staticUrls = [
       '/', '/hakkimizda', '/iletisim', '/galeri', '/referanslar', '/sss',
       '/hizmetler', '/evden-eve-nakliyat', '/blog', '/makaleler',
-      '/gizlilik-politikasi', '/kullanim-sartlari', '/kvkk'
+      '/gizlilik-politikasi', '/kullanim-sartlari', '/kvkk',
+      '/islemler', '/site-haritasi'
     ];
 
     staticUrls.forEach(url => {

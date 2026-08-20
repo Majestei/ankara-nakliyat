@@ -4,15 +4,19 @@ import { hizmetler } from "@/data/siteData";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Hizmetlerimiz | Ankara Evden Eve Nakliyat & Uluslararası Taşımacılık",
-    description:
-        "Ankara'nın en iyi nakliyat firması Ankara Özdemir'den profesyonel hizmetler: Evden eve nakliyat, asansörlü taşıma, şehirler arası nakliyat ve uluslararası zati eşya taşımacılığı. 15+ yıl deneyim, sigortalı ve garantili çözümler.",
+    title: "Hizmetlerimiz - Ankara Evden Eve Nakliyat",
+    description: "Ankara Özdemir'den profesyonel hizmetler: Evden eve nakliyat, asansörlü taşıma, şehirler arası nakliyat. 15+ yıl deneyim, sigortalı çözümler.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler" },
     openGraph: {
-        title: "Profesyonel Nakliyat Hizmetleri | Ankara Özdemir",
-        description: "Ankara içi ve dışı tüm taşımacılık ihtiyaçlarınızda profesyonel, sigortalı ve asansörlü çözümler.",
+        title: "Hizmetlerimiz - Ankara Evden Eve Nakliyat",
+        description: "Ankara Özdemir'den profesyonel hizmetler: Evden eve nakliyat, asansörlü taşıma, şehirler arası nakliyat. 15+ yıl deneyim, sigortalı çözümler.",
         url: "https://ankaraozdemirnakliyat.com/hizmetler",
         type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Hizmetlerimiz - Ankara Evden Eve Nakliyat",
+        description: "Ankara Özdemir'den profesyonel hizmetler: Evden eve nakliyat, asansörlü taşıma, şehirler arası nakliyat. 15+ yıl deneyim, sigortalı çözümler.",
     }
 };
 

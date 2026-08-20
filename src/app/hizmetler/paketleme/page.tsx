@@ -4,10 +4,20 @@ import ServiceSchema from "@/components/ServiceSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Profesyonel Paketleme Hizmeti Ankara | Güvenli Ambalaj",
-    description: "Ankara profesyonel eşya paketleme hizmeti ✓ Kırılacak eşya koruması ✓ Gardırop kolileri ✓ Elektronik paketleme ✓ Köpük & balonlu ambalaj. ☎ 0545 656 81 03",
+    title: "Profesyonel Paketleme Hizmeti Ankara - Güvenli Ambalaj",
+    description: "Ankara profesyonel eşya paketleme hizmeti. Kırılacak eşya koruması, gardırop kolileri, elektronik paketleme, köpük ve balonlu ambalaj.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler/paketleme" },
-    openGraph: { title: "Paketleme Hizmeti - Ankara Özdemir", description: "Profesyonel eşya paketleme ve ambalajlama hizmetleri.", url: "https://ankaraozdemirnakliyat.com/hizmetler/paketleme/", type: "website" },
+    openGraph: {
+        title: "Profesyonel Paketleme Hizmeti Ankara - Güvenli Ambalaj",
+        description: "Ankara profesyonel eşya paketleme hizmeti. Kırılacak eşya koruması, gardırop kolileri, elektronik paketleme, köpük ve balonlu ambalaj.",
+        url: "https://ankaraozdemirnakliyat.com/hizmetler/paketleme",
+        type: "website"
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Profesyonel Paketleme Hizmeti Ankara - Güvenli Ambalaj",
+        description: "Ankara profesyonel eşya paketleme hizmeti. Kırılacak eşya koruması, gardırop kolileri, elektronik paketleme, köpük ve balonlu ambalaj."
+    }
 };
 
 export default function PaketlemePage() {

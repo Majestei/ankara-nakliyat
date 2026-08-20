@@ -271,7 +271,7 @@ export default function BlogPostClient({ post, relatedPosts, toc }: Props) {
                                     <div className="absolute -top-20 -right-20 p-4 opacity-10 group-hover:scale-150 group-hover:-rotate-45 transition-all duration-1000 ease-out">
                                         <IconTruck className="w-64 h-64" />
                                     </div>
-                                    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
+                                    <div className="absolute inset-0 bg-[url('/images/noise.svg')] opacity-20 mix-blend-overlay"></div>
                                     
                                     <div className="relative z-10 transform translate-z-10">
                                         <h3 className="text-4xl font-black mb-6 tracking-tighter leading-none">VIP<br/>Taşıma.</h3>

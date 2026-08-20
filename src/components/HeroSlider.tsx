@@ -74,7 +74,7 @@ const PerspectiveGrid = () => (
 
 const CinematicOverlay = () => (
     <div className="absolute inset-0 z-[5] pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] mix-blend-overlay" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/noise.svg')] opacity-[0.03] mix-blend-overlay" />
         <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-primary-500/20 blur-[120px] rounded-full mix-blend-screen hidden md:block animate-pulse" />
         <div className="absolute -bottom-[20%] -right-[10%] w-[50%] h-[50%] bg-orange-500/10 blur-[120px] rounded-full mix-blend-screen hidden md:block animate-pulse" style={{ animationDelay: '2s' }} />
     </div>

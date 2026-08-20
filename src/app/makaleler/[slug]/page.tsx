@@ -15,8 +15,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     if (!post) return { title: "Bulunamadı" };
 
     return {
-        title: `🏆 ${post.title} | %20 İndirimli & Sigortalı ✅`,
-        description: `🚀 ${post.excerpt} | Profesyonel evden eve nakliyat, ücretsiz ekspertiz ve uygun fiyatlar için hemen bizi arayın!`,
+        title: post.title,
+        description: post.excerpt.slice(0, 155),
         alternates: { canonical: `https://ankaraozdemirnakliyat.com/makaleler/${slug}` },
         openGraph: {
             title: post.title,
@@ -94,42 +94,7 @@ export default async function MakaleDetail({ params }: { params: { slug: string 
                 }}
             />
             
-            {/* FAQ JSON-LD Structured Data */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        mainEntity: [
-                            {
-                                "@type": "Question",
-                                name: `${post.location} nakliyat fiyatları ne kadar?`,
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: `${post.location} bölgesinde evden eve nakliyat fiyatları eşya yoğunluğu, kat durumu ve asansör gereksinimine göre belirlenmektedir. En net fiyatı almak için ücretsiz ekspertiz talep edebilirsiniz.`
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                name: `${post.location} asansörlü taşıma hizmetiniz var mı?`,
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: `Evet, ${post.location} ilçesinde ve mahallelerinde yüksek katlı binalar için güvenli ve hızlı asansörlü nakliyat hizmetimiz mevcuttur.`
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                name: `Eşyalarım sigortalanıyor mu?`,
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: `Tüm taşıma işlemlerimiz sigortalı olarak gerçekleştirilmektedir. Eşyalarınız profesyonel ekibimiz tarafından ambalajlanıp güvenle taşınmaktadır.`
-                                }
-                            }
-                        ]
-                    }),
-                }}
-            />
+
 
             {/* HERO */}
             <header className="max-w-4xl mx-auto px-6 mb-16 mt-10">

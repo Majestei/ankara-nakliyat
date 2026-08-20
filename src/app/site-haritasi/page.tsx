@@ -3,9 +3,20 @@ import Link from "next/link";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Site Haritası | Ankara Özdemir Nakliyat",
+    title: "Site Haritası",
     description: "Ankara Özdemir Nakliyat web sitesindeki tüm sayfalara hızlı erişim sağlayan site haritası sayfası.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/site-haritasi" },
+    openGraph: {
+        title: "Site Haritası",
+        description: "Ankara Özdemir Nakliyat web sitesindeki tüm sayfalara hızlı erişim sağlayan site haritası sayfası.",
+        url: "https://ankaraozdemirnakliyat.com/site-haritasi",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Site Haritası",
+        description: "Ankara Özdemir Nakliyat web sitesindeki tüm sayfalara hızlı erişim sağlayan site haritası sayfası.",
+    }
 };
 
 const sitemapData = [
@@ -46,8 +57,8 @@ const sitemapData = [
         title: "Hizmet Bölgeleri",
         links: [
             { name: "Tüm Hizmet Bölgeleri", url: "/islemler" },
-            { name: "Ankara İçi Nakliyat Bölgeleri", url: "/islemler/ankara" },
-            { name: "Ankara İlçeleri", url: "/islemler/ankara#ilceler" },
+            { name: "Ankara İçi Nakliyat Bölgeleri", url: "/islemler" },
+            { name: "Ankara İlçeleri", url: "/islemler" },
         ]
     },
     {

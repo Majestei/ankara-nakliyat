@@ -4,10 +4,20 @@ import ServiceSchema from "@/components/ServiceSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Parça Eşya Taşıma Ankara | Ekonomik Tekli Taşıma",
-    description: "Ankara parça eşya taşıma hizmeti ✓ Tek parçadan taşıma ✓ Ekonomik fiyat ✓ Sigortalı ✓ Aynı gün teslimat. Hemen arayın! ☎ 0545 656 81 03",
+    title: "Parça Eşya Taşıma Ankara - Ekonomik Taşıma",
+    description: "Ankara parça eşya taşıma hizmeti. Tek parçadan taşıma, ekonomik fiyat, sigortalı, aynı gün teslimat. Hemen arayın!",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler/parca-esya-tasima" },
-    openGraph: { title: "Parça Eşya Taşıma - Ankara Özdemir", description: "Tek parça eşyadan komple eve. Ekonomik ve güvenli parça eşya taşıma.", url: "https://ankaraozdemirnakliyat.com/hizmetler/parca-esya-tasima/", type: "website" },
+    openGraph: {
+        title: "Parça Eşya Taşıma Ankara - Ekonomik Taşıma",
+        description: "Ankara parça eşya taşıma hizmeti. Tek parçadan taşıma, ekonomik fiyat, sigortalı, aynı gün teslimat. Hemen arayın!",
+        url: "https://ankaraozdemirnakliyat.com/hizmetler/parca-esya-tasima",
+        type: "website"
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Parça Eşya Taşıma Ankara - Ekonomik Taşıma",
+        description: "Ankara parça eşya taşıma hizmeti. Tek parçadan taşıma, ekonomik fiyat, sigortalı, aynı gün teslimat. Hemen arayın!"
+    }
 };
 
 export default function ParcaEsyaPage() {

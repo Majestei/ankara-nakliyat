@@ -47,5 +47,5 @@ export const galeriItems: GaleriItem[] = [
     
     // Videolar
     { id: "v1", src: "/images/galeri/video.mp4", alt: "Asansörlü taşıma süreci", title: "Asansörlü Taşımacılık", category: "Asansörlü Taşıma", type: "video" },
-    { id: "v2", src: "/images/galeri/video (2).mp4", alt: "Eşya paketleme operasyon videosu", title: "Paketleme Operasyonu", category: "Paketleme", type: "video" },
+    { id: "v2", src: "/images/galeri/video-2.mp4", alt: "Eşya paketleme operasyon videosu", title: "Paketleme Operasyonu", category: "Paketleme", type: "video" },
 ];

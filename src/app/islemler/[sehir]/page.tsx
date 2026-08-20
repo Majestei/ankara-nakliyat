@@ -15,8 +15,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const il = civarIller.find((i) => i.slug === params.sehir);
     if (!il) return {};
 
-    const title = `🥇 Ankara ${il.name} Evden Eve Nakliyat Şirketi | Müşteri Memnuniyeti %100 ✅`;
-    const description = `📦 Ankara - ${il.name} arası şehirler arası profesyonel evden eve nakliyat. Asansörlü, ambalajlı ve sigortalı taşımacılık ile eşyalarınız güvende. ☎ Bizi Arayın!`;
+    const title = `Ankara ${il.name} Evden Eve Nakliyat`;
+    const description = `Ankara - ${il.name} arası şehirler arası profesyonel evden eve nakliyat. Asansörlü, ambalajlı ve sigortalı taşımacılık ile eşyalarınız güvende.`;
     const url = `https://ankaraozdemirnakliyat.com/islemler/${params.sehir}`;
 
     return {

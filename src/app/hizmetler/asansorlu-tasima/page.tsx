@@ -4,10 +4,20 @@ import ServiceSchema from "@/components/ServiceSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Asansörlü Nakliyat Ankara | Yüksek Kat Taşıma Çözümü",
-    description: "Ankara asansörlü nakliyat hizmeti ✓ 25. kata kadar ✓ Dış cephe asansörü ✓ Hasarsız taşıma ✓ %50 daha hızlı. Hemen teklif alın! ☎ 0545 656 81 03",
+    title: "Asansörlü Nakliyat Ankara - Yüksek Kat Taşıma",
+    description: "Ankara asansörlü nakliyat hizmeti. 25. kata kadar dış cephe asansörü, hasarsız taşıma, %50 daha hızlı. Hemen teklif alın!",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler/asansorlu-tasima" },
-    openGraph: { title: "Asansörlü Nakliyat Ankara - Ankara Özdemir", description: "25. kata kadar dış cephe asansörlü nakliyat hizmeti.", url: "https://ankaraozdemirnakliyat.com/hizmetler/asansorlu-tasima/", type: "website" },
+    openGraph: {
+        title: "Asansörlü Nakliyat Ankara - Yüksek Kat Taşıma",
+        description: "Ankara asansörlü nakliyat hizmeti. 25. kata kadar dış cephe asansörü, hasarsız taşıma, %50 daha hızlı. Hemen teklif alın!",
+        url: "https://ankaraozdemirnakliyat.com/hizmetler/asansorlu-tasima",
+        type: "website"
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Asansörlü Nakliyat Ankara - Yüksek Kat Taşıma",
+        description: "Ankara asansörlü nakliyat hizmeti. 25. kata kadar dış cephe asansörü, hasarsız taşıma, %50 daha hızlı. Hemen teklif alın!"
+    }
 };
 
 export default function AsansorluTasimaPage() {

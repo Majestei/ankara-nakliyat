@@ -4,10 +4,20 @@ import ServiceSchema from "@/components/ServiceSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Ankara Eşya Depolama | Güvenli & Sigortalı Depo Hizmeti",
-    description: "Ankara eşya depolama hizmeti ✓ 7/24 güvenlik ✓ İklimlendirmeli depo ✓ Sigortalı ✓ Kısa & uzun süreli. Hemen teklif alın! ☎ 0545 656 81 03",
+    title: "Ankara Eşya Depolama - Güvenli & Sigortalı Depo",
+    description: "Ankara eşya depolama hizmeti. 7/24 güvenlik, iklimlendirmeli depo, sigortalı, kısa ve uzun süreli. Hemen teklif alın!",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler/depolama" },
-    openGraph: { title: "Eşya Depolama Ankara - Ankara Özdemir", description: "Ankara'da güvenli, sigortalı eşya depolama hizmeti.", url: "https://ankaraozdemirnakliyat.com/hizmetler/depolama/", type: "website" },
+    openGraph: {
+        title: "Ankara Eşya Depolama - Güvenli & Sigortalı Depo",
+        description: "Ankara eşya depolama hizmeti. 7/24 güvenlik, iklimlendirmeli depo, sigortalı, kısa ve uzun süreli. Hemen teklif alın!",
+        url: "https://ankaraozdemirnakliyat.com/hizmetler/depolama",
+        type: "website"
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Ankara Eşya Depolama - Güvenli & Sigortalı Depo",
+        description: "Ankara eşya depolama hizmeti. 7/24 güvenlik, iklimlendirmeli depo, sigortalı, kısa ve uzun süreli. Hemen teklif alın!"
+    }
 };
 
 export default function DepolamaPage() {

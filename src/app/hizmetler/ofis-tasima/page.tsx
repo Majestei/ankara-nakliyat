@@ -4,16 +4,20 @@ import ServiceSchema from "@/components/ServiceSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Ankara Ofis Taşıma | Kurumsal Nakliyat Hizmeti 2026",
-    description:
-        "Ankara ofis taşıma hizmeti ✓ IT altyapı güvenliği ✓ Arşiv taşıma ✓ Hafta sonu hizmet ✓ Sigortalı. Minimum iş kaybıyla taşının! ☎ 0545 656 81 03",
+    title: "Ankara Ofis Taşıma - Kurumsal Nakliyat Hizmeti",
+    description: "Ankara ofis taşıma hizmeti. IT altyapı güvenliği, arşiv taşıma, hafta sonu hizmet, sigortalı. Minimum iş kaybıyla taşının!",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler/ofis-tasima" },
     openGraph: {
-        title: "Ankara Ofis Taşıma - Kurumsal Nakliyat | Ankara Özdemir",
-        description: "Ankara'da profesyonel ofis taşıma. IT altyapı, arşiv, mobilya - minimum kesinti ile taşının.",
-        url: "https://ankaraozdemirnakliyat.com/hizmetler/ofis-tasima/",
+        title: "Ankara Ofis Taşıma - Kurumsal Nakliyat Hizmeti",
+        description: "Ankara ofis taşıma hizmeti. IT altyapı güvenliği, arşiv taşıma, hafta sonu hizmet, sigortalı. Minimum iş kaybıyla taşının!",
+        url: "https://ankaraozdemirnakliyat.com/hizmetler/ofis-tasima",
         type: "website",
     },
+    twitter: {
+        card: "summary_large_image",
+        title: "Ankara Ofis Taşıma - Kurumsal Nakliyat Hizmeti",
+        description: "Ankara ofis taşıma hizmeti. IT altyapı güvenliği, arşiv taşıma, hafta sonu hizmet, sigortalı. Minimum iş kaybıyla taşının!",
+    }
 };
 
 export default function OfisTasimaPage() {

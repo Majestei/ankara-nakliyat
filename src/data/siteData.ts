@@ -242,7 +242,7 @@ export const hizmetler = [
         ],
     },
     {
-        id: "sigorta",
+        id: "nakliyat-sigortasi",
         title: "Nakliyat Sigortası",
         icon: "🛡️",
         shortDesc: "Tam kapsamlı nakliyat sigortası ile güvende olun.",

@@ -3,21 +3,20 @@ import { firmaBilgileri, istatistikler } from "@/data/siteData";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Hakkımızda | Ankara Özdemir Nakliyat - 15+ Yıllık Deneyim",
-    description:
-        "Ankara Özdemir Nakliyat hakkında. 15+ yıllık deneyim, 10.000+ başarılı taşıma, profesyonel ekip. Ankara'nın güvenilir nakliyat firması hakkında bilgi alın.",
+    title: "Hakkımızda - 15+ Yıllık Deneyim",
+    description: "15+ yıllık deneyim, 10.000+ başarılı taşıma, profesyonel ekip. Ankara'nın güvenilir nakliyat firması Ankara Özdemir Nakliyat hakkında bilgi alın.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hakkimizda" },
     openGraph: {
-        title: "Hakkımızda - Ankara Özdemir Nakliyat",
-        description: "15 yılı aşkın deneyimimiz, profesyonel kadromuz ve müşteri odaklı yaklaşımımızla Ankara'nın güvenilir nakliyat firmasıyız.",
+        title: "Hakkımızda - 15+ Yıllık Deneyim",
+        description: "15+ yıllık deneyim, 10.000+ başarılı taşıma, profesyonel ekip. Ankara'nın güvenilir nakliyat firması Ankara Özdemir Nakliyat hakkında bilgi alın.",
         url: "https://ankaraozdemirnakliyat.com/hakkimizda",
         type: "website",
         images: [{ url: "https://ankaraozdemirnakliyat.com/og-image.jpg" }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Hakkımızda - Ankara Özdemir Nakliyat",
-        description: "15 yılı aşkın deneyimimiz, profesyonel kadromuz ve müşteri odaklı yaklaşımımızla Ankara'nın güvenilir nakliyat firmasıyız.",
+        title: "Hakkımızda - 15+ Yıllık Deneyim",
+        description: "15+ yıllık deneyim, 10.000+ başarılı taşıma, profesyonel ekip. Ankara'nın güvenilir nakliyat firması Ankara Özdemir Nakliyat hakkında bilgi alın.",
         images: ["https://ankaraozdemirnakliyat.com/og-image.jpg"],
     },
 };

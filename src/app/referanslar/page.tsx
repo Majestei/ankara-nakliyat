@@ -3,20 +3,19 @@ import { firmaBilgileri, musterıYorumlari } from "@/data/siteData";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Müşteri Referansları | Ankara Özdemir Nakliyat Yorumları",
-    description:
-        "Ankara Özdemir Nakliyat müşteri referansları ve yorumları. 4.9/5 Google puanı, 1250+ değerlendirme. Gerçek müşteri deneyimlerini okuyun.",
+    title: "Müşteri Referansları - Nakliyat Yorumları",
+    description: "Ankara Özdemir Nakliyat müşteri referansları ve yorumları. 4.9/5 Google puanı, 1250+ değerlendirme. Gerçek müşteri deneyimlerini okuyun.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/referanslar" },
     openGraph: {
-        title: "Müşteri Referansları - Ankara Özdemir Nakliyat",
+        title: "Müşteri Referansları - Nakliyat Yorumları",
         description: "Gerçek müşterilerimizin deneyimlerini ve yorumlarını keşfedin.",
-        url: "https://ankaraozdemirnakliyat.com/referanslar/",
+        url: "https://ankaraozdemirnakliyat.com/referanslar",
         type: "website",
         images: [{ url: "https://ankaraozdemirnakliyat.com/og-image.jpg" }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Müşteri Referansları - Ankara Özdemir Nakliyat",
+        title: "Müşteri Referansları - Nakliyat Yorumları",
         description: "Gerçek müşterilerimizin deneyimlerini ve yorumlarını keşfedin.",
         images: ["https://ankaraozdemirnakliyat.com/og-image.jpg"],
     },

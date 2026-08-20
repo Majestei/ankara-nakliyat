@@ -3,9 +3,20 @@ import Link from "next/link";
 import { firmaBilgileri } from "@/data/siteData";
 
 export const metadata: Metadata = {
-    title: "Gizlilik Politikası | Ankara Özdemir Nakliyat",
+    title: "Gizlilik Politikası",
     description: "Ankara Özdemir Nakliyat gizlilik politikası. Kişisel verilerinizin nasıl toplandığını, işlendiğini ve korunduğunu öğrenin.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/gizlilik-politikasi" },
+    openGraph: {
+        title: "Gizlilik Politikası",
+        description: "Ankara Özdemir Nakliyat gizlilik politikası. Kişisel verilerinizin nasıl toplandığını, işlendiğini ve korunduğunu öğrenin.",
+        url: "https://ankaraozdemirnakliyat.com/gizlilik-politikasi",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Gizlilik Politikası",
+        description: "Ankara Özdemir Nakliyat gizlilik politikası. Kişisel verilerinizin nasıl toplandığını, işlendiğini ve korunduğunu öğrenin.",
+    }
 };
 
 export default function GizlilikPolitikasiPage() {

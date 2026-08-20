@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { firmaBilgileri, navLinks, ankaraIlceleri, hizmetler } from "@/data/siteData";
 import { IconMapPin, IconPhone, IconMail, IconClock, IconChat, IconArrow, IconStar, IconShield, IconTruck } from "@/components/Icons";
+import { FooterSeoLinks } from "@/components/InternalLinks";
 
 export default function Footer() {
     return (
@@ -131,7 +132,7 @@ export default function Footer() {
                                 Hizmet Bölgeleri
                             </h4>
                             <ul className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-2">
-                                {ankaraIlceleri.slice(0, 12).map((ilce) => (
+                                {ankaraIlceleri.map((ilce) => (
                                     <li key={ilce.slug}>
                                         <Link
                                             href={`/islemler/ankara/${ilce.slug}`}
@@ -180,6 +181,13 @@ export default function Footer() {
                             </div>
                         </nav>
                     </div>
+                </div>
+            </div>
+
+            {/* SEO İç Linkleri */}
+            <div className="py-8 bg-slate-100 border-t border-slate-200">
+                <div className="container-custom">
+                    <FooterSeoLinks />
                 </div>
             </div>
 

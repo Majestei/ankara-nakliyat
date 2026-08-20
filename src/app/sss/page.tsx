@@ -4,20 +4,20 @@ import { faqData } from "@/data/faqData";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Sıkça Sorulan Sorular | Ankara Özdemir Nakliyat",
+    title: "Sıkça Sorulan Sorular",
     description: "Ankara evden eve nakliyat, fiyatlandırma, paketleme, asansörlü taşıma ve sigorta süreçleri hakkında aklınıza takılan tüm soruların cevapları.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/sss" },
     openGraph: {
-        title: "Sıkça Sorulan Sorular | Ankara Özdemir Nakliyat",
-        description: "Nakliyat süreçleri hakkında aklınıza takılan her şeyin cevabı bu sayfada.",
-        url: "https://ankaraozdemirnakliyat.com/sss/",
+        title: "Sıkça Sorulan Sorular",
+        description: "Ankara evden eve nakliyat, fiyatlandırma, paketleme, asansörlü taşıma ve sigorta süreçleri hakkında aklınıza takılan tüm soruların cevapları.",
+        url: "https://ankaraozdemirnakliyat.com/sss",
         type: "website",
         images: [{ url: "https://ankaraozdemirnakliyat.com/og-image.jpg" }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Sıkça Sorulan Sorular | Ankara Özdemir Nakliyat",
-        description: "Nakliyat süreçleri hakkında aklınıza takılan her şeyin cevabı bu sayfada.",
+        title: "Sıkça Sorulan Sorular",
+        description: "Ankara evden eve nakliyat, fiyatlandırma, paketleme, asansörlü taşıma ve sigorta süreçleri hakkında aklınıza takılan tüm soruların cevapları.",
         images: ["https://ankaraozdemirnakliyat.com/og-image.jpg"],
     }
 };

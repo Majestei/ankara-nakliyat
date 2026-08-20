@@ -4,14 +4,13 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ServiceSchema from "@/components/ServiceSchema";
 
 export const metadata: Metadata = {
-    title: "Ankara Evden Eve Nakliyat | Sigortalı & Asansörlü Ev Taşıma",
-    description:
-        "Ankara'da profesyonel evden eve nakliyat hizmeti. 15+ yıllık tecrübe, sigortalı taşımacılık, uzman marangozlar ve asansörlü nakliyat çözümleriyle yanınızdayız. Hemen ücretsiz fiyat teklifi alın!",
+    title: "Ankara Evden Eve Nakliyat - Sigortalı & Asansörlü",
+    description: "Ankara'da profesyonel evden eve nakliyat hizmeti. 15+ yıllık tecrübe, sigortalı taşımacılık ve asansörlü nakliyat çözümleriyle yanınızdayız.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/evden-eve-nakliyat" },
     openGraph: {
-        title: "Ankara Evden Eve Nakliyat - Ankara Özdemir",
-        description: "Güvenilir, sigortalı ve profesyonel ev taşıma hizmeti. Ankara'nın her yerine 7/24 hizmet.",
-        url: "https://ankaraozdemirnakliyat.com/evden-eve-nakliyat/",
+        title: "Ankara Evden Eve Nakliyat - Sigortalı & Asansörlü",
+        description: "Ankara'da profesyonel evden eve nakliyat hizmeti. 15+ yıllık tecrübe, sigortalı taşımacılık ve asansörlü nakliyat çözümleriyle yanınızdayız.",
+        url: "https://ankaraozdemirnakliyat.com/evden-eve-nakliyat",
         type: "website",
         images: [
             {
@@ -21,6 +20,11 @@ export const metadata: Metadata = {
                 alt: "Ankara Evden Eve Nakliyat Hizmetleri",
             },
         ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Ankara Evden Eve Nakliyat - Sigortalı & Asansörlü",
+        description: "Ankara'da profesyonel evden eve nakliyat hizmeti. 15+ yıllık tecrübe, sigortalı taşımacılık ve asansörlü nakliyat çözümleriyle yanınızdayız.",
     }
 };
 

@@ -5,15 +5,19 @@ import HeroSection from "@/components/HeroSlider";
 import { istatistikler } from "@/data/siteData";
 
 export const metadata: Metadata = {
-    title: "Ankara Özdemir Nakliyat | Ankara Evden Eve Nakliyat | #1 Güvenilir Taşımacılık",
-    description:
-        "Ankara evden eve nakliyat firması. Şehir içi, şehirler arası nakliyat, ofis taşıma, asansörlü taşıma, depolama hizmetleri. Hemen ücretsiz teklif alın ve güvenle taşının!",
+    title: "Ankara Evden Eve Nakliyat | Güvenilir Taşımacılık",
+    description: "Ankara evden eve nakliyat firması. Şehir içi, şehirler arası nakliyat, ofis taşıma, asansörlü taşıma, depolama. Hemen ücretsiz teklif alın ve taşının!",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com" },
     openGraph: {
-        title: "Ankara Özdemir Nakliyat | Ankara Evden Eve Nakliyat | #1 Güvenilir Taşımacılık",
-        description: "Ankara evden eve nakliyat firması. Şehir içi, şehirler arası nakliyat, ofis taşıma, asansörlü taşıma, depolama hizmetleri.",
-        url: "https://ankaraozdemirnakliyat.com/",
+        title: "Ankara Evden Eve Nakliyat | Güvenilir Taşımacılık",
+        description: "Ankara evden eve nakliyat firması. Şehir içi, şehirler arası nakliyat, ofis taşıma, asansörlü taşıma, depolama. Hemen ücretsiz teklif alın ve taşının!",
+        url: "https://ankaraozdemirnakliyat.com",
         type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Ankara Evden Eve Nakliyat | Güvenilir Taşımacılık",
+        description: "Ankara evden eve nakliyat firması. Şehir içi, şehirler arası nakliyat, ofis taşıma, asansörlü taşıma, depolama. Hemen ücretsiz teklif alın ve taşının!",
     }
 };
 

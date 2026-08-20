@@ -55,7 +55,7 @@ const ilceHizmetler = [
         title: "Nakliyat Fiyatları",
         getContent: (ilce: string) => ({
             h1: `${ilce} Nakliyat Fiyatları`,
-            description: `${ilce} nakliyat fiyatları 2024. ${ilce}'da evden eve nakliyat, ofis taşıma, asansörlü taşıma fiyatları. Ücretsiz teklif alın.`,
+            description: `${ilce} nakliyat fiyatları 2026. ${ilce}'da evden eve nakliyat, ofis taşıma, asansörlü taşıma fiyatları. Ücretsiz teklif alın.`,
             paragraphs: [
                 `${ilce} nakliyat fiyatları, taşınacak eşya miktarı, mesafe, kat durumu ve tercih edilen ek hizmetlere göre belirlenmektedir. ${ilce}'da en uygun nakliyat fiyatlarını sunmak için ücretsiz ekspertiz hizmetimizden yararlanabilirsiniz.`,
                 `${ilce} evden eve nakliyat fiyatları genellikle 1+1 daireler için uygun fiyatlarla başlamaktadır. ${ilce}'da 2+1, 3+1 ve daha büyük daireler için fiyatlar eşya miktarına göre artmaktadır. Asansörlü taşıma, paketleme ve sigorta gibi ek hizmetler fiyata dahil edilebilir.`,
@@ -99,7 +99,7 @@ export async function generateStaticParams() {
         });
     });
 
-    return params.slice(0, 100);
+    return params;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -110,8 +110,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const hizmet = ilceHizmetler.find((h) => h.slug === params.slug);
     if (hizmet) {
         const content = hizmet.getContent(ilce.name);
-        const title = `🏆 ${content.h1} | %20 İndirimli Garantili Hizmet 🚀`;
-        const description = `📦 ${content.description} ☎ Ücretsiz Ekspertiz ve Fiyat Alın!`;
+        const title = `${content.h1} | Garantili Hizmet`;
+        const description = `${content.description} Ücretsiz Ekspertiz ve Fiyat Alın!`;
         const url = `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}/${params.slug}`;
 
         return {
@@ -138,8 +138,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const mahalleler = neighborhoodsByDistrict[ilce.slug] || [];
     const mahalle = mahalleler.find(m => m.slug === params.slug);
     if (mahalle) {
-        const title = `🥇 Ankara ${ilce.name} ${mahalle.name} Evden Eve Nakliyat | %20 İndirimli Sigortalı Taşıma ✅`;
-        const description = `🚚 Ankara ${ilce.name} ${mahalle.name} mahallesinde asansörlü, ambalajlı ve sigortalı profesyonel evden eve nakliyat. Hemen arayın, uygun fiyatları kaçırmayın!`;
+        const title = `Ankara ${ilce.name} ${mahalle.name} Evden Eve Nakliyat`;
+        const description = `Ankara ${ilce.name} ${mahalle.name} mahallesinde asansörlü, ambalajlı ve sigortalı profesyonel evden eve nakliyat. Hemen arayın, uygun fiyatları kaçırmayın!`;
         const url = `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}/${params.slug}`;
 
         return {

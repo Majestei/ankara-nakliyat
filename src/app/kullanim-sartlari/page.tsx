@@ -3,9 +3,20 @@ import Link from "next/link";
 import { firmaBilgileri } from "@/data/siteData";
 
 export const metadata: Metadata = {
-    title: "Kullanım Şartları | Ankara Özdemir Nakliyat",
+    title: "Kullanım Şartları",
     description: "Ankara Özdemir Nakliyat web sitesi kullanım şartları ve koşulları. Hizmet sözleşmesi, sorumluluk sınırları ve yasal bilgiler.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/kullanim-sartlari" },
+    openGraph: {
+        title: "Kullanım Şartları",
+        description: "Ankara Özdemir Nakliyat web sitesi kullanım şartları ve koşulları. Hizmet sözleşmesi, sorumluluk sınırları ve yasal bilgiler.",
+        url: "https://ankaraozdemirnakliyat.com/kullanim-sartlari",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Kullanım Şartları",
+        description: "Ankara Özdemir Nakliyat web sitesi kullanım şartları ve koşulları. Hizmet sözleşmesi, sorumluluk sınırları ve yasal bilgiler.",
+    }
 };
 
 export default function KullanimSartlariPage() {

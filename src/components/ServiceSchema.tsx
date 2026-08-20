@@ -28,6 +28,8 @@ export default function ServiceSchema({ serviceName, serviceDescription, service
             priceSpecification: {
                 "@type": "PriceSpecification",
                 priceCurrency: "TRY",
+                minPrice: "2500",
+                maxPrice: "15000"
             },
         },
     };

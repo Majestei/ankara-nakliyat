@@ -2,10 +2,7 @@
   RewriteEngine On
   RewriteBase /
 
-  # 1. URL sonunda slash yoksa ve bir dosya değilse slash ekle (Next.js trailingSlash: true uyumu)
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_URI} !(.*)/$
-  RewriteRule ^(.*)$ %{REQUEST_URI}/ [L,R=301]
+  # 1. URL sonunda slash yoksa ve bir dosya değilse slash ekle (Next.js trailingSlash: true uyumu) Kaldırıldı
 
   # 2. Klasör içindeki index.html dosyasını kontrol et ve sun
   RewriteCond %{REQUEST_FILENAME} -d

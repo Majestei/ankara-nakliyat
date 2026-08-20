@@ -215,7 +215,7 @@ export default function HomeClient() {
                                 title={hizmet.title}
                                 description={hizmet.description}
                                 icon={getServiceIcon(hizmet.id)}
-                                href={`/hizmetler#${hizmet.id}`}
+                                href={hizmet.id === "evden-eve-nakliyat" ? "/evden-eve-nakliyat" : `/hizmetler/${hizmet.id}`}
                             />
                         ))}
                     </div>
@@ -255,7 +255,7 @@ export default function HomeClient() {
                                         </div>
                                         <div className="space-y-2">
                                             <span className="text-primary-500 font-black text-[10px] tracking-widest">{step.num}</span>
-                                            <h4 className="text-2xl font-black text-slate-950 tracking-tight">{step.title}</h4>
+                                            <h3 className="text-2xl font-black text-slate-950 tracking-tight">{step.title}</h3>
                                             <p className="text-sm text-slate-500 font-medium leading-relaxed">{step.desc}</p>
                                         </div>
                                     </motion.div>
@@ -281,7 +281,7 @@ export default function HomeClient() {
                                     />
                                     <div className="absolute inset-0 bg-primary-500/10" />
                                     <div className="absolute bottom-3 lg:bottom-12 left-3 lg:left-12 right-3 lg:right-12 p-4 lg:p-10 bg-white/80 backdrop-blur-2xl rounded-[1.5rem] lg:rounded-[3rem] border border-white text-center lg:text-left">
-                                        <h4 className="text-base sm:text-lg lg:text-3xl font-black text-slate-950 tracking-tighter mb-1 lg:mb-2 leading-tight">{steps[activeStep].title}</h4>
+                                        <h3 className="text-base sm:text-lg lg:text-3xl font-black text-slate-950 tracking-tighter mb-1 lg:mb-2 leading-tight">{steps[activeStep].title}</h3>
                                         <p className="text-[10px] sm:text-xs lg:text-sm text-slate-500 font-medium leading-snug lg:leading-normal">{steps[activeStep].desc}</p>
                                     </div>
                                 </motion.div>
@@ -311,7 +311,7 @@ export default function HomeClient() {
                                 className="p-4 md:p-8 bg-white/5 border border-white/10 rounded-2xl md:rounded-[2.5rem] group hover:bg-primary-500 transition-all duration-500 flex flex-col justify-center"
                             >
                                 <span className="text-white font-black text-[9px] md:text-[10px] uppercase tracking-widest opacity-40 group-hover:opacity-100 transition-opacity block mb-1 md:mb-2 truncate">{ilce.slug}</span>
-                                <h4 className="text-base sm:text-lg md:text-xl font-black text-white tracking-tighter group-hover:scale-105 transition-transform break-words">{ilce.name}</h4>
+                                <h3 className="text-base sm:text-lg md:text-xl font-black text-white tracking-tighter group-hover:scale-105 transition-transform break-words">{ilce.name}</h3>
                             </Link>
                         ))}
                     </div>
@@ -437,7 +437,7 @@ export default function HomeClient() {
 
                                     {/* Text Content */}
                                     <div className="relative z-10 space-y-3">
-                                        <h4 className="text-sm md:text-base font-black text-slate-900 uppercase tracking-[0.2em]">{item.title}</h4>
+                                        <h3 className="text-sm md:text-base font-black text-slate-900 uppercase tracking-[0.2em]">{item.title}</h3>
                                         <p className="text-[10px] md:text-xs text-slate-400 font-bold uppercase tracking-[0.3em] leading-relaxed px-4 opacity-70 group-hover:opacity-100 transition-opacity">
                                             {item.desc}
                                         </p>
