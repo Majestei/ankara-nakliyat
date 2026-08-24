@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import WhatsAppSticky from "@/components/WhatsAppSticky";
 import CustomCursor from "@/components/CustomCursor";
+import ConversionTracker from "@/components/ConversionTracker";
 import Script from "next/script";
 import { firmaBilgileri } from "@/data/siteData";
 
@@ -253,6 +254,7 @@ export default function RootLayout({
                 <Footer />
                 <CookieConsent />
                 <WhatsAppSticky />
+                <ConversionTracker />
             </body>
         </html>
     );

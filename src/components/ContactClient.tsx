@@ -6,6 +6,7 @@ import { firmaBilgileri } from "@/data/siteData";
 import {
     IconMapPin, IconPhone, IconMail, IconArrow, IconShield, IconTruck, IconStar, IconCheck, IconBox, IconGlobe, IconChat
 } from "@/components/Icons";
+import { trackConversion } from "@/lib/gtag";
 
 // ── ADVANCED SPATIAL COMPONENTS ──
 
@@ -136,6 +137,7 @@ function SmartLogisticsForm() {
                             e.preventDefault();
                         } else {
                             setIsSubmitting(true);
+                            trackConversion();
                         }
                     }}
                     action="https://formsubmit.co/bilgi@ankaraozdemirnakliyat.com" 
