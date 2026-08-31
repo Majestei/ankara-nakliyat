@@ -144,7 +144,9 @@ function SmartLogisticsForm() {
                     method="POST" 
                     className="min-h-[400px] md:min-h-[450px] flex flex-col justify-between"
                 >
-                    <input type="hidden" name="_subject" value="Holographic Command Lead!" />
+                    <input type="hidden" name="_subject" value="Ankara Özdemir Nakliyat - Yeni Teklif Talebi" />
+                    <input type="hidden" name="_next" value="https://ankaraozdemirnakliyat.com/tesekkurler" />
+                    <input type="hidden" name="_captcha" value="false" />
                     {/* DOM'dan silinen verilerin FormSubmit'e gidebilmesi için gizli alanlar */}
                     <input type="hidden" name="name" value={formData.name} />
                     <input type="hidden" name="phone" value={formData.phone} />
