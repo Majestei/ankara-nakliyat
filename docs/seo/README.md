@@ -60,6 +60,10 @@ npm run seo:audit:full
 
 The quick audit checks both live sites' canonical hosts, robots, sitemap integrity, and critical pages. The full audit fetches every sitemap URL and validates status, title, description, H1, canonical, and sitemap/noindex conflicts. Any critical error produces a non-zero exit code.
 
+## Scheduled cadence
+
+The active thread heartbeat, **Two-site SEO operations**, runs daily at 08:30 in the local app schedule. It performs the quick health check every day, the full sitemap crawl every third calendar day beginning 2026-09-08, and the evidence-led growth review each Monday. It stays quiet when nothing meaningful changes and reports only fixes, failures, material findings, or required user action.
+
 ## Change log
 
 | Date | Scope | Change | Verification |
