@@ -15,7 +15,7 @@ The first production crawl checked all 1,466 sitemap URLs and received direct HT
 
 1. **Akif initial HTML:** 344 of 501 generated HTML documents had no H1 or primary content because four client components returned an empty shell until `useEffect` ran. The gate was removed; the verified local build now has an H1 in all 501 HTML documents. This is the highest-confidence first-run fix.
 2. **Akif duplicate titles:** the root metadata template appended the brand to page titles that already contained it. The local build went from 336 duplicate-brand titles to zero.
-3. **Canonical hosts:** Özdemir's `www` host returned 200 instead of redirecting to the apex. A permanent host redirect is configured locally. Akif's bare apex currently fails TLS hostname validation while HTTP redirects visitors to that broken HTTPS URL; this requires a Vercel/DNS domain correction.
+3. **Canonical hosts:** Özdemir's `www` host returned 200 instead of redirecting to the apex; the permanent host redirect is now live. Akif's bare apex still fails TLS hostname validation because an obsolete AAAA record (`2a06:41c0:1:2e::269`) competes with the correct Vercel A record (`76.76.21.21`). Delete that AAAA record at the authoritative Güzel Hosting DNS zone, then configure the bare domain to redirect permanently to `www` in Vercel.
 4. **Structured data integrity:** unverified ratings, review counts, founding dates, headcounts, payment data, price range, copied address/coordinates, and superlatives were removed from JSON-LD. Review pages now publish no named review unless its source and permission are verifiable, and are temporarily `noindex`.
 5. **Sitemap dates:** Akif used the build time as `lastmod` for nearly every URL. Unknown dates are now omitted; dated blog entries retain their declared publication date.
 6. **Title/content scope:** no bulk title rewrite, URL removal, redirect migration, or mass deindexing was performed without Search Console evidence. Existing routes and internal architecture were preserved.
@@ -77,7 +77,7 @@ The active thread heartbeat, **Two-site SEO operations**, runs daily at 08:30 in
 ## Next evidence-led work
 
 1. Connect read-only Search Console access for both domain properties and export at least 16 months of page/query/device/country data.
-2. Fix the Akif apex certificate/domain assignment, then verify bare-apex HTTP and HTTPS both permanently redirect to `www`.
+2. At Güzel Hosting DNS, delete the Akif apex AAAA record `2a06:41c0:1:2e::269` and keep the apex A record `76.76.21.21`; then verify bare-apex HTTP and HTTPS both permanently redirect to `www`.
 3. Confirm business facts and scrub or substantiate the remaining legacy numeric/guarantee claims.
 4. Segment Search Console pages into protect, improve CTR, expand, consolidate, and investigate-indexing groups before changing mass-generated routes.
 5. Build one genuinely useful planning asset per domain with distinct positioning; measure impressions, qualified leads, and assisted conversions rather than raw page count.
