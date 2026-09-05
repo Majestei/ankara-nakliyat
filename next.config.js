@@ -22,6 +22,16 @@ const nextConfig = {
                 source: '/hizmetler/sigorta',
                 destination: '/hizmetler/nakliyat-sigortasi',
                 permanent: true,
+            },
+            {
+                source: '/sitemap-2.xml',
+                destination: '/sitemap.xml',
+                permanent: true,
+            },
+            {
+                source: '/sitemap-3.xml',
+                destination: '/sitemap.xml',
+                permanent: true,
             }
         ];
     },
