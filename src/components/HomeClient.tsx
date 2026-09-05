@@ -17,7 +17,6 @@ import {
     IconPhone, IconGlobe, IconBuilding, IconChat, IconPlus
 } from "@/components/Icons";
 
-const TestimonialsCarousel = dynamic(() => import("./TestimonialsCarousel"), { ssr: false });
 const ServiceCard3D = dynamic(() => import("./ServiceCard3D"), { ssr: false });
 
 // ── SHARED PREMIUM COMPONENTS ──
@@ -179,14 +178,14 @@ export default function HomeClient() {
                                 {/* Floating Trust Badges - Moved outside overflow-hidden */}
                                 <MagneticPod className="absolute -top-4 lg:-top-6 xl:-top-12 -right-4 lg:-right-6 xl:-right-12 p-4 lg:p-6 xl:p-10 bg-white/[0.08] backdrop-blur-3xl border border-white/20 rounded-[1.5rem] lg:rounded-[2.5rem] xl:rounded-[3.5rem] shadow-3xl text-center min-w-[120px] lg:min-w-[180px] xl:min-w-[220px] group hover:bg-white/15 transition-all duration-500 z-30">
                                     <IconStar className="w-5 h-5 lg:w-8 lg:h-8 xl:w-10 xl:h-10 text-primary-500 mb-2 lg:mb-4 xl:mb-6 mx-auto group-hover:scale-110 transition-transform duration-500" />
-                                    <div className="text-xl lg:text-3xl xl:text-4xl font-black text-white tracking-tighter group-hover:text-primary-400 transition-colors">4.9</div>
-                                    <div className="text-[7px] lg:text-[9px] xl:text-[10px] font-black text-white/40 uppercase tracking-[0.3em] group-hover:text-white transition-colors mt-1">Google Puanı</div>
+                                    <div className="text-xl lg:text-3xl xl:text-4xl font-black text-white tracking-tighter group-hover:text-primary-400 transition-colors">Planlı</div>
+                                    <div className="text-[7px] lg:text-[9px] xl:text-[10px] font-black text-white/40 uppercase tracking-[0.3em] group-hover:text-white transition-colors mt-1">Taşıma Süreci</div>
                                 </MagneticPod>
 
                                 <MagneticPod className="absolute -bottom-4 lg:-bottom-6 xl:-bottom-12 -left-4 lg:-left-6 xl:-left-12 p-4 lg:p-6 xl:p-10 bg-slate-950/95 backdrop-blur-3xl border border-white/10 rounded-[1.5rem] lg:rounded-[2.5rem] xl:rounded-[3.5rem] shadow-3xl text-center min-w-[120px] lg:min-w-[180px] xl:min-w-[220px] group hover:bg-white/5 transition-all duration-500 z-30">
                                     <IconUsers className="w-5 h-5 lg:w-8 lg:h-8 xl:w-10 xl:h-10 text-primary-500 mb-2 lg:mb-4 xl:mb-6 mx-auto group-hover:scale-110 transition-transform duration-500" />
-                                    <div className="text-xl lg:text-3xl xl:text-4xl font-black text-white tracking-tighter group-hover:text-primary-400 transition-colors">10K+</div>
-                                    <div className="text-[7px] lg:text-[9px] xl:text-[10px] font-black text-white/40 uppercase tracking-[0.3em] group-hover:text-white transition-colors mt-1">Mutlu Yuva</div>
+                                    <div className="text-xl lg:text-3xl xl:text-4xl font-black text-white tracking-tighter group-hover:text-primary-400 transition-colors">Ankara</div>
+                                    <div className="text-[7px] lg:text-[9px] xl:text-[10px] font-black text-white/40 uppercase tracking-[0.3em] group-hover:text-white transition-colors mt-1">Yerel Hizmet</div>
                                 </MagneticPod>
                             </div>
                         </div>
@@ -382,11 +381,6 @@ export default function HomeClient() {
                 </div>
             </section>
 
-            {/* ── TESTIMONIALS ── */}
-            <div className="py-20 bg-white">
-                <TestimonialsCarousel />
-            </div>
-
             {/* ── TRUST & CERTIFICATES BAR (Point 4) ── */}
             <section className="py-24 md:py-32 bg-white relative overflow-hidden">
                 {/* Cinematic Background Elements */}
@@ -402,10 +396,10 @@ export default function HomeClient() {
                 <div className="container-custom relative z-10">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
                         {[
-                            { title: "K3 Yetki Belgesi", desc: "Ulaştırma Bakanlığı Onaylı", icon: <IconClipboard className="w-10 h-10" />, color: "from-orange-500 to-primary-500" },
-                            { title: "%100 Sigortalı", desc: "HDI Sigorta Güvencesiyle", icon: <IconShield className="w-10 h-10" />, color: "from-blue-500 to-indigo-500" },
-                            { title: "Geniş Filo", desc: "10+ Modern Taşıma Aracı", icon: <IconTruck className="w-10 h-10" />, color: "from-emerald-500 to-teal-500" },
-                            { title: "Uzman Kadro", desc: "Sertifikalı Personel Ekibi", icon: <IconUsers className="w-10 h-10" />, color: "from-purple-500 to-pink-500" }
+                            { title: "Planlı Taşıma", desc: "İhtiyaca göre hazırlanan süreç", icon: <IconClipboard className="w-10 h-10" />, color: "from-orange-500 to-primary-500" },
+                            { title: "Eşya Koruma", desc: "Paketleme seçenekleri", icon: <IconShield className="w-10 h-10" />, color: "from-blue-500 to-indigo-500" },
+                            { title: "Taşıma Seçenekleri", desc: "Ev, ofis ve parça eşya", icon: <IconTruck className="w-10 h-10" />, color: "from-emerald-500 to-teal-500" },
+                            { title: "Teklif Desteği", desc: "Telefon ve iletişim formu", icon: <IconUsers className="w-10 h-10" />, color: "from-purple-500 to-pink-500" }
                         ].map((item, i) => (
                             <motion.div 
                                 key={i}

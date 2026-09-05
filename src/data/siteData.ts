@@ -270,32 +270,14 @@ export const firmaBilgileri = {
     social: {
         instagram: "https://www.instagram.com/ozdemirnakliyat_/",
     },
-    experience: "15+",
-    completedJobs: "10.000+",
-    happyCustomers: "9.500+",
-    vehicleCount: "10+",
 };
 
 // Ana Sayfa İstatistikler
 export const istatistikler = [
-    { value: "15+", label: "Yıllık Deneyim" },
-    { value: "10.000+", label: "Tamamlanan Taşıma" },
-    { value: "9.500+", label: "Mutlu Müşteri" },
-    { value: "10+", label: "Araç Filosu" },
-];
-
-// Müşteri Yorumları
-export const musterıYorumlari = [
-    { name: "Süleyman Özdemir", location: "Çankaya, Ankara", rating: 5, comment: "Çankaya'nın dar sokaklarına rağmen ekibiniz çok hızlıydı. Eşyalarımızda tek bir çizik bile yok. Teşekkürler!" },
-    { name: "Merve Yılmaz", location: "Etimesgut, Ankara", rating: 5, comment: "Eryaman'daki yüksek katlı sitemize asansörlü taşıma sistemiyle sorunsuz taşındık. Profesyonel bir ekip." },
-    { name: "Mustafa Kaya", location: "Yenimahalle, Ankara", rating: 5, comment: "Ofisimizi Batıkent'ten taşıdılar. Dosyalar ve bilgisayarlar hiç karışmadan yerleşti. Çok memnunuz." },
-    { name: "Hüseyin Demir", location: "Mamak, Ankara", rating: 5, comment: "Mamak'ın dik yokuşlarında bile araçları çok stabildi. Paketleme hizmeti gerçekten harika." },
-    { name: "Elif Arslan", location: "Sincan, Ankara", rating: 5, comment: "Eşyalarımızı depolama hizmeti için verdik. 6 ay sonra aldığımızda her şey bıraktığımız gibi tertemizdi." },
-    { name: "Osman Yıldız", location: "Pursaklar, Ankara", rating: 5, comment: "Ankara içi nakliyat fiyatları konusunda en uygun ve en kaliteli hizmeti veren firma diyebilirim." },
-    { name: "Zeynep Çelik", location: "Keçiören, Ankara", rating: 5, comment: "Etlik bölgesindeki evimize asansörlü taşıma ile 2 saatte yerleştik. Ekip çok saygılıydı." },
-    { name: "Bünyamin Öztürk", location: "Gölbaşı, Ankara", rating: 5, comment: "Villa taşıma konusunda gerçekten uzmanlar. İncek'teki yeni evimize eşyaları büyük bir titizlikle taşıdılar." },
-    { name: "Derya Korkmaz", location: "Altındağ, Ankara", rating: 5, comment: "Eski evimiz çok dardı ama ekip dar merdivenlerden bile eşyaları ustalıkla indirdi. Çok memnun kaldık." },
-    { name: "Mehmet Aksoy", location: "Kızılay, Ankara", rating: 5, comment: "Şehir merkezindeki ofis taşıma işimizi pazar günü sessizce hallettiler. Kurumsal bir firma." },
+    { value: "Ankara", label: "Merkez Bölge" },
+    { value: "Ev & Ofis", label: "Taşıma Türleri" },
+    { value: "Paketleme", label: "Destek Hizmeti" },
+    { value: "Şehirler Arası", label: "Hizmet Kapsamı" },
 ];
 
 // Navigasyon Menüsü

@@ -4,12 +4,12 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ServiceSchema from "@/components/ServiceSchema";
 
 export const metadata: Metadata = {
-    title: "Ankara Evden Eve Nakliyat - Sigortalı & Asansörlü",
-    description: "Ankara'da profesyonel evden eve nakliyat hizmeti. 15+ yıllık tecrübe, sigortalı taşımacılık ve asansörlü nakliyat çözümleriyle yanınızdayız.",
+    title: "Ankara Evden Eve Nakliyat ve Taşıma Hizmeti",
+    description: "Ankara'da evden eve nakliyat, paketleme ve asansörlü taşıma seçenekleri hakkında bilgi ve teklif alın.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/evden-eve-nakliyat" },
     openGraph: {
-        title: "Ankara Evden Eve Nakliyat - Sigortalı & Asansörlü",
-        description: "Ankara'da profesyonel evden eve nakliyat hizmeti. 15+ yıllık tecrübe, sigortalı taşımacılık ve asansörlü nakliyat çözümleriyle yanınızdayız.",
+        title: "Ankara Evden Eve Nakliyat ve Taşıma Hizmeti",
+        description: "Ankara'da evden eve nakliyat, paketleme ve asansörlü taşıma seçenekleri hakkında bilgi ve teklif alın.",
         url: "https://ankaraozdemirnakliyat.com/evden-eve-nakliyat",
         type: "website",
         images: [
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Ankara Evden Eve Nakliyat - Sigortalı & Asansörlü",
-        description: "Ankara'da profesyonel evden eve nakliyat hizmeti. 15+ yıllık tecrübe, sigortalı taşımacılık ve asansörlü nakliyat çözümleriyle yanınızdayız.",
+        title: "Ankara Evden Eve Nakliyat ve Taşıma Hizmeti",
+        description: "Ankara'da evden eve nakliyat, paketleme ve asansörlü taşıma seçenekleri hakkında bilgi alın.",
     }
 };
 
@@ -37,7 +37,7 @@ export default function EvdenEveNakliyatPage() {
             ]} />
             <ServiceSchema
                 serviceName="Ankara Evden Eve Nakliyat"
-                serviceDescription="Ankara evden eve nakliyat hizmeti. 15+ yıllık tecrübe, sigortalı taşımacılık, asansörlü nakliyat."
+                serviceDescription="Ankara evden eve nakliyat, paketleme ve asansörlü taşıma seçenekleri."
                 serviceType="Evden Eve Nakliyat"
             />
             <EvdenEveClient />

@@ -304,7 +304,7 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
                             {[
                                 { stat: stats[1], icon: <IconTruck />, delay: 0.2, yOffset: "-translate-y-8" },
                                 { stat: stats[0], icon: <IconClock />, delay: 0.4, yOffset: "translate-y-12" },
-                                { stat: { value: "4.9", label: "GOOGLE SCORE" }, icon: <IconStar />, delay: 0.6, yOffset: "-translate-y-4" },
+                                { stat: stats[2], icon: <IconStar />, delay: 0.6, yOffset: "-translate-y-4" },
                                 { stat: stats[3], icon: <IconShield />, delay: 0.8, yOffset: "translate-y-16" }
                             ].map((item, i) => (
                                 <motion.div

@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { faqData, faqCategories } from "@/data/faqData";
-import { firmaBilgileri, musterıYorumlari } from "@/data/siteData";
+import { firmaBilgileri } from "@/data/siteData";
 import {
     IconChevronRight, IconPhone, IconMail, IconShield, IconCheck,
     IconArrow, IconStar, IconUsers, IconTruck, IconBox, IconClipboard
@@ -298,49 +298,6 @@ export default function FaqClient() {
                                 </div>
                                 <h3 className="text-lg font-black text-slate-900 tracking-tight mb-2">{item.title}</h3>
                                 <p className="text-sm text-slate-500 font-medium leading-relaxed">{item.desc}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* ═══════════════ TESTIMONIAL STRIP ═══════════════ */}
-            <section className="py-20 md:py-28 bg-slate-50 relative overflow-hidden">
-                <div className="container-custom relative z-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-                        className="text-center mb-14"
-                    >
-                        <h2 className="text-3xl md:text-5xl font-heading font-black text-slate-950 tracking-tighter leading-tight">
-                            Müşterilerimiz <span className="text-primary-500 italic">Ne Diyor?</span>
-                        </h2>
-                    </motion.div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                        {musterıYorumlari.slice(0, 3).map((yorum, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className="bg-white rounded-3xl p-8 border border-slate-100 hover:shadow-xl hover:border-primary-100 transition-all duration-500 group"
-                            >
-                                <div className="flex gap-1 mb-4">
-                                    {[...Array(yorum.rating)].map((_, j) => (
-                                        <IconStar key={j} className="w-4 h-4 text-primary-500" />
-                                    ))}
-                                </div>
-                                <p className="text-slate-600 text-sm font-medium leading-relaxed mb-6">&ldquo;{yorum.comment}&rdquo;</p>
-                                <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
-                                    <div className="w-10 h-10 rounded-full bg-primary-500/10 flex items-center justify-center text-primary-600 font-black text-sm">
-                                        {yorum.name.charAt(0)}
-                                    </div>
-                                    <div>
-                                        <div className="text-sm font-bold text-slate-900">{yorum.name}</div>
-                                        <div className="text-xs text-slate-400">{yorum.location}</div>
-                                    </div>
-                                </div>
                             </motion.div>
                         ))}
                     </div>

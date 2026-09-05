@@ -5,18 +5,18 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
     title: "Hizmetlerimiz - Ankara Evden Eve Nakliyat",
-    description: "Ankara Özdemir'den profesyonel hizmetler: Evden eve nakliyat, asansörlü taşıma, şehirler arası nakliyat. 15+ yıl deneyim, sigortalı çözümler.",
+    description: "Ankara Özdemir Nakliyat'ın evden eve, ofis, parça eşya, paketleme, asansörlü ve şehirler arası taşıma seçeneklerini inceleyin.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler" },
     openGraph: {
         title: "Hizmetlerimiz - Ankara Evden Eve Nakliyat",
-        description: "Ankara Özdemir'den profesyonel hizmetler: Evden eve nakliyat, asansörlü taşıma, şehirler arası nakliyat. 15+ yıl deneyim, sigortalı çözümler.",
+        description: "Evden eve, ofis, parça eşya, paketleme, asansörlü ve şehirler arası taşıma seçeneklerini inceleyin.",
         url: "https://ankaraozdemirnakliyat.com/hizmetler",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
         title: "Hizmetlerimiz - Ankara Evden Eve Nakliyat",
-        description: "Ankara Özdemir'den profesyonel hizmetler: Evden eve nakliyat, asansörlü taşıma, şehirler arası nakliyat. 15+ yıl deneyim, sigortalı çözümler.",
+        description: "Ankara Özdemir Nakliyat'ın taşıma ve paketleme seçeneklerini inceleyin.",
     }
 };
 

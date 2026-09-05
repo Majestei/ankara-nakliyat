@@ -96,16 +96,10 @@ const jsonLd = {
     "@id": "https://ankaraozdemirnakliyat.com/#organization",
     name: "Ankara Özdemir Nakliyat",
     alternateName: "Ankara Özdemir - Profesyonel Evden Eve Taşımacılık",
-    description: "Ankara evden eve nakliyat, şehirler arası nakliyat, ofis taşıma ve depolama hizmetleri. 15+ yıllık deneyim, sigortalı taşımacılık.",
+    description: "Ankara evden eve nakliyat, şehirler arası nakliyat, ofis taşıma ve depolama hizmetleri.",
     url: "https://ankaraozdemirnakliyat.com",
     telephone: firmaBilgileri.phone.replace(/\s+/g, ''),
     email: firmaBilgileri.email,
-    foundingDate: "2009",
-    numberOfEmployees: {
-        "@type": "QuantitativeValue",
-        minValue: 50,
-        maxValue: 100,
-    },
     address: {
         "@type": "PostalAddress",
         streetAddress: firmaBilgileri.address,
@@ -113,11 +107,6 @@ const jsonLd = {
         addressRegion: "Ankara",
         postalCode: "06930",
         addressCountry: "TR",
-    },
-    geo: {
-        "@type": "GeoCoordinates",
-        latitude: 39.9208,
-        longitude: 32.8541,
     },
     openingHoursSpecification: [
         {
@@ -162,18 +151,6 @@ const jsonLd = {
         { "@type": "City", name: "Şereflikoçhisar" },
         { "@type": "City", name: "Yenimahalle" },
     ],
-    serviceArea: {
-        "@type": "GeoCircle",
-        geoMidpoint: {
-            "@type": "GeoCoordinates",
-            latitude: 39.9208,
-            longitude: 32.8541,
-        },
-        geoRadius: "500000",
-    },
-    priceRange: "$$",
-    currenciesAccepted: "TRY",
-    paymentAccepted: "Cash, Credit Card, Bank Transfer",
     image: "https://ankaraozdemirnakliyat.com/og-image.jpg",
     logo: "https://ankaraozdemirnakliyat.com/logo.svg",
     sameAs: [
@@ -184,14 +161,13 @@ const jsonLd = {
         name: "Nakliyat Hizmetleri",
         itemListElement: [
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Evden Eve Nakliyat", description: "Ankara evden eve nakliyat hizmeti" } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Şehirler Arası Nakliyat", description: "20 ile şehirler arası nakliyat" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Şehirler Arası Nakliyat", description: "Şehirler arası nakliyat hizmeti" } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ofis Taşıma", description: "Kurumsal ofis taşıma hizmeti" } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Asansörlü Taşıma", description: "Asansörlü nakliyat hizmeti" } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Paketleme", description: "Profesyonel paketleme hizmeti" } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Nakliyat Sigortası", description: "Tam kapsamlı nakliyat sigortası" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Nakliyat Sigortası", description: "Nakliyat sigortası hakkında bilgi" } },
         ],
     },
-    slogan: "Ankara'da Nakliyat Denince Akla İlk Gelen Firma",
 };
 
 const websiteJsonLd = {

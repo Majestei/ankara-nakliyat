@@ -14,6 +14,12 @@ const nextConfig = {
     async redirects() {
         return [
             {
+                source: '/:path*',
+                has: [{ type: 'host', value: 'www.ankaraozdemirnakliyat.com' }],
+                destination: 'https://ankaraozdemirnakliyat.com/:path*',
+                permanent: true,
+            },
+            {
                 source: '/hizmetler/evden-eve-nakliyat',
                 destination: '/evden-eve-nakliyat',
                 permanent: true,
