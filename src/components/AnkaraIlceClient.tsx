@@ -13,6 +13,8 @@ import {
 import { IlceInternalLinks, HizmetInternalLinks } from "@/components/InternalLinks";
 import PricingTable from "@/components/PricingTable";
 import TrustBadgesSection from "@/components/TrustBadgesSection";
+import ContractGuaranteeSection from "@/components/ContractGuaranteeSection";
+import MovingChecklistSection from "@/components/MovingChecklistSection";
 
 // ── SPATIAL UI COMPONENTS ──
 
@@ -141,6 +143,144 @@ function PodCard({ item, ilceName, ilceSlug, index }: { item: any, ilceName: str
     );
 }
 
+function DistrictGuideSection({ ilce }: { ilce: { name: string; slug: string } }) {
+    const content = ilceIcerikleri[ilce.slug] || [
+        `${ilce.name} evden eve nakliyat hizmetlerimizde, bölgenin sokak yapısına ve mimari özelliklerine uygun geniş araç filomuz ve kadrolu ekibimizle profesyonel çözümler sunuyoruz.`,
+        `${ilce.name}'da yüksek katlı siteler ve müstakil yerleşimler için geliştirdiğimiz 25. kata kadar erişen modüler asansör sistemimizle eşyalarınızı bina merdivenlerine temas etmeden, sıfır hasar riskiyle taşıyoruz.`,
+        `Taşınma öncesinde ücretsiz ekspertiz yaparak sabit fiyat sözleşmesi imzalıyor, ambalajlamadan montaja kadar süreci anahtar teslim olarak tamamlıyoruz.`
+    ];
+
+    const highlights = [
+        {
+            title: "Dar Sokak & Yokuş Manevrası",
+            desc: `${ilce.name}'nın dik yokuşlarına, yoğun cadde trafiğine ve dar sokaklarına uygun manevra kabiliyeti yüksek kapalı çelik kasa araç filosu.`
+        },
+        {
+            title: "25. Kata Kadar Modüler Asansör",
+            desc: `${ilce.name}'daki yüksek katlı rezidans ve sitelerde bina merdivenlerini ve apartman asansörünü işgal etmeden dış cepheden hızlı yükleme.`
+        },
+        {
+            title: "Site & Rezidans Yönetim Uyumu",
+            desc: `Toplu konut sitelerinde yönetim kuralları, peyzaj koruma, otopark saatleri ve yük asansörü protokollerine %100 profesyonel uyum.`
+        },
+        {
+            title: "Sözleşmeli Sabit Fiyat Güvencesi",
+            desc: `Taşınma günü kapıda ek masraf veya sürpriz fiyat artışı yok. K3 lisansı, emtia sigortası ve imzalı sözleşmeyle güvencedesiniz.`
+        }
+    ];
+
+    return (
+        <section className="py-20 md:py-28 bg-white border-b border-slate-200 relative overflow-hidden">
+            <div className="container-custom max-w-5xl px-4">
+                <div className="text-center mb-14 space-y-4">
+                    <span className="text-primary-600 font-bold text-xs uppercase tracking-[0.3em] bg-primary-50 px-4 py-1.5 rounded-full border border-primary-100">
+                        Bölgesel Saha Tecrübesi
+                    </span>
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-black text-slate-900 tracking-tight">
+                        {ilce.name} Evden Eve Nakliyat & <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-orange-500">
+                            Saha Lojistiği Rehberi
+                        </span>
+                    </h2>
+                    <p className="text-slate-600 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+                        {ilce.name} ilçesinde taşınırken sokak yapısından site izinlerine, asansör kurulumundan mobilya montajına kadar bilmeniz gereken tüm operasyonel detaylar.
+                    </p>
+                </div>
+
+                <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 md:p-12 mb-12 space-y-6 shadow-sm">
+                    {content.map((p, idx) => (
+                        <p
+                            key={idx}
+                            className="text-slate-700 text-base md:text-lg leading-relaxed"
+                            dangerouslySetInnerHTML={{
+                                __html: p.replace(/\*\*(.*?)\*\*/g, "<strong class='text-slate-900 font-bold bg-primary-100/50 px-1 py-0.5 rounded'>$1</strong>")
+                            }}
+                        />
+                    ))}
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-6">
+                    {highlights.map((h, i) => (
+                        <div key={i} className="p-6 md:p-8 bg-slate-50 border border-slate-200 rounded-2xl shadow-sm hover:border-primary-500/50 hover:bg-primary-50/20 transition-all">
+                            <div className="w-10 h-10 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center font-black text-base mb-4 border border-primary-200">
+                                0{i + 1}
+                            </div>
+                            <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2">{h.title}</h3>
+                            <p className="text-sm text-slate-600 leading-relaxed">{h.desc}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function DistrictFaqAccordion({ ilceName }: { ilceName: string }) {
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+    const faqs = [
+        {
+            q: `${ilceName}'da evden eve nakliyat fiyatları ne kadar?`,
+            a: `${ilceName} nakliyat fiyatları 2026 yılı için ortalama 1+1 daireler için 8.000 - 12.000 ₺, 2+1 daireler için 12.000 - 16.500 ₺, 3+1 daireler için 16.500 - 23.000 ₺ aralığındadır. Fiyat; kat durumu, asansör gereksinimi ve seçilen pakete (Standart veya Anahtar Teslim VIP) göre netleşir.`
+        },
+        {
+            q: `${ilceName}'da asansörlü nakliyat kurulumu için cadde veya sokak izni gerekiyor mu?`,
+            a: `Modüler dış cephe asansörlerimiz araç üstü hidrolik sistem olduğu için çoğu sokakta trafiği tıkamadan 20-30 dakikada kurulur. Dar sokaklarda veya ana arterlerde gerekirse zabıta ve belediye izin süreçlerini önceden koordine ediyoruz.`
+        },
+        {
+            q: `${ilceName} taşınma süreci ortalama kaç saat sürer?`,
+            a: `${ilceName} içi taşımalarda 4-5 kişilik kadrolu ekibimiz ve dış cephe asansörümüz sayesinde sabah 08:30'da başlayan bir 3+1 daire taşınması ortalama 4-6 saat içinde yeni evinizde mobilyalarınız monte edilmiş olarak teslim edilir.`
+        },
+        {
+            q: `Mobilya demontaj, montaj ve beyaz eşya bağlantıları fiyata dahil mi?`,
+            a: `Evet. Ekibimizdeki kadrolu marangoz gardırop, baza, masa ve üniteleri söker; yeni evinizde dilediğiniz odaya kurar. Çamaşır ve bulaşık makinelerinizin su tesisat bağlantıları da fiyata dahildir.`
+        },
+        {
+            q: `Taşınma günü sürpriz fiyat artışı veya ek masraf çıkar mı?`,
+            a: `Asla. Taşıma öncesi WhatsApp video keşfi veya fiziki ekspertiz ile sabit fiyat sözleşmesi imzalanır. Sözleşmede yazan rakam haricinde tek bir kuruş ek ücret talep edilmez.`
+        }
+    ];
+
+    return (
+        <section className="py-20 md:py-28 bg-white border-t border-slate-200">
+            <div className="container-custom max-w-4xl px-4">
+                <div className="text-center mb-12 space-y-4">
+                    <span className="text-primary-600 font-bold text-xs uppercase tracking-widest bg-primary-50 px-4 py-1.5 rounded-full border border-primary-100">
+                        Merak Edilenler
+                    </span>
+                    <h2 className="text-3xl md:text-5xl font-heading font-black text-slate-900 tracking-tight">
+                        {ilceName} Nakliyat Sıkça Sorulan Sorular
+                    </h2>
+                    <p className="text-slate-600 text-sm md:text-base">
+                        {ilceName} bölgesindeki taşınma süreçleriyle ilgili müşterilerimizin en çok sorduğu sorular ve şeffaf yanıtlarımız.
+                    </p>
+                </div>
+
+                <div className="space-y-4">
+                    {faqs.map((faq, i) => (
+                        <div key={i} className="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition-all">
+                            <button
+                                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                                className="w-full text-left p-6 flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-primary-600 transition-colors"
+                            >
+                                <span className="text-base md:text-lg">{faq.q}</span>
+                                <span className={`text-xl font-black transition-transform duration-200 text-primary-500 shrink-0 ${openIndex === i ? "rotate-45" : ""}`}>
+                                    +
+                                </span>
+                            </button>
+                            {openIndex === i && (
+                                <div className="px-6 pb-6 text-slate-600 text-sm md:text-base leading-relaxed border-t border-slate-200/60 pt-4">
+                                    {faq.a}
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
+
 // ── MAIN CLIENT COMPONENT ──
 
 export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, digerIlceler: any[] }) {
@@ -213,6 +353,9 @@ export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, di
                 </div>
             </section>
 
+            {/* ── DISTRICT LOGISTICS & FIELD GUIDE ── */}
+            <DistrictGuideSection ilce={ilce} />
+
             {/* ── SPATIAL PODS GRID ── */}
             <section className="py-24 md:py-40 lg:py-60 relative">
                 <div className="container-custom">
@@ -275,8 +418,6 @@ export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, di
                 </section>
             )}
 
-
-
             {/* ── DIGITAL TERMINAL DASHBOARD ── */}
             <section className="py-24 md:py-40 bg-white rounded-t-[2.5rem] md:rounded-t-[5rem] lg:rounded-[10rem] relative z-10 shadow-[0_-50px_100px_rgba(0,0,0,0.1)]">
                 <div className="container-custom">
@@ -337,8 +478,17 @@ export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, di
                 locationName={ilce.name}
             />
 
+            {/* ── MOVING CHECKLIST SECTION ── */}
+            <MovingChecklistSection />
+
+            {/* ── CONTRACT GUARANTEE SECTION ── */}
+            <ContractGuaranteeSection />
+
             {/* ── INSTITUTIONAL TRUST BADGES (K3 & RESMİ GÜVENCE) ── */}
             <TrustBadgesSection />
+
+            {/* ── DISTRICT FAQ ACCORDION ── */}
+            <DistrictFaqAccordion ilceName={ilce.name} />
 
             {/* ── THE KINETIC HUB ── */}
             <section className="py-24 md:py-40 lg:py-60 bg-white">
@@ -359,37 +509,6 @@ export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, di
                                 <div className="absolute inset-0 bg-primary-500 translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-in-out opacity-10" />
                             </Link>
                         ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* ── EDITORIAL SPOTLIGHT ── */}
-            <section className="py-24 md:py-40 lg:py-60 bg-slate-950 relative overflow-hidden">
-                <div className="container-custom max-w-6xl relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-32 items-center">
-                        <div className="space-y-12">
-                            <div className="w-24 h-px bg-primary-500" />
-                             <h2 className="text-5xl md:text-7xl font-heading font-black text-white tracking-tighter leading-[0.9] md:leading-none">
-                                {ilce.name} <br /> <span className="text-white/20 italic">İstihbaratı.</span>
-                            </h2>
-                            <div className="prose prose-invert prose-2xl text-white/40 leading-relaxed space-y-10 font-medium">
-                                {ilceIcerikleri[ilce.slug] ? (
-                                    ilceIcerikleri[ilce.slug].map((text: string, idx: number) => (
-                                        <p key={idx} dangerouslySetInnerHTML={{ __html: text.replace(/\*\*(.*?)\*\*/g, "<strong class='text-primary-500'>$1</strong>") }} />
-                                    ))
-                                ) : (
-                                    <p>{ilce.name} bölgesinde 15 yıllık tecrübemizle lojistik standartlarını belirliyoruz.</p>
-                                )}
-                            </div>
-                        </div>
-                        <div className="relative aspect-[3/4] bg-white/5 border border-white/10 rounded-[5rem] overflow-hidden group shadow-3xl">
-                            <Image src="/images/hizmetler/evden-eve-nakliyat.webp" alt={ilce.name} fill className="object-cover opacity-20 grayscale group-hover:grayscale-0 group-hover:opacity-40 transition-all duration-1000" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
-                            <div className="absolute bottom-12 left-12 right-12">
-                                <p className="text-white font-black text-4xl tracking-tighter uppercase">{ilce.name}</p>
-                                <p className="text-primary-500 text-[10px] font-black uppercase tracking-[0.5em] mt-2">Onaylanmış Operasyon</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>

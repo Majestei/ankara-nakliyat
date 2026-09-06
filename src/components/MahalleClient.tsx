@@ -7,8 +7,11 @@ import { motion, useScroll, useTransform, useSpring, useMotionValue } from "fram
 import { firmaBilgileri, hizmetler, ilceIcerikleri } from "@/data/siteData";
 import { 
     IconPhone, IconShield, IconTruck, 
-    IconBox, IconCog, IconArrow, IconStar 
+    IconBox, IconCog, IconArrow, IconStar, IconCheck 
 } from "@/components/Icons";
+import PricingTable from "@/components/PricingTable";
+import TrustBadgesSection from "@/components/TrustBadgesSection";
+import ContractGuaranteeSection from "@/components/ContractGuaranteeSection";
 
 // ── SPATIAL UI COMPONENTS ──
 
@@ -239,7 +242,18 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                 </div>
             </section>
 
+            {/* ── 2026 MAHALLE PRICING TABLE ── */}
+            <PricingTable 
+                title={`${ilce.name} ${mahalle.name} Nakliyat Fiyatları (2026)`}
+                subtitle={`${ilce.name} ${mahalle.name} genelinde geçerli, şeffaf, sigortalı ve marangozlu evden eve nakliyat fiyat tarifesi. Sürpriz ek maliyet olmadan güvenle taşının.`}
+                locationName={`${ilce.name} ${mahalle.name}`}
+            />
 
+            {/* ── INSTITUTIONAL TRUST BADGES ── */}
+            <TrustBadgesSection />
+
+            {/* ── CONTRACT GUARANTEE ── */}
+            <ContractGuaranteeSection />
 
             {/* ── THE KINETIC HUB (Diğer Mahalleler) ── */}
             <section className="py-24 md:py-40 bg-white border-t border-slate-100">

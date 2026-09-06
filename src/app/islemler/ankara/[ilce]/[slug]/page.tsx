@@ -5,6 +5,10 @@ import { ankaraIlceleri, firmaBilgileri } from "@/data/siteData";
 import { neighborhoodsByDistrict } from "@/data/neighborhoodData";
 import { IconPhone, IconCheck, IconMapPin } from "@/components/Icons";
 import MahalleClient from "@/components/MahalleClient";
+import PricingTable from "@/components/PricingTable";
+import TrustBadgesSection from "@/components/TrustBadgesSection";
+import ContractGuaranteeSection from "@/components/ContractGuaranteeSection";
+import MovingChecklistSection from "@/components/MovingChecklistSection";
 
 // Hizmet alt sayfa tanımları
 const ilceHizmetler = [
@@ -341,6 +345,22 @@ export default function CombinedIlceSubPage({ params }: Props) {
                         </div>
                     </div>
                 </section>
+
+                {/* 2026 District Service Pricing Table */}
+                <PricingTable 
+                    title={`${ilce.name} ${hizmet.title} Fiyatları (2026)`}
+                    subtitle={`${ilce.name} genelinde geçerli şeffaf fiyat tarifemiz. K3 lisansı, tam kapsamlı sigorta ve profesyonel montaj dahildir.`}
+                    locationName={`${ilce.name}`}
+                />
+
+                {/* Moving Checklist */}
+                <MovingChecklistSection />
+
+                {/* Contract Guarantee */}
+                <ContractGuaranteeSection />
+
+                {/* Institutional Trust Badges */}
+                <TrustBadgesSection />
 
                 {/* CTA */}
                 <section className="section-padding bg-gradient-to-br from-primary-600 to-orange-600 text-white relative overflow-hidden">
