@@ -275,62 +275,252 @@ export default function EvdenEveClient() {
                 </div>
             </section>
 
-            {/* ── SMART PRICING DASHBOARD ── */}
-            <section className="py-24 md:py-40 lg:py-60 bg-slate-950 relative overflow-hidden">
-                <div className="absolute inset-0 z-0 opacity-20">
-                    <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-primary-500 to-transparent" />
-                    <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-primary-500 to-transparent" />
+            {/* ── 2026 ANKARA EVDEN EVE NAKLİYAT FİYAT TABLOSU ── */}
+            <section className="py-24 md:py-36 bg-slate-950 relative overflow-hidden text-white" id="fiyatlar">
+                <div className="absolute inset-0 z-0 opacity-15 pointer-events-none">
+                    <div className="absolute top-0 left-1/3 w-px h-full bg-gradient-to-b from-transparent via-primary-500 to-transparent" />
+                    <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-primary-500 to-transparent" />
                 </div>
-                
+
                 <div className="container-custom relative z-10">
-                    <div className="grid lg:grid-cols-2 gap-32 items-center">
-                        <div className="space-y-10 md:space-y-12 text-center lg:text-left px-4 md:px-0">
-                            <h2 className="text-5xl md:text-8xl font-heading font-black text-white leading-[0.95] md:leading-[0.85] tracking-tighter">
-                                Şeffaf <br />
-                                <span className="text-primary-500">Fiyatlandırma</span>
-                            </h2>
-                            <p className="text-white/40 text-lg md:text-2xl font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
-                                Hiçbir sürpriz maliyetle karşılaşmamanız için her adımı dijital ortamda planlıyoruz.
-                            </p>
-                            
-                            <div className="grid grid-cols-2 gap-6">
-                                {[
-                                    { text: "Eşya Hacmi", icon: <IconBox className="w-5 h-5 md:w-6 md:h-6" /> },
-                                    { text: "Asansör İhtiyacı", icon: <IconCog className="w-5 h-5 md:w-6 md:h-6" /> },
-                                    { text: "Lojistik Mesafe", icon: <IconTruck className="w-5 h-5 md:w-6 md:h-6" /> },
-                                    { text: "Paketleme Düzeyi", icon: <IconCheck className="w-5 h-5 md:w-6 md:h-6" /> }
-                                ].map((item, i) => (
-                                    <div key={i} className="bg-white/5 border border-white/10 p-6 md:p-8 rounded-2xl md:rounded-[2.5rem] flex flex-col items-center gap-3 md:gap-4 hover:bg-white/10 transition-all">
-                                        <div className="text-primary-500">{item.icon}</div>
-                                        <span className="text-white font-black uppercase tracking-widest text-[9px] md:text-[10px] text-center">{item.text}</span>
+                    <div className="text-center max-w-4xl mx-auto mb-16 md:mb-24 space-y-6 px-4">
+                        <span className="text-primary-500 font-black text-xs uppercase tracking-[0.4em] md:tracking-[0.6em] bg-primary-500/10 px-6 py-2 rounded-full border border-primary-500/20">
+                            Şeffaf ve Sabit Fiyat Politikası
+                        </span>
+                        <h2 className="text-4xl md:text-7xl font-heading font-black tracking-tight leading-tight">
+                            2026 Ankara Evden Eve <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-orange-500 to-primary-600">
+                                Nakliyat Fiyatları
+                            </span>
+                        </h2>
+                        <p className="text-slate-400 text-base md:text-xl leading-relaxed max-w-3xl mx-auto">
+                            Ankara içi taşınmalarda sürpriz ek masraflarla karşılaşmamanız için oda sayısına ve hizmet kapsamına göre şeffaf ortalama fiyatlandırma tablomuz aşağıdadır. Tüm fiyatlarımıza KDV, marangozluk ve sigorta dahildir.
+                        </p>
+                    </div>
+
+                    {/* Fiyat Kartları */}
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16">
+                        {[
+                            {
+                                type: "1+1 Daire Taşıma",
+                                price: "8.000 ₺ – 12.000 ₺",
+                                team: "2-3 Uzman Personel",
+                                vehicle: "Kompakt Kapalı Kasa Araç",
+                                duration: "3 - 5 Saat",
+                                features: [
+                                    "Mobilya demontaj ve montajı",
+                                    "Çift katlı balonlu ambalajlama",
+                                    "Beyaz eşya koruma kılıfları",
+                                    "Tam kapsamlı emtia sigortası",
+                                ],
+                                popular: false,
+                            },
+                            {
+                                type: "2+1 Daire Taşıma",
+                                price: "12.000 ₺ – 16.500 ₺",
+                                team: "3-4 Uzman Personel",
+                                vehicle: "Orta Boy Çelik Kasalı Kamyon",
+                                duration: "4 - 6 Saat",
+                                features: [
+                                    "Profesyonel marangoz desteği",
+                                    "Kraft kağıt ve patpat sarım",
+                                    "Askılı tekstil taşıma dolabı",
+                                    "Asansör kurulumuna uygun",
+                                ],
+                                popular: true,
+                            },
+                            {
+                                type: "3+1 Daire Taşıma",
+                                price: "16.500 ₺ – 23.000 ₺",
+                                team: "4-5 Uzman Personel",
+                                vehicle: "Büyük Boy Geniş Hacimli Filo",
+                                duration: "5 - 8 Saat",
+                                features: [
+                                    "A'dan Z'ye anahtar teslim paketleme",
+                                    "Tüm dolap ve ünite demontajı",
+                                    "Özel dış cephe asansörü imkanı",
+                                    "Sıfır risk ve hasar teminatı",
+                                ],
+                                popular: false,
+                            },
+                            {
+                                type: "4+1 & Villa Taşıma",
+                                price: "23.000 ₺ – 35.000 ₺",
+                                team: "5-6 Kıdemli Personel",
+                                vehicle: "Maksimum Boy Çelik Kasa Kamyon",
+                                duration: "Tam Gün Operasyon",
+                                features: [
+                                    "VIP kişiye özel taşıma planı",
+                                    "Kırılacaklar için özel ahşap sandık",
+                                    "Çift asansör kurulum desteği",
+                                    "Aynı gün kurulum ve yerleşim",
+                                ],
+                                popular: false,
+                            },
+                        ].map((tier, index) => (
+                            <div
+                                key={index}
+                                className={`rounded-3xl p-8 flex flex-col justify-between relative transition-all duration-300 ${
+                                    tier.popular
+                                        ? "bg-gradient-to-b from-primary-950/80 to-slate-900 border-2 border-primary-500 shadow-[0_20px_60px_rgba(249,115,22,0.2)]"
+                                        : "bg-white/5 border border-white/10 hover:border-white/20"
+                                }`}
+                            >
+                                {tier.popular && (
+                                    <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-500 text-slate-950 text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg">
+                                        En Çok Tercih Edilen
+                                    </span>
+                                )}
+                                <div>
+                                    <h3 className="text-xl font-black text-white mb-2">{tier.type}</h3>
+                                    <div className="text-2xl md:text-3xl font-black text-primary-400 mb-6">{tier.price}</div>
+
+                                    <div className="space-y-3 text-xs text-slate-300 pb-6 border-b border-white/10 mb-6">
+                                        <div className="flex items-center gap-2">
+                                            <IconTruck className="w-4 h-4 text-primary-500 shrink-0" />
+                                            <span>{tier.vehicle}</span>
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                            <IconBox className="w-4 h-4 text-primary-500 shrink-0" />
+                                            <span>{tier.team}</span>
+                                        </div>
                                     </div>
-                                ))}
+
+                                    <ul className="space-y-3 mb-8">
+                                        {tier.features.map((feat, fi) => (
+                                            <li key={fi} className="flex items-start gap-2.5 text-xs text-slate-300">
+                                                <IconCheck className="w-4 h-4 text-green-400 shrink-0 mt-0.5" />
+                                                <span>{feat}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <a
+                                    href={`tel:${firmaBilgileri.phone.replace(/\s/g, "")}`}
+                                    className={`w-full py-4 rounded-xl font-black uppercase tracking-wider text-xs text-center transition-all ${
+                                        tier.popular
+                                            ? "bg-primary-500 text-slate-950 hover:bg-primary-400"
+                                            : "bg-white/10 text-white hover:bg-white/20"
+                                    }`}
+                                >
+                                    Fiyat Teklifi Al
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Fiyatı Belirleyen Kriterler Bilgilendirme Kutusu */}
+                    <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 mb-20">
+                        <h3 className="text-2xl md:text-3xl font-black text-white mb-6">
+                            Ankara Nakliyat Fiyatları Neye Göre Belirlenir?
+                        </h3>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-slate-300 text-sm leading-relaxed">
+                            <div>
+                                <h4 className="text-primary-400 font-bold mb-2">1. Kat Durumu & Asansör</h4>
+                                <p>Binaların kat yüksekliği ve bina içi asansör kullanım izni önemlidir. Dış cephe modüler asansörü kurulumu maliyeti ve süreyi optimize eder.</p>
+                            </div>
+                            <div>
+                                <h4 className="text-primary-400 font-bold mb-2">2. Eşya Yoğunluğu (Oda Sayısı)</h4>
+                                <p>Eşyaların hacmi gereken personel sayısını, ambalaj sarf malzemesini ve nakliyat kamyonunun boyutunu belirleyen birincil etkendir.</p>
+                            </div>
+                            <div>
+                                <h4 className="text-primary-400 font-bold mb-2">3. Ankara İçi Taşıma Mesafesi</h4>
+                                <p>Örneğin Sincan&apos;dan Çankaya&apos;ya veya Keçiören&apos;den Gölbaşı&apos;na yapılan taşımalardaki yakıt ve köprü/otoyol rotası maliyeti etkiler.</p>
+                            </div>
+                            <div>
+                                <h4 className="text-primary-400 font-bold mb-2">4. Özel Eşyalar & Montaj</h4>
+                                <p>Piyano, ağır çelik para kasası veya özel tasarım demonte mobilyalar gibi özel işçilik gerektiren parçalar önceden planlanır.</p>
                             </div>
                         </div>
+                    </div>
 
-                        <HologramCard>
-                            <div className="space-y-10">
-                                <div className="flex justify-between items-center">
-                                    <h3 className="text-3xl font-black text-white">Ekspertiz Talebi</h3>
-                                    <div className="px-4 py-1 bg-primary-500 text-white text-[8px] font-black uppercase tracking-widest rounded-full animate-pulse">Live</div>
+                    {/* ── 5 ADIMDA KUSURSUZ TAŞINMA SÜRECİ ── */}
+                    <div className="pt-12 border-t border-white/10">
+                        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                            <span className="text-primary-500 font-black text-xs uppercase tracking-[0.4em]">Şeffaf Operasyon Akışı</span>
+                            <h3 className="text-3xl md:text-6xl font-heading font-black text-white">
+                                5 Adımda Profesyonel Taşınma
+                            </h3>
+                            <p className="text-slate-400 text-sm md:text-base">
+                                Ankara Özdemir Nakliyat olarak eşyalarınızı rastgele değil, adım adım planlanmış kurumsal bir sistemle taşıyoruz.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-5 gap-6">
+                            {[
+                                {
+                                    step: "01",
+                                    title: "Ücretsiz Keşif & Sözleşme",
+                                    desc: "Eksperimiz eşyalarınızı inceler, net sabit fiyat teklifini sunar ve karşılıklı resmi taşıma sözleşmesi imzalanır.",
+                                },
+                                {
+                                    step: "02",
+                                    title: "Özel Ambalajlama & Demontaj",
+                                    desc: "Marangozumuz gardırop ve mobilyaları söker. Kırılacaklar kraft kağıt ve balonlu naylonlarla darbelere karşı zırhlanır.",
+                                },
+                                {
+                                    step: "03",
+                                    title: "Modüler Asansörle Yükleme",
+                                    desc: "Bina merdivenlerine çarpmadan, 15. kata kadar ulaşan yük asansörümüzle eşyalar güvenle doğrudan araca indirilir.",
+                                },
+                                {
+                                    step: "04",
+                                    title: "Sigortalı Güvenli Sevkiyat",
+                                    desc: "Kapalı çelik kasalı araçlarımızda sabitleme aparatlarıyla bağlanan eşyalar tam kapsamlı emtia poliçesiyle sevk edilir.",
+                                },
+                                {
+                                    step: "05",
+                                    title: "Yeni Evde Montaj & Teslimat",
+                                    desc: "Eşyalar dilediğiniz odalara yerleştirilir, mobilya montajları yapılır, beyaz eşyalar bağlanır ve ambalaj atıkları temizlenir.",
+                                },
+                            ].map((process, pi) => (
+                                <div key={pi} className="bg-white/5 border border-white/10 rounded-2xl p-6 relative flex flex-col justify-between">
+                                    <div>
+                                        <span className="text-4xl font-heading font-black text-primary-500/40 block mb-3">{process.step}</span>
+                                        <h4 className="text-base font-black text-white mb-2">{process.title}</h4>
+                                        <p className="text-xs text-slate-400 leading-relaxed">{process.desc}</p>
+                                    </div>
                                 </div>
-                                <p className="text-white/60 text-lg leading-relaxed">
-                                    Ankara geneline aynı gün profesyonel keşif ekiplerimizi ücretsiz yönlendiriyoruz.
-                                </p>
-                                <div className="space-y-4">
-                                    <MagneticButton 
-                                        isAnchor
-                                        href={`tel:${firmaBilgileri.phone.replace(/\s/g, "")}`}
-                                        className="w-full py-8 bg-white text-slate-950 rounded-3xl font-black uppercase tracking-[0.4em] text-[10px] flex items-center justify-center gap-4 hover:bg-primary-500 hover:text-white transition-all"
-                                    >
-                                        <IconPhone className="w-5 h-5" /> {firmaBilgileri.phone}
-                                    </MagneticButton>
-                                    <Link href="/iletisim" className="block w-full py-8 border border-white/20 text-white rounded-3xl font-black uppercase tracking-[0.4em] text-[10px] text-center hover:bg-white/5">
-                                        Detaylı Teklif Al
-                                    </Link>
-                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* ── ANKARA İLÇELERİNE ÖZEL LOJİSTİK KOŞULLARI REHBERİ ── */}
+                    <div className="mt-20 bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-3xl p-8 md:p-12">
+                        <h3 className="text-2xl md:text-3xl font-black text-white mb-4">
+                            Ankara&apos;nın Coğrafi Koşullarına Hakim Lojistik Altyapı
+                        </h3>
+                        <p className="text-slate-400 text-sm leading-relaxed mb-8 max-w-3xl">
+                            Ankara&apos;da ev taşımak sadece araca eşya yüklemek değildir; ilçelerin sokak darlığı, yokuşları ve site kuralları özel çözümler gerektirir:
+                        </p>
+
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm text-slate-300">
+                            <div className="border-l-2 border-primary-500 pl-4">
+                                <strong className="text-white block mb-1">Çankaya, Ayrancı & Dikmen:</strong>
+                                Dik yokuşlar ve dar sokaklar için manevra kabiliyeti yüksek araçlarımız ve cadde üzeri güvenli asansör yerleşim planlarımız devrededir.
                             </div>
-                        </HologramCard>
+                            <div className="border-l-2 border-primary-500 pl-4">
+                                <strong className="text-white block mb-1">Keçiören & Mamak:</strong>
+                                Yüksek katlı apartmanlarda bina asansörlerinin yıpranmasını önlemek için 15+ kata ulaşan teleskopik hidrolik asansörlerimiz kurulur.
+                            </div>
+                            <div className="border-l-2 border-primary-500 pl-4">
+                                <strong className="text-white block mb-1">Yenimahalle, Batıkent & Çayyolu:</strong>
+                                Geniş site yerleşimlerinde yönetim izinleri, peyzaj koruma ve kapalı otopark yanaşma saatlerine tam uyum sağlanır.
+                            </div>
+                            <div className="border-l-2 border-primary-500 pl-4">
+                                <strong className="text-white block mb-1">Etimesgut, Sincan & Eryaman:</strong>
+                                Merkez operasyon üssümüzün bulunduğu bölgede aynı gün acil ekspertiz ve hızlı araç tahsisi avantajı sunulur.
+                            </div>
+                            <div className="border-l-2 border-primary-500 pl-4">
+                                <strong className="text-white block mb-1">Gölbaşı & İncek:</strong>
+                                Villa, dubleks ve müstakil konutlarda geniş hacimli eşyalar için çift araç ve çoklu ambalaj ekibi görevlendirilir.
+                            </div>
+                            <div className="border-l-2 border-primary-500 pl-4">
+                                <strong className="text-white block mb-1">K3 Yetki Belgesi & Yasal Güvence:</strong>
+                                T.C. Ulaştırma ve Altyapı Bakanlığı K3 Karayolu Taşıma Yetki Belgesi ve Axa/Allianz emtia sigortası ile kurumsal güvence.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
