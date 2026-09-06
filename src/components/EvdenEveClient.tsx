@@ -12,6 +12,7 @@ import {
 } from "@/components/Icons";
 import MovingChecklistSection from "@/components/MovingChecklistSection";
 import ContractGuaranteeSection from "@/components/ContractGuaranteeSection";
+import VolumeCalculator from "@/components/VolumeCalculator";
 
 // ── 3D UTILS & SUB-COMPONENTS ──
 
@@ -154,10 +155,10 @@ export default function EvdenEveClient() {
     const evdenEveOzellikleri = [
         { icon: <IconBox className="w-10 h-10" />, title: "Profesyonel Paketleme", desc: "Kırılacak eşyalarınız için çift katlı balonlu naylon ve özel köpük sistemleri kullanıyoruz.", detail: "Tam Koruma" },
         { icon: <IconShield className="w-10 h-10" />, title: "Tam Kapsamlı Sigorta", desc: "Taşınma öncesi eşyalarınızın ekspertizi yapılarak gerçek değerinde sigortalanır.", detail: "Axa & Allianz" },
-        { icon: <IconWrench className="w-10 h-10" />, title: "Uzman Marangozluk", desc: "Gardırop, beyaz eşya ve avizelerinizin söküm ve montajı profesyonellerce yapılır.", detail: "Söküm & Montaj" },
+        { icon: <IconWrench className="w-10 h-10" />, title: "Marangozluk & Tesisat Dahil", desc: "Gardırop demontaj/montajının yanı sıra çamaşır, bulaşık makinesi su tesisatı ve avize bağlantıları ücretsiz yapılır.", detail: "Ücretsiz Tesisat" },
         { icon: <IconCog className="w-10 h-10" />, title: "Modüler Asansör", desc: "15. kata kadar ulaşabilen modüler asansörlerimizle eşyalarınız çizilmeden taşınır.", detail: "Dikey Lojistik" },
         { icon: <IconTruck className="w-10 h-10" />, title: "Çelik Kasalı Filo", desc: "Hava süspansiyonlu, içi mobilya taşımaya uygun tasarlanmış özel araçlar.", detail: "Modern Filo" },
-        { icon: <IconClipboard className="w-10 h-10" />, title: "Ücretsiz Ekspertiz", desc: "Taşınma günü sürpriz maliyetlerle karşılaşmamanız için yerinde ücretsiz keşif.", detail: "Sıfır Sürpriz" },
+        { icon: <IconClipboard className="w-10 h-10" />, title: "Yazılı Sözleşme & Sabit Fiyat", desc: "Taşınma günü sürpriz maliyetlerle karşılaşmamanız için noter onaylı nitelikte yazılı sözleşme imzalanır.", detail: "Sıfır Sürpriz" },
     ];
 
     return (
@@ -200,7 +201,7 @@ export default function EvdenEveClient() {
                                     <span className="text-transparent bg-clip-text bg-gradient-to-br from-primary-400 via-orange-500 to-primary-600">
                                         Evden Eve
                                     </span> <br />
-                                    <span className="text-white/20">Nakliyat</span>
+                                    <span className="text-white/20">Nakliyat &amp; Nakliye</span>
                                 </h1>
                                 
                                 <p className="text-white/40 text-base md:text-3xl font-medium max-w-2xl leading-relaxed mb-12 md:mb-16 mx-auto lg:mx-0 px-4 md:px-0">
@@ -276,6 +277,9 @@ export default function EvdenEveClient() {
                     </div>
                 </div>
             </section>
+
+            {/* ── İNTERAKTİF EŞYA HACİM & KAMYON HESAPLAMA ARACI ── */}
+            <VolumeCalculator />
 
             {/* ── 2026 ANKARA EVDEN EVE NAKLİYAT FİYAT TABLOSU ── */}
             <section className="py-24 md:py-36 bg-slate-950 relative overflow-hidden text-white" id="fiyatlar">

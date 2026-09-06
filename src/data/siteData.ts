@@ -449,31 +449,5 @@ export const ilceIcerikleri: Record<string, string[]> = {
         "Kalecik nakliyat operasyonlarımızla, bölgenin bağ ve bahçe kültürüyle harmanlanmış yerleşim alanlarında profesyonel hizmet sunuyoruz.",
         "Kalecik evden eve nakliyat ihtiyaçlarınızda, eşyalarınızı her türlü darbe ve sarsıntıya karşı çift katlı balonlu naylonlarla koruyoruz.",
         "Hızlı ve ekonomik Kalecik nakliye çözümleri için bizi arayın."
-    ],
-    "besiktas": [
-        "Beşiktaş nakliyat hizmetlerimizde, İstanbul'un kalbinde, **Bebek'in yalılarından Levent'in plazalarına** kadar her noktada premium çözümler sunuyoruz.",
-        "Dar sokakları ve trafik yoğunluğu ile bilinen Beşiktaş'ta, operasyonlarımızı gece veya sabahın ilk ışıklarında planlayarak aksamaları önlüyoruz. **Sigortalı taşımacılık** ve profesyonel paketleme ile değerli eşyalarınız güvence altındadır.",
-        "Etiler, Arnavutköy ve Ortaköy gibi semtlerde villa taşımacılığı konusunda uzman ekibimizle, antika ve sanat eserlerinizi büyük bir titizlikle yeni adresine ulaştırıyoruz."
-    ],
-    "kadikoy": [
-        "Kadıköy nakliyat operasyonlarımızda, Anadolu Yakası'nın en prestijli bölgeleri olan **Bağdat Caddesi, Moda ve Fenerbahçe**'de 15 yıllık tecrübemizle hizmet veriyoruz.",
-        "**Kadıköy asansörlü nakliyat** sistemimizle, özellikle yüksek katlı ve dar merdivenli binalarda eşyalarınızı bina dışından güvenli bir şekilde taşıyoruz. Göztepe ve Erenköy'deki geniş daireler için özel paketleme ekiplerimiz mevcuttur.",
-        "Kadıköy evden eve nakliyat süreçlerinde, bölgenin sosyal dokusuna uygun, gürültüsüz ve düzenli bir çalışma prensibi benimsiyoruz."
-    ],
-    "sisli": [
-        "Şişli nakliyat hizmetlerimizde, **Nişantaşı, Teşvikiye ve Mecidiyeköy** gibi ticaret ve yaşamın merkezi olan noktalarda kurumsal ve bireysel çözümler üretiyoruz.",
-        "Özellikle **Nişantaşı'ndaki butik mağazalar ve lüks rezidanslar** için geliştirdiğimiz özel taşıma yöntemleriyle, hassas eşyalarınızı sıfır riskle taşıyoruz. Şişli'de trafik ve park sorunlarını önceden koordine ederek zaman tasarrufu sağlıyoruz.",
-        "Bomonti ve Feriköy gibi kentsel dönüşüm bölgelerinde, modern araç filomuzla hızlı ve ekonomik taşınma imkanı sunuyoruz."
-    ],
-    "atasehir": [
-        "Ataşehir nakliyat servisimizle, Finans Merkezi'ne ev sahipliği yapan bu modern ilçede, **Batı Ataşehir'in gökdelenlerinden İçerenköy'ün yerleşik mahallelerine** kadar geniş bir ağda hizmet veriyoruz.",
-        "Rezidans taşımacılığı konusunda uzmanlaşmış ekiplerimiz, site yönetimleri ile koordineli çalışarak taşınma sürecinizi stressiz hale getirir. **Asansörlü taşıma** sistemlerimiz en yüksek katlara bile kolayca ulaşır.",
-        "Ataşehir evden eve nakliyat ihtiyaçlarınızda, eşyalarınızın montaj ve demontaj işlemleri profesyonel marangozlarımız tarafından gerçekleştirilir."
-    ],
-    "beylikduzu": [
-        "Beylikdüzü nakliyat operasyonlarımızda, İstanbul'un batı aksında yer alan **Adnan Kahveci, Beykent ve Gürpınar** bölgelerinde geniş araç filomuzla hizmet veriyoruz.",
-        "Modern şehir planlamasına uygun olarak, Beylikdüzü'ndeki geniş caddelerde asansörlü nakliye araçlarımızla çok hızlı kurulum sağlıyoruz. **Sigortalı taşımacılık** kapsamında her eşyanızın değeri üzerinden poliçe düzenlenir.",
-        "Beylikdüzü evden eve nakliyat süreçlerinde, ailelerin yeni yuvalarına huzurla yerleşmesi için anahtar teslim hizmet sunuyoruz."
     ]
-
 };
