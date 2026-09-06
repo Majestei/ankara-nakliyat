@@ -5,19 +5,19 @@ import ServiceSchema from "@/components/ServiceSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Şehirler Arası Nakliyat - Ankara'dan 81 İle Taşıma",
-    description: "Ankara'dan 81 ile şehirler arası nakliyat. Sigortalı, GPS takipli, parsiyel ve komple taşıma, kapıdan kapıya hizmet. Hemen teklif alın!",
+    title: "Ankara Şehirler Arası Nakliyat: 81 İle Sigortalı Taşıma",
+    description: "Ankara'dan Türkiye'nin 81 iline sigortalı ve sözleşmeli şehirler arası nakliyat. Kapalı çelik kasalı araçlar ve anlık takip ile hemen sabit fiyat alın!",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler/sehirler-arasi-nakliyat" },
     openGraph: {
-        title: "Şehirler Arası Nakliyat - Ankara'dan 81 İle Taşıma",
-        description: "Ankara'dan 81 ile şehirler arası nakliyat. Sigortalı, GPS takipli, parsiyel ve komple taşıma, kapıdan kapıya hizmet. Hemen teklif alın!",
+        title: "Ankara Şehirler Arası Nakliyat: 81 İle Sigortalı Taşıma",
+        description: "Ankara'dan Türkiye'nin 81 iline sigortalı ve sözleşmeli şehirler arası nakliyat. Kapalı çelik kasalı araçlar ve anlık takip ile hemen sabit fiyat alın!",
         url: "https://ankaraozdemirnakliyat.com/hizmetler/sehirler-arasi-nakliyat",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Şehirler Arası Nakliyat - Ankara'dan 81 İle Taşıma",
-        description: "Ankara'dan 81 ile şehirler arası nakliyat. Sigortalı, GPS takipli, parsiyel ve komple taşıma, kapıdan kapıya hizmet. Hemen teklif alın!",
+        title: "Ankara Şehirler Arası Nakliyat: 81 İle Sigortalı Taşıma",
+        description: "Ankara'dan Türkiye'nin 81 iline sigortalı ve sözleşmeli şehirler arası nakliyat. Kapalı çelik kasalı araçlar ve anlık takip ile hemen sabit fiyat alın!",
     }
 };
 

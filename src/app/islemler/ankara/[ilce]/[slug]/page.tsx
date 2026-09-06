@@ -178,10 +178,49 @@ export default function CombinedIlceSubPage({ params }: Props) {
 
     if (!hizmet && !mahalle) notFound();
 
-    // If it's a mahalle, return the MahalleClient
+    // If it's a mahalle, return the MahalleClient with full JSON-LD structured data
     if (mahalle) {
         const digerMahalleler = mahalleler.filter(m => m.slug !== params.slug);
-        return <MahalleClient ilce={ilce} mahalle={mahalle} digerMahalleler={digerMahalleler} isIstanbul={false} />;
+        const mahalleBreadcrumbJsonLd = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: "https://ankaraozdemirnakliyat.com" },
+                { "@type": "ListItem", position: 2, name: "İşlemler", item: "https://ankaraozdemirnakliyat.com/islemler" },
+                { "@type": "ListItem", position: 3, name: `${ilce.name}`, item: `https://ankaraozdemirnakliyat.com/islemler/ankara/${ilce.slug}` },
+                { "@type": "ListItem", position: 4, name: `${mahalle.name} Nakliyat`, item: `https://ankaraozdemirnakliyat.com/islemler/ankara/${ilce.slug}/${mahalle.slug}` },
+            ],
+        };
+        const mahalleServiceJsonLd = {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: `${ilce.name} ${mahalle.name} Evden Eve Nakliyat`,
+            description: `${ilce.name} ${mahalle.name} mahallesinde asansörlü, ambalajlı ve sigortalı profesyonel evden eve nakliyat.`,
+            provider: {
+                "@type": "MovingCompany",
+                name: "Ankara Özdemir Nakliyat",
+                telephone: "05456568103",
+                url: "https://ankaraozdemirnakliyat.com",
+            },
+            areaServed: {
+                "@type": "AdministrativeArea",
+                name: `${mahalle.name}, ${ilce.name}, Ankara`,
+            },
+        };
+
+        return (
+            <>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(mahalleBreadcrumbJsonLd) }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(mahalleServiceJsonLd) }}
+                />
+                <MahalleClient ilce={ilce} mahalle={mahalle} digerMahalleler={digerMahalleler} isIstanbul={false} />
+            </>
+        );
     }
 
     // If it's a hizmet, return the Hizmet page layout

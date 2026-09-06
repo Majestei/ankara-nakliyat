@@ -108,6 +108,12 @@ const jsonLd = {
         postalCode: "06930",
         addressCountry: "TR",
     },
+    geo: {
+        "@type": "GeoCoordinates",
+        latitude: "39.9575",
+        longitude: "32.5835",
+    },
+    priceRange: "₺₺",
     openingHoursSpecification: [
         {
             "@type": "OpeningHoursSpecification",

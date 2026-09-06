@@ -4,19 +4,19 @@ import ServiceSchema from "@/components/ServiceSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Asansörlü Nakliyat Ankara - Yüksek Kat Taşıma",
-    description: "Ankara asansörlü nakliyat hizmeti. 25. kata kadar dış cephe asansörü, hasarsız taşıma, %50 daha hızlı. Hemen teklif alın!",
+    title: "Ankara Asansörlü Nakliyat: 25. Kata Kadar Hızlı Taşıma",
+    description: "Ankara asansörlü nakliyat hizmeti. 25. kata kadar modüler dış cephe asansörüyle çiziksiz, sıfır hasarlı hızlı taşıma. Hemen net fiyat teklifi alın!",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler/asansorlu-tasima" },
     openGraph: {
-        title: "Asansörlü Nakliyat Ankara - Yüksek Kat Taşıma",
-        description: "Ankara asansörlü nakliyat hizmeti. 25. kata kadar dış cephe asansörü, hasarsız taşıma, %50 daha hızlı. Hemen teklif alın!",
+        title: "Ankara Asansörlü Nakliyat: 25. Kata Kadar Hızlı Taşıma",
+        description: "Ankara asansörlü nakliyat hizmeti. 25. kata kadar modüler dış cephe asansörüyle çiziksiz, sıfır hasarlı hızlı taşıma. Hemen net fiyat teklifi alın!",
         url: "https://ankaraozdemirnakliyat.com/hizmetler/asansorlu-tasima",
         type: "website"
     },
     twitter: {
         card: "summary_large_image",
-        title: "Asansörlü Nakliyat Ankara - Yüksek Kat Taşıma",
-        description: "Ankara asansörlü nakliyat hizmeti. 25. kata kadar dış cephe asansörü, hasarsız taşıma, %50 daha hızlı. Hemen teklif alın!"
+        title: "Ankara Asansörlü Nakliyat: 25. Kata Kadar Hızlı Taşıma",
+        description: "Ankara asansörlü nakliyat hizmeti. 25. kata kadar modüler dış cephe asansörüyle çiziksiz, sıfır hasarlı hızlı taşıma. Hemen net fiyat teklifi alın!"
     }
 };
 

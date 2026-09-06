@@ -30,7 +30,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
             title: post.title,
             description: post.excerpt,
             images: ["/og-image.jpg"],
-        }
+        },
+        robots: {
+            index: false,
+            follow: true,
+        },
     };
 }
 

@@ -4,12 +4,14 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import ServiceSchema from "@/components/ServiceSchema";
 
 export const metadata: Metadata = {
-    title: "Ankara Evden Eve Nakliyat ve Taşıma Hizmeti",
-    description: "Ankara'da evden eve nakliyat, paketleme ve asansörlü taşıma seçenekleri hakkında bilgi ve teklif alın.",
+    title: {
+        absolute: "Ankara Evden Eve Nakliyat: Sabit Fiyat & %100 Sigortalı Taşıma",
+    },
+    description: "Ankara evden eve nakliyat sürecinde marangozlu demontaj/montaj, sıfır hasar garantisi ve asansörlü taşıma. Sürpriz masrafsız ücretsiz net fiyat teklifi alın!",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/evden-eve-nakliyat" },
     openGraph: {
-        title: "Ankara Evden Eve Nakliyat ve Taşıma Hizmeti",
-        description: "Ankara'da evden eve nakliyat, paketleme ve asansörlü taşıma seçenekleri hakkında bilgi ve teklif alın.",
+        title: "Ankara Evden Eve Nakliyat: Sabit Fiyat & %100 Sigortalı Taşıma",
+        description: "Ankara evden eve nakliyat sürecinde marangozlu demontaj/montaj, sıfır hasar garantisi ve asansörlü taşıma. Sürpriz masrafsız ücretsiz net fiyat teklifi alın!",
         url: "https://ankaraozdemirnakliyat.com/evden-eve-nakliyat",
         type: "website",
         images: [
@@ -23,8 +25,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Ankara Evden Eve Nakliyat ve Taşıma Hizmeti",
-        description: "Ankara'da evden eve nakliyat, paketleme ve asansörlü taşıma seçenekleri hakkında bilgi alın.",
+        title: "Ankara Evden Eve Nakliyat: Sabit Fiyat & %100 Sigortalı Taşıma",
+        description: "Ankara evden eve nakliyat sürecinde marangozlu demontaj/montaj, sıfır hasar garantisi ve asansörlü taşıma. Sürpriz masrafsız ücretsiz net fiyat teklifi alın!",
     }
 };
 

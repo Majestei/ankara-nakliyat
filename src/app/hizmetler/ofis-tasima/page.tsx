@@ -4,19 +4,19 @@ import ServiceSchema from "@/components/ServiceSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Ankara Ofis Taşıma - Kurumsal Nakliyat Hizmeti",
-    description: "Ankara ofis taşıma hizmeti. IT altyapı güvenliği, arşiv taşıma, hafta sonu hizmet, sigortalı. Minimum iş kaybıyla taşının!",
+    title: "Ankara Ofis Taşıma: Kurumsal & Sigortalı Nakliyat",
+    description: "Ankara ofis ve iş yeri taşıma hizmeti. IT altyapı güvenliği, arşiv kolileme ve hafta sonu taşıma ile sıfır iş kaybı. Hemen kurumsal teklif alın!",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler/ofis-tasima" },
     openGraph: {
-        title: "Ankara Ofis Taşıma - Kurumsal Nakliyat Hizmeti",
-        description: "Ankara ofis taşıma hizmeti. IT altyapı güvenliği, arşiv taşıma, hafta sonu hizmet, sigortalı. Minimum iş kaybıyla taşının!",
+        title: "Ankara Ofis Taşıma: Kurumsal & Sigortalı Nakliyat",
+        description: "Ankara ofis ve iş yeri taşıma hizmeti. IT altyapı güvenliği, arşiv kolileme ve hafta sonu taşıma ile sıfır iş kaybı. Hemen kurumsal teklif alın!",
         url: "https://ankaraozdemirnakliyat.com/hizmetler/ofis-tasima",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Ankara Ofis Taşıma - Kurumsal Nakliyat Hizmeti",
-        description: "Ankara ofis taşıma hizmeti. IT altyapı güvenliği, arşiv taşıma, hafta sonu hizmet, sigortalı. Minimum iş kaybıyla taşının!",
+        title: "Ankara Ofis Taşıma: Kurumsal & Sigortalı Nakliyat",
+        description: "Ankara ofis ve iş yeri taşıma hizmeti. IT altyapı güvenliği, arşiv kolileme ve hafta sonu taşıma ile sıfır iş kaybı. Hemen kurumsal teklif alın!",
     }
 };
 

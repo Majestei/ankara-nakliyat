@@ -5,19 +5,19 @@ import ServiceSchema from "@/components/ServiceSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Ankara Şehir İçi Nakliyat - Aynı Gün Teslimat",
-    description: "Ankara şehir içi nakliyat hizmeti. Aynı gün teslimat, ekonomik fiyatlar, sigortalı taşıma, 25 ilçeye hizmet. Hemen ücretsiz teklif alın!",
+    title: "Ankara Şehir İçi Nakliyat: Aynı Gün Sigortalı Taşıma",
+    description: "Ankara şehir içi nakliyat hizmetinde 25 ilçeye aynı gün teslimat garantisi. Kendi asansörlü araçlarımızla uygun fiyatlı ve sigortalı taşının. Teklif alın!",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler/sehir-ici-nakliyat" },
     openGraph: {
-        title: "Ankara Şehir İçi Nakliyat - Aynı Gün Teslimat",
-        description: "Ankara şehir içi nakliyat hizmeti. Aynı gün teslimat, ekonomik fiyatlar, sigortalı taşıma, 25 ilçeye hizmet. Hemen ücretsiz teklif alın!",
+        title: "Ankara Şehir İçi Nakliyat: Aynı Gün Sigortalı Taşıma",
+        description: "Ankara şehir içi nakliyat hizmetinde 25 ilçeye aynı gün teslimat garantisi. Kendi asansörlü araçlarımızla uygun fiyatlı ve sigortalı taşının. Teklif alın!",
         url: "https://ankaraozdemirnakliyat.com/hizmetler/sehir-ici-nakliyat",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Ankara Şehir İçi Nakliyat - Aynı Gün Teslimat",
-        description: "Ankara şehir içi nakliyat hizmeti. Aynı gün teslimat, ekonomik fiyatlar, sigortalı taşıma, 25 ilçeye hizmet. Hemen ücretsiz teklif alın!",
+        title: "Ankara Şehir İçi Nakliyat: Aynı Gün Sigortalı Taşıma",
+        description: "Ankara şehir içi nakliyat hizmetinde 25 ilçeye aynı gün teslimat garantisi. Kendi asansörlü araçlarımızla uygun fiyatlı ve sigortalı taşının. Teklif alın!",
     }
 };
 

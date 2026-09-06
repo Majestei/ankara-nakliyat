@@ -4,19 +4,19 @@ import ServiceSchema from "@/components/ServiceSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Parça Eşya Taşıma Ankara - Ekonomik Taşıma",
-    description: "Ankara parça eşya taşıma hizmeti. Tek parçadan taşıma, ekonomik fiyat, sigortalı, aynı gün teslimat. Hemen arayın!",
+    title: "Ankara Parça Eşya Taşıma: Hızlı & Ekonomik Nakliye",
+    description: "Ankara parça eşya taşıma hizmeti. Tek koltuk, beyaz eşya veya parça yükleriniz için aynı gün uygun fiyatlı ve sigortalı nakliye çözümü. Arayın!",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler/parca-esya-tasima" },
     openGraph: {
-        title: "Parça Eşya Taşıma Ankara - Ekonomik Taşıma",
-        description: "Ankara parça eşya taşıma hizmeti. Tek parçadan taşıma, ekonomik fiyat, sigortalı, aynı gün teslimat. Hemen arayın!",
+        title: "Ankara Parça Eşya Taşıma: Hızlı & Ekonomik Nakliye",
+        description: "Ankara parça eşya taşıma hizmeti. Tek koltuk, beyaz eşya veya parça yükleriniz için aynı gün uygun fiyatlı ve sigortalı nakliye çözümü. Arayın!",
         url: "https://ankaraozdemirnakliyat.com/hizmetler/parca-esya-tasima",
         type: "website"
     },
     twitter: {
         card: "summary_large_image",
-        title: "Parça Eşya Taşıma Ankara - Ekonomik Taşıma",
-        description: "Ankara parça eşya taşıma hizmeti. Tek parçadan taşıma, ekonomik fiyat, sigortalı, aynı gün teslimat. Hemen arayın!"
+        title: "Ankara Parça Eşya Taşıma: Hızlı & Ekonomik Nakliye",
+        description: "Ankara parça eşya taşıma hizmeti. Tek koltuk, beyaz eşya veya parça yükleriniz için aynı gün uygun fiyatlı ve sigortalı nakliye çözümü. Arayın!"
     }
 };
 

@@ -380,24 +380,27 @@ export default function ContactClient() {
 
 
                         {/* Google Business Profile Card */}
-                        <motion.a
-                            href="https://maps.app.goo.gl/7soWnTCHGLBfguVt9"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        {/* Google Business Profile Card */}
+                        <motion.div
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.15 }}
                             whileHover={{ y: -6, transition: { duration: 0.3 } }}
-                            className="flex flex-col md:flex-row items-stretch gap-0 bg-white border border-slate-100 rounded-3xl md:rounded-[4rem] overflow-hidden shadow-2xl hover:shadow-primary-500/20 hover:border-primary-200 transition-all duration-500 group cursor-pointer"
+                            className="flex flex-col md:flex-row items-stretch gap-0 bg-white border border-slate-100 rounded-3xl md:rounded-[4rem] overflow-hidden shadow-2xl hover:shadow-primary-500/20 hover:border-primary-200 transition-all duration-500 group"
                         >
                             {/* Left: Google branding strip */}
-                            <div className="bg-gradient-to-br from-[#4285F4] via-[#34A853] to-[#FBBC05] md:w-64 flex flex-col items-center justify-center p-10 md:p-12 gap-4 shrink-0">
+                            <a 
+                                href="https://maps.app.goo.gl/7soWnTCHGLBfguVt9"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-gradient-to-br from-[#4285F4] via-[#34A853] to-[#FBBC05] md:w-64 flex flex-col items-center justify-center p-10 md:p-12 gap-4 shrink-0 hover:opacity-95 transition-opacity"
+                            >
                                 <svg viewBox="0 0 48 48" className="w-14 h-14 drop-shadow-xl" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M43.6 20.5H24v7.5h11.3C33.8 33 29.5 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.8 1.1 7.9 3l5.3-5.3C33.8 7.1 29.2 5 24 5 13.5 5 5 13.5 5 24s8.5 19 19 19c9.5 0 18-7 18-19 0-1.2-.1-2.3-.4-3.5z" fill="white"/>
                                 </svg>
                                 <span className="text-white font-black text-xs uppercase tracking-widest text-center">Google'da Görüntüle</span>
-                            </div>
+                            </a>
 
                             {/* Right: Business info */}
                             <div className="flex-1 p-8 md:p-12 flex flex-col justify-between gap-8">
@@ -420,7 +423,7 @@ export default function ContactClient() {
                                                 </svg>
                                             ))}
                                         </div>
-                                        <span className="text-slate-400 text-sm font-semibold">1.250+ Google Yorumu</span>
+                                        <span className="text-slate-400 text-sm font-semibold">Müşteri Memnuniyeti</span>
                                     </div>
                                 </div>
 
@@ -461,19 +464,24 @@ export default function ContactClient() {
                                         <div>
                                             <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Doğrulandı</p>
                                             <p className="text-sm font-bold text-slate-700">Google İşletme Profili</p>
-                                            <p className="text-xs text-green-600 font-bold">✓ Sahip Tarafından Onaylı</p>
+                                            <p className="text-xs text-green-600 font-bold">✓ Doğrulanmış Firma</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="flex items-center justify-between pt-2 border-t border-slate-100">
                                     <span className="text-xs text-slate-400 font-semibold">ankaraozdemirnakliyat.com</span>
-                                    <span className="flex items-center gap-2 text-primary-500 font-black text-xs uppercase tracking-widest group-hover:gap-4 transition-all duration-300">
+                                    <a 
+                                        href="https://maps.app.goo.gl/7soWnTCHGLBfguVt9"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-2 text-primary-500 font-black text-xs uppercase tracking-widest hover:gap-4 transition-all duration-300"
+                                    >
                                         Google'da Gör <IconArrow className="w-4 h-4" />
-                                    </span>
+                                    </a>
                                 </div>
                             </div>
-                        </motion.a>
+                        </motion.div>
                     </div>
                 </div>
             </section>

@@ -11,8 +11,8 @@ export async function generateStaticParams() { return ankaraIlceleri.map((ilce) 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const ilce = ankaraIlceleri.find((i) => i.slug === params.ilce);
     if (!ilce) return {};
-    const title = `${ilce.name} Evden Eve Nakliyat | Sigortalı Taşıma`;
-    const description = `${ilce.name} bölgesinde güvenilir nakliyat firması mı arıyorsunuz? Kırılma garantili, asansörlü ve marangozlu taşıma hizmeti ile tanışın. Ücretsiz fiyat alın!`;
+    const title = `${ilce.name} Evden Eve Nakliyat - Asansörlü & Sigortalı`;
+    const description = `${ilce.name} evden eve nakliyat ve profesyonel nakliyeci hizmeti. Kırılmaya karşı tam sigortalı, marangozlu montaj ve sabit net fiyatla hemen teklif alın.`;
     const url = `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}`;
 
     return {
@@ -74,14 +74,20 @@ export default function AnkaraIlcePage({ params }: Props) {
         telephone: "05456568103",
         address: {
             "@type": "PostalAddress",
-            addressLocality: ilce.name,
+            streetAddress: "Atatürk Mah. Mithatpaşa Cad. Özmert Apt. No:6/8",
+            addressLocality: "Sincan",
             addressRegion: "Ankara",
+            postalCode: "06930",
             addressCountry: "TR",
         },
+        geo: {
+            "@type": "GeoCoordinates",
+            latitude: "39.9575",
+            longitude: "32.5835",
+        },
         areaServed: {
-            "@type": "City",
-            name: ilce.name,
-            containedInPlace: { "@type": "State", name: "Ankara" },
+            "@type": "AdministrativeArea",
+            name: `${ilce.name}, Ankara`,
         },
         priceRange: "$$",
         hasOfferCatalog: {

@@ -9,27 +9,27 @@ import { IconPhone, IconStar, IconTruck, IconClock, IconUsers, IconShield, IconA
 const heroSlides = [
     {
         image: "/images/genel/hero-bg-1.webp",
-        tag: "Profesyonel Lojistik",
+        tag: "Ankara'nın Lider Nakliyecisi",
         title1: "Ankara Evden Eve",
         titleHighlight: "Nakliyat",
-        title2: "Şehirler Arası Uzmanlık",
-        description: "Ankara'nın her noktasından Türkiye'nin 20 iline uzanan sigortalı ve garantili şehirler arası nakliyat hizmeti. Modern araç filomuzla eşyalarınız güvende.",
+        title2: "Sigortalı & Asansörlü Taşıma",
+        description: "Ankara nakliyat ve asansörlü nakliyeci hizmetlerinde %100 sigorta garantisi, marangozlu montaj ve sabit fiyat sözüyle güvenle taşının.",
     },
     {
         image: "/images/genel/hero-bg-2.webp",
-        tag: "Modern Taşımacılık",
+        tag: "Kendi Asansörlü Araç Filomuz",
         title1: "Asansörlü ve",
         titleHighlight: "Güvenli",
-        title2: "Eşya Paketleme Desteği",
-        description: "Yüksek katlara asansörlü nakliyat ve Avrupa standartlarında profesyonel paketleme çözümleri. 15 yıllık tecrübemizle eşyalarınızı özenle taşıyoruz.",
+        title2: "Hasarsız Eşya Paketleme",
+        description: "25. kata kadar modüler dış cephe asansörleri ve Avrupa standartlarında darbe emici paketleme ile eşyalarınız tek bir çizik almadan taşınır.",
     },
     {
         image: "/images/genel/hero-bg-3.webp",
-        tag: "Kurumsal Çözümler",
-        title1: "Ofis Taşıma ve",
-        titleHighlight: "Parsiyel",
-        title2: "Lojistik Hizmetleri",
-        description: "Kurumsal ofis taşıma ve parça eşya taşımacılığında Ankara'nın lider markası. Tam kapsamlı sigorta ve anlık operasyon takibi ile sorunsuz taşının.",
+        tag: "81 İle Sözleşmeli Taşıma",
+        title1: "Şehirler Arası ve",
+        titleHighlight: "Ofis",
+        title2: "Garantili Taşıma Çözümleri",
+        description: "Ankara'dan tüm Türkiye'ye kapalı çelik kasalı araçlar ve tam kapsamlı emtia sigortasıyla zamanında, güvenli teslimat.",
     },
 ];
 
@@ -246,7 +246,11 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
                                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                                 className="space-y-10 overflow-visible"
                             >
-                                <h1 className="flex flex-col text-5xl md:text-8xl lg:text-[clamp(6rem,10vw,9rem)] font-heading font-black text-white tracking-tighter overflow-visible z-10 relative">
+                                <h1 
+                                    aria-label="Ankara Evden Eve Nakliyat ve Asansörlü Nakliyeci Hizmetleri"
+                                    className="flex flex-col text-5xl md:text-8xl lg:text-[clamp(6rem,10vw,9rem)] font-heading font-black text-white tracking-tighter overflow-visible z-10 relative"
+                                >
+                                    <span className="sr-only">Ankara Evden Eve Nakliyat ve Asansörlü Nakliyeci Hizmetleri</span>
                                     <motion.span 
                                         initial={{ opacity: 0, x: -50 }}
                                         animate={{ opacity: 1, x: 0 }}
