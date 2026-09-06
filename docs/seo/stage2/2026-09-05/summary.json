@@ -1,0 +1,102 @@
+{
+  "generatedAt": "2026-09-05T17:16:53.364Z",
+  "methodology": {
+    "searchConsole": "authenticated_ui_snapshot_complete_api_not_connected",
+    "serpProvider": "not_connected",
+    "classificationRule": "Conservative technical/content heuristic; authenticated GSC UI evidence protects only explicitly verified query/page owners, while full URL decisions remain pending API data."
+  },
+  "totalUrls": 1464,
+  "classificationCounts": {
+    "KEEP": 141,
+    "IMPROVE": 917,
+    "MERGE": 333,
+    "NOINDEX": 0,
+    "REDIRECT": 0,
+    "REMOVE": 0,
+    "MANUAL_REVIEW": 73
+  },
+  "riskCounts": {
+    "doorway": 241,
+    "duplicate": 333,
+    "thin": 408
+  },
+  "productionDiff": {
+    "mapped": 1464,
+    "mismatch": 20,
+    "missingGenerated": 0
+  },
+  "crossSiteOverlap": {
+    "exactPathPairs": 118,
+    "likelySameQueryIntent": 71,
+    "gscQueryEvidence": "core query verified in both properties; remaining overlap candidates pending full API matrix"
+  },
+  "searchConsoleUi": {
+    "finalizedThrough": "2026-09-03",
+    "ozdemir": {
+      "account": "mehmetkaratasbey4@gmail.com",
+      "property": "https://ankaraozdemirnakliyat.com/",
+      "status28d": "DECLINING",
+      "clicks28d": 152,
+      "previousClicks28d": 250,
+      "impressions28d": 19300,
+      "previousImpressions28d": 54900
+    },
+    "akif": {
+      "account": "k.suleymanks@gmail.com",
+      "property": "https://www.ankaraakifnakliyat.com/",
+      "status14d": "DECLINING",
+      "clicks14d": 8,
+      "previousClicks14d": 14,
+      "impressions14d": 1360,
+      "previousImpressions14d": 1950,
+      "availableDataStart": "2026-07-23"
+    },
+    "protectedOwner": {
+      "query": "ankara evden eve nakliyat",
+      "site": "ozdemir",
+      "url": "https://ankaraozdemirnakliyat.com/"
+    }
+  },
+  "sites": {
+    "ozdemir": {
+      "name": "Ankara Özdemir Nakliyat",
+      "origin": "https://ankaraozdemirnakliyat.com",
+      "sitemapUrls": 965,
+      "indexableOnPage": 965,
+      "doorwayRisk": 107,
+      "duplicateRisk": 199,
+      "thinRisk": 82,
+      "generatedMapped": 965,
+      "productionMismatches": 5,
+      "classifications": {
+        "KEEP": 77,
+        "IMPROVE": 626,
+        "MERGE": 199,
+        "NOINDEX": 0,
+        "REDIRECT": 0,
+        "REMOVE": 0,
+        "MANUAL_REVIEW": 63
+      }
+    },
+    "akif": {
+      "name": "Akif Nakliyat",
+      "origin": "https://www.ankaraakifnakliyat.com",
+      "sitemapUrls": 499,
+      "indexableOnPage": 499,
+      "doorwayRisk": 134,
+      "duplicateRisk": 134,
+      "thinRisk": 326,
+      "generatedMapped": 499,
+      "productionMismatches": 15,
+      "classifications": {
+        "KEEP": 64,
+        "IMPROVE": 291,
+        "MERGE": 134,
+        "NOINDEX": 0,
+        "REDIRECT": 0,
+        "REMOVE": 0,
+        "MANUAL_REVIEW": 10
+      }
+    }
+  }
+}

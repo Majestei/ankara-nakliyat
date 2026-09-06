@@ -1,0 +1,22 @@
+{
+  "name": "antigravity-seo-tools",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.19" },
+  "scripts": {
+    "verify": "node verify.mjs",
+    "test": "node --test tests.mjs",
+    "gsc:check": "node gsc.mjs --check",
+    "gsc:report": "node gsc.mjs",
+    "smoke": "node smoke.mjs",
+    "lighthouse": "node performance.mjs",
+    "pagespeed": "node performance.mjs --pagespeed"
+  },
+  "dependencies": {
+    "google-auth-library": "11.0.2",
+    "lighthouse": "13.4.1",
+    "puppeteer-core": "25.10.0",
+    "yaml": "2.9.0"
+  }
+}

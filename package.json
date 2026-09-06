@@ -10,7 +10,11 @@
         "start": "next start",
         "lint": "next lint",
         "seo:audit": "node scripts/seo-audit.mjs --quick",
-        "seo:audit:full": "node scripts/seo-audit.mjs --full"
+        "seo:audit:full": "node scripts/seo-audit.mjs --full",
+        "seo:stage2": "node scripts/seo-stage2-audit.mjs",
+        "seo:gsc": "node scripts/seo-gsc-report.mjs",
+        "seo:serp": "node scripts/seo-serp-report.mjs",
+        "seo:competitors": "node scripts/seo-competitor-snapshot.mjs"
     },
     "dependencies": {
         "framer-motion": "^11.0.0",

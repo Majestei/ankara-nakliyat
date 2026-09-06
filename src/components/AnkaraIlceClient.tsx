@@ -11,6 +11,8 @@ import {
     IconBox, IconCog, IconMapPin, IconArrow, IconPlus, IconStar, IconCheck 
 } from "@/components/Icons";
 import { IlceInternalLinks, HizmetInternalLinks } from "@/components/InternalLinks";
+import PricingTable from "@/components/PricingTable";
+import TrustBadgesSection from "@/components/TrustBadgesSection";
 
 // ── SPATIAL UI COMPONENTS ──
 
@@ -322,6 +324,16 @@ export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, di
                     </div>
                 </div>
             </section>
+
+            {/* ── 2026 DISTRICT PRICING TABLE ── */}
+            <PricingTable 
+                title={`${ilce.name} Nakliyat Fiyatları (2026)`}
+                subtitle={`${ilce.name} genelinde ve tüm mahallelerinde geçerli, sürpriz masrafsız şeffaf evden eve nakliyat fiyat tarifesi. Fiyatlarımıza KDV, marangozluk ve sigorta dahildir.`}
+                locationName={ilce.name}
+            />
+
+            {/* ── INSTITUTIONAL TRUST BADGES (K3 & RESMİ GÜVENCE) ── */}
+            <TrustBadgesSection />
 
             {/* ── THE KINETIC HUB ── */}
             <section className="py-24 md:py-40 lg:py-60 bg-white">

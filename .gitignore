@@ -31,3 +31,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Antigravity SEO local tools and private reports
+/.agents/seo-tools/node_modules/
+/.agents/reports/
+/.agents/seo.local.json
+/.agents/*credentials*.json

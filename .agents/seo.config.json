@@ -1,0 +1,28 @@
+{
+  "site": "ozdemir",
+  "origin": "https://ankaraozdemirnakliyat.com",
+  "gscProperty": "https://ankaraozdemirnakliyat.com/",
+  "localPort": 3101,
+  "criticalPaths": [
+    "/",
+    "/evden-eve-nakliyat",
+    "/hizmetler",
+    "/islemler/ankara/sincan",
+    "/blog",
+    "/iletisim"
+  ],
+  "performancePaths": [
+    "/",
+    "/evden-eve-nakliyat"
+  ],
+  "redirectChecks": [
+    {
+      "from": "/hizmetler/evden-eve-nakliyat",
+      "to": "/evden-eve-nakliyat"
+    },
+    {
+      "from": "/sitemap-2.xml",
+      "to": "/sitemap.xml"
+    }
+  ]
+}

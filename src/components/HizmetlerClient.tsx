@@ -11,6 +11,8 @@ import {
     IconStar
 } from "@/components/Icons";
 import { AnimatePresence } from "framer-motion";
+import PricingTable from "@/components/PricingTable";
+import TrustBadgesSection from "@/components/TrustBadgesSection";
 
 const serviceImages: Record<string, string> = {
     "evden-eve-nakliyat": "/images/hizmetler/evden-eve-nakliyat.webp",
@@ -340,6 +342,16 @@ export default function HizmetlerClient() {
             {hizmetler.map((hizmet, i) => (
                 <ServiceSection key={hizmet.id} hizmet={hizmet} index={i} />
             ))}
+
+            {/* ── 2026 PRICING TABLE ── */}
+            <PricingTable 
+                title="2026 Ankara Nakliyat Fiyatları"
+                subtitle="Tüm nakliyat hizmetlerimizde geçerli, oda sayısına ve operasyon kapsamına göre şeffaf ortalama fiyatlandırma tarifesi. Fiyatlarımıza KDV, marangozluk ve sigorta dahildir."
+                locationName="Ankara"
+            />
+
+            {/* ── INSTITUTIONAL TRUST & E-E-A-T BADGES ── */}
+            <TrustBadgesSection />
 
             {/* ── FINAL TRUST BANNER ── */}
             <section className="py-24 md:py-40 bg-slate-50 relative overflow-hidden">

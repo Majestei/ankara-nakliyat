@@ -1,0 +1,13 @@
+Bu projede seo-orchestrator olarak SEO denetimini başlat. Önce .agents/SEO_PROJECT_CONTEXT.md ve .agents/INTEGRATION.md oku.
+
+1. Site kökünü doğrula; git status ile mevcut değişiklikleri kaydet. Firma/domain bilgilerini diğer siteden kopyalama.
+2. npm --prefix .agents/seo-tools run verify ve test komutlarını çalıştır.
+3. Dört uzmanı (technical-seo, local-seo, content-seo, performance-seo) bağımsız salt-okuma denetimleri için paralel çağır. Ortak dosyalara eşzamanlı yazma veya aynı projede eşzamanlı build yapma. Delegasyon araçları yoksa rolleri sırayla uygula ve bunu raporla.
+4. npm --prefix .agents/seo-tools run gsc:check çalıştır. CONNECTED ise gsc:report al; BLOCKED ise sebebini raporla ve bağımsız teknik denetime devam et. Veri uydurma.
+5. Bulguları Critical / High / Medium / Low olarak, URL/dosya/kanıt ile birleştir. İşletme doğruluğu, teknik geçerlilik ve kullanıcı ihtiyacını birlikte gözet.
+6. Yetkilendirilmiş, küçük, geri alınabilir Critical/High düzeltmeleri uygula. Belirsiz iş bilgilerini UNKNOWN bırak. Toplu URL/noindex/yönlendirme değişiklikleri için veri ve geçiş planı gerekir.
+7. npm run build ve mevcut anlamlı testleri çalıştır. Sunucuyu 3101 portunda başlat; smoke ve lighthouse çalıştır. PageSpeed uygunsa pagespeed çalıştır; engellenen ölçümü PASS sayma.
+8. Yeni hatayı düzeltip ilgili kontrolü tekrarla. İşletme teyidi veya erişim gerektiren bir engelde aynı işlemi durmadan deneme; bağımsız işleri tamamla ve engeli açıkla.
+9. Son raporda değişen dosyaları, gerçekten çalıştırılan testleri, gözlenen URL'leri, GSC veri tarihlerini, mobil/masaüstü laboratuvar ölçümlerini ve açık işleri belirt.
+
+Sahte yorum/puan/sertifika/şirket geçmişi/istatistik üretme. Mevcut dönüşüm işlevlerini koru. Google sıra garantisi verme. Canlı siteyi yayınlamak ve periyodik görev oluşturmak bu promptun parçası değildir.

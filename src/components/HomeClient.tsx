@@ -18,6 +18,9 @@ import {
 } from "@/components/Icons";
 
 const ServiceCard3D = dynamic(() => import("./ServiceCard3D"), { ssr: false });
+import PricingTable from "@/components/PricingTable";
+import TrustBadgesSection from "@/components/TrustBadgesSection";
+import AnkaraGuideSection from "@/components/AnkaraGuideSection";
 
 // ── SHARED PREMIUM COMPONENTS ──
 
@@ -193,6 +196,9 @@ export default function HomeClient() {
                 </div>
             </section>
 
+            {/* ── TRUST & E-E-A-T BADGES: K3 & RESMİ GÜVENCE ── */}
+            <TrustBadgesSection />
+
             {/* ── SERVICES: THE FEATURE HUB ── */}
             <section className="py-24 md:py-40 lg:py-60 bg-white relative">
                 <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-slate-950 to-transparent pointer-events-none z-10" />
@@ -290,6 +296,16 @@ export default function HomeClient() {
                     </div>
                 </div>
             </section>
+
+            {/* ── 2026 PRICING TABLE (1+1, 2+1, 3+1, 4+1) ── */}
+            <PricingTable 
+                title="2026 Ankara Evden Eve Nakliyat Fiyatları" 
+                subtitle="Ankara içi ve ilçeler arası taşınmalarda sürpriz ek masrafsız, oda sayısına ve hizmet kapsamına göre şeffaf ortalama fiyatlandırma tablomuz. Fiyatlarımıza KDV, profesyonel marangozluk ve sigorta dahildir."
+                locationName="Ankara"
+            />
+
+            {/* ── ANKARA DISTRICT LOGISTICS GUIDE ── */}
+            <AnkaraGuideSection />
 
             {/* ── DISTRICT HUB: THE DIGITAL GRID ── */}
             <section className="py-24 md:py-40 lg:py-60 bg-slate-950 relative overflow-hidden">

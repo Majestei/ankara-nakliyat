@@ -1,0 +1,4 @@
+{
+  "credentialsPath": "ABSOLUTE_PATH_TO_EXISTING_AUTHORIZED_USER_OR_SERVICE_ACCOUNT_JSON",
+  "quotaProjectId": ""
+}

@@ -1,0 +1,55 @@
+{
+  "capturedAt": "2026-09-05T17:08:00+03:00",
+  "query": "Ankara evden eve nakliyat",
+  "source": "google.com live browser",
+  "parameters": {
+    "hl": "tr",
+    "gl": "tr",
+    "pws": 0,
+    "num": 10,
+    "device": "desktop",
+    "reportedLocation": "06980, Ankara",
+    "personalizationMessage": "Sonuçlar kişiselleştirilmemiş"
+  },
+  "limitations": [
+    "Bu tek seferlik manuel doğrulamadır; sıralama geçmişi değildir.",
+    "Konum IP tabanlı olarak Kahramankazan/06980'e eğilimlidir.",
+    "Mobil öncelikli otomatik takip, gerçek SERP sağlayıcı anahtarı gelene kadar çalıştırılamaz."
+  ],
+  "localPack": [
+    { "position": 1, "name": "Ankara lüks Vip evden eve nakliyat", "domain": "luxvipnakliyat.com.tr" },
+    { "position": 2, "name": "Kazan Zekeriyaoğlu Nakliyat", "domain": "zekeriyaoglunakliyat.com.tr" },
+    { "position": 3, "name": "Ankara Evden Eve Nakliye", "domain": "ankarevdenevenakliye.com.tr" }
+  ],
+  "organic": [
+    { "position": 1, "title": "Ankara Evden Eve Nakliyat Sahibinden.com Hizmetler'de!", "domain": "sahibinden.com" },
+    { "position": 2, "title": "Ankara Evden Eve Nakliyat - En İyi 40 Firma", "domain": "armut.com" },
+    { "position": 3, "title": "Ankara Evden Eve Nakliyat - Sigortalı & Asansörlü - %35 ...", "domain": "anadolunakliyat.gen.tr" },
+    { "position": 4, "title": "Europatrans (@europatransnakliyat)", "domain": "instagram.com" },
+    { "position": 5, "title": "Ankara Evden Eve Nakliyat | Ankara Nakliyat Firmaları", "domain": "ankaraevdenevenakliyat.com.tr" },
+    { "position": 6, "title": "Evden Eve Nakliyat | Ankara - İstanbul ve İzmir ProTrans", "domain": "protrans.com.tr" },
+    { "position": 7, "title": "Ankara Evden Eve Nakliyat | %100 Başarılı Nakliye", "domain": "dehanakliyat.com.tr" },
+    { "position": 8, "title": "Ankara Evden Eve Nakliyat - 0532 592 30 86", "domain": "yandex.com.tr" },
+    { "position": 9, "title": "Ankara Şehirler Arası Nakliyat", "domain": "facebook.com" }
+  ],
+  "trackedDomains": {
+    "ankaraozdemirnakliyat.com": { "top10Organic": false, "localPack": false },
+    "ankaraakifnakliyat.com": { "top10Organic": false, "localPack": false }
+  },
+  "peopleAlsoAsk": [
+    "Ankara'da ev nakliye fiyatları ne kadar?",
+    "Evden eve nakliye ücreti ne kadar?",
+    "Evden eve nakliyat aracı fiyatları ne kadar?",
+    "600 km nakliye fiyatları ne kadar?"
+  ],
+  "relatedSearches": [
+    "Ankara evden eve Nakliyat tavsiye",
+    "Ankara şehirlerarası nakliye",
+    "Yenimahalle evden eve nakliyat",
+    "Ankara nakliye firmaları",
+    "Ankara evden eve nakliyat platformu",
+    "Ankara evden eve nakliyat yorumlar",
+    "Etimesgut evden eve nakliyat",
+    "Ankara evden eve nakliyat sahibinden"
+  ]
+}
