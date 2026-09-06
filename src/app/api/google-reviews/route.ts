@@ -53,7 +53,7 @@ export async function GET(request: Request) {
                             user_ratings_total: Number(result.user_ratings_total) || googleReviewsData.user_ratings_total,
                             rating_breakdown: googleReviewsData.rating_breakdown,
                             googleMapsUrl: result.url || googleReviewsData.googleMapsUrl,
-                            writeReviewUrl: `https://search.google.com/local/writereview?placeid=${placeId}`,
+                            writeReviewUrl: googleReviewsData.writeReviewUrl,
                             reviews: combinedReviews,
                         };
 

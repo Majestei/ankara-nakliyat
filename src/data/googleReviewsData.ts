@@ -34,18 +34,18 @@ export interface GoogleReviewsSummary {
 }
 
 export const googleReviewsData: GoogleReviewsSummary = {
-    placeName: "Ankara Özdemir Nakliyat - Evden Eve Taşımacılık",
-    rating: 4.9,
+    placeName: "Ankara Özdemir Nakliyat - Ankara Evden Eve Nakliyat",
+    rating: 5.0,
     user_ratings_total: 168,
     rating_breakdown: {
-        5: 158,
-        4: 8,
-        3: 2,
+        5: 168,
+        4: 0,
+        3: 0,
         2: 0,
         1: 0
     },
-    googleMapsUrl: "https://maps.google.com/?q=Ankara+Özdemir+Nakliyat",
-    writeReviewUrl: "https://search.google.com/local/writereview?placeid=ChIJN1t_tDeuEmsRUsoyG83frY4",
+    googleMapsUrl: "https://www.google.com/maps/place/Ankara+%C3%96zdemir+Nakliyat+-+Ankara+Evden+Eve+Nakliyat/@39.7535708,32.1973644,9z/data=!3m1!4b1!4m6!3m5!1s0x6e092525bb874c41:0x3bceb88d30a5fe73!8m2!3d39.75438!4d32.856727!16s%2Fg%2F11zb75hrp0",
+    writeReviewUrl: "https://www.google.com/maps/place/Ankara+%C3%96zdemir+Nakliyat+-+Ankara+Evden+Eve+Nakliyat/@39.75438,32.856727,17z/data=!4m8!3m7!1s0x6e092525bb874c41:0x3bceb88d30a5fe73!8m2!3d39.75438!4d32.856727!9m1!1b1!16s%2Fg%2F11zb75hrp0",
     reviews: [
         {
             id: "g-rev-1",

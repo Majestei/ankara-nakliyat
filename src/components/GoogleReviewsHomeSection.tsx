@@ -38,7 +38,7 @@ export default function GoogleReviewsHomeSection() {
                     <div className="space-y-3">
                         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm">
                             <GoogleGIcon className="w-4 h-4" />
-                            <span>Google Haritalar Doğrulanmış Profil</span>
+                            <span>Ankara Özdemir Nakliyat - Google Haritalar</span>
                             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                         </div>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-slate-900 tracking-tight">
@@ -51,10 +51,10 @@ export default function GoogleReviewsHomeSection() {
 
                     {/* Quick Stat Pill */}
                     <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex items-center gap-5 shrink-0">
-                        <div className="text-3xl font-black text-slate-900">4.9</div>
+                        <div className="text-3xl font-black text-slate-900">5.0</div>
                         <div>
                             <div className="flex text-amber-400 text-lg">★★★★★</div>
-                            <p className="text-xs font-bold text-slate-500">168+ Gerçek Google Yorumu</p>
+                            <p className="text-xs font-bold text-slate-500">Google Haritalar Puanı</p>
                         </div>
                     </div>
                 </div>

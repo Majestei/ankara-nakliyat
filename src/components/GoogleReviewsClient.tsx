@@ -115,7 +115,7 @@ export default function GoogleReviewsClient({ initialData }: Props) {
                     <div className="space-y-3">
                         <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-xs font-bold text-slate-700">
                             <GoogleGIcon className="w-4 h-4" />
-                            <span>Google Haritalar Doğrulanmış Profil</span>
+                            <span>{data.placeName}</span>
                             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                         </div>
 
@@ -395,6 +395,46 @@ export default function GoogleReviewsClient({ initialData }: Props) {
                     })}
                 </div>
             )}
+
+            {/* ── GOOGLE MAPS EMBEDDED LOCATION ── */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-md">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <div className="flex items-center gap-2 text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
+                            <GoogleGIcon className="w-4 h-4" />
+                            <span>Google Haritalar Doğrulanmış İşletme Konumu</span>
+                        </div>
+                        <h3 className="text-xl sm:text-2xl font-black text-slate-900">
+                            {data.placeName}
+                        </h3>
+                        <p className="text-xs text-slate-500 mt-1">
+                            Google Haritalar Kayıt Kodu (CID): 4309584809986227827 • 24 Saat Açık • 0545 656 81 03
+                        </p>
+                    </div>
+                    <a
+                        href={data.googleMapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-outline !py-2.5 !px-5 text-xs font-bold shrink-0 flex items-center gap-2"
+                        title="Google Haritalar'da Aç"
+                    >
+                        <span>Haritada Aç</span>
+                        <span>↗</span>
+                    </a>
+                </div>
+                <div className="w-full h-72 sm:h-96 rounded-2xl overflow-hidden border border-slate-200 shadow-inner">
+                    <iframe
+                        src="https://maps.google.com/maps?q=39.75438,32.856727&hl=tr&z=11&output=embed"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen={false}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Google Haritalar Ankara Özdemir Nakliyat Konumu"
+                    />
+                </div>
+            </div>
 
             {/* ── BOTTOM CALLOUT ── */}
             <div className="bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-3xl p-8 sm:p-12 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-8">

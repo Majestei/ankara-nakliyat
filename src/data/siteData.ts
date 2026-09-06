@@ -266,7 +266,8 @@ export const firmaBilgileri = {
     email: "bilgi@ankaraozdemirnakliyat.com",
     address: "Atatürk Mahallesi Mithatpaşa Caddesi, Özmert Apartmanı No: 6/8",
     workingHours: "Pazartesi - Cumartesi: 07:00 - 21:00 | Pazar: 09:00 - 18:00",
-    mapUrl: "https://maps.google.com/?q=39.9208,32.8541",
+    mapUrl: "https://www.google.com/maps/place/Ankara+%C3%96zdemir+Nakliyat+-+Ankara+Evden+Eve+Nakliyat/@39.7535708,32.1973644,9z/data=!3m1!4b1!4m6!3m5!1s0x6e092525bb874c41:0x3bceb88d30a5fe73!8m2!3d39.75438!4d32.856727!16s%2Fg%2F11zb75hrp0",
+    mapsCid: "4309584809986227827",
     social: {
         instagram: "https://www.instagram.com/ozdemirnakliyat_/",
     },
