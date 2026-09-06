@@ -14,6 +14,15 @@ import {
     IconMobile
 } from "./Icons";
 
+const roomFactors: Record<string, number> = {
+    "Stüdyo": 2500,
+    "1+1": 3500,
+    "2+1": 5500,
+    "3+1": 7500,
+    "4+1+": 10000,
+    "Ofis": 4500
+};
+
 export default function PriceCalculator() {
     const [roomCount, setRoomCount] = useState("2+1");
     const [distance, setDistance] = useState(10);
@@ -22,15 +31,6 @@ export default function PriceCalculator() {
     const [elevator, setElevator] = useState(true);
     const [packing, setPacking] = useState(true);
     const [totalPrice, setTotalPrice] = useState(0);
-
-    const roomFactors: Record<string, number> = {
-        "Stüdyo": 2500,
-        "1+1": 3500,
-        "2+1": 5500,
-        "3+1": 7500,
-        "4+1+": 10000,
-        "Ofis": 4500
-    };
 
     useEffect(() => {
         let base = roomFactors[roomCount] || 5000;

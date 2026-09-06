@@ -51,7 +51,7 @@ export default function HakkimizdaPage() {
                             Ankara Özdemir Nakliyat
                         </h1>
                         <p className="mx-auto max-w-3xl text-lg leading-relaxed text-slate-600">
-                            Ankara'daki evden eve, ofis, parça eşya ve şehirler arası taşıma talepleri için planlama ve iletişim desteği sunuyoruz.
+                            Ankara&apos;daki evden eve, ofis, parça eşya ve şehirler arası taşıma talepleri için planlama ve iletişim desteği sunuyoruz.
                         </p>
                     </div>
                 </section>

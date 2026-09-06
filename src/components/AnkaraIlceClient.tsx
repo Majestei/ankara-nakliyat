@@ -555,7 +555,7 @@ export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, di
             <section className="py-24 bg-white border-t border-slate-100 relative z-10">
                 <div className="container-custom">
                     <div className="mb-16">
-                        <h3 className="text-2xl md:text-4xl font-heading font-black text-slate-900 mb-8 tracking-tight">Ankara'nın Diğer İlçeleri</h3>
+                        <h3 className="text-2xl md:text-4xl font-heading font-black text-slate-900 mb-8 tracking-tight">Ankara&apos;nın Diğer İlçeleri</h3>
                         <IlceInternalLinks currentSlug={ilce.slug} maxItems={25} />
                     </div>
                     <div>
@@ -575,7 +575,7 @@ export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, di
                         className="space-y-12 md:space-y-20"
                     >
                         <h2 className="text-4xl xs:text-5xl md:text-7xl lg:text-[10rem] font-heading font-black text-slate-950 tracking-tighter leading-[0.85]">
-                            Yeni Bir <br /> <span className="text-primary-500">Türkiye'ye</span> <br /> Taşının.
+                            Yeni Bir <br /> <span className="text-primary-500">Türkiye&apos;ye</span> <br /> Taşının.
                         </h2>
                         <MagneticElement strength={0.6} className="inline-block w-full sm:w-auto">
                             <a href={`tel:${firmaBilgileri.phone.replace(/\s/g, "")}`} className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10 bg-slate-950 text-white px-8 md:px-20 py-6 md:py-10 rounded-2xl lg:rounded-[4rem] text-lg md:text-3xl font-black shadow-[0_50px_100px_rgba(0,0,0,0.3)] hover:bg-primary-500 transition-all duration-700">

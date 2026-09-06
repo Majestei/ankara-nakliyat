@@ -48,7 +48,7 @@ export default function UluslararasiTasimacilikPage() {
                     <div className="prose prose-lg text-slate-600 leading-relaxed space-y-8">
                         
                         <p className="text-xl font-medium text-slate-800">
-                            Yurtdışına taşınmak, yerel bir taşınma sürecine kıyasla çok daha kapsamlı planlama, yasal mevzuat bilgisi ve lojistik altyapı gerektirir. <strong>Ankara Özdemir Nakliyat</strong> olarak, "Uluslararası Evden Eve Nakliyat" alanında yılların getirdiği tecrübemizle, sınır ötesi yolculuğunuzda size uçtan uca destek sağlıyoruz.
+                            Yurtdışına taşınmak, yerel bir taşınma sürecine kıyasla çok daha kapsamlı planlama, yasal mevzuat bilgisi ve lojistik altyapı gerektirir. <strong>Ankara Özdemir Nakliyat</strong> olarak, &ldquo;Uluslararası Evden Eve Nakliyat&rdquo; alanında yılların getirdiği tecrübemizle, sınır ötesi yolculuğunuzda size uçtan uca destek sağlıyoruz.
                         </p>
 
                         <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Zati Eşya Taşımacılığı Nedir?</h2>
@@ -56,7 +56,7 @@ export default function UluslararasiTasimacilikPage() {
                             Zati eşya, kişilerin ticari bir amaç gütmeden kendi kullanımları için sahip oldukları ev eşyalarıdır. Uluslararası zati eşya taşımacılığı, bu eşyaların gümrük vergilerinden muaf veya belirli kurallar çerçevesinde bir ülkeden diğerine taşınması işlemidir. Bu işlem, uluslararası taşımacılık yetki belgesine (C3 Belgesi) sahip profesyonel firmalar tarafından yapılmalıdır.
                         </p>
                         <p>
-                            Avrupa ülkeleri başta olmak üzere, Amerika, Asya ve Orta Doğu'ya düzenli seferlerimizle eşyalarınızı kapınızdan alıp, yeni ülkenizdeki evinize kadar (door-to-door) teslim ediyoruz.
+                            Avrupa ülkeleri başta olmak üzere, Amerika, Asya ve Orta Doğu&apos;ya düzenli seferlerimizle eşyalarınızı kapınızdan alıp, yeni ülkenizdeki evinize kadar (door-to-door) teslim ediyoruz.
                         </p>
 
                         <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Uluslararası Taşımacılık Sürecimiz Nasıl İşler?</h2>
@@ -78,7 +78,7 @@ export default function UluslararasiTasimacilikPage() {
 
                         <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Uluslararası Nakliyat Sigortası</h2>
                         <p>
-                            Eşyalarınızın güvenliği bizim için her şeyden önemlidir. Uluslararası taşımacılıkta olası tüm risklere (kaza, doğal afet, hırsızlık) karşı eşyalarınız "Tam Kapsamlı Uluslararası Nakliyat Sigortası" ile güvence altına alınır. Dünyanın önde gelen sigorta şirketleriyle yaptığımız anlaşmalar sayesinde, taşınma sürecinizi sıfır stresle atlatmanızı sağlıyoruz.
+                            Eşyalarınızın güvenliği bizim için her şeyden önemlidir. Uluslararası taşımacılıkta olası tüm risklere (kaza, doğal afet, hırsızlık) karşı eşyalarınız &ldquo;Tam Kapsamlı Uluslararası Nakliyat Sigortası&rdquo; ile güvence altına alınır. Dünyanın önde gelen sigorta şirketleriyle yaptığımız anlaşmalar sayesinde, taşınma sürecinizi sıfır stresle atlatmanızı sağlıyoruz.
                         </p>
 
                         <div className="mt-12 p-8 bg-gradient-to-br from-primary-600 to-orange-600 rounded-3xl text-white text-center shadow-xl">

@@ -64,7 +64,7 @@ export default function TesekkurlerPage() {
                         className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold py-4 px-8 rounded-2xl md:rounded-full flex items-center justify-center gap-3 text-base shadow-xl shadow-[#25D366]/20 hover:scale-105 transition-transform"
                     >
                         <IconChat className="w-5 h-5" />
-                        WhatsApp'tan Yazın
+                        WhatsApp&apos;tan Yazın
                     </a>
                 </div>
 

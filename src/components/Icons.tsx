@@ -13,9 +13,11 @@ import { MdVerified } from "react-icons/md";
 
 // Wrapper function to add default classes and pass through others
 const createIcon = (IconComponent: React.ComponentType<{ className?: string }>, defaultClass = "w-5 h-5") => {
-    return ({ className }: { className?: string }) => (
+    const IconWrapper = ({ className }: { className?: string }) => (
         <IconComponent className={className || defaultClass} />
     );
+    IconWrapper.displayName = `IconWrapper(${IconComponent.displayName || IconComponent.name || "Icon"})`;
+    return IconWrapper;
 };
 
 export const IconPhone = createIcon(FiPhone);

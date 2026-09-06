@@ -132,7 +132,7 @@ export default function MakalelerClient() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/50 to-transparent">Makaleleri.</span>
                     </h1>
                     <p className="text-[#8892B0] text-lg sm:text-xl font-light leading-relaxed max-w-3xl mb-12">
-                        Türkiye'nin dört bir yanındaki ilçelerde sunduğumuz evden eve nakliyat, asansörlü taşıma ve depolama hizmetleri hakkında detaylı SEO analizleri ve rehberler. Toplam {makalelerData.length} lokasyon kaydı.
+                        Türkiye&apos;nin dört bir yanındaki ilçelerde sunduğumuz evden eve nakliyat, asansörlü taşıma ve depolama hizmetleri hakkında detaylı SEO analizleri ve rehberler. Toplam {makalelerData.length} lokasyon kaydı.
                     </p>
 
                     {/* Search Bar */}

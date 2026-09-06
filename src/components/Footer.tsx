@@ -61,7 +61,7 @@ export default function Footer() {
                                 </div>
                             </Link>
                             <p className="text-sm leading-relaxed text-slate-600 max-w-sm">
-                                Ankara'nın öncü lojistik markası olarak, 15 yıldır evden eve taşımacılıkta 
+                                Ankara&apos;nın öncü lojistik markası olarak, 15 yıldır evden eve taşımacılıkta 
                                 <strong className="text-slate-900"> teknoloji ve güveni</strong> harmanlıyoruz.
                             </p>
                             

@@ -1,0 +1,75 @@
+{
+  "generatedAt": "2026-09-06T03:25:50.177Z",
+  "methodology": {
+    "searchConsole": "not_connected",
+    "serpProvider": "not_connected",
+    "classificationRule": "Conservative technical/content heuristic; programmatic risks are MANUAL_REVIEW without Search Console evidence."
+  },
+  "totalUrls": 864,
+  "classificationCounts": {
+    "KEEP": 137,
+    "IMPROVE": 305,
+    "MERGE": 244,
+    "NOINDEX": 0,
+    "REDIRECT": 0,
+    "REMOVE": 0,
+    "MANUAL_REVIEW": 178
+  },
+  "riskCounts": {
+    "doorway": 412,
+    "duplicate": 244,
+    "thin": 332
+  },
+  "productionDiff": {
+    "mapped": 864,
+    "mismatch": 21,
+    "missingGenerated": 0
+  },
+  "crossSiteOverlap": {
+    "exactPathPairs": 118,
+    "likelySameQueryIntent": 31,
+    "gscQueryEvidence": "not_connected"
+  },
+  "sites": {
+    "ozdemir": {
+      "name": "Ankara Özdemir Nakliyat",
+      "origin": "https://ankaraozdemirnakliyat.com",
+      "sitemapUrls": 365,
+      "indexableOnPage": 365,
+      "doorwayRisk": 278,
+      "duplicateRisk": 110,
+      "thinRisk": 6,
+      "generatedMapped": 365,
+      "productionMismatches": 4,
+      "classifications": {
+        "KEEP": 73,
+        "IMPROVE": 14,
+        "MERGE": 110,
+        "NOINDEX": 0,
+        "REDIRECT": 0,
+        "REMOVE": 0,
+        "MANUAL_REVIEW": 168
+      }
+    },
+    "akif": {
+      "name": "Akif Nakliyat",
+      "origin": "https://www.ankaraakifnakliyat.com",
+      "sitemapUrls": 499,
+      "indexableOnPage": 499,
+      "doorwayRisk": 134,
+      "duplicateRisk": 134,
+      "thinRisk": 326,
+      "generatedMapped": 499,
+      "productionMismatches": 17,
+      "classifications": {
+        "KEEP": 64,
+        "IMPROVE": 291,
+        "MERGE": 134,
+        "NOINDEX": 0,
+        "REDIRECT": 0,
+        "REMOVE": 0,
+        "MANUAL_REVIEW": 10
+      }
+    }
+  }
+}

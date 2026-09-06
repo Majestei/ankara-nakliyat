@@ -399,7 +399,7 @@ export default function ContactClient() {
                                 <svg viewBox="0 0 48 48" className="w-14 h-14 drop-shadow-xl" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M43.6 20.5H24v7.5h11.3C33.8 33 29.5 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3 0 5.8 1.1 7.9 3l5.3-5.3C33.8 7.1 29.2 5 24 5 13.5 5 5 13.5 5 24s8.5 19 19 19c9.5 0 18-7 18-19 0-1.2-.1-2.3-.4-3.5z" fill="white"/>
                                 </svg>
-                                <span className="text-white font-black text-xs uppercase tracking-widest text-center">Google'da Görüntüle</span>
+                                <span className="text-white font-black text-xs uppercase tracking-widest text-center">Google&apos;da Görüntüle</span>
                             </a>
 
                             {/* Right: Business info */}
@@ -477,7 +477,7 @@ export default function ContactClient() {
                                         rel="noopener noreferrer"
                                         className="flex items-center gap-2 text-primary-500 font-black text-xs uppercase tracking-widest hover:gap-4 transition-all duration-300"
                                     >
-                                        Google'da Gör <IconArrow className="w-4 h-4" />
+                                        Google&apos;da Gör <IconArrow className="w-4 h-4" />
                                     </a>
                                 </div>
                             </div>
