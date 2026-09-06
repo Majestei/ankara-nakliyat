@@ -80,5 +80,124 @@ export const neighborhoodsByDistrict: Record<string, Neighborhood[]> = {
     ],
     "yenimahalle": [
         { name: "Batıkent", slug: "batikent" }, { name: "Demetevler", slug: "demetevler" }, { name: "İvedik", slug: "ivedik" }, { name: "Ostim", slug: "ostim" }, { name: "Şentepe", slug: "sentepe" }, { name: "Çayyolu 2", slug: "cayyolu-2" }, { name: "Beştepe", slug: "bestepe" }, { name: "Gayret", slug: "gayret" }, { name: "Macunköy", slug: "macunkoy" }, { name: "Varlık", slug: "varlik" }, { name: "Kardelen", slug: "kardelen" }, { name: "Uğur Mumcu", slug: "ugur-mumcu" }, { name: "Anadolu", slug: "anadolu" }, { name: "Avcılar", slug: "avcilar" }, { name: "Burç", slug: "burc" }, { name: "Çiğdemtepe", slug: "cigdemtepe" }, { name: "Ergazi", slug: "ergazi" }, { name: "Ergenekon", slug: "ergenekon" }, { name: "İlkyerleşim", slug: "ilkyerlesim" }, { name: "İnönü", slug: "inonu" }, { name: "Işınlar", slug: "isinlar" }, { name: "İvedikosb", slug: "ivedikosb" }, { name: "Kaletepe", slug: "kaletepe" }, { name: "Karşıyaka", slug: "karsiyaka" }, { name: "Kayalar", slug: "kayalar" }, { name: "Kentkoop", slug: "kentkoop" }, { name: "Kuzey Yıldızı", slug: "kuzey-yildizi" }, { name: "Mehmet Akif Ersoy", slug: "mehmet-akif-ersoy" }, { name: "Memlik", slug: "memlik" }, { name: "Pamuklar", slug: "pamuklar" }, { name: "Susuz", slug: "susuz" }, { name: "Tepealtı", slug: "tepealti" }, { name: "Turgut Özal", slug: "turgut-ozal" }, { name: "Yakacık", slug: "yakacik" }, { name: "Yuva", slug: "yuva" }
+    ],
+
+    // ISTANBUL (39 Districts)
+    "adalar": [
+        { name: "Büyükada", slug: "buyukada" }, { name: "Heybeliada", slug: "heybeliada" }, { name: "Burgazada", slug: "burgazada" }, { name: "Kınalıada", slug: "kinaliada" }
+    ],
+    "arnavutkoy": [
+        { name: "Hadımköy", slug: "hadimkoy" }, { name: "Haraççı", slug: "haracci" }, { name: "Taşoluk", slug: "tasoluk" }, { name: "Bolluca", slug: "bolluca" }
+    ],
+    "atasehir": [
+        { name: "Batı Ataşehir", slug: "bati-atasehir" }, { name: "İçerenköy", slug: "icerenkoy" }, { name: "Kayışdağı", slug: "kayisdagi" }, { name: "Küçükbakkalköy", slug: "kucukbakkalkoy" }, { name: "Örnek", slug: "ornek" }, { name: "Yeni Sahra", slug: "yeni-sahra" }, { name: "Ferhatpaşa", slug: "ferhatpasa" }, { name: "Mevlana", slug: "mevlana" }, { name: "Mimar Sinan", slug: "mimar-sinan" }
+    ],
+    "avcilar": [
+        { name: "Ambarlı", slug: "ambarli" }, { name: "Cihangir", slug: "cihangir" }, { name: "Denizköşkler", slug: "denizkoskler" }, { name: "Firuzköy", slug: "firuzkoy" }, { name: "Gümüşpala", slug: "gumuspala" }, { name: "Mustafa Kemalpaşa", slug: "mustafa-kemalpasa" }, { name: "Tahtakale", slug: "tahtakale" }
+    ],
+    "bagcilar": [
+        { name: "Güneşli", slug: "gunesli" }, { name: "Mahmutbey", slug: "mahmutbey" }, { name: "Kirazlı", slug: "kirazli" }, { name: "Yenimahalle", slug: "yenimahalle" }, { name: "Hürriyet", slug: "hurriyet" }, { name: "Barbaros", slug: "barbaros" }
+    ],
+    "bahcelievler": [
+        { name: "Yenibosna", slug: "yenibosna" }, { name: "Şirinevler", slug: "sirinevler" }, { name: "Kocasinan", slug: "kocasinan" }, { name: "Cumhuriyet", slug: "cumhuriyet" }, { name: "Fevzi Çakmak", slug: "fevzi-cakmak" }, { name: "Hürriyet", slug: "hurriyet" }
+    ],
+    "bakirkoy": [
+        { name: "Ataköy", slug: "atakoy" }, { name: "Florya", slug: "florya" }, { name: "Yeşilköy", slug: "yesilkoy" }, { name: "Yeşilyurt", slug: "yesilyurt" }, { name: "Zuhuratbaba", slug: "zuhuratbaba" }, { name: "Kartaltepe", slug: "kartaltepe" }, { name: "Osmaniye", slug: "osmaniye" }, { name: "Cevizlik", slug: "cevizlik" }
+    ],
+    "basaksehir": [
+        { name: "Bahçeşehir", slug: "bahcesehir" }, { name: "Kayaşehir", slug: "kayasehir" }, { name: "Ispartakule", slug: "ispartakule" }, { name: "Altınşehir", slug: "altinsehir" }, { name: "Güvercintepe", slug: "guvercintepe" }, { name: "Şahintepe", slug: "sahintepe" }, { name: "Ziya Gökalp", slug: "ziya-gokalp" }
+    ],
+    "bayrampasa": [
+        { name: "Altıntepsi", slug: "altintepsi" }, { name: "Cevatpaşa", slug: "cevatpasa" }, { name: "Kartaltepe", slug: "kartaltepe" }, { name: "Muratpaşa", slug: "muratpasa" }, { name: "Yenidoğan", slug: "yenidogan" }
+    ],
+    "besiktas": [
+        { name: "Akatlar", slug: "akatlar" }, { name: "Arnavutköy", slug: "arnavutkoy" }, { name: "Bebek", slug: "bebek" }, { name: "Etiler", slug: "etiler" }, { name: "Gayrettepe", slug: "gayrettepe" }, { name: "Levent", slug: "levent" }, { name: "Ortaköy", slug: "ortakoy" }, { name: "Ulus", slug: "ulus" }, { name: "Yıldız", slug: "yildiz" }, { name: "Levazım", slug: "levazim" }, { name: "Mecidiye", slug: "mecidiye" }, { name: "Muradiye", slug: "muradiye" }, { name: "Sinanpaşa", slug: "sinanpasa" }, { name: "Türkali", slug: "turkali" }, { name: "Vişnezade", slug: "visnezade" }
+    ],
+    "beykoz": [
+        { name: "Acarkent", slug: "acarkent" }, { name: "Kavacık", slug: "kavacik" }, { name: "Kanlıca", slug: "kanlica" }, { name: "Paşabahçe", slug: "pasabahce" }, { name: "Çubuklu", slug: "cubuklu" }, { name: "Anadolu Hisarı", slug: "anadolu-hisari" }
+    ],
+    "beylikduzu": [
+        { name: "Adnan Kahveci", slug: "adnan-kahveci" }, { name: "Barış", slug: "baris" }, { name: "Cumhuriyet", slug: "cumhuriyet" }, { name: "Gürpınar", slug: "gurpinar" }, { name: "Kavaklı", slug: "kavakli" }, { name: "Yakuplu", slug: "yakuplu" }, { name: "Dereağzı", slug: "dereagzi" }, { name: "Marmara", slug: "marmara" }, { name: "Sahil", slug: "sahil" }
+    ],
+    "beyoglu": [
+        { name: "Cihangir", slug: "cihangir" }, { name: "Galata", slug: "galata" }, { name: "Karaköy", slug: "karakoy" }, { name: "Taksim", slug: "taksim" }, { name: "Tarlabaşı", slug: "tarlabasi" }, { name: "Kasımpaşa", slug: "kasimpasa" }, { name: "Sütlüce", slug: "sutluce" }
+    ],
+    "buyukcekmece": [
+        { name: "Mimaroba", slug: "mimaroba" }, { name: "Sinanoba", slug: "sinanoba" }, { name: "Kumburgaz", slug: "kumburgaz" }, { name: "Tepecik", slug: "tepecik" }, { name: "Celaliye", slug: "celaliye" }
+    ],
+    "catalca": [
+        { name: "Ferhatpaşa", slug: "ferhatpasa" }, { name: "Kaleici", slug: "kaleici" }, { name: "Binkılıç", slug: "binkilic" }
+    ],
+    "cekmekoy": [
+        { name: "Alemdağ", slug: "alemdag" }, { name: "Taşdelen", slug: "tasdelen" }, { name: "Ömerli", slug: "omerli" }, { name: "Hamidiye", slug: "hamidiye" }
+    ],
+    "esenler": [
+        { name: "Birlik", slug: "birlik" }, { name: "Havaalanı", slug: "havaalani" }, { name: "Menderes", slug: "menderes" }, { name: "Turgutreis", slug: "turgutreis" }
+    ],
+    "esenyurt": [
+        { name: "Akçaburgaz", slug: "akcaburgaz" }, { name: "Kıraç", slug: "kirac" }, { name: "Mehterçeşme", slug: "mehtercesme" }, { name: "Saadetdere", slug: "saadetdere" }, { name: "Piri Reis", slug: "piri-reis" }, { name: "Yeşilkent", slug: "yesilkent" }
+    ],
+    "eyupsultan": [
+        { name: "Göktürk", slug: "gokturk" }, { name: "Kemerburgaz", slug: "kemerburgaz" }, { name: "Alibeyköy", slug: "alibeykoy" }, { name: "Yeşilpınar", slug: "yesilpinar" }
+    ],
+    "fatih": [
+        { name: "Aksaray", slug: "aksaray" }, { name: "Balat", slug: "balat" }, { name: "Beyazıt", slug: "beyazit" }, { name: "Eminönü", slug: "eminonu" }, { name: "Fener", slug: "fener" }, { name: "Sultanahmet", slug: "sultanahmet" }
+    ],
+    "gaziosmanpasa": [
+        { name: "Bağlarbaşı", slug: "baglarbasi" }, { name: "Karadeniz", slug: "karadeniz" }, { name: "Küçükköy", slug: "kucukkoy" }, { name: "Yıldıztabya", slug: "yildiztabya" }
+    ],
+    "gungoren": [
+        { name: "Haznedar", slug: "haznedar" }, { name: "Merter", slug: "merter" }, { name: "Tozkoparan", slug: "tozkoparan" }, { name: "Güven", slug: "guven" }
+    ],
+    "kadikoy": [
+        { name: "Bostancı", slug: "bostanci" }, { name: "Caddebostan", slug: "caddebostan" }, { name: "Erenköy", slug: "erenkoy" }, { name: "Fenerbahçe", slug: "fenerbahce" }, { name: "Feneryolu", slug: "feneryolu" }, { name: "Göztepe", slug: "goztepe" }, { name: "Kozyatağı", slug: "kozyatagi" }, { name: "Moda", slug: "moda" }, { name: "Suadiye", slug: "suadiye" }, { name: "Zühtüpaşa", slug: "zuhtupasa" }, { name: "Acıbadem", slug: "acibadem" }, { name: "Caferağa", slug: "caferaga" }, { name: "Fikirtepe", slug: "fikirtepe" }, { name: "Hasanpaşa", slug: "hasanpasa" }, { name: "Sahrayıcedit", slug: "sahrayicedit" }
+    ],
+    "kagithane": [
+        { name: "Çeliktepe", slug: "celiktepe" }, { name: "Gültepe", slug: "gultepe" }, { name: "Seyrantepe", slug: "seyrantepe" }, { name: "Emniyetevleri", slug: "emniyetevleri" }
+    ],
+    "kartal": [
+        { name: "Atalar", slug: "atalar" }, { name: "Cevizli", slug: "cevizli" }, { name: "Dragos", slug: "dragos" }, { name: "Soğanlık", slug: "soganlik" }, { name: "Uğur Mumcu", slug: "ugur-mumcu" }, { name: "Yakacık", slug: "yakacik" }
+    ],
+    "kucukcekmece": [
+        { name: "Atakent", slug: "atakent" }, { name: "Halkalı", slug: "halkali" }, { name: "İkitelli", slug: "ikitelli" }, { name: "Sefaköy", slug: "sefakoy" }, { name: "Cennet", slug: "cennet" }, { name: "Kanarya", slug: "kanarya" }
+    ],
+    "maltepe": [
+        { name: "Altıntepe", slug: "altintepe" }, { name: "İdealtepe", slug: "idealtepe" }, { name: "Küçükyalı", slug: "kucukyali" }, { name: "Zümrütevler", slug: "zumrutevler" }, { name: "Başıbüyük", slug: "basibuyuk" }, { name: "Cevizli", slug: "cevizli" }
+    ],
+    "pendik": [
+        { name: "Kurtköy", slug: "kurtkoy" }, { name: "Kaynarca", slug: "kaynarca" }, { name: "Yenişehir", slug: "yenisehir" }, { name: "Güzelyalı", slug: "guzelyali" }, { name: "Çamlık", slug: "camlik" }
+    ],
+    "sancaktepe": [
+        { name: "Samandıra", slug: "samandira" }, { name: "Sarıgazi", slug: "sarigazi" }, { name: "Yenidoğan", slug: "yenidogan" }, { name: "Paşaköy", slug: "pasakoy" }
+    ],
+    "sariyer": [
+        { name: "Ayazağa", slug: "ayazaga" }, { name: "Bahçeköy", slug: "bahcekoy" }, { name: "Emirgan", slug: "emirgan" }, { name: "İstinye", slug: "istinye" }, { name: "Maslak", slug: "maslak" }, { name: "Tarabya", slug: "tarabya" }, { name: "Zekeriyaköy", slug: "zekeriyakoy" }, { name: "Reşitpaşa", slug: "resitpasa" }, { name: "Yeniköy", slug: "yenikoy" }
+    ],
+    "silivri": [
+        { name: "Selimpaşa", slug: "selimpasa" }, { name: "Gümüşyaka", slug: "gumusyaka" }, { name: "Çanta", slug: "canta" }, { name: "Ortaköy", slug: "ortakoy" }
+    ],
+    "sultanbeyli": [
+        { name: "Abdurrahmangazi", slug: "abdurrahmangazi" }, { name: "Hamidiye", slug: "hamidiye" }, { name: "Mecidiye", slug: "mecidiye" }, { name: "Yavuz Selim", slug: "yavuz-selim" }
+    ],
+    "sultangazi": [
+        { name: "Habibler", slug: "habibler" }, { name: "Gazi", slug: "gazi" }, { name: "Cebeci", slug: "cebeci" }, { name: "Yunus Emre", slug: "yunus-emre" }
+    ],
+    "sile": [
+        { name: "Ağva", slug: "agva" }, { name: "Kumbaba", slug: "kumbaba" }, { name: "Çavuş", slug: "cavus" }
+    ],
+    "sisli": [
+        { name: "Mecidiyeköy", slug: "mecidiyekoy" }, { name: "Nişantaşı", slug: "nisantasi" }, { name: "Teşvikiye", slug: "tesvikiye" }, { name: "Feriköy", slug: "ferikoy" }, { name: "Kurtuluş", slug: "kurtulus" }, { name: "Bomonti", slug: "bomonti" }, { name: "Okmeydanı", slug: "okmeydani" }, { name: "Esentepe", slug: "esentepe" }, { name: "Kuştepe", slug: "kustepe" }, { name: "Fulya", slug: "fulya" }, { name: "Halaskargazi", slug: "halaskargazi" }, { name: "Harbiye", slug: "harbiye" }, { name: "İzzetpaşa", slug: "izzetpasa" }, { name: "Pangaltı", slug: "pangalti" }
+    ],
+    "tuzla": [
+        { name: "Aydınlı", slug: "aydinli" }, { name: "İçmeler", slug: "icmeler" }, { name: "Orhanlı", slug: "orhanli" }, { name: "Postane", slug: "postane" }, { name: "Şifa", slug: "sifa" }
+    ],
+    "umraniye": [
+        { name: "Atakent", slug: "atakent" }, { name: "Ihlamurkuyu", slug: "ihlamurkuyu" }, { name: "Namık Kemal", slug: "namik-kemal" }, { name: "Şerifali", slug: "serifali" }, { name: "Tepeüstü", slug: "tepeustu" }, { name: "Yukarı Dudullu", slug: "yukari-dudullu" }, { name: "Çakmak", slug: "cakmak" }
+    ],
+    "uskudar": [
+        { name: "Acıbadem", slug: "acibadem" }, { name: "Altunizade", slug: "altunizade" }, { name: "Beylerbeyi", slug: "beylerbeyi" }, { name: "Çengelköy", slug: "cengelkoy" }, { name: "Kandilli", slug: "kandilli" }, { name: "Kuzguncuk", slug: "kuzguncuk" }, { name: "Kısıklı", slug: "kisikli" }, { name: "Libadiye", slug: "libadiye" }, { name: "Yavuztürk", slug: "yavuzturk" }, { name: "Bahçelievler", slug: "bahcelievler" }, { name: "Bulgurlu", slug: "bulgurlu" }, { name: "Burhaniye", slug: "burhaniye" }, { name: "Kirazlıtepe", slug: "kirazlitepe" }, { name: "Selimiye", slug: "selimiye" }, { name: "Zeynep Kamil", slug: "zeynep-kamil" }
+    ],
+    "zeytinburnu": [
+        { name: "Merkezefendi", slug: "merkezefendi" }, { name: "Telsiz", slug: "telsiz" }, { name: "Veliefendi", slug: "veliefendi" }, { name: "Beştelsiz", slug: "bestelsiz" }
     ]
 };

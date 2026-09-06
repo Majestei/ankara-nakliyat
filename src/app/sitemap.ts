@@ -1,5 +1,8 @@
 import { MetadataRoute } from 'next';
 import { ankaraIlceleri, hizmetler } from '@/data/siteData';
+import { neighborhoodsByDistrict } from '@/data/neighborhoodData';
+import { blogPosts } from '@/data/blogData';
+import makalelerData from '@/data/makalelerData.json';
 
 const BASE_URL = 'https://ankaraozdemirnakliyat.com';
 
@@ -7,52 +10,64 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const urls: MetadataRoute.Sitemap = [];
     const today = '2026-09-06';
 
-    // 1. Core High-Value Landing Pages
     const staticUrls = [
-      { path: '/', priority: 1.0, changeFrequency: 'daily' as const },
-      { path: '/evden-eve-nakliyat', priority: 0.95, changeFrequency: 'daily' as const },
-      { path: '/hizmetler', priority: 0.85, changeFrequency: 'weekly' as const },
-      { path: '/islemler', priority: 0.85, changeFrequency: 'weekly' as const },
-      { path: '/hakkimizda', priority: 0.7, changeFrequency: 'monthly' as const },
-      { path: '/iletisim', priority: 0.8, changeFrequency: 'weekly' as const },
-      { path: '/sss', priority: 0.7, changeFrequency: 'monthly' as const },
-      { path: '/galeri', priority: 0.6, changeFrequency: 'monthly' as const },
-      { path: '/site-haritasi', priority: 0.5, changeFrequency: 'monthly' as const },
-      { path: '/gizlilik-politikasi', priority: 0.3, changeFrequency: 'yearly' as const },
-      { path: '/kullanim-sartlari', priority: 0.3, changeFrequency: 'yearly' as const },
-      { path: '/kvkk', priority: 0.3, changeFrequency: 'yearly' as const },
+      '/', '/hakkimizda', '/iletisim', '/galeri', '/sss',
+      '/hizmetler', '/evden-eve-nakliyat', '/blog', '/makaleler',
+      '/gizlilik-politikasi', '/kullanim-sartlari', '/kvkk',
+      '/islemler', '/site-haritasi'
     ];
 
-    staticUrls.forEach(({ path, priority, changeFrequency }) => {
+    staticUrls.forEach(url => {
         urls.push({
-            url: `${BASE_URL}${path}`,
+            url: `${BASE_URL}${url}`,
             lastModified: today,
-            changeFrequency,
-            priority,
+            changeFrequency: 'weekly',
+            priority: url === '/' ? 1.0 : 0.8
         });
     });
 
-    // 2. Core Service Pillar Pages (Unique content, custom pricing, schema)
     hizmetler.forEach(h => {
-        if (h.id === "evden-eve-nakliyat") return; // Handled by /evden-eve-nakliyat
+        if (h.id === "evden-eve-nakliyat") return; // 301 redirected to /islemler/ankara/evden-eve-nakliyat
         urls.push({
             url: `${BASE_URL}/hizmetler/${h.id}`,
             lastModified: today,
             changeFrequency: 'weekly',
-            priority: 0.9,
+            priority: 0.8
         });
     });
 
-    // 3. 25 Ankara District Pillar Pages (Each has unique operational guide, pricing, checklist & FAQ)
+    const ilceHizmetSlugs = ["evden-eve-nakliyat", "ofis-tasima", "nakliyat-fiyatlari"];
+    
     ankaraIlceleri.forEach(ilce => {
+        urls.push({ url: `${BASE_URL}/islemler/ankara/${ilce.slug}`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 });
+        
+        ilceHizmetSlugs.forEach(h => {
+            urls.push({ url: `${BASE_URL}/islemler/ankara/${ilce.slug}/${h}`, lastModified: today, changeFrequency: 'weekly', priority: 0.7 });
+        });
+        
+        const neighborhoods = neighborhoodsByDistrict[ilce.slug] || [];
+        neighborhoods.forEach(m => {
+            urls.push({ url: `${BASE_URL}/islemler/ankara/${ilce.slug}/${m.slug}`, lastModified: today, changeFrequency: 'weekly', priority: 0.6 });
+        });
+    });
+
+    blogPosts.forEach(post => {
         urls.push({
-            url: `${BASE_URL}/islemler/ankara/${ilce.slug}`,
+            url: `${BASE_URL}/blog/${post.slug}`,
             lastModified: today,
-            changeFrequency: 'weekly',
-            priority: 0.85,
+            changeFrequency: 'monthly',
+            priority: 0.6
+        });
+    });
+
+    makalelerData.forEach(makale => {
+        urls.push({
+            url: `${BASE_URL}/makaleler/${makale.slug}`,
+            lastModified: today,
+            changeFrequency: 'monthly',
+            priority: 0.6
         });
     });
 
     return urls;
 }
-

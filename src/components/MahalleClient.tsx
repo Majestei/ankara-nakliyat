@@ -12,6 +12,7 @@ import {
 import PricingTable from "@/components/PricingTable";
 import TrustBadgesSection from "@/components/TrustBadgesSection";
 import ContractGuaranteeSection from "@/components/ContractGuaranteeSection";
+import MovingChecklistSection from "@/components/MovingChecklistSection";
 
 // ── SPATIAL UI COMPONENTS ──
 
@@ -217,27 +218,129 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                                 Yerel <br /> <span className="text-white/10">Uzmanlık.</span>
                             </h2>
                         </div>
-                        <div className="w-full lg:w-1/3 p-6 md:p-10 bg-white/5 border border-white/10 rounded-2xl md:rounded-[3rem] backdrop-blur-3xl">
-                            <p className="text-white/50 text-base md:text-xl font-medium leading-relaxed">
-                                {ilceIcerikleri[ilce.slug as keyof typeof ilceIcerikleri] || (() => {
-                                    const options = [
-                                        `Sokağınızı biliyoruz. ${ilce.name} ${mahalle.name}'da asansörlü ve sigortalı profesyonel nakliyat hizmeti.`,
-                                        `${ilce.name} ilçesinin gözdesi ${mahalle.name} bölgesinde uzman ekibimizle kusursuz evden eve nakliyat deneyimi yaşıyorsunuz.`,
-                                        `${mahalle.name} mahallesinde yeni evinize taşınırken eşyalarınız bize emanet. Sigortalı ve ambalajlı nakliye çözümleri.`,
-                                        `${ilce.name}, ${mahalle.name} için özel tasarlanmış asansörlü nakliyat hizmetimizle yüksek katlara güvenle taşıyoruz.`,
-                                        `${mahalle.name} sakinleri için %100 müşteri memnuniyeti garantili, profesyonel paketlemeli evden eve taşımacılık.`
-                                    ];
-                                    const hash = mahalle.name.split('').reduce((acc: number, char: string) => acc + char.charCodeAt(0), 0);
-                                    return options[hash % options.length];
-                                })()}
+                        <div className="w-full lg:w-1/2 p-6 md:p-10 bg-white/5 border border-white/10 rounded-2xl md:rounded-[3rem] backdrop-blur-3xl space-y-4 text-white/70 text-sm md:text-base leading-relaxed">
+                            <p>
+                                <strong className="text-white font-bold">{ilce.name} {mahalle.name}</strong> bölgesinde ev ve ofis taşınma operasyonlarında sokak yapısına, site yönetim izinlerine ve bina kat yüksekliklerine hakim uzman kadromuzla hizmet veriyoruz.
+                            </p>
+                            <p>
+                                Taşınma öncesinde adresinize özel araç yanaşma ve dış cephe asansörü kurulum planı yapılır. Eşyalarınız kalın kraft havalı naylonlarla ambalajlanırken, gardıroplarınız marangozlarımızca sökülüp yeni adresinizde dilediğiniz odaya monte edilir.
                             </p>
                         </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12 mb-24">
                         {hizmetler.slice(0, 6).map((hizmet, i) => (
                             <PodCard key={hizmet.id} item={hizmet} name={displayName} index={i} />
                         ))}
+                    </div>
+
+                    {/* ── BÖLGESEL LOJİSTİK VE SAHA ANALİZİ ── */}
+                    <div className="bg-white/5 border border-white/10 rounded-3xl md:rounded-[3rem] p-8 md:p-16 mb-24 backdrop-blur-2xl">
+                        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                            <span className="text-primary-500 font-black text-xs uppercase tracking-[0.4em]">Saha &amp; Operasyon Rehberi</span>
+                            <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight">
+                                {mahalle.name} Bölgesinde Taşınma Dinamikleri
+                            </h3>
+                            <p className="text-slate-400 text-sm md:text-base">
+                                Her mahallenin sokak genişliği, kat yüksekliği ve otopark nizamı farklıdır. Eşyalarınızı rastgele değil, bölgenin koşullarına özel ekipmanla taşıyoruz.
+                            </p>
+                        </div>
+
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-slate-300 text-sm">
+                            <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                                <h4 className="text-primary-400 font-bold text-base mb-2">1. Sokak &amp; Araç Yanaşması</h4>
+                                <p className="text-xs leading-relaxed text-slate-400">
+                                    {mahalle.name} sokaklarındaki parklanma ve trafik akışına göre sabah erken saatlerde doğru araç açısıyla yanaşma yapılır.
+                                </p>
+                            </div>
+                            <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                                <h4 className="text-primary-400 font-bold text-base mb-2">2. Dış Cephe Modüler Asansör</h4>
+                                <p className="text-xs leading-relaxed text-slate-400">
+                                    Bina merdivenlerini ve bina asansörünü yıpratmamak için 25. kata kadar ulaşan hidrolik asansör balkona kurulur.
+                                </p>
+                            </div>
+                            <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                                <h4 className="text-primary-400 font-bold text-base mb-2">3. Site Yönetim Uyumu</h4>
+                                <p className="text-xs leading-relaxed text-slate-400">
+                                    Site güvenlik kapısı geçişleri, peyzaj koruma kuralları ve gürültü saatlerine %100 riayet edilir.
+                                </p>
+                            </div>
+                            <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
+                                <h4 className="text-primary-400 font-bold text-base mb-2">4. Ücretsiz Tesisat &amp; Montaj</h4>
+                                <p className="text-xs leading-relaxed text-slate-400">
+                                    Gardırop montajının yanı sıra çamaşır, bulaşık makinesi su tesisatı ve avizeler ek ücret alınmadan bağlanır.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* ── 3 ADIMDA MAHALLE TAŞINMA PLANI ── */}
+                    <div className="mb-24">
+                        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                            <span className="text-primary-500 font-black text-xs uppercase tracking-[0.4em]">Stressiz Transfer</span>
+                            <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight">
+                                3 Adımda {mahalle.name} Taşınması
+                            </h3>
+                        </div>
+                        <div className="grid md:grid-cols-3 gap-6">
+                            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-white relative">
+                                <span className="text-5xl font-black text-primary-500/30 block mb-4">01</span>
+                                <h4 className="text-xl font-bold mb-2">Ücretsiz Keşif &amp; Sabit Fiyat</h4>
+                                <p className="text-slate-400 text-xs leading-relaxed">
+                                    Adresinizde veya görüntülü görüşmeyle eşyalar incelenir, noter niteliğinde yazılı sabit fiyat sözleşmesi imzalanır.
+                                </p>
+                            </div>
+                            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-white relative">
+                                <span className="text-5xl font-black text-primary-500/30 block mb-4">02</span>
+                                <h4 className="text-xl font-bold mb-2">Marangozluk &amp; Zırhlı Ambalaj</h4>
+                                <p className="text-slate-400 text-xs leading-relaxed">
+                                    Kırılacaklar kraft balonlu naylonla zırhlanır, mobilyalar kadrolu marangozumuzca çizilmeden demonte edilir.
+                                </p>
+                            </div>
+                            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-white relative">
+                                <span className="text-5xl font-black text-primary-500/30 block mb-4">03</span>
+                                <h4 className="text-xl font-bold mb-2">Asansörlü İndirme &amp; Kurulum</h4>
+                                <p className="text-slate-400 text-xs leading-relaxed">
+                                    Dış cephe asansörüyle yüklenen eşyalar kapalı kasalı araçla sevk edilir; yeni evinizde mobilyalar kurulur ve teslim edilir.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* ── MAHALLEYE ÖZEL SIKÇA SORULAN SORULAR ── */}
+                    <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 mb-24 max-w-4xl mx-auto">
+                        <h3 className="text-2xl md:text-3xl font-black text-white mb-8 text-center">
+                            {mahalle.name} Sakinlerinin Sıkça Sorduğu Sorular
+                        </h3>
+                        <div className="space-y-4">
+                            <details className="group bg-white/5 border border-white/10 rounded-2xl p-6 open:bg-white/10 transition-all text-white">
+                                <summary className="font-bold cursor-pointer list-none flex items-center justify-between text-sm md:text-base">
+                                    <span>{mahalle.name}&apos;da taşınma günü ek masraf çıkar mı?</span>
+                                    <span className="text-primary-500 group-open:rotate-180 transition-transform text-xl">▾</span>
+                                </summary>
+                                <p className="text-slate-400 text-xs md:text-sm leading-relaxed mt-4 pt-4 border-t border-white/10">
+                                    Kesinlikle hayır. Taşıma öncesinde ücretsiz ekspertiz ile eşyalarınız incelenir ve yazılı sözleşme imzalanır. Belirlenen rakam kapıda 1 TL bile artmaz.
+                                </p>
+                            </details>
+                            <details className="group bg-white/5 border border-white/10 rounded-2xl p-6 open:bg-white/10 transition-all text-white">
+                                <summary className="font-bold cursor-pointer list-none flex items-center justify-between text-sm md:text-base">
+                                    <span>Dar sokaklarda veya yüksek binalarda asansör kurulabilir mi?</span>
+                                    <span className="text-primary-500 group-open:rotate-180 transition-transform text-xl">▾</span>
+                                </summary>
+                                <p className="text-slate-400 text-xs md:text-sm leading-relaxed mt-4 pt-4 border-t border-white/10">
+                                    Evet. 25. kata kadar ulaşabilen teleskopik hidrolik asansörlerimiz kompakt araç şasisi sayesinde dar sokaklara dahi kolayca yanaştırılabilmektedir.
+                                </p>
+                            </details>
+                            <details className="group bg-white/5 border border-white/10 rounded-2xl p-6 open:bg-white/10 transition-all text-white">
+                                <summary className="font-bold cursor-pointer list-none flex items-center justify-between text-sm md:text-base">
+                                    <span>Taşınma ortalama kaç saat sürer?</span>
+                                    <span className="text-primary-500 group-open:rotate-180 transition-transform text-xl">▾</span>
+                                </summary>
+                                <p className="text-slate-400 text-xs md:text-sm leading-relaxed mt-4 pt-4 border-t border-white/10">
+                                    Standart bir 2+1 veya 3+1 dairenin paketlenmesi, asansörle indirilmesi, sevkiyatı ve yeni evinizde montajı 4 ile 7 saat arasında aynı gün tamamlanmaktadır.
+                                </p>
+                            </details>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -248,6 +351,9 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                 subtitle={`${ilce.name} ${mahalle.name} genelinde geçerli, şeffaf, sigortalı ve marangozlu evden eve nakliyat fiyat tarifesi. Sürpriz ek maliyet olmadan güvenle taşının.`}
                 locationName={`${ilce.name} ${mahalle.name}`}
             />
+
+            {/* ── INTERACTIVE MOVING CHECKLIST ── */}
+            <MovingChecklistSection />
 
             {/* ── INSTITUTIONAL TRUST BADGES ── */}
             <TrustBadgesSection />

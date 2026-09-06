@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             images: ["/og-image.jpg"],
         },
         robots: {
-            index: false,
+            index: true,
             follow: true,
         },
     };

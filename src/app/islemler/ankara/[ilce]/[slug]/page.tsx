@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ankaraIlceleri, firmaBilgileri, ilceIcerikleri } from "@/data/siteData";
+import { ankaraIlceleri, firmaBilgileri } from "@/data/siteData";
 import { neighborhoodsByDistrict } from "@/data/neighborhoodData";
 import { IconPhone, IconCheck, IconMapPin } from "@/components/Icons";
 import MahalleClient from "@/components/MahalleClient";
@@ -9,104 +9,70 @@ import PricingTable from "@/components/PricingTable";
 import TrustBadgesSection from "@/components/TrustBadgesSection";
 import ContractGuaranteeSection from "@/components/ContractGuaranteeSection";
 import MovingChecklistSection from "@/components/MovingChecklistSection";
+import { getDistrictServiceContent } from "@/data/districtServiceData";
 
 // Hizmet alt sayfa tanımları
 const ilceHizmetler = [
     {
         slug: "evden-eve-nakliyat",
         title: "Evden Eve Nakliyat",
-        getContent: (ilce: string, ilceSlug: string) => {
-            const customParagraphs = ilceIcerikleri[ilceSlug];
-            return {
-                h1: `${ilce} Evden Eve Nakliyat`,
-                description: `${ilce} evden eve nakliyat ve nakliye hizmeti. Profesyonel ekibimizle ${ilce}'da asansörlü, sigortalı, marangozlu ve ekonomik taşımacılık.`,
-                paragraphs: customParagraphs && customParagraphs.length >= 3 ? customParagraphs : [
-                    `${ilce} evden eve nakliyat hizmetimiz kapsamında eşyalarınızı kadrolu uzman ekibimiz, modern çelik kasalı araçlarımız ve dış cephe asansörlerimizle güvenle taşıyoruz.`,
-                    `${ilce} nakliyat operasyonlarında eşyalarınız çift katlı balonlu naylonlarla paketlenir, marangozumuz mobilyalarınızı söker ve yeni evinizde montajını tamamlar.`,
-                    `${ilce} taşınma sürecinde sürpriz ek masraflarla karşılaşmamanız için ücretsiz ekspertiz sonrasında noter onaylı nitelikte sabit fiyat sözleşmesi imzalanır.`,
-                ],
-                features: [
-                    `${ilce}'da ücretsiz yerinde/video ekspertiz`,
-                    `${ilce} tam kapsamlı emtia sigortası`,
-                    `${ilce}'da marangozlu demontaj & montaj`,
-                    `${ilce} su tesisatı ve beyaz eşya bağlantısı`,
-                    `${ilce}'da 25. kata kadar modüler asansör`,
-                    `${ilce} sabit fiyat & yazılı sözleşme güvencesi`,
-                ],
-            };
-        },
+        getContent: (ilce: string) => ({
+            h1: `${ilce} Evden Eve Nakliyat`,
+            description: `${ilce} evden eve nakliyat hizmeti. Profesyonel ekibimizle ${ilce}'da güvenli, sigortalı ve ekonomik evden eve taşımacılık.`,
+            paragraphs: [
+                `${ilce} evden eve nakliyat hizmetimiz kapsamında eşyalarınızı profesyonel ekibimizle güvenle taşıyoruz. ${ilce}'da 15 yılı aşkın deneyimimizle evden eve nakliyat sektöründe hizmet veriyoruz.`,
+                `${ilce} evden eve nakliyat fiyatları, taşınacak eşya miktarına, kat durumuna ve mesafeye göre belirlenmektedir. Ücretsiz ekspertiz hizmetimizle ${ilce}'da en uygun nakliyat fiyatını sunuyoruz.`,
+                `${ilce} evden eve nakliyat hizmetimiz; profesyonel paketleme, mobilya sökme-kurulum, asansörlü taşıma, sigortalı taşımacılık ve taşınma sonrası yerleştirme hizmetlerini kapsamaktadır. ${ilce}'da evden eve taşınma planınız için hemen bizi arayın.`,
+            ],
+            features: [
+                `${ilce}'da ücretsiz ekspertiz ve fiyat teklifi`,
+                `${ilce} evden eve nakliyat sigortası`,
+                `${ilce}'da profesyonel paketleme hizmeti`,
+                `${ilce} mobilya sökme ve kurulum`,
+                `${ilce}'da asansörlü taşıma imkanı`,
+                `${ilce} 7/24 müşteri desteği`,
+            ],
+        }),
     },
     {
         slug: "ofis-tasima",
         title: "Ofis Taşıma",
-        getContent: (ilce: string, ilceSlug: string) => {
-            const districtSpecificNotes: Record<string, string[]> = {
-                "cankaya": [
-                    "Çankaya ofis taşıma hizmetlerimizde, **Kızılay, Tunalı, Gaziosmanpaşa, Söğütözü ve Çukurambar** plazalarındaki şirket merkezleri, avukatlık büroları ve elçilik temsilcilikleri için kurumsal lojistik sağlıyoruz.",
-                    "Hafta sonu veya mesai bitimi operasyonlarımızla, şirketinizin çalışma temposunu ve müşteri iletişimini aksatmadan Cuma akşamı başlayıp Pazartesi sabahı anahtar teslim kurulum yapıyoruz.",
-                    "Sunucu kabinleri, IT donanımları ve masaüstü bilgisayarlar antistatik ambalajlarla korunurken, klasör ve arşiv evraklarınız numaralı kolilerle departman sırasına göre dizilir."
-                ],
-                "yenimahalle": [
-                    "Yenimahalle ofis taşıma servisimizle, **Ostim Sanayi, İvedik Organize Sanayi ve Batı Sitesi** iş merkezlerindeki işletmeler, mühendislik ofisleri ve üretim atölyeleri için hızlı çözümler sunuyoruz.",
-                    "Ağır sanayi parçaları, hassas test cihazları ve ofis mobilyaları çelik kasalı araçlarımız ve forklift/asansör desteğimizle güvenle sevk edilir.",
-                    "Yenimahalle genelinde kurumsal faturalı, K3 yetki belgeli ve tam teminatlı sigorta güvencesiyle sıfır iş kaybı taahhüt ediyoruz."
-                ],
-                "sincan": [
-                    "Sincan kurumsal taşıma hizmetlerimiz, **Sincan 1. Organize Sanayi Bölgesi (ASO) ve Törekent** fabrikalarının idari yönetim ofisleri ile muhasebe birimlerinin taşınmasında uzmanlaşmıştır.",
-                    "Sanayi bölgesinin yoğun sevkiyat saatlerine uyumlu çalışma planı hazırlayarak tesis içi operasyonlarınızı aksatmadan taşınmayı tamamlıyoruz.",
-                    "Büro mobilyalarının demontajı, arşivleme raflarının sökümü ve montajı profesyonel marangoz ekibimiz tarafından titizlikle yürütülür."
-                ],
-                "altindag": [
-                    "Altındağ ofis taşımacılığında, **Siteler mobilya imalatçıları ve mağazaları, Ulus tarihi iş hanları ve toptancılar** için güvenli kurumsal nakliyat yapıyoruz.",
-                    "Dar sokaklar ve tarihi yapıların merdiven koşullarına uygun kompakt nakliye araçlarımız ve modüler dış cephe asansörlerimiz devreye girer.",
-                    "Resmi kurum evrakları, muhasebe kayıtları ve mağaza demirbaşları tam kapsamlı sigorta poliçesi ile teminat altındadır."
-                ],
-                "etimesgut": [
-                    "Etimesgut ofis taşıma operasyonlarımızda, **Bağlıca, Eryaman ve Elvankent** bölgelerindeki poliklinikler, özel okullar, etüt merkezleri ve yerel işletmeler için hizmet sunuyoruz.",
-                    "Eğitim ve sağlık kurumlarının hassas mobilya ve teknolojik cihazları özel patpat naylonlarla ambalajlanarak taşınır.",
-                    "Aynı gün içinde hızlı ve düzenli yerleşim sağlayarak iş yerinizin kesintisiz hizmet vermesine destek oluyoruz."
-                ]
-            };
-
-            const paragraphs = districtSpecificNotes[ilceSlug] || [
-                `${ilce} ofis taşıma hizmetimizle kurumsal iş yerinizin taşınma sürecini profesyonel bir takvimle yönetiyor, mesai kaybınızı sıfıra indiriyoruz.`,
-                `${ilce} bölgesindeki bürolar, klinikler ve işletmeler için arşiv dosyaları numaralı kutulara yerleştirilir, bilgisayar ve elektronik cihazlar antistatik korumayla ambalajlanır.`,
-                `Hafta sonu veya mesai dışı çalışma opsiyonumuz sayesinde Cuma akşamı başlayan taşınmanız Pazartesi sabahı şirketiniz çalışmaya hazır şekilde teslim edilir.`
-            ];
-
-            return {
-                h1: `${ilce} Ofis Taşıma`,
-                description: `${ilce} kurumsal ofis ve büro taşıma hizmeti. IT donanım güvenliği, numaralı arşivleme ve hafta sonu taşıma ile sıfır iş kaybı.`,
-                paragraphs,
-                features: [
-                    `${ilce}'da hafta sonu sıfır iş kaybı ile taşıma`,
-                    `${ilce} IT & sunucu antistatik paketleme`,
-                    `${ilce}'da numaralı arşiv kolileme sistemi`,
-                    `${ilce} kurumsal sözleşmeli sabit fiyat`,
-                    `${ilce}'da demonte & anahtar teslim montaj`,
-                    `${ilce} tam kapsamlı kurumsal sigorta poliçesi`,
-                ],
-            };
-        },
+        getContent: (ilce: string) => ({
+            h1: `${ilce} Ofis Taşıma`,
+            description: `${ilce} ofis taşıma hizmeti. Kurumsal taşınmalarınızı minimum iş kaybıyla gerçekleştiriyoruz. Profesyonel ofis nakliyat.`,
+            paragraphs: [
+                `${ilce} ofis taşıma hizmetimizle kurumsal taşınmalarınızı profesyonelce yönetiyoruz. ${ilce}'da ofis taşıma sürecinde iş kaybınızı minimuma indirmeyi hedefliyoruz.`,
+                `${ilce} ofis taşıma hizmetimiz kapsamında; ofis mobilyaları, elektronik cihazlar, arşiv dosyaları ve IT altyapısı güvenle taşınmaktadır. ${ilce}'da hafta sonu ofis taşıma seçeneği ile iş günü kaybınızı sıfıra indirebilirsiniz.`,
+                `${ilce}'da ofis taşıma fiyatları, ofis büyüklüğüne ve taşınacak eşya miktarına göre belirlenmektedir. ${ilce} kurumsal nakliyat çözümlerimiz hakkında detaylı bilgi almak için bizi arayın.`,
+            ],
+            features: [
+                `${ilce}'da hafta sonu ofis taşıma`,
+                `${ilce} ofis mobilya montaj/demontaj`,
+                `${ilce}'da elektronik cihaz koruması`,
+                `${ilce} arşiv taşımacılığı`,
+                `${ilce}'da IT altyapı taşıma desteği`,
+                `${ilce} sigortalı ofis taşıma`,
+            ],
+        }),
     },
     {
         slug: "nakliyat-fiyatlari",
         title: "Nakliyat Fiyatları",
-        getContent: (ilce: string, ilceSlug: string) => ({
-            h1: `${ilce} Nakliyat Fiyatları (2026)`,
-            description: `${ilce} nakliyat fiyatları 2026 listesi. ${ilce}'da 1+1, 2+1, 3+1 ev taşıma, asansörlü nakliye ve marangozluk dahil şeffaf sabit fiyat teklifi.`,
+        getContent: (ilce: string) => ({
+            h1: `${ilce} Nakliyat Fiyatları`,
+            description: `${ilce} nakliyat fiyatları 2026. ${ilce}'da evden eve nakliyat, ofis taşıma, asansörlü taşıma fiyatları. Ücretsiz teklif alın.`,
             paragraphs: [
-                `${ilce} nakliyat fiyatları 2026 yılı için dairenin oda sayısına (1+1, 2+1, 3+1, 4+1), kat yüksekliğine ve eşya hacmine göre şeffaf olarak hesaplanmaktadır. Fiyatlarımıza KDV, marangozluk, ambalajlama ve sigorta dahildir.`,
-                `Sincan merkez operasyon üssümüzden ${ilce} ilçesine sağladığımız doğrudan lojistik güzergahlar sayesinde gereksiz aracı komisyonlarını ortadan kaldırıyor, bölge halkına en rekabetçi sabit fiyatları sunuyoruz.`,
-                `${ilce} içi ve ilçeler arası taşınmalarda sürpriz masraflarla karşılaşmamanız için ücretsiz video veya fiziki ekspertiz ile sabit fiyat sözleşmesi imzalıyoruz. Kapıda asla fiyat artışı yapılmaz.`,
+                `${ilce} nakliyat fiyatları, taşınacak eşya miktarı, mesafe, kat durumu ve tercih edilen ek hizmetlere göre belirlenmektedir. ${ilce}'da en uygun nakliyat fiyatlarını sunmak için ücretsiz ekspertiz hizmetimizden yararlanabilirsiniz.`,
+                `${ilce} evden eve nakliyat fiyatları genellikle 1+1 daireler için uygun fiyatlarla başlamaktadır. ${ilce}'da 2+1, 3+1 ve daha büyük daireler için fiyatlar eşya miktarına göre artmaktadır. Asansörlü taşıma, paketleme ve sigorta gibi ek hizmetler fiyata dahil edilebilir.`,
+                `${ilce} nakliyat fiyatları hakkında en doğru bilgiyi almak için ücretsiz yerinde ekspertiz hizmetimizi kullanmanızı öneriyoruz. ${ilce}'da nakliyat fiyat teklifi almak için hemen bizi arayın.`,
             ],
             features: [
-                `${ilce}'da sürpriz masrafsız sabit fiyat taahhüdü`,
-                `${ilce} 1+1'den villaya şeffaf fiyat skalası`,
-                `${ilce}'da Standart ve Toplamalı VIP paket seçenekleri`,
-                `${ilce} marangozluk ve ambalajlama fiyata dahil`,
-                `${ilce}'da ücretsiz keşif ve ekspertiz imkanı`,
-                `${ilce} K3 yetki belgeli resmi faturalı hizmet`,
+                `${ilce}'da ücretsiz ekspertiz ve keşif`,
+                `${ilce} en uygun nakliyat fiyatları`,
+                `${ilce}'da fiyat garantisi`,
+                `${ilce} ek hizmet seçenekleri`,
+                `${ilce}'da taksit imkanı`,
+                `${ilce} şeffaf fiyatlandırma`,
             ],
         }),
     },
@@ -148,13 +114,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     // Check if it's a hizmet
     const hizmet = ilceHizmetler.find((h) => h.slug === params.slug);
     if (hizmet) {
-        const content = hizmet.getContent(ilce.name, ilce.slug);
-        const title = `${content.h1} | Garantili Hizmet`;
-        const description = `${content.description} Ücretsiz Ekspertiz ve Fiyat Alın!`;
-        const isCanonicalToDistrict = params.slug === "evden-eve-nakliyat" || params.slug === "nakliyat-fiyatlari";
-        const url = isCanonicalToDistrict
-            ? `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}`
-            : `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}/${params.slug}`;
+        const content = getDistrictServiceContent(ilce.slug, hizmet.slug as any, ilce.name);
+        const title = `${content.h1} | Özdemir Nakliyat`;
+        const description = content.description;
+        const url = `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}/${params.slug}`;
 
         return {
             title,
@@ -182,16 +145,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (mahalle) {
         const title = `Ankara ${ilce.name} ${mahalle.name} Evden Eve Nakliyat`;
         const description = `Ankara ${ilce.name} ${mahalle.name} mahallesinde asansörlü, ambalajlı ve sigortalı profesyonel evden eve nakliyat. Hemen arayın, uygun fiyatları kaçırmayın!`;
-        // Canonical points directly to district hub; noindex, follow passes authority while eliminating doorway risk
-        const url = `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}`;
+        const url = `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}/${params.slug}`;
 
         return {
             title,
             description,
-            robots: {
-                index: false,
-                follow: true,
-            },
             alternates: { canonical: url },
             openGraph: {
                 title,
@@ -272,7 +230,7 @@ export default function CombinedIlceSubPage({ params }: Props) {
 
     // If it's a hizmet, return the Hizmet page layout
     if (hizmet) {
-        const content = hizmet.getContent(ilce.name, ilce.slug);
+        const content = getDistrictServiceContent(ilce.slug, hizmet.slug as any, ilce.name);
         const digerHizmetler = ilceHizmetler.filter((h) => h.slug !== hizmet.slug);
         const digerIlceler = ankaraIlceleri.filter((i) => i.slug !== ilce.slug).slice(0, 12);
 
@@ -307,11 +265,28 @@ export default function CombinedIlceSubPage({ params }: Props) {
             serviceType: hizmet.title,
         };
 
+        // FAQPage JSON-LD
+        const faqJsonLd = content.faq && content.faq.length > 0 ? {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: content.faq.map(item => ({
+                "@type": "Question",
+                name: item.q,
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: item.a
+                }
+            }))
+        } : null;
+
         return (
             <>
                 {/* JSON-LD */}
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
                 <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+                {faqJsonLd && (
+                    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+                )}
 
                 {/* Hero */}
                 <section className="bg-slate-50 border-b border-slate-200 py-20 md:py-28 relative overflow-hidden">
@@ -332,11 +307,11 @@ export default function CombinedIlceSubPage({ params }: Props) {
                                     <li className="text-primary-600 font-bold">{hizmet.title}</li>
                                 </ol>
                             </nav>
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black mb-6 text-slate-900">
-                                {ilce.name} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-orange-500">{hizmet.title}</span>
+                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-black mb-6 text-slate-900 leading-tight">
+                                {content.h1}
                             </h1>
-                            <p className="text-slate-600 text-lg max-w-2xl mx-auto mb-10">
-                                {content.description}
+                            <p className="text-slate-600 text-lg max-w-3xl mx-auto mb-10 leading-relaxed">
+                                {content.intro}
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <a href={`tel:${firmaBilgileri.phone.replace(/\s/g, "")}`} className="btn-primary text-lg !py-4 !px-10 flex items-center justify-center gap-3 shadow-lg shadow-primary-500/20" title="Bizi Hemen Arayın">
@@ -364,6 +339,20 @@ export default function CombinedIlceSubPage({ params }: Props) {
                                     }} />
                                 ))}
                             </div>
+
+                            {/* Bölgesel Zorluk & Çözüm Kartları */}
+                            <div className="grid md:grid-cols-2 gap-6 my-10 not-prose">
+                                <div className="p-6 bg-red-50/70 border border-red-200/80 rounded-2xl">
+                                    <span className="text-xs font-bold uppercase tracking-wider text-red-600 block mb-2">Bölgesel Zorluk</span>
+                                    <h3 className="text-lg font-bold text-slate-900 mb-2">{content.localChallenge.title}</h3>
+                                    <p className="text-sm text-slate-600 leading-relaxed">{content.localChallenge.desc}</p>
+                                </div>
+                                <div className="p-6 bg-green-50/70 border border-green-200/80 rounded-2xl">
+                                    <span className="text-xs font-bold uppercase tracking-wider text-green-600 block mb-2">Özdemir Lojistik Çözümü</span>
+                                    <h3 className="text-lg font-bold text-slate-900 mb-2">{content.logisticsSolution.title}</h3>
+                                    <p className="text-sm text-slate-600 leading-relaxed">{content.logisticsSolution.desc}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -388,6 +377,33 @@ export default function CombinedIlceSubPage({ params }: Props) {
                         </div>
                     </div>
                 </section>
+
+                {/* FAQ Accordion Section */}
+                {content.faq && content.faq.length > 0 && (
+                    <section className="section-padding bg-white border-t border-slate-100">
+                        <div className="container-custom max-w-4xl">
+                            <div className="text-center mb-12">
+                                <span className="text-xs font-bold uppercase tracking-wider text-primary-600 block mb-2">Merak Edilenler</span>
+                                <h2 className="text-3xl font-heading font-black text-slate-900">
+                                    {ilce.name} {hizmet.title} Sıkça Sorulan Sorular
+                                </h2>
+                            </div>
+                            <div className="space-y-4">
+                                {content.faq.map((item, fi) => (
+                                    <details key={fi} className="group bg-slate-50 border border-slate-200 rounded-2xl p-6 open:bg-white open:shadow-md transition-all">
+                                        <summary className="font-bold text-slate-900 cursor-pointer list-none flex items-center justify-between">
+                                            <span>{item.q}</span>
+                                            <span className="text-primary-500 group-open:rotate-180 transition-transform text-xl">▾</span>
+                                        </summary>
+                                        <p className="text-slate-600 text-sm leading-relaxed mt-4 pt-4 border-t border-slate-100">
+                                            {item.a}
+                                        </p>
+                                    </details>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+                )}
 
                 {/* 2026 District Service Pricing Table */}
                 <PricingTable 
@@ -473,29 +489,6 @@ export default function CombinedIlceSubPage({ params }: Props) {
                     </div>
                 </section>
 
-                {/* SEO Content */}
-                <section className="section-padding bg-white border-t border-slate-100">
-                    <div className="container-custom max-w-4xl">
-                        <h2 className="text-2xl font-heading font-bold text-slate-900 mb-4 line-decoration">
-                            {ilce.name} {hizmet.title} Hakkında
-                        </h2>
-                        <div className="prose text-slate-600 leading-relaxed space-y-4 mt-8">
-                            <p>
-                                <strong className="text-slate-900">{ilce.name} {hizmet.title.toLowerCase()}</strong> hizmetimiz,
-                                Ankara Özdemir Nakliyat&apos;ın {ilce.name} ilçesindeki profesyonel taşımacılık çözümlerinden biridir.
-                                <strong className="text-slate-900"> {ilce.name} nakliyat</strong> sektöründe 15 yılı aşkın deneyimimizle
-                                müşterilerimize en kaliteli hizmeti sunmaktayız.
-                            </p>
-                            <p>
-                                <strong className="text-slate-900">{ilce.name}</strong>&apos;da{" "}
-                                <strong className="text-slate-900">{hizmet.title.toLowerCase()}</strong> hizmeti almak için
-                                hemen bizi arayabilir veya online teklif formunu doldurabilirsiniz.{" "}
-                                <strong className="text-slate-900">{ilce.name} {hizmet.title.toLowerCase()} fiyatları</strong> hakkında
-                                detaylı bilgi almak için ücretsiz ekspertiz hizmetimizden yararlanabilirsiniz.
-                            </p>
-                        </div>
-                    </div>
-                </section>
             </>
         );
     }
