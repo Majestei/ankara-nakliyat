@@ -3,6 +3,7 @@ import Link from "next/link";
 import { firmaBilgileri } from "@/data/siteData";
 import ServiceSchema from "@/components/ServiceSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
+import TrustBadgesSection from "@/components/TrustBadgesSection";
 
 export const metadata: Metadata = {
     title: "Ankara Şehirler Arası Nakliyat: 81 İle Sigortalı Taşıma",
@@ -104,14 +105,32 @@ export default function SehirlerArasiPage() {
                             </table>
                         </div>
 
-                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Şehirler Arası Nakliyat Fiyatları</h2>
-                        <p>
-                            Şehirler arası nakliyat fiyatları; eşya hacmi, mesafe, yakıt maliyetleri ve ek hizmetlere göre belirlenir. <strong>Parsiyel taşıma</strong> ile aynı güzergahtaki diğer müşterilerimizin eşyalarıyla birlikte taşıma yaparak önemli maliyet avantajı sağlayabilirsiniz. <strong>Gidiş-dönüş avantajı</strong> ile de ekonomik fiyatlar sunuyoruz.
-                        </p>
+                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">2026 Ankara Çıkışlı Şehirler Arası Fiyat Tahminleri</h2>
+                        <div className="grid md:grid-cols-3 gap-6 not-prose mb-8">
+                            <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                                <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Popüler Hat</span>
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">Ankara ➔ İstanbul</h3>
+                                <div className="text-2xl font-black text-slate-900 mb-2">16.000 - 28.000 ₺</div>
+                                <p className="text-xs text-slate-500">Marmara bölgesi her gün çift yönlü sefer. Parsiyel 4.500 ₺&apos;den başlar.</p>
+                            </div>
+                            <div className="p-6 bg-primary-50/50 rounded-2xl border-2 border-primary-500/30 relative">
+                                <span className="absolute -top-3 right-4 bg-primary-500 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded-full">Ege & Akdeniz</span>
+                                <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Güneş Hattı</span>
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">Ankara ➔ İzmir / Antalya</h3>
+                                <div className="text-2xl font-black text-slate-900 mb-2">18.000 - 34.000 ₺</div>
+                                <p className="text-xs text-slate-500">Özel süspansiyonlu uzun yol çelik araçlar, 24 saat içinde kapıda teslim.</p>
+                            </div>
+                            <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                                <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Tüm Türkiye</span>
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">Diğer 81 İl Seferleri</h3>
+                                <div className="text-2xl font-black text-slate-900 mb-2">Özel Fiyat</div>
+                                <p className="text-xs text-slate-500">Bursa, Adana, Samsun, Trabzon, Diyarbakır ve tüm Anadolu illerine sabit fiyat garantisi.</p>
+                            </div>
+                        </div>
 
-                        <div className="mt-12 p-8 bg-gradient-to-br from-primary-600 to-orange-600 rounded-3xl text-white text-center shadow-xl">
+                        <div className="mt-12 p-8 bg-gradient-to-br from-primary-600 to-orange-600 rounded-3xl text-white text-center shadow-xl not-prose">
                             <h3 className="text-2xl font-bold mb-4">Şehirler Arası Nakliyat Teklifi Alın</h3>
-                            <p className="mb-6 opacity-90">Hangi şehre taşınırsanız taşının, güvenle taşıyoruz!</p>
+                            <p className="mb-6 opacity-90">Hangi şehre taşınırsanız taşının, K3 belgeli ve sigortalı güvenceyle taşıyoruz!</p>
                             <a href={`tel:${firmaBilgileri.phone.replace(/\s/g, "")}`} className="inline-block bg-white text-primary-600 font-bold px-8 py-4 rounded-full shadow-lg hover:bg-slate-50 transition-all hover:scale-105">
                                 Hemen Arayın: {firmaBilgileri.phone}
                             </a>
@@ -119,6 +138,8 @@ export default function SehirlerArasiPage() {
                     </div>
                 </div>
             </section>
+
+            <TrustBadgesSection />
         </>
     );
 }

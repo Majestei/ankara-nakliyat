@@ -10,6 +10,8 @@ import {
     IconClipboard, IconPhone, IconHome, IconCheck, IconMapPin,
     IconArrow, IconPlus, IconStar
 } from "@/components/Icons";
+import MovingChecklistSection from "@/components/MovingChecklistSection";
+import ContractGuaranteeSection from "@/components/ContractGuaranteeSection";
 
 // ── 3D UTILS & SUB-COMPONENTS ──
 
@@ -525,6 +527,9 @@ export default function EvdenEveClient() {
                 </div>
             </section>
 
+            {/* ── CONTRACT & FIXED PRICE GUARANTEE ── */}
+            <ContractGuaranteeSection />
+
             {/* ── THE SPOTLIGHT REVIEW ── */}
             <section className="py-32 md:py-60 lg:py-80 bg-white relative overflow-hidden">
                 <div className="container-custom relative z-10 text-center">
@@ -608,6 +613,9 @@ export default function EvdenEveClient() {
                     </div>
                 </div>
             </section>
+
+            {/* ── INTERACTIVE MOVING CHECKLIST (STRESSİZ TAŞINMA REHBERİ) ── */}
+            <MovingChecklistSection />
 
             {/* ── FAQ ACCORDION ── */}
             <section className="py-24 md:py-60 bg-white px-4">

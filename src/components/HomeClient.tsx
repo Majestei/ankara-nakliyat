@@ -21,6 +21,9 @@ const ServiceCard3D = dynamic(() => import("./ServiceCard3D"), { ssr: false });
 import PricingTable from "@/components/PricingTable";
 import TrustBadgesSection from "@/components/TrustBadgesSection";
 import AnkaraGuideSection from "@/components/AnkaraGuideSection";
+import SearchIntentGrid from "@/components/SearchIntentGrid";
+import ContractGuaranteeSection from "@/components/ContractGuaranteeSection";
+import MovingChecklistSection from "@/components/MovingChecklistSection";
 
 // ── SHARED PREMIUM COMPONENTS ──
 
@@ -234,6 +237,9 @@ export default function HomeClient() {
                 </div>
             </section>
 
+            {/* ── SEARCH INTENT & SERVICE MATRIX (NAKLİYECİ, ASANSÖRLÜ, PARÇA EŞYA, OFİS, DEPO) ── */}
+            <SearchIntentGrid />
+
             {/* ── PROCESS: TECHNICAL NODES ── */}
             <section className="py-24 md:py-40 lg:py-60 bg-slate-50 relative overflow-hidden">
                 <PerspectiveGrid opacity="0.03" color="#000" />
@@ -304,6 +310,9 @@ export default function HomeClient() {
                 locationName="Ankara"
             />
 
+            {/* ── CONTRACT & FIXED PRICE GUARANTEE (KOMİSYONCU / ARACI TUZAĞINA SON) ── */}
+            <ContractGuaranteeSection />
+
             {/* ── ANKARA DISTRICT LOGISTICS GUIDE ── */}
             <AnkaraGuideSection />
 
@@ -339,6 +348,9 @@ export default function HomeClient() {
                     </div>
                 </div>
             </section>
+
+            {/* ── INTERACTIVE MOVING CHECKLIST (STRESSİZ TAŞINMA REHBERİ) ── */}
+            <MovingChecklistSection />
 
             {/* ── HOME FAQ SECTION (Point 1) ── */}
             <section className="py-24 md:py-40 bg-white relative overflow-hidden">
