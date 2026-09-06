@@ -38,6 +38,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
 }
 
+function formatDate(dateStr: string) {
+    if (!dateStr) return "";
+    const parts = dateStr.slice(0, 10).split("-");
+    return parts.length === 3 ? `${parts[2]}.${parts[1]}.${parts[0]}` : dateStr;
+}
+
 export default async function MakaleDetail({ params }: { params: { slug: string } }) {
     const { slug } = await params;
     const post = makalelerData.find((m) => m.slug === slug);
@@ -117,7 +123,7 @@ export default async function MakaleDetail({ params }: { params: { slug: string 
                         {post.category}
                     </span>
                     <span className="text-[#8892B0] text-sm font-mono tracking-widest">
-                        {new Date(post.date).toLocaleDateString('tr-TR')}
+                        {formatDate(post.date)}
                     </span>
                     <span className="text-white/20">•</span>
                     <span className="text-[#8892B0] text-sm font-mono tracking-widest">{(post as any).readTime || '3 dk'} okuma</span>

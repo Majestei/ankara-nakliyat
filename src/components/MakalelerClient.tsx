@@ -56,6 +56,12 @@ export default function MakalelerClient() {
             .replace(/û/g, 'u');
     };
 
+    const formatDate = (dateStr: string) => {
+        if (!dateStr) return "";
+        const parts = dateStr.slice(0, 10).split("-");
+        return parts.length === 3 ? `${parts[2]}.${parts[1]}.${parts[0]}` : dateStr;
+    };
+
     const searchTerms = normalizeText(searchQuery).split(' ').filter(term => term.trim() !== '');
 
     const filteredMakaleler = makalelerData.filter(post => {
@@ -164,7 +170,7 @@ export default function MakalelerClient() {
                                 {/* Meta Information */}
                                 <div className="flex flex-row md:flex-col gap-4 md:gap-2 w-full md:w-56 shrink-0 md:opacity-50 group-hover:opacity-100 transition-opacity duration-500">
                                     <span className="text-[#8892B0] group-hover:text-white font-mono text-[10px] uppercase tracking-widest transition-colors duration-500">
-                                        {new Date(post.date).toLocaleDateString('tr-TR')}
+                                        {formatDate(post.date)}
                                     </span>
                                     <span className="text-[#F5B913] font-black text-[11px] uppercase tracking-[0.2em]">
                                         {post.location}
