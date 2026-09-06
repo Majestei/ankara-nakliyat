@@ -73,6 +73,8 @@ The active thread heartbeat, **Two-site SEO operations**, runs daily at 08:30 in
 | 2026-09-05 | Akif | Removed duplicate brand-title template and false build-time sitemap dates | zero duplicate-brand titles in local build |
 | 2026-09-05 | Both | Removed unverified structured trust claims and source-less published review listings | both local builds pass |
 | 2026-09-05 | Özdemir | Added `www` to apex permanent redirect | pending production deployment check |
+| 2026-09-06 | Both | Daily canonical-host, robots, sitemap and critical-page health check | Özdemir 966 and Akif 499 sitemap URLs; errors=0, warnings=0 |
+| 2026-09-06 | Özdemir | Removed duplicate hidden text from the homepage H1 introduced by the accessibility label | 993-page build passed; production H1 verified as a single phrase; commit `4fce28d` |
 
 ## Next evidence-led work
 
