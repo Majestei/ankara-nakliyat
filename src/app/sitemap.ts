@@ -1,53 +1,58 @@
 import { MetadataRoute } from 'next';
 import { ankaraIlceleri, hizmetler } from '@/data/siteData';
-import { neighborhoodsByDistrict } from '@/data/neighborhoodData';
 
 const BASE_URL = 'https://ankaraozdemirnakliyat.com';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const urls: MetadataRoute.Sitemap = [];
-    const today = '2026-08-18';
+    const today = '2026-09-06';
 
+    // 1. Core High-Value Landing Pages
     const staticUrls = [
-      '/', '/hakkimizda', '/iletisim', '/galeri', '/sss',
-      '/hizmetler', '/evden-eve-nakliyat', '/blog', '/makaleler',
-      '/gizlilik-politikasi', '/kullanim-sartlari', '/kvkk',
-      '/islemler', '/site-haritasi'
+      { path: '/', priority: 1.0, changeFrequency: 'daily' as const },
+      { path: '/evden-eve-nakliyat', priority: 0.95, changeFrequency: 'daily' as const },
+      { path: '/hizmetler', priority: 0.85, changeFrequency: 'weekly' as const },
+      { path: '/islemler', priority: 0.85, changeFrequency: 'weekly' as const },
+      { path: '/hakkimizda', priority: 0.7, changeFrequency: 'monthly' as const },
+      { path: '/iletisim', priority: 0.8, changeFrequency: 'weekly' as const },
+      { path: '/sss', priority: 0.7, changeFrequency: 'monthly' as const },
+      { path: '/galeri', priority: 0.6, changeFrequency: 'monthly' as const },
+      { path: '/site-haritasi', priority: 0.5, changeFrequency: 'monthly' as const },
+      { path: '/gizlilik-politikasi', priority: 0.3, changeFrequency: 'yearly' as const },
+      { path: '/kullanim-sartlari', priority: 0.3, changeFrequency: 'yearly' as const },
+      { path: '/kvkk', priority: 0.3, changeFrequency: 'yearly' as const },
     ];
 
-    staticUrls.forEach(url => {
+    staticUrls.forEach(({ path, priority, changeFrequency }) => {
         urls.push({
-            url: `${BASE_URL}${url}`,
+            url: `${BASE_URL}${path}`,
             lastModified: today,
-            changeFrequency: 'weekly',
-            priority: url === '/' ? 1.0 : 0.8
+            changeFrequency,
+            priority,
         });
     });
 
+    // 2. Core Service Pillar Pages (Unique content, custom pricing, schema)
     hizmetler.forEach(h => {
-        if (h.id === "evden-eve-nakliyat") return; // 301 redirected to /islemler/ankara/evden-eve-nakliyat
+        if (h.id === "evden-eve-nakliyat") return; // Handled by /evden-eve-nakliyat
         urls.push({
             url: `${BASE_URL}/hizmetler/${h.id}`,
             lastModified: today,
             changeFrequency: 'weekly',
-            priority: 0.8
+            priority: 0.9,
         });
     });
 
-    const ilceHizmetSlugs = ["evden-eve-nakliyat", "ofis-tasima", "nakliyat-fiyatlari"];
-    
+    // 3. 25 Ankara District Pillar Pages (Each has unique operational guide, pricing, checklist & FAQ)
     ankaraIlceleri.forEach(ilce => {
-        urls.push({ url: `${BASE_URL}/islemler/ankara/${ilce.slug}`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 });
-        
-        ilceHizmetSlugs.forEach(h => {
-            urls.push({ url: `${BASE_URL}/islemler/ankara/${ilce.slug}/${h}`, lastModified: today, changeFrequency: 'weekly', priority: 0.7 });
-        });
-        
-        const neighborhoods = neighborhoodsByDistrict[ilce.slug] || [];
-        neighborhoods.forEach(m => {
-            urls.push({ url: `${BASE_URL}/islemler/ankara/${ilce.slug}/${m.slug}`, lastModified: today, changeFrequency: 'weekly', priority: 0.6 });
+        urls.push({
+            url: `${BASE_URL}/islemler/ankara/${ilce.slug}`,
+            lastModified: today,
+            changeFrequency: 'weekly',
+            priority: 0.85,
         });
     });
 
     return urls;
 }
+
