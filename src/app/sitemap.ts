@@ -13,7 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const staticUrls = [
       '/', '/hakkimizda', '/iletisim', '/galeri', '/sss',
       '/hizmetler', '/evden-eve-nakliyat', '/blog', '/makaleler',
-      '/gizlilik-politikasi', '/kullanim-sartlari', '/kvkk',
+      '/referanslar', '/gizlilik-politikasi', '/kullanim-sartlari', '/kvkk',
       '/islemler', '/site-haritasi'
     ];
 

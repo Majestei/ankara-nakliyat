@@ -24,6 +24,7 @@ import AnkaraGuideSection from "@/components/AnkaraGuideSection";
 import SearchIntentGrid from "@/components/SearchIntentGrid";
 import ContractGuaranteeSection from "@/components/ContractGuaranteeSection";
 import MovingChecklistSection from "@/components/MovingChecklistSection";
+import GoogleReviewsHomeSection from "@/components/GoogleReviewsHomeSection";
 
 // ── SHARED PREMIUM COMPONENTS ──
 
@@ -351,6 +352,9 @@ export default function HomeClient() {
 
             {/* ── INTERACTIVE MOVING CHECKLIST (STRESSİZ TAŞINMA REHBERİ) ── */}
             <MovingChecklistSection />
+
+            {/* ── GOOGLE HARİTALAR MÜŞTERİ DEĞERLENDİRMELERİ ── */}
+            <GoogleReviewsHomeSection />
 
             {/* ── HOME FAQ SECTION (Point 1) ── */}
             <section className="py-24 md:py-40 bg-white relative overflow-hidden">
