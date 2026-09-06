@@ -29,9 +29,6 @@ export const metadata: Metadata = {
         default: "Ankara Özdemir Nakliyat | Sigortalı Evden Eve Nakliyat",
         template: "%s | Ankara Özdemir Nakliyat",
     },
-    alternates: {
-        canonical: "https://ankaraozdemirnakliyat.com",
-    },
     description:
         "Ankara'da garantili ve asansörlü evden eve nakliyat hizmeti. Kırılmaya karşı sigortalı taşıma, ücretsiz ekspertiz ve uzman kadro. Hemen Ücretsiz Fiyat Alın",
     authors: [{ name: "Ankara Özdemir Nakliyat" }],
@@ -201,8 +198,8 @@ export default function RootLayout({
                 <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
                 <meta name="geo.region" content="TR-06" />
                 <meta name="geo.placename" content="Ankara" />
-                <meta name="geo.position" content="39.9208;32.8541" />
-                <meta name="ICBM" content="39.9208, 32.8541" />
+                <meta name="geo.position" content="39.9575;32.5835" />
+                <meta name="ICBM" content="39.9575, 32.5835" />
                 <meta name="format-detection" content="telephone=yes" />
                 <meta name="mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />

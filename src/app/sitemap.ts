@@ -1,8 +1,6 @@
 import { MetadataRoute } from 'next';
 import { ankaraIlceleri, hizmetler } from '@/data/siteData';
 import { neighborhoodsByDistrict } from '@/data/neighborhoodData';
-import makalelerData from '@/data/makalelerData.json';
-import blogDataGen from '@/data/blogDataGen.json';
 
 const BASE_URL = 'https://ankaraozdemirnakliyat.com';
 
@@ -50,28 +48,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             urls.push({ url: `${BASE_URL}/islemler/ankara/${ilce.slug}/${m.slug}`, lastModified: today, changeFrequency: 'weekly', priority: 0.6 });
         });
     });
-
-    if (Array.isArray(blogDataGen)) {
-      blogDataGen.forEach((b: any) => {
-        urls.push({
-          url: `${BASE_URL}/blog/${b.slug}`,
-          lastModified: b.date || today,
-          changeFrequency: 'monthly',
-          priority: 0.6,
-        });
-      });
-    }
-
-    if (Array.isArray(makalelerData)) {
-      makalelerData.forEach((m: any) => {
-        urls.push({
-          url: `${BASE_URL}/makaleler/${m.slug}`,
-          lastModified: m.date || today,
-          changeFrequency: 'monthly',
-          priority: 0.5,
-        });
-      });
-    }
 
     return urls;
 }

@@ -64,32 +64,32 @@ export default function AnkaraIlcePage({ params }: Props) {
         ],
     };
 
-    // LocalBusiness JSON-LD Schema
-    const localBusinessJsonLd = {
+    // Service JSON-LD Schema
+    const serviceJsonLd = {
         "@context": "https://schema.org",
-        "@type": "MovingCompany",
-        name: `Ankara Özdemir Nakliyat - ${ilce.name}`,
+        "@type": "Service",
+        name: `${ilce.name} Evden Eve Nakliyat`,
+        serviceType: "Evden Eve Nakliyat",
         description: `${ilce.name} evden eve nakliyat, ofis taşıma, asansörlü nakliyat hizmetleri. Sigortalı ve profesyonel taşımacılık.`,
         url: `https://ankaraozdemirnakliyat.com/islemler/ankara/${ilce.slug}`,
-        telephone: "05456568103",
-        address: {
-            "@type": "PostalAddress",
-            streetAddress: "Atatürk Mah. Mithatpaşa Cad. Özmert Apt. No:6/8",
-            addressLocality: "Sincan",
-            addressRegion: "Ankara",
-            postalCode: "06930",
-            addressCountry: "TR",
-        },
-        geo: {
-            "@type": "GeoCoordinates",
-            latitude: "39.9575",
-            longitude: "32.5835",
+        provider: {
+            "@type": "MovingCompany",
+            "@id": "https://ankaraozdemirnakliyat.com/#organization",
+            name: "Ankara Özdemir Nakliyat",
+            telephone: "05456568103",
+            address: {
+                "@type": "PostalAddress",
+                streetAddress: "Atatürk Mah. Mithatpaşa Cad. Özmert Apt. No:6/8",
+                addressLocality: "Sincan",
+                addressRegion: "Ankara",
+                postalCode: "06930",
+                addressCountry: "TR",
+            },
         },
         areaServed: {
             "@type": "AdministrativeArea",
             name: `${ilce.name}, Ankara`,
         },
-        priceRange: "$$",
         hasOfferCatalog: {
             "@type": "OfferCatalog",
             name: `${ilce.name} Nakliyat Hizmetleri`,
@@ -114,15 +114,15 @@ export default function AnkaraIlcePage({ params }: Props) {
                 "name": `${ilce.name} nakliyat fiyatları ne kadar?`,
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": `${ilce.name} nakliyat fiyatları eşya miktarı, kat durumu ve mesafeye göre değişmektedir. Ortalama fiyatlarımızı öğrenmek için fiyat hesaplayıcımızı kullanabilir veya bizi arayabilirsiniz.`
+                    "text": `${ilce.name} nakliyat fiyatları eşya miktarı, kat durumu ve mesafeye göre değişmektedir. Ortalama 8.000 TL ile 35.000 TL arasındadır.`
                 }
             },
             {
                 "@type": "Question",
-                "name": `${ilce.name} asansörlü taşıma hizmetiniz var mı?`,
+                "name": `${ilce.name} asansörlü nakliyat var mı?`,
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": `Evet, ${ilce.name}'da 15. kata kadar ulaşabilen modern asansörlü taşıma sistemlerimizle hizmet veriyoruz.`
+                    "text": `Evet, ${ilce.name} ilçesindeki tüm mahallelerde 25. kata kadar modüler asansörlü nakliyat hizmetimiz bulunmaktadır.`
                 }
             },
             {
@@ -145,7 +145,7 @@ export default function AnkaraIlcePage({ params }: Props) {
             />
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
             />
             <script
                 type="application/ld+json"

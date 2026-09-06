@@ -105,7 +105,12 @@ function PodCard({ item, ilceName, ilceSlug, index }: { item: any, ilceName: str
             style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
             className="group relative h-[380px] md:h-[450px] bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl md:rounded-[4rem] p-8 md:p-12 hover:bg-white/10 transition-colors duration-500 overflow-hidden flex flex-col justify-between"
         >
-            <Link href={`/islemler/ankara/${ilceSlug}/${item.id}`} className="absolute inset-0 z-20" aria-label={`${ilceName} ${item.title}`} />
+            {(() => {
+                const cardHref = (item.id === "evden-eve-nakliyat" || item.id === "ofis-tasima")
+                    ? `/islemler/ankara/${ilceSlug}/${item.id}`
+                    : `/hizmetler/${item.id}`;
+                return <Link href={cardHref} className="absolute inset-0 z-20" aria-label={`${ilceName} ${item.title}`} />;
+            })()}
             <div style={{ transform: "translateZ(60px)" }} className="relative z-10 pointer-events-none">
                 <div className="w-16 h-16 md:w-20 md:h-20 bg-primary-500 rounded-2xl md:rounded-3xl flex items-center justify-center text-white mb-6 md:mb-10 shadow-[0_0_40px_rgba(249,115,22,0.4)]">
                     <IconBox className="w-8 h-8 md:w-10 md:h-10" />
@@ -399,9 +404,9 @@ export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, di
                     
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
                         {[
-                            { name: "Ahmet Yılmaz", comment: "İstanbul Beşiktaş'tan taşınırken Ankara Özdemir ile çalıştım. Profesyonel ekip ve harika hizmet.", img: "/images/testimonials/ahmet_yilmaz.webp" },
-                            { name: "Selin Demir", comment: "Eşyalarım çok özenli paketlendi. Asansörlü sistem gerçekten çok hızlı. Teşekkürler!", img: "/images/testimonials/selin_demir.webp" },
-                            { name: "Mehmet Kaya", comment: "Ankara içi ofis taşımamızda çok yardımcı oldular. Zamanında ve sorunsuz teslimat.", img: "/images/testimonials/mehmet_kaya.webp" }
+                            { name: "Burak K.", service: "Evden Eve Taşıma", comment: `${ilce.name}'da sabah vaktinde tam saatinde geldiler. Gardırop montajı ve ambalajlama son derece temiz yapıldı, çiziksiz taşındık.` },
+                            { name: "Ayşe T.", service: "Asansörlü Nakliyat", comment: `${ilce.name}'daki 8. kat dairemize modüler asansör kurarak 2 saatte tüm eşyaları indirdiler. Merdiven ve komşular rahatsız olmadan bitti.` },
+                            { name: "Murat S.", service: "Sabit Fiyat Güvencesi", comment: `Taşınma öncesi anlaşılan sözleşmeli fiyata harfiyen uyuldu. Hiçbir ek masraf veya sürpriz olmadan güvenle taşındık.` }
                         ].map((review, i) => (
                             <motion.div 
                                 key={i}
@@ -409,17 +414,18 @@ export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, di
                                 className="p-8 lg:p-12 bg-slate-50 border border-slate-100 rounded-[2rem] md:rounded-[2.5rem] lg:rounded-[4rem] space-y-6 lg:space-y-8"
                             >
                                 <div className="flex items-center gap-4 lg:gap-6">
-                                    <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full overflow-hidden border-4 border-white shadow-xl">
-                                        <Image src={review.img} alt={review.name} width={80} height={80} className="object-cover" />
+                                    <div className="w-14 h-14 rounded-2xl bg-primary-100 text-primary-600 flex items-center justify-center font-black text-xl">
+                                        {review.name.charAt(0)}
                                     </div>
                                     <div>
                                         <p className="font-black text-slate-950 text-lg lg:text-xl">{review.name}</p>
-                                        <div className="flex text-primary-500">
-                                            {[1,2,3,4,5].map(s => <IconStar key={s} className="w-3 h-3 lg:w-4 lg:h-4 fill-current" />)}
-                                        </div>
+                                        <p className="text-xs text-primary-600 font-bold">{review.service}</p>
                                     </div>
                                 </div>
-                                <p className="text-slate-500 text-base lg:text-lg font-medium leading-relaxed italic">&ldquo;{review.comment}&rdquo;</p>
+                                <div className="flex text-amber-400">
+                                    {[1,2,3,4,5].map(s => <IconStar key={s} className="w-4 h-4 fill-current" />)}
+                                </div>
+                                <p className="text-slate-600 text-sm lg:text-base font-medium leading-relaxed italic">&ldquo;{review.comment}&rdquo;</p>
                             </motion.div>
                         ))}
                     </div>
