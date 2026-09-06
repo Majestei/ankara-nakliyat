@@ -246,11 +246,7 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
                                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
                                 className="space-y-10 overflow-visible"
                             >
-                                <h1 
-                                    aria-label="Ankara Evden Eve Nakliyat ve Asansörlü Nakliyeci Hizmetleri"
-                                    className="flex flex-col text-5xl md:text-8xl lg:text-[clamp(6rem,10vw,9rem)] font-heading font-black text-white tracking-tighter overflow-visible z-10 relative"
-                                >
-                                    <span className="sr-only">Ankara Evden Eve Nakliyat ve Asansörlü Nakliyeci Hizmetleri</span>
+                                <h1 className="flex flex-col text-5xl md:text-8xl lg:text-[clamp(6rem,10vw,9rem)] font-heading font-black text-white tracking-tighter overflow-visible z-10 relative">
                                     <motion.span 
                                         initial={{ opacity: 0, x: -50 }}
                                         animate={{ opacity: 1, x: 0 }}
