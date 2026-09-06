@@ -6,20 +6,20 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import GoogleReviewsClient from "@/components/GoogleReviewsClient";
 
 export const metadata: Metadata = {
-    title: "Müşteri Yorumları & Referanslar | Google Haritalar 4.9★ | Ankara Özdemir Nakliyat",
-    description: "Ankara Özdemir Nakliyat Google Haritalar doğrulanmış müşteri yorumları ve evden eve nakliyat referansları. 168+ gerçek müşteri değerlendirmesiyle 4.9 puan.",
+    title: "Müşteri Yorumları & Referanslar | Google Haritalar 5.0★ | Ankara Özdemir Nakliyat",
+    description: "Ankara Özdemir Nakliyat Google Haritalar doğrulanmış müşteri değerlendirmeleri ve nakliyat referansları. Gerçek müşteri yorumları ile 5.0 tam puan.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/referanslar" },
     robots: { index: true, follow: true },
     openGraph: {
-        title: "Müşteri Yorumları & Referanslar | Google Haritalar 4.9★ | Ankara Özdemir Nakliyat",
-        description: "Ankara Özdemir Nakliyat Google Haritalar doğrulanmış müşteri yorumları ve evden eve nakliyat referansları. 168+ gerçek değerlendirme.",
+        title: "Müşteri Yorumları & Referanslar | Google Haritalar 5.0★ | Ankara Özdemir Nakliyat",
+        description: "Ankara Özdemir Nakliyat Google Haritalar doğrulanmış müşteri değerlendirmeleri ve nakliyat referansları. Gerçek müşteri yorumları ile 5.0 tam puan.",
         url: "https://ankaraozdemirnakliyat.com/referanslar",
         type: "website",
         images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Ankara Özdemir Nakliyat Referanslar" }]
     },
     twitter: {
         card: "summary_large_image",
-        title: "Müşteri Yorumları & Referanslar | Google Haritalar 4.9★ | Ankara Özdemir Nakliyat",
+        title: "Müşteri Yorumları & Referanslar | Google Haritalar 5.0★ | Ankara Özdemir Nakliyat",
         description: "Ankara Özdemir Nakliyat Google Haritalar doğrulanmış müşteri yorumları.",
         images: ["/og-image.jpg"]
     }

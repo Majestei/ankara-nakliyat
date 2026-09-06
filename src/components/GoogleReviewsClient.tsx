@@ -101,8 +101,12 @@ export default function GoogleReviewsClient({ initialData }: Props) {
     });
 
     const fiveStarsCount = data.rating_breakdown[5] || 0;
+    const fourStarCount = data.rating_breakdown[4] || 0;
+    const threeStarCount = data.rating_breakdown[3] || 0;
     const totalReviews = data.user_ratings_total || data.reviews.length;
-    const fiveStarPercent = Math.round((fiveStarsCount / totalReviews) * 100);
+    const fiveStarPercent = totalReviews > 0 ? Math.round((fiveStarsCount / totalReviews) * 100) : 100;
+    const fourStarPercent = totalReviews > 0 ? Math.round((fourStarCount / totalReviews) * 100) : 0;
+    const threeStarPercent = totalReviews > 0 ? Math.round((threeStarCount / totalReviews) * 100) : 0;
 
     return (
         <div className="space-y-12">
@@ -130,7 +134,7 @@ export default function GoogleReviewsClient({ initialData }: Props) {
                                     ))}
                                 </div>
                                 <p className="text-sm font-semibold text-slate-500 mt-0.5">
-                                    {totalReviews}+ gerçek müşteri değerlendirmesi
+                                    {totalReviews} doğrulanmış Google değerlendirmesi
                                 </p>
                             </div>
                         </div>
@@ -152,16 +156,16 @@ export default function GoogleReviewsClient({ initialData }: Props) {
                         <div className="flex items-center gap-3 text-xs font-semibold text-slate-600">
                             <span className="w-12">4 Yıldız</span>
                             <div className="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                                <div className="h-full bg-amber-400/80 rounded-full" style={{ width: "5%" }} />
+                                <div className="h-full bg-amber-400/80 rounded-full" style={{ width: `${fourStarPercent}%` }} />
                             </div>
-                            <span className="w-8 text-right font-bold text-slate-900">5%</span>
+                            <span className="w-8 text-right font-bold text-slate-900">{fourStarPercent}%</span>
                         </div>
                         <div className="flex items-center gap-3 text-xs font-semibold text-slate-600">
                             <span className="w-12">3 Yıldız</span>
                             <div className="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden">
-                                <div className="h-full bg-amber-400/60 rounded-full" style={{ width: "1%" }} />
+                                <div className="h-full bg-amber-400/60 rounded-full" style={{ width: `${threeStarPercent}%` }} />
                             </div>
-                            <span className="w-8 text-right font-bold text-slate-900">1%</span>
+                            <span className="w-8 text-right font-bold text-slate-900">{threeStarPercent}%</span>
                         </div>
                     </div>
 
@@ -273,18 +277,20 @@ export default function GoogleReviewsClient({ initialData }: Props) {
                         <span className="text-amber-300">★</span>
                         <span>({data.reviews.filter(r => r.rating === 5).length})</span>
                     </button>
-                    <button
-                        onClick={() => setFilterRating(4)}
-                        className={`px-4 py-2 rounded-xl text-xs font-bold transition-all shrink-0 flex items-center gap-1 ${
-                            filterRating === 4
-                                ? "bg-amber-500 text-white shadow-sm"
-                                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
-                        }`}
-                    >
-                        <span>4 Yıldız</span>
-                        <span className="text-amber-300">★</span>
-                        <span>({data.reviews.filter(r => r.rating === 4).length})</span>
-                    </button>
+                    {data.reviews.some(r => r.rating === 4) && (
+                        <button
+                            onClick={() => setFilterRating(4)}
+                            className={`px-4 py-2 rounded-xl text-xs font-bold transition-all shrink-0 flex items-center gap-1 ${
+                                filterRating === 4
+                                    ? "bg-amber-500 text-white shadow-sm"
+                                    : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                            }`}
+                        >
+                            <span>4 Yıldız</span>
+                            <span className="text-amber-300">★</span>
+                            <span>({data.reviews.filter(r => r.rating === 4).length})</span>
+                        </button>
+                    )}
                 </div>
 
                 {/* District & Search */}
@@ -354,7 +360,10 @@ export default function GoogleReviewsClient({ initialData }: Props) {
                                                     {review.author_review_count && (
                                                         <>
                                                             <span>•</span>
-                                                            <span className="text-slate-600 font-medium">{review.author_review_count} yorum</span>
+                                                            <span className="text-slate-600 font-medium">
+                                                                {review.author_review_count} yorum
+                                                                {review.photo_count ? ` · ${review.photo_count} fotoğraf` : ""}
+                                                            </span>
                                                         </>
                                                     )}
                                                     <span>•</span>

@@ -83,7 +83,10 @@ export default function GoogleReviewsHomeSection() {
                                                     {review.author_review_count && (
                                                         <>
                                                             <span>•</span>
-                                                            <span className="text-slate-600 font-medium">{review.author_review_count} yorum</span>
+                                                            <span className="text-slate-600 font-medium">
+                                                                {review.author_review_count} yorum
+                                                                {review.photo_count ? ` · ${review.photo_count} fotoğraf` : ""}
+                                                            </span>
                                                         </>
                                                     )}
                                                 </div>
@@ -119,7 +122,7 @@ export default function GoogleReviewsHomeSection() {
                         className="btn-primary !py-3.5 !px-8 flex items-center gap-3 text-sm font-bold shadow-lg shadow-primary-500/20"
                         title="Tüm Müşteri Yorumlarını Gör"
                     >
-                        <span>Tüm 168+ Google Yorumunu İnceleyin</span>
+                        <span>Tüm Doğrulanmış Google Yorumlarını İnceleyin</span>
                         <IconArrow className="w-4 h-4" />
                     </Link>
 
