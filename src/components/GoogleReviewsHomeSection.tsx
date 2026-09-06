@@ -80,6 +80,12 @@ export default function GoogleReviewsHomeSection() {
                                                 <div className="flex items-center gap-1.5 text-[11px] text-slate-500">
                                                     <GoogleGIcon className="w-3 h-3" />
                                                     <span className="text-emerald-700 font-semibold">Doğrulanmış Müşteri</span>
+                                                    {review.author_review_count && (
+                                                        <>
+                                                            <span>•</span>
+                                                            <span className="text-slate-600 font-medium">{review.author_review_count} yorum</span>
+                                                        </>
+                                                    )}
                                                 </div>
                                             </div>
                                         </div>

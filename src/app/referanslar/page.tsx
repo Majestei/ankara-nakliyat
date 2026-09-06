@@ -53,7 +53,7 @@ export default function ReferanslarPage() {
                 "@type": "Person",
                 name: rev.author_name
             },
-            datePublished: new Date(rev.time).toISOString().split("T")[0],
+            datePublished: new Date(rev.time < 10000000000 ? rev.time * 1000 : rev.time).toISOString().split("T")[0],
             reviewBody: rev.text,
             reviewRating: {
                 "@type": "Rating",

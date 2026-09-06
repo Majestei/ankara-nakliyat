@@ -11,6 +11,7 @@ export interface GoogleReviewItem {
     service: string;
     text: string;
     verifiedGoogle: boolean;
+    author_review_count?: number;
     owner_reply?: {
         text: string;
         date: string;
@@ -47,6 +48,56 @@ export const googleReviewsData: GoogleReviewsSummary = {
     googleMapsUrl: "https://www.google.com/maps/place/Ankara+%C3%96zdemir+Nakliyat+-+Ankara+Evden+Eve+Nakliyat/@39.7535708,32.1973644,9z/data=!3m1!4b1!4m6!3m5!1s0x6e092525bb874c41:0x3bceb88d30a5fe73!8m2!3d39.75438!4d32.856727!16s%2Fg%2F11zb75hrp0",
     writeReviewUrl: "https://www.google.com/maps/place/Ankara+%C3%96zdemir+Nakliyat+-+Ankara+Evden+Eve+Nakliyat/@39.75438,32.856727,17z/data=!4m8!3m7!1s0x6e092525bb874c41:0x3bceb88d30a5fe73!8m2!3d39.75438!4d32.856727!9m1!1b1!16s%2Fg%2F11zb75hrp0",
     reviews: [
+        {
+            id: "g-maps-1",
+            author_name: "Ali Aksoy",
+            author_review_count: 2,
+            avatar_color: "from-emerald-600 to-green-700",
+            rating: 5,
+            relative_time_description: "3 ay önce",
+            time: 1717200000,
+            district: "Ankara Geneli",
+            service: "Evden Eve Nakliyat",
+            verifiedGoogle: true,
+            text: "Çok memnun kaldım tavsiye ederim herkese çok güzel taşıma oldu herkesin eline sağlık",
+            owner_reply: {
+                text: "Teşekkürler efendim sağlıklı günler dileriz",
+                date: "3 ay önce"
+            }
+        },
+        {
+            id: "g-maps-2",
+            author_name: "Bahar Sarıoğlu",
+            author_review_count: 1,
+            avatar_color: "from-amber-500 to-orange-600",
+            rating: 5,
+            relative_time_description: "3 ay önce",
+            time: 1717200000,
+            district: "Ankara Geneli",
+            service: "Profesyonel Ev Taşıma",
+            verifiedGoogle: true,
+            text: "Profesyonel bir ekiple taşıma yaptırdık gayet güzel bir işçilik yaptılar biz memnun kaldık sizlere de tavsiye ederim ellerine sağlık",
+            owner_reply: {
+                text: "Bahar Hanım değerli tavsiyeniz ve güzel yorumunuz için çok teşekkür ederiz, sağlıklı ve mutlu günlerde oturun.",
+                date: "3 ay önce"
+            }
+        },
+        {
+            id: "g-maps-3",
+            author_name: "Süleyman Karataş",
+            avatar_color: "from-purple-600 to-indigo-700",
+            rating: 5,
+            relative_time_description: "1 ay önce",
+            time: 1722400000,
+            district: "Ankara Geneli",
+            service: "Asansörlü Evden Eve Nakliyat",
+            verifiedGoogle: true,
+            text: "4. kattan 13.kata taşındık memnunuz paketleme çok iyiydi teşekkürler",
+            owner_reply: {
+                text: "Süleyman Bey bizi tercih ettiğiniz ve güzel yorumunuz için çok teşekkür ederiz. Yeni yuvanızda ailenizle huzur dileriz.",
+                date: "1 ay önce"
+            }
+        },
         {
             id: "g-rev-1",
             author_name: "Dr. Emre Yılmaz",

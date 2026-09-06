@@ -351,6 +351,12 @@ export default function GoogleReviewsClient({ initialData }: Props) {
                                                 <div className="flex items-center gap-1.5 text-[11px] text-slate-500 mt-0.5">
                                                     <GoogleGIcon className="w-3.5 h-3.5" />
                                                     <span className="text-emerald-700 font-semibold">Doğrulanmış Yorum</span>
+                                                    {review.author_review_count && (
+                                                        <>
+                                                            <span>•</span>
+                                                            <span className="text-slate-600 font-medium">{review.author_review_count} yorum</span>
+                                                        </>
+                                                    )}
                                                     <span>•</span>
                                                     <span>{review.relative_time_description}</span>
                                                 </div>
