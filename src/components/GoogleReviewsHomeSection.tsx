@@ -28,64 +28,66 @@ export default function GoogleReviewsHomeSection() {
     const featuredReviews = googleReviewsData.reviews.slice(0, 3);
 
     return (
-        <section className="py-20 md:py-28 bg-slate-50 relative overflow-hidden border-b border-slate-200/60">
+        <section className="py-24 md:py-36 bg-slate-50 relative overflow-hidden border-b border-slate-200/60">
             {/* Ambient Background Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-primary-100/40 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-primary-100/50 rounded-full blur-[140px] pointer-events-none" />
 
             <div className="container-custom relative z-10">
                 {/* Section Header */}
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-                    <div className="space-y-3">
-                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-sm">
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 md:mb-20">
+                    <div className="space-y-4">
+                        <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white border border-slate-200/80 text-xs font-bold text-slate-700 shadow-sm">
                             <GoogleGIcon className="w-4 h-4" />
                             <span>Ankara Özdemir Nakliyat - Google Haritalar</span>
-                            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
                         </div>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-black text-slate-900 tracking-tight">
+                        <h2 className="text-3xl sm:text-4xl md:text-6xl font-heading font-black text-slate-900 tracking-tighter leading-tight">
                             Müşterilerimiz Bizim İçin <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-orange-500">
+                            <span className="font-serif text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-orange-500 to-amber-500 italic font-normal">
                                 Ne Diyor?
                             </span>
                         </h2>
                     </div>
 
                     {/* Quick Stat Pill */}
-                    <div className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm flex items-center gap-5 shrink-0">
-                        <div className="text-3xl font-black text-slate-900">5.0</div>
+                    <div className="bg-white p-6 rounded-[2rem] border border-slate-200/80 shadow-md flex items-center gap-5 shrink-0">
+                        <div className="text-4xl font-black text-slate-900">5.0</div>
                         <div>
-                            <div className="flex text-amber-400 text-lg">★★★★★</div>
-                            <p className="text-xs font-bold text-slate-500">Google Haritalar Puanı</p>
+                            <div className="flex text-amber-400 text-xl tracking-tight">★★★★★</div>
+                            <p className="text-xs font-bold text-slate-500 mt-0.5">Google Haritalar Puanı</p>
                         </div>
                     </div>
                 </div>
 
                 {/* 3 Featured Review Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-14">
                     {featuredReviews.map((review) => {
                         const initial = review.author_name.charAt(0).toUpperCase();
 
                         return (
                             <div
                                 key={review.id}
-                                className="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+                                className="bg-white rounded-[2.5rem] p-8 border border-slate-200/80 shadow-sm hover:shadow-2xl hover:border-primary-400 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between group relative overflow-hidden"
                             >
+                                {/* Card Top Accent Glow */}
+                                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary-500 via-orange-400 to-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
                                 <div className="space-y-4">
                                     <div className="flex items-center justify-between gap-3">
-                                        <div className="flex items-center gap-3">
-                                            <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${review.avatar_color} text-white font-bold flex items-center justify-center text-sm shadow-sm`}>
+                                        <div className="flex items-center gap-3.5">
+                                            <div className={`w-11 h-11 rounded-2xl bg-gradient-to-br ${review.avatar_color} text-white font-black flex items-center justify-center text-sm shadow-md`}>
                                                 {initial}
                                             </div>
                                             <div>
-                                                <h3 className="font-bold text-slate-900 text-sm">{review.author_name}</h3>
+                                                <h3 className="font-bold text-slate-900 text-sm tracking-tight">{review.author_name}</h3>
                                                 <div className="flex items-center gap-1.5 text-[11px] text-slate-500">
                                                     <GoogleGIcon className="w-3 h-3" />
                                                     <span className="text-emerald-700 font-semibold">Doğrulanmış Müşteri</span>
                                                     {review.author_review_count && (
                                                         <>
                                                             <span>•</span>
-                                                            <span className="text-slate-600 font-medium">
+                                                            <span className="text-slate-500">
                                                                 {review.author_review_count} yorum
-                                                                {review.photo_count ? ` · ${review.photo_count} fotoğraf` : ""}
                                                             </span>
                                                         </>
                                                     )}
@@ -95,7 +97,7 @@ export default function GoogleReviewsHomeSection() {
                                         <div className="flex text-amber-400 text-sm">★★★★★</div>
                                     </div>
 
-                                    <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-slate-100 text-[10px] font-bold text-slate-700">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/70 text-[11px] font-bold text-slate-700">
                                         <span className="text-primary-600">{review.district}</span>
                                         <span>•</span>
                                         <span>{review.service}</span>
@@ -106,8 +108,8 @@ export default function GoogleReviewsHomeSection() {
                                     </p>
                                 </div>
 
-                                <div className="mt-5 pt-3 border-t border-slate-100 text-[11px] text-slate-400 flex items-center justify-between">
-                                    <span>Google Haritalar</span>
+                                <div className="mt-6 pt-4 border-t border-slate-100 text-[11px] text-slate-400 flex items-center justify-between">
+                                    <span className="font-semibold text-slate-500">Google Haritalar</span>
                                     <span>{review.relative_time_description}</span>
                                 </div>
                             </div>
@@ -119,7 +121,7 @@ export default function GoogleReviewsHomeSection() {
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <Link
                         href="/referanslar"
-                        className="btn-primary !py-3.5 !px-8 flex items-center gap-3 text-sm font-bold shadow-lg shadow-primary-500/20"
+                        className="btn-primary !py-4 !px-8 rounded-full flex items-center gap-3 text-xs md:text-sm font-black uppercase tracking-wider shadow-lg shadow-primary-500/25"
                         title="Tüm Müşteri Yorumlarını Gör"
                     >
                         <span>Tüm Doğrulanmış Google Yorumlarını İnceleyin</span>
@@ -130,7 +132,7 @@ export default function GoogleReviewsHomeSection() {
                         href={googleReviewsData.writeReviewUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-slate-300 bg-white text-xs font-bold text-slate-700 hover:bg-slate-50 transition-colors"
+                        className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-slate-300 bg-white text-xs font-black uppercase tracking-wider text-slate-700 hover:bg-slate-50 transition-all shadow-sm"
                         title="Google Haritalar'da Bize Puan Verin"
                     >
                         <GoogleGIcon className="w-4 h-4" />
