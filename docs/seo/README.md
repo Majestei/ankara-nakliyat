@@ -77,6 +77,7 @@ The active thread heartbeat, **Two-site SEO operations**, runs daily at 08:30 in
 | 2026-09-06 | Özdemir | Removed duplicate hidden text from the homepage H1 introduced by the accessibility label | 993-page build passed; production H1 verified as a single phrase; commit `4fce28d` |
 | 2026-09-07 | Both | Daily canonical-host, robots, sitemap and critical-page health check | Özdemir 966 and Akif 500 sitemap URLs; errors=0, warnings=0; Akif `/referanslar/` is the one added sitemap URL |
 | 2026-09-07 | Akif | Reverified the previously blocked bare-domain canonical redirect | bare HTTPS returns 308 to `https://www.ankaraakifnakliyat.com/` |
+| 2026-09-08 | Both | Scheduled full sitemap audit of all 1,466 live URLs | Quick audit clean; full pass had two isolated request timeouts, and both affected Özdemir URLs then returned HTTP 200 three times with title, description, H1, canonical and no `noindex`; no reproducible regression |
 
 ## Next evidence-led work
 
