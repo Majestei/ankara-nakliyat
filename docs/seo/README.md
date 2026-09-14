@@ -22,7 +22,7 @@ The first production crawl checked all 1,466 sitemap URLs and received direct HT
 
 ## Access gaps
 
-- No Google Search Console credential or authenticated API configuration was available in either workspace. The property placeholders are in `search-console.env.example`; secrets must remain outside Git.
+- Özdemir's read-only Search Console API access is connected. On 2026-09-14 a 16-month range was requested; the property returned daily data only from 2026-05-11 onward. Akif remains blocked with `USER_PROJECT_DENIED` at the configured quota project.
 - The PageSpeed Insights API returned HTTP 429 during the baseline, so no synthetic performance number is recorded as fact.
 - Akif is linked to the Vercel project `akif-nakliyat-seo`, but no usable non-interactive deployment session was confirmed during the baseline.
 - Akif has a local Git baseline but no remote configured.
@@ -79,6 +79,7 @@ The active thread heartbeat, **Two-site SEO operations**, runs daily at 08:30 in
 | 2026-09-07 | Akif | Reverified the previously blocked bare-domain canonical redirect | bare HTTPS returns 308 to `https://www.ankaraakifnakliyat.com/` |
 | 2026-09-08 | Both | Scheduled full sitemap audit of all 1,466 live URLs | Quick audit clean; full pass had two isolated request timeouts, and both affected Özdemir URLs then returned HTTP 200 three times with title, description, H1, canonical and no `noindex`; no reproducible regression |
 | 2026-09-11 | Both | Scheduled quick and full production SEO audits | All 1,466 sitemap URLs passed; errors=0, warnings=0; sitemap counts unchanged |
+| 2026-09-14 | Both | Monday growth review plus scheduled quick/full production audits | All 1,466 sitemap URLs passed; Özdemir GSC connected and 16-month range queried; Akif GSC blocked; material cross-brand claim/schema risks recorded in `weekly/2026-09-14.md` |
 
 ## Next evidence-led work
 
