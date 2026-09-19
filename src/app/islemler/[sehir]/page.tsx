@@ -11,6 +11,8 @@ export async function generateStaticParams() {
     return civarIller.map((il) => ({ sehir: il.slug }));
 }
 
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const il = civarIller.find((i) => i.slug === params.sehir);
     if (!il) return {};

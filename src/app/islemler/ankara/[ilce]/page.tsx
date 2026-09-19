@@ -6,6 +6,8 @@ import { IconPhone, IconMail, IconMobile, IconShield, IconMoney, IconTruck, Icon
 
 interface Props { params: { ilce: string } }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() { return ankaraIlceleri.map((ilce) => ({ ilce: ilce.slug })); }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

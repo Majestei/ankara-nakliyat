@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 import { blogPosts } from "@/data/blogData";
 import BlogPostClient from "@/components/BlogPostClient";
 
+// Only reviewed, prebuilt URLs are published during recovery.
+export const dynamicParams = false;
+
 interface Props {
     params: {
         slug: string;

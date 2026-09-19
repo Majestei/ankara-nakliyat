@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { googleReviewsData, GoogleReviewItem, GoogleReviewsSummary } from "@/data/googleReviewsData";
 
 export const dynamic = "force-dynamic";
+export const runtime = "edge";
 
 export async function GET() {
     const apiKey = process.env.GOOGLE_PLACES_API_KEY;

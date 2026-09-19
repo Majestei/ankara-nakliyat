@@ -3,6 +3,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { publishedArticles as makalelerData } from "@/data/publishedArticles";
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
     return makalelerData.map((makale) => ({
         slug: makale.slug,

@@ -22,6 +22,8 @@ interface Props {
     params: { ilce: string; slug: string };
 }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
     const params: { ilce: string, slug: string }[] = [];
 

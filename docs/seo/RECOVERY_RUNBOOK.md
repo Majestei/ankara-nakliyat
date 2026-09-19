@@ -6,7 +6,15 @@ The recovery branch stops automatic page generation, preserves existing search w
 
 Private Search Console exports, the reviewed migration map, per-URL decisions and before/after crawl reports remain in `docs/seo/recovery/2026-09-16/` and `.agents/reports/recovery-2026-09-16/`. Both are git-ignored. The public redirect configuration contains only source and destination paths.
 
-The initial checkout and pre-existing user edits are preserved on the backup branch and in `.agents/reports/recovery-2026-09-16/backup/`. Revert the release commit or restore the previous Vercel deployment to roll back a release; do not reset unrelated working changes.
+The initial checkout and pre-existing user edits are preserved on the backup branch and in `.agents/reports/recovery-2026-09-16/backup/`. Revert the release commit or roll back the Cloudflare Pages production deployment; do not reset unrelated working changes.
+
+## Cloudflare deployment
+
+The existing Pages project is `ankara-nakliyat`, connected to the repository's `main` branch. Its configured Linux build runs `npx @cloudflare/next-on-pages@1` and publishes `.vercel/output/static`. That output directory is an adapter convention, not proof that Pages deploys to Vercel. The reviews API uses the Edge runtime; dynamic page families publish only their explicit `generateStaticParams` lists.
+
+`npm run pages:build` invokes the same adapter locally. The adapter warns that its CLI subprocesses can fail on Windows; in that case record the failure and inspect the authoritative Cloudflare Linux build log. Check the Pages custom-domain list and actual domain response separately from deployment success.
+
+The small worker in `infra/canonical-redirect` handles only HTTP apex and HTTP/HTTPS www requests, sending them straight to the final canonical path. HTTPS apex content stays on the site's hosting project. Keep its redirect map synchronized with the application when migrations change. Deploy with `npx wrangler deploy --config infra/canonical-redirect/wrangler.jsonc`; remove only these worker routes to roll back the edge redirect layer.
 
 ## Repeatable verification
 
