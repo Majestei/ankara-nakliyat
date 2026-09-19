@@ -26,7 +26,7 @@ export default function ContractGuaranteeSection() {
 
             <div className="container-custom px-4 md:px-0 relative z-10">
                 <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-                    
+
                     {/* Sol Metin / Karşılaştırma Alanı */}
                     <div className="lg:col-span-7 space-y-6">
                         <span className="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-2 rounded-full backdrop-blur-xl">
@@ -37,14 +37,14 @@ export default function ContractGuaranteeSection() {
                         </span>
 
                         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-black tracking-tighter leading-tight text-white">
-                            Neden Aracı Komisyoncular Değil, <br />
+                            Taşınma Öncesinde <br />
                             <span className="font-serif text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-orange-400 to-amber-400 italic font-normal">
-                                K3 Belgeli Özmal Firma?
+                                Neleri Netleştirmelisiniz?
                             </span>
                         </h2>
 
                         <p className="text-slate-400 text-sm md:text-base leading-relaxed">
-                            İnternette veya aracı platformlarda verilen düşük fiyatlara kanıp taşınma günü kapıda &ldquo;eşya çok çıktı, kat zormuş&rdquo; denilerek 2 katı para talep edilen mağduriyetlere son veriyoruz. <strong>Ankara Özdemir Nakliyat</strong> olarak kurumsal sözleşmemizle sabit fiyat garantisi veriyoruz.
+                            <strong>Ankara Özdemir Nakliyat</strong> ile teklif görüşmesinde eşya listesini, erişim koşullarını ve hizmet kapsamını birlikte değerlendirin. Fiyatın hangi işleri kapsadığını yazılı olarak netleştirin.
                         </p>
 
                         <div className="grid sm:grid-cols-2 gap-4 pt-2">
@@ -53,25 +53,25 @@ export default function ContractGuaranteeSection() {
                                 <div className="flex items-center justify-between">
                                     <h3 className="text-red-400 font-bold text-sm flex items-center gap-2">
                                         <span className="w-6 h-6 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center text-xs">✕</span>
-                                        <span>Belgesiz & Komisyoncu</span>
+                                        <span>Eksik Bırakılmaması Gerekenler</span>
                                     </h3>
                                 </div>
                                 <ul className="text-xs text-slate-400 space-y-2.5 pt-1">
                                     <li className="flex items-start gap-2">
                                         <span className="text-red-400">•</span>
-                                        <span>İş komisyon karşılığı tanınmayan şahıslara devredilir</span>
+                                        <span>Taşımayı yapacak firma ve iletişim kişisi</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <span className="text-red-400">•</span>
-                                        <span>Taşınma günü kapıda keyfi fiyat artırılır</span>
+                                        <span>Eşya listesi ve ek işlerin ücret koşulları</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <span className="text-red-400">•</span>
-                                        <span>Resmi K3 belgesi ve nakliyat sigortası yoktur</span>
+                                        <span>İlgili belgeler ve varsa poliçe kapsamı</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <span className="text-red-400">•</span>
-                                        <span>Eşya kırıldığında muhatap ve tazminat bulunamaz</span>
+                                        <span>Hasar bildirimi ve iletişim süreci</span>
                                     </li>
                                 </ul>
                             </div>
@@ -87,19 +87,19 @@ export default function ContractGuaranteeSection() {
                                 <ul className="text-xs text-slate-300 space-y-2.5 pt-1">
                                     <li className="flex items-start gap-2">
                                         <span className="text-emerald-400">•</span>
-                                        <span>Kendi logolu özmal çelik kasa filomuz gelir</span>
+                                        <span>Araç gereksinimini ve yükleme alanını görüşün</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <span className="text-emerald-400">•</span>
-                                        <span>İmzalı yazılı sözleşme ile fiyat kesinlikle sabittir</span>
+                                        <span>Yazılı teklifte dahil işleri kontrol edin</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <span className="text-emerald-400">•</span>
-                                        <span>Ulaştırma Bakanlığı onaylı K3 taşımacılık lisansı</span>
+                                        <span>Hizmetle ilgili belgeleri taşıma öncesi inceleyin</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <span className="text-emerald-400">•</span>
-                                        <span>Allianz/Axa resmi emtia nakliyat sigortası</span>
+                                        <span>Varsa poliçenin limit ve istisnalarını sorun</span>
                                     </li>
                                 </ul>
                             </div>
@@ -117,10 +117,10 @@ export default function ContractGuaranteeSection() {
 
                             <div className="space-y-2">
                                 <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight">
-                                    Yazılı Sözleşme & Sabit Fiyat Garantisi
+                                    Yazılı Teklif ve Taşıma Planı
                                 </h3>
                                 <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
-                                    Taşınma gününden önce adresinizde veya dijital ekspertizle belirlenen tüm koşullar (araç plakası, personel sayısı, taşınma tarihi/saati ve net tutar) ıslak imzalı veya dijital onaylı sözleşmemize yazılır.
+                                    Taşıma tarihini, adresleri, eşya listesini, paketleme ve kurulum ihtiyaçlarını teklif görüşmesinde belirtin. Dahil hizmetler ile değişiklik halinde uygulanacak koşulları yazılı olarak teyit edin.
                                 </p>
                             </div>
 
@@ -135,13 +135,13 @@ export default function ContractGuaranteeSection() {
                                     <div className="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center shrink-0">
                                         <IconCheck className="w-3.5 h-3.5 text-emerald-400" />
                                     </div>
-                                    <span>T.C. Ulaştırma Bakanlığı K3 Yetki Lisansı</span>
+                                    <span>İlgili belge ve hizmet kapsamını görüşün</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center shrink-0">
                                         <IconCheck className="w-3.5 h-3.5 text-emerald-400" />
                                     </div>
-                                    <span>Axa / Allianz tam kapsamlı emtia poliçesi</span>
+                                    <span>Varsa poliçe teminatları ve istisnalarını inceleyin</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center shrink-0">

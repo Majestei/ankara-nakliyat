@@ -242,15 +242,15 @@ export default function IslemlerClient() {
                                 </h2>
                                 <div className="space-y-10 text-white/40 text-xl font-medium leading-relaxed">
                                     <p>
-                                        Ankara Özdemir Nakliyat, Ankara&apos;nın stratejik konumunu kullanarak tüm Türkiye&apos;ye yayılan bir
-                                        lojistik ağı kurmuştur. <strong className="text-white">Ankara-İstanbul</strong> hattımızda
-                                        her gün karşılıklı araçlarımız bulunmaktadır.
+                                        Ankara çıkışlı taşınmalarda varış adresini, eşya listesini ve tarih aralığını birlikte paylaşın.
+                                        <strong className="text-white">Ankara-İstanbul</strong> gibi şehirler arası rotalarda
+                                        araç uygunluğu ve teslim planını teklif öncesinde görüşün.
                                     </p>
                                     <p>
                                         <strong className="text-white">Ege, Akdeniz ve Marmara</strong> rotalarımızda
-                                        50+ araçlık filomuzla kesintisiz yanıt veriyoruz.
-                                        Karadeniz&apos;den Doğu Anadolu&apos;ya kadar her coğrafi bölgede
-                                        deneyimli ekiplerimizle yanınızdayız.
+                                        için yükleme ve teslim koşullarını ayrı ayrı değerlendirin.
+                                        Güzergâh, paketleme, montaj ve varsa aktarma kapsamını
+                                        yazılı teklifte netleştirin.
                                     </p>
                                 </div>
                             </div>
@@ -258,7 +258,7 @@ export default function IslemlerClient() {
                             <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
                                 {[
                                     { title: "Hızlı Teslimat", desc: "Şehirler arası rotalarda 24-48 saat içinde anahtar teslim.", i: <IconTruck /> },
-                                    { title: "Dijital Takip", desc: "Araçlarımızı GPS üzerinden anlık olarak takip edebilirsiniz.", i: <IconGlobe /> },
+                                    { title: "Dijital Takip", desc: "Sevkiyat bilgisi alacağınız iletişim kişisini ve kanalını önceden görüşün.", i: <IconGlobe /> },
                                     { title: "Ekonomik Çözüm", desc: "Az miktardaki eşyalarınız için parsiyel taşıma desteği.", i: <IconMoney /> },
                                     { title: "Dönüş Araçları", desc: "Dönüş yükü sistemiyle %30'a varan maliyet avantajı.", i: <IconCheck /> }
                                 ].map((box, i) => (

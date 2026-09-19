@@ -1,6 +1,10 @@
 import fs from "fs";
 import path from "path";
 
+// Recovery freeze: hash-selected templates overwrite editorial intent across URLs.
+// Resume only after a reviewed, page-specific content plan replaces this generator.
+throw new Error('SEO recovery freeze: bulk content regeneration is disabled. Existing content has not been changed.');
+
 const rootDir = process.cwd();
 const blogPath = path.join(rootDir, "src/data/blogDataGen.json");
 const makalelerPath = path.join(rootDir, "src/data/makalelerData.json");
@@ -15,11 +19,11 @@ console.log(`Mevcut makale sayısı: ${makaleler.length}`);
 function extractDistrict(item) {
     const text = (item.title + " " + item.slug + " " + (item.location || "")).toLowerCase();
     const districts = [
-        "çankaya", "kecioren", "keçiören", "yenimahalle", "mamak", "etimesgut", "sincan", 
-        "gölbaşı", "golbasi", "altındağ", "altindag", "pursaklar", "çubuk", "cubuk", 
-        "kahramankazan", "kazan", "akyurt", "beypazarı", "beypazari", "elmadağ", "elmadag", 
-        "polatlı", "polatli", "kızılcahamam", "kizilcahamam", "haymana", "nallıhan", "nallihan", 
-        "şereflikoçhisar", "sereflikochisar", "ayaş", "ayas", "balâ", "bala", "çamlıdere", "camlidere", 
+        "çankaya", "kecioren", "keçiören", "yenimahalle", "mamak", "etimesgut", "sincan",
+        "gölbaşı", "golbasi", "altındağ", "altindag", "pursaklar", "çubuk", "cubuk",
+        "kahramankazan", "kazan", "akyurt", "beypazarı", "beypazari", "elmadağ", "elmadag",
+        "polatlı", "polatli", "kızılcahamam", "kizilcahamam", "haymana", "nallıhan", "nallihan",
+        "şereflikoçhisar", "sereflikochisar", "ayaş", "ayas", "balâ", "bala", "çamlıdere", "camlidere",
         "kalecik", "güdül", "gudul", "evren"
     ];
     for (const d of districts) {
@@ -40,7 +44,7 @@ const ARCHETYPES = [
             const h2_2 = `2. Kat Yüksekliği ve Dış Cephe Asansörü Gereksinimleri`;
             const h2_3 = `3. Adım Adım Güvenli Yükleme ve Sabitleme Aşamaları`;
             const h2_4 = `4. Yeni Adreste Anahtar Teslim Montaj ve Yerleşim`;
-            
+
             const content = `## ${district} ${topic}: Adım Adım Taşınma Rehberi
 
 ${district} genelinde ${topic.toLowerCase()} süreci doğru planlanmadığında hem zaman kaybına hem de yüksek strese yol açabilir. Başarılı bir taşınmanın temeli, ilk andan teslimat anına kadar her aşamanın disiplinle koordine edilmesidir.
@@ -52,7 +56,7 @@ Taşınma gününden en az 3-4 gün önce adresinize özel bir lojistik yol hari
 - **Elektrik ve Su Abonelikleri:** Yeni adresteki aboneliklerin taşınma gününden 1 gün önce aktif hale getirilmesi tavsiye edilir.
 
 ### ${h2_2}
-${district} bölgesindeki modern sitelerde ve çok katlı apartmanlarda bina merdivenlerinden eşya taşımak mobilyaların köşelerinin ezilmesine veya apartman duvarlarının çizilmesine neden olabilir. 
+${district} bölgesindeki modern sitelerde ve çok katlı apartmanlarda bina merdivenlerinden eşya taşımak mobilyaların köşelerinin ezilmesine veya apartman duvarlarının çizilmesine neden olabilir.
 - 25. kata kadar ulaşabilen teleskopik dış cephe asansörlerimizle dairenizin balkonundan doğrudan araç kasasına güvenli iniş sağlanır.
 - Bu sistem sayesinde geleneksel 8 saat süren merdiven taşımacılığı 3-4 saat gibi kısa bir sürede sıfır hasarla tamamlanır.
 
@@ -166,7 +170,7 @@ Buzdolabı, çamaşır makinesi ve kurutma makineleri iç tamburları sabitlener
 Yüksek katlı rezidanslar, dar apartman koridorları ve dik merdivenler geleneksel taşınma yöntemlerini hem riskli hem de yorucu hale getirmektedir. ${district} genelinde sunduğumuz ${topic.toLowerCase()} teknolojisi bu sorunları kökten çözmektedir.
 
 ### ${h2_1}
-${district} bölgesindeki yapılaşmada kat yükseklikleri 10 ila 25 kat arasına ulaşmaktadır. Çoğu apartman yönetimi ortak alanların yıpranmasını önlemek için bina içi asansörlerin eşya taşımada kullanılmasını yasaklar. 
+${district} bölgesindeki yapılaşmada kat yükseklikleri 10 ila 25 kat arasına ulaşmaktadır. Çoğu apartman yönetimi ortak alanların yıpranmasını önlemek için bina içi asansörlerin eşya taşımada kullanılmasını yasaklar.
 - Hidrolik raylı dış cephe asansörlerimizle bina ortak alanlarını hiç işgal etmeden dairenizin penceresine veya balkonuna dikey hat kuruyoruz.
 - Eşyalar doğrudan evin içinden asansör sepetine konularak saniyeler içinde kamyon kasasına indirilir.
 
@@ -323,7 +327,7 @@ Depoya kaldırılacak tüm mobilya ve beyaz eşyalar uzun süre saklanmaya uygun
 Taşınma sürecinde mağduriyet yaşamamak ve eşyalarınızı yasal koruma altında taşıtmak için bilmeniz gereken hukuki haklar ve kurumsal standartlar vardır. ${district} bölgesinde ${topic.toLowerCase()} alırken nelere dikkat etmeniz gerektiğini özetliyoruz.
 
 ### ${h2_1}
-T.C. Ulaştırma ve Altyapı Bakanlığı tarafından ticari eşya taşımacılığı yapan firmalara verilen **K3 Yetki Belgesi**, firmanın yeterli araç filosuna, sermayeye ve yetkin personele sahip olduğunun resmi kanıtıdır. 
+T.C. Ulaştırma ve Altyapı Bakanlığı tarafından ticari eşya taşımacılığı yapan firmalara verilen **K3 Yetki Belgesi**, firmanın yeterli araç filosuna, sermayeye ve yetkin personele sahip olduğunun resmi kanıtıdır.
 - K3 belgesi olmayan kişi veya kamyonetlerle yapılan taşımalarda trafik denetimlerinde araç bağlanabilir ve eşyalarınız günlerce yolda mahsur kalabilir.
 - Ankara Özdemir Nakliyat olarak Ulaştırma Bakanlığı onaylı resmi K3 belgemizle yasal taşımacılık yapıyoruz.
 
@@ -355,11 +359,11 @@ Taşıma sırasında meydana gelebilecek en küçük sürtünme veya hasar durum
 function cleanTopic(title, district) {
     let t = title;
     const districts = [
-        "çankaya", "kecioren", "keçiören", "yenimahalle", "mamak", "etimesgut", "sincan", 
-        "gölbaşı", "golbasi", "altındağ", "altindag", "pursaklar", "çubuk", "cubuk", 
-        "kahramankazan", "kazan", "akyurt", "beypazarı", "beypazari", "elmadağ", "elmadag", 
-        "polatlı", "polatli", "kızılcahamam", "kizilcahamam", "haymana", "nallıhan", "nallihan", 
-        "şereflikoçhisar", "sereflikochisar", "ayaş", "ayas", "balâ", "bala", "çamlıdere", "camlidere", 
+        "çankaya", "kecioren", "keçiören", "yenimahalle", "mamak", "etimesgut", "sincan",
+        "gölbaşı", "golbasi", "altındağ", "altindag", "pursaklar", "çubuk", "cubuk",
+        "kahramankazan", "kazan", "akyurt", "beypazarı", "beypazari", "elmadağ", "elmadag",
+        "polatlı", "polatli", "kızılcahamam", "kizilcahamam", "haymana", "nallıhan", "nallihan",
+        "şereflikoçhisar", "sereflikochisar", "ayaş", "ayas", "balâ", "bala", "çamlıdere", "camlidere",
         "kalecik", "güdül", "gudul", "evren"
     ];
     districts.forEach(d => {
@@ -389,9 +393,9 @@ const updatedBlogPosts = blogPosts.map((post, index) => {
     const topic = cleanTopic(post.title, district);
     const archetypeIndex = (getHash(post.slug) + index) % ARCHETYPES.length;
     const archetype = ARCHETYPES[archetypeIndex];
-    
+
     const generated = archetype.getArticle(district, topic, post.category);
-    
+
     return {
         ...post,
         excerpt: generated.excerpt,
@@ -409,9 +413,9 @@ const updatedMakaleler = makaleler.map((makale, index) => {
     const topic = cleanTopic(makale.title, district);
     const archetypeIndex = (getHash(makale.slug) + index + 3) % ARCHETYPES.length;
     const archetype = ARCHETYPES[archetypeIndex];
-    
+
     const generated = archetype.getArticle(district, topic, makale.category);
-    
+
     return {
         ...makale,
         excerpt: generated.excerpt,

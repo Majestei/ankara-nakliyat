@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { firmaBilgileri, navLinks, ankaraIlceleri, hizmetler } from "@/data/siteData";
 import { IconMapPin, IconPhone, IconMail, IconClock, IconChat, IconArrow, IconStar, IconShield, IconTruck } from "@/components/Icons";
-import { FooterSeoLinks } from "@/components/InternalLinks";
 
 export default function Footer() {
     return (
@@ -19,7 +18,7 @@ export default function Footer() {
                             <p className="text-white/80 text-sm md:text-lg">Ücretsiz keşif ve fiyat teklifi için hemen arayın.</p>
                         </div>
                         <div className="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row gap-3 md:gap-4 w-full lg:w-auto px-4 md:px-0">
-                            <a 
+                            <a
                                 href={`tel:${firmaBilgileri.phone.replace(/\s/g, "")}`}
                                 className="group flex items-center gap-3 bg-white text-primary-600 font-black py-4 px-6 md:px-8 rounded-xl md:rounded-2xl hover:bg-gray-100 transition-all shadow-xl hover:-translate-y-1 text-xs md:text-sm uppercase tracking-wider justify-center"
                                 title="Hemen Arayın"
@@ -27,7 +26,7 @@ export default function Footer() {
                                 <IconPhone className="w-4 h-4 md:w-5 md:h-5 group-hover:rotate-12 transition-transform" />
                                 {firmaBilgileri.phone}
                             </a>
-                            <a 
+                            <a
                                 href={`tel:${firmaBilgileri.phoneSecondary.replace(/\s/g, "")}`}
                                 className="group flex items-center gap-3 bg-white text-primary-600 font-black py-4 px-6 md:px-8 rounded-xl md:rounded-2xl hover:bg-gray-100 transition-all shadow-xl hover:-translate-y-1 text-xs md:text-sm uppercase tracking-wider justify-center"
                                 title="Hemen Arayın"
@@ -35,7 +34,7 @@ export default function Footer() {
                                 <IconPhone className="w-4 h-4 md:w-5 md:h-5 group-hover:rotate-12 transition-transform" />
                                 {firmaBilgileri.phoneSecondary}
                             </a>
-                            <Link 
+                            <Link
                                 href="/iletisim"
                                 className="flex items-center gap-3 bg-white/10 backdrop-blur-xl text-white font-black py-4 px-6 md:px-8 rounded-xl md:rounded-2xl border border-white/20 hover:bg-white/20 transition-all text-xs md:text-sm uppercase tracking-wider justify-center sm:col-span-2 lg:col-auto"
                                 title="Online Teklif Al"
@@ -61,10 +60,10 @@ export default function Footer() {
                                 </div>
                             </Link>
                             <p className="text-sm leading-relaxed text-slate-600 max-w-sm">
-                                Ankara&apos;nın öncü lojistik markası olarak, 15 yıldır evden eve taşımacılıkta 
-                                <strong className="text-slate-900"> teknoloji ve güveni</strong> harmanlıyoruz.
+                                Ankara&apos;da evden eve taşınma, paketleme ve taşıma planınız için
+                                <strong className="text-slate-900"> ekibimizle iletişime geçin.</strong>
                             </p>
-                            
+
                             {/* Contact Cards */}
                             <div className="space-y-3">
                                 <div className="flex flex-col gap-2 p-3 bg-white rounded-xl border border-slate-200 shadow-sm group hover:border-primary-200 hover:shadow-md transition-all">
@@ -169,9 +168,9 @@ export default function Footer() {
                             {/* Trust Badges */}
                             <div className="mt-8 space-y-3">
                                 {[
-                                    { icon: <IconShield className="w-4 h-4" />, text: "%100 Sigortalı" },
-                                    { icon: <IconTruck className="w-4 h-4" />, text: "K3 Belgeli" },
-                                    { icon: <IconClock className="w-4 h-4" />, text: "7/24 Destek" },
+                                    { icon: <IconShield className="w-4 h-4" />, text: "Paketleme ve koruma" },
+                                    { icon: <IconTruck className="w-4 h-4" />, text: "Taşıma planlaması" },
+                                    { icon: <IconClock className="w-4 h-4" />, text: "Randevu ve teklif" },
                                 ].map((badge, i) => (
                                     <div key={i} className="flex items-center gap-2 text-xs text-slate-600">
                                         <span className="text-primary-500">{badge.icon}</span>
@@ -181,13 +180,6 @@ export default function Footer() {
                             </div>
                         </nav>
                     </div>
-                </div>
-            </div>
-
-            {/* SEO İç Linkleri */}
-            <div className="py-8 bg-slate-100 border-t border-slate-200">
-                <div className="container-custom">
-                    <FooterSeoLinks />
                 </div>
             </div>
 

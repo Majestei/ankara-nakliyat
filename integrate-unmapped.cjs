@@ -1,3 +1,6 @@
+// Recovery freeze: archived posts must not silently expand the published URL set.
+throw new Error('SEO recovery freeze: bulk legacy-content imports are disabled. Existing content has not been changed.');
+
 const fs = require('fs');
 const path = require('path');
 
@@ -15,7 +18,7 @@ let blogsAdded = 0;
 
 for (const post of extractedPosts) {
     const { originalType, type, ...rest } = post;
-    
+
     // We map old properties to new ones to ensure they don't break TS interfaces.
     // Ensure we don't duplicate
     if (originalType === 'makaleler' || originalType === 'makale') {

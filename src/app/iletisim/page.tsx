@@ -45,7 +45,7 @@ export default function IletisimPage() {
             />
             <BreadcrumbSchema items={[
                 { name: "Ana Sayfa", href: "/" },
-                { name: "İletişim", href: "/iletisim/" },
+                { name: "İletişim", href: "/iletisim" },
             ]} />
             <ContactClient />
         </>

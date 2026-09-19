@@ -2,26 +2,19 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-    IconTruck, 
-    IconBox, 
-    IconHome, 
-    IconMoney, 
-    IconArrow, 
-    IconCog, 
+import {
+    IconTruck,
+    IconBox,
+    IconHome,
+    IconMoney,
+    IconArrow,
+    IconCog,
     IconCheck,
     IconPlus,
     IconMobile
 } from "./Icons";
 
-const roomFactors: Record<string, number> = {
-    "Stüdyo": 2500,
-    "1+1": 3500,
-    "2+1": 5500,
-    "3+1": 7500,
-    "4+1+": 10000,
-    "Ofis": 4500
-};
+const roomOptions = ["Stüdyo", "1+1", "2+1", "3+1", "4+1+", "Ofis"];
 
 export default function PriceCalculator() {
     const [roomCount, setRoomCount] = useState("2+1");
@@ -30,16 +23,7 @@ export default function PriceCalculator() {
     const [toFloor, setToFloor] = useState(1);
     const [elevator, setElevator] = useState(true);
     const [packing, setPacking] = useState(true);
-    const [totalPrice, setTotalPrice] = useState(0);
-
-    useEffect(() => {
-        let base = roomFactors[roomCount] || 5000;
-        let distCost = distance * 25;
-        let floorCost = (fromFloor + toFloor) * 200;
-        let serviceCost = (elevator ? 1500 : 0) + (packing ? 2000 : 0);
-        
-        setTotalPrice(base + distCost + floorCost + serviceCost);
-    }, [roomCount, distance, fromFloor, toFloor, elevator, packing]);
+    const quoteMessage = `Merhaba, ${roomCount} için taşınma teklifi istiyorum. Mesafe: ${distance} km, çıkış katı: ${fromFloor}, varış katı: ${toFloor}. Asansör ihtiyacı: ${elevator ? "değerlendirilsin" : "yok"}; paketleme: ${packing ? "istiyorum" : "kendim yapacağım"}. Kapsamı görüşebilir miyiz?`;
 
     return (
         <section className="py-24 relative overflow-hidden bg-slate-50" id="hesaplama">
@@ -53,36 +37,36 @@ export default function PriceCalculator() {
             <div className="container-custom relative z-10">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-20">
-                        <motion.span 
+                        <motion.span
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             className="inline-block px-6 py-2 rounded-full bg-white border border-primary-200 text-primary-600 text-sm font-black uppercase tracking-[0.4em] mb-6 shadow-sm"
                         >
-                            Akıllı Fiyatlandırma
+                            Taşınma Planı
                         </motion.span>
-                        <motion.h2 
+                        <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
                             className="text-5xl md:text-7xl font-heading font-black text-slate-900 mb-8 leading-tight"
                         >
-                            Taşınma Maliyetini <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-orange-500">Hemen Hesapla</span>
+                            Taşınma Detaylarını <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-orange-500">Birlikte Planla</span>
                         </motion.h2>
                     </div>
 
                     <div className="grid lg:grid-cols-12 gap-10">
                         {/* Control Panel */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             className="lg:col-span-7 bg-white/80 backdrop-blur-3xl border border-slate-200 rounded-[3.5rem] p-8 md:p-14 shadow-xl relative group"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-primary-50/50 to-transparent rounded-[3.5rem] pointer-events-none"></div>
-                            
+
                             <div className="relative z-10 space-y-12">
                                 {/* Room Count Selection */}
                                 <div className="space-y-6">
@@ -93,13 +77,13 @@ export default function PriceCalculator() {
                                         <h3 className="text-xl font-bold text-slate-900">Eşya Miktarı</h3>
                                     </div>
                                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                                        {Object.keys(roomFactors).map((room) => (
+                                        {roomOptions.map((room) => (
                                             <button
                                                 key={room}
                                                 onClick={() => setRoomCount(room)}
                                                 className={`relative group overflow-hidden py-5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all duration-500 border ${
-                                                    roomCount === room 
-                                                    ? "bg-primary-500 border-primary-500 text-white shadow-[0_8px_20px_rgba(249,115,22,0.3)] scale-[1.02]" 
+                                                    roomCount === room
+                                                    ? "bg-primary-500 border-primary-500 text-white shadow-[0_8px_20px_rgba(249,115,22,0.3)] scale-[1.02]"
                                                     : "bg-slate-50 border-slate-200 text-slate-500 hover:border-primary-200 hover:bg-white"
                                                 }`}
                                             >
@@ -126,8 +110,8 @@ export default function PriceCalculator() {
                                         </div>
                                     </div>
                                     <div className="relative pt-4">
-                                        <input 
-                                            type="range" min="1" max="1000" value={distance} 
+                                        <input
+                                            type="range" min="1" max="1000" value={distance}
                                             onChange={(e) => setDistance(parseInt(e.target.value))}
                                             className="w-full h-3 bg-slate-200 rounded-full appearance-none cursor-pointer accent-primary-500"
                                         />
@@ -140,7 +124,7 @@ export default function PriceCalculator() {
 
                                 {/* Toggles */}
                                 <div className="grid sm:grid-cols-2 gap-6">
-                                    <button 
+                                    <button
                                         onClick={() => setElevator(!elevator)}
                                         className={`group p-6 rounded-[2rem] border transition-all duration-500 flex items-center justify-between ${
                                             elevator ? "bg-primary-50 border-primary-200" : "bg-slate-50 border-slate-200"
@@ -160,7 +144,7 @@ export default function PriceCalculator() {
                                         </div>
                                     </button>
 
-                                    <button 
+                                    <button
                                         onClick={() => setPacking(!packing)}
                                         className={`group p-6 rounded-[2rem] border transition-all duration-500 flex items-center justify-between ${
                                             packing ? "bg-orange-50 border-orange-200" : "bg-slate-50 border-slate-200"
@@ -184,7 +168,7 @@ export default function PriceCalculator() {
                         </motion.div>
 
                         {/* Result Section */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -194,23 +178,23 @@ export default function PriceCalculator() {
                                 {/* Decorative elements */}
                                 <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-[100px] -mr-40 -mt-40"></div>
                                 <div className="absolute bottom-0 left-0 w-80 h-80 bg-orange-300/30 rounded-full blur-[100px] -ml-40 -mb-40"></div>
-                                
+
                                 <div className="relative z-10 text-center lg:text-left">
-                                    <span className="inline-block text-primary-100 text-xs font-black uppercase tracking-[0.5em] mb-8">Tahmini Nakliye Ücreti</span>
-                                    
+                                    <span className="inline-block text-primary-100 text-xs font-black uppercase tracking-[0.5em] mb-8">Taşınma Özeti</span>
+
                                     <div className="mb-12">
                                         <AnimatePresence mode="wait">
-                                            <motion.div 
-                                                key={totalPrice}
+                                            <motion.div
+                                                key={roomCount}
                                                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                                                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                                                className="text-7xl md:text-8xl font-black tracking-tighter text-white"
+                                                className="text-4xl md:text-5xl font-black tracking-tighter text-white"
                                             >
-                                                {totalPrice.toLocaleString('tr-TR')}
-                                                <span className="text-3xl font-bold text-orange-200 ml-4">TL</span>
+                                                Teklif İsteyin
+
                                             </motion.div>
                                         </AnimatePresence>
-                                        <p className="text-primary-100/80 text-xs font-bold uppercase tracking-widest mt-4">KDV DAHİL FİYATTIR</p>
+                                        <p className="text-primary-100/80 text-xs font-bold uppercase tracking-widest mt-4">Fiyat, adres ve kapsam görüşüldükten sonra belirlenir</p>
                                     </div>
 
                                     <div className="space-y-5 py-10 border-y border-white/20">
@@ -228,10 +212,10 @@ export default function PriceCalculator() {
                                 </div>
 
                                 <div className="mt-16 space-y-6 relative z-10">
-                                    <motion.a 
+                                    <motion.a
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
-                                        href="https://wa.me/905456568103" 
+                                        href={`https://wa.me/905456568103?text=${encodeURIComponent(quoteMessage)}`}
                                         target="_blank"
                                         rel="noopener noreferrer nofollow"
                                         className="w-full py-7 bg-white text-primary-600 rounded-2xl font-black text-sm uppercase tracking-[0.3em] flex items-center justify-center gap-4 shadow-xl hover:bg-slate-50 transition-colors"
@@ -241,20 +225,20 @@ export default function PriceCalculator() {
                                     </motion.a>
                                     <div className="flex items-center justify-center gap-4 opacity-80">
                                         <IconCheck className="w-4 h-4 text-emerald-300" />
-                                        <span className="text-xs font-bold text-white uppercase tracking-widest">Anında Geri Dönüş</span>
+                                        <span className="text-xs font-bold text-white uppercase tracking-widest">İletişime Geçin</span>
                                     </div>
                                 </div>
                             </div>
                         </motion.div>
                     </div>
 
-                    <motion.p 
+                    <motion.p
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 0.6 }}
                         className="text-center text-slate-500 text-xs font-medium mt-12 max-w-2xl mx-auto uppercase tracking-widest"
                     >
-                        * Hesaplanan tutar piyasa ortalamaları baz alınarak sunulan bir öngörüdür. 
-                        Kesin fiyat için eşyalarınızın yerinde görülmesi veya resimlerinin incelenmesi gerekmektedir.
+                        Seçimleriniz teklif görüşmesi için bir hazırlık özetidir.
+                        Güncel fiyat için eşya ve adres bilgileriyle birlikte dahil hizmetleri, vergi ve ödeme koşullarını görüşün.
                     </motion.p>
                 </div>
             </div>

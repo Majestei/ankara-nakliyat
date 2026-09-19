@@ -1,3 +1,6 @@
+// Recovery freeze: a reviewed GSC-backed migration map must replace token matching.
+throw new Error('SEO recovery freeze: automatic redirect generation is disabled. Existing redirects have not been changed.');
+
 const fs = require('fs');
 const path = require('path');
 
@@ -30,7 +33,7 @@ const redirects = [];
 
 for (const oldPage of oldSlugs) {
     const oldTokens = tokenize(oldPage.slug).filter(t => t !== '2026' && t !== '2025');
-    
+
     let bestMatch = null;
     let bestScore = -1;
 
@@ -48,7 +51,7 @@ for (const oldPage of oldSlugs) {
         // Ensure destination starts with /
         const sourcePath = `/${oldPage.type}/${oldPage.slug}`;
         const destPath = `/${bestMatch.type}/${bestMatch.slug}`;
-        
+
         if (sourcePath !== destPath) {
             redirects.push({
                 source: sourcePath,

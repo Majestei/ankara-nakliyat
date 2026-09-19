@@ -5,9 +5,9 @@ import Image from "next/image";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
 import { firmaBilgileri, hizmetler, ilceIcerikleri } from "@/data/siteData";
-import { 
-    IconPhone, IconShield, IconTruck, 
-    IconBox, IconCog, IconArrow, IconStar, IconCheck 
+import {
+    IconPhone, IconShield, IconTruck,
+    IconBox, IconCog, IconArrow, IconStar, IconCheck
 } from "@/components/Icons";
 import PricingTable from "@/components/PricingTable";
 import TrustBadgesSection from "@/components/TrustBadgesSection";
@@ -19,31 +19,31 @@ import MovingChecklistSection from "@/components/MovingChecklistSection";
 const SpatialBackground = () => (
     <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-slate-950" />
-        <motion.div 
-            animate={{ 
+        <motion.div
+            animate={{
                 scale: [1, 1.2, 1],
                 rotate: [0, 90, 0],
                 opacity: [0.1, 0.2, 0.1]
             }}
             transition={{ duration: 20, repeat: Infinity }}
-            className="absolute -top-[20%] -left-[10%] w-[80%] h-[80%] bg-primary-600/30 blur-[150px] rounded-full hidden md:block" 
+            className="absolute -top-[20%] -left-[10%] w-[80%] h-[80%] bg-primary-600/30 blur-[150px] rounded-full hidden md:block"
         />
-        <motion.div 
-            animate={{ 
+        <motion.div
+            animate={{
                 scale: [1.2, 1, 1.2],
                 rotate: [0, -90, 0],
                 opacity: [0.05, 0.15, 0.05]
             }}
             transition={{ duration: 15, repeat: Infinity }}
-            className="absolute -bottom-[20%] -right-[10%] w-[70%] h-[70%] bg-orange-600/20 blur-[150px] rounded-full hidden md:block" 
+            className="absolute -bottom-[20%] -right-[10%] w-[70%] h-[70%] bg-orange-600/20 blur-[150px] rounded-full hidden md:block"
         />
-        <div className="absolute inset-0 opacity-10 hidden md:block" 
-             style={{ 
-                backgroundImage: "radial-gradient(circle at 2px 2px, rgba(249,115,22,0.3) 1px, transparent 0)", 
+        <div className="absolute inset-0 opacity-10 hidden md:block"
+             style={{
+                backgroundImage: "radial-gradient(circle at 2px 2px, rgba(249,115,22,0.3) 1px, transparent 0)",
                 backgroundSize: "40px 40px",
                 perspective: "1000px",
                 transform: "rotateX(20deg)"
-             }} 
+             }}
         />
     </div>
 );
@@ -112,7 +112,7 @@ function PodCard({ item, name, index }: { item: any, name: string, index: number
                     <span className="text-primary-500">{item.title}</span>
                 </h3>
             </div>
-            
+
             <div style={{ transform: "translateZ(40px)" }}>
                 <p className="text-white/40 text-lg font-medium leading-relaxed italic mb-8">
                     &ldquo;{name}&apos;da {item.shortDesc.toLowerCase()}&rdquo;
@@ -123,7 +123,7 @@ function PodCard({ item, name, index }: { item: any, name: string, index: number
                 </div>
             </div>
 
-            <motion.div 
+            <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
                 className="absolute -top-1/2 -right-1/2 w-full h-full border border-primary-500/10 rounded-full"
@@ -151,13 +151,13 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
 
     return (
         <div className="bg-slate-950 overflow-hidden selection:bg-primary-500 selection:text-white font-sans">
-            
+
             {/* ── SPATIAL KINETIC HERO ── */}
             <section className="relative min-h-[75dvh] md:min-h-screen flex items-center justify-center py-20 md:py-40">
                 <SpatialBackground />
-                
+
                 <div className="container-custom relative z-10">
-                    <motion.div 
+                    <motion.div
                         style={{ opacity: titleOpacity, scale: titleScale }}
                         className="text-center"
                     >
@@ -167,7 +167,7 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                                 <span className="text-primary-500">{ilce.name}, {mahalle.name}</span>
                             </div>
                         </MagneticElement>
-                        
+
                         <h1 className="text-5xl md:text-8xl lg:text-[10rem] font-heading font-black text-white leading-[0.9] md:leading-[0.85] tracking-tighter mb-10 md:mb-16">
                             <span className="text-white/10">{ilce.name} {mahalle.name}</span> <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-orange-500 to-primary-600 animate-gradient-x italic">
@@ -256,19 +256,19 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                             <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                                 <h4 className="text-primary-400 font-bold text-base mb-2">2. Dış Cephe Modüler Asansör</h4>
                                 <p className="text-xs leading-relaxed text-slate-400">
-                                    Bina merdivenlerini ve bina asansörünü yıpratmamak için 25. kata kadar ulaşan hidrolik asansör balkona kurulur.
+                                    Asansör kurulumu için kat yüksekliği, zemin, cephe ve yükleme alanının uygunluğu değerlendirilmelidir.
                                 </p>
                             </div>
                             <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                                 <h4 className="text-primary-400 font-bold text-base mb-2">3. Site Yönetim Uyumu</h4>
                                 <p className="text-xs leading-relaxed text-slate-400">
-                                    Site güvenlik kapısı geçişleri, peyzaj koruma kuralları ve gürültü saatlerine %100 riayet edilir.
+                                    Site yönetiminden araç giriş saatleri, ortak alan kullanımı ve yükleme kuralları hakkında önceden bilgi alın.
                                 </p>
                             </div>
                             <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
-                                <h4 className="text-primary-400 font-bold text-base mb-2">4. Ücretsiz Tesisat &amp; Montaj</h4>
+                                <h4 className="text-primary-400 font-bold text-base mb-2">4. Söküm ve Kurulum Kapsamı</h4>
                                 <p className="text-xs leading-relaxed text-slate-400">
-                                    Gardırop montajının yanı sıra çamaşır, bulaşık makinesi su tesisatı ve avizeler ek ücret alınmadan bağlanır.
+                                    Mobilya kurulumu ve cihaz bağlantılarının teklif kapsamını görüşün. Gereken işlemler için yetkili servis planlayın.
                                 </p>
                             </div>
                         </div>
@@ -285,9 +285,9 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                         <div className="grid md:grid-cols-3 gap-6">
                             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-white relative">
                                 <span className="text-5xl font-black text-primary-500/30 block mb-4">01</span>
-                                <h4 className="text-xl font-bold mb-2">Ücretsiz Keşif &amp; Sabit Fiyat</h4>
+                                <h4 className="text-xl font-bold mb-2">Eşya Listesi ve Teklif</h4>
                                 <p className="text-slate-400 text-xs leading-relaxed">
-                                    Adresinizde veya görüntülü görüşmeyle eşyalar incelenir, noter niteliğinde yazılı sabit fiyat sözleşmesi imzalanır.
+                                    Eşya ve adres bilgilerini paylaşın. Dahil hizmetleri ve değişiklik koşullarını yazılı olarak görüşün.
                                 </p>
                             </div>
                             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-white relative">
@@ -319,7 +319,7 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                                     <span className="text-primary-500 group-open:rotate-180 transition-transform text-xl">▾</span>
                                 </summary>
                                 <p className="text-slate-400 text-xs md:text-sm leading-relaxed mt-4 pt-4 border-t border-white/10">
-                                    Kesinlikle hayır. Taşıma öncesinde ücretsiz ekspertiz ile eşyalarınız incelenir ve yazılı sözleşme imzalanır. Belirlenen rakam kapıda 1 TL bile artmaz.
+                                    Eşya ve adres bilgileriyle teklifi karşılaştırın. Ek işlerin, kapsam değişikliklerinin ve verginin nasıl ücretlendirileceğini önceden görüşün.
                                 </p>
                             </details>
                             <details className="group bg-white/5 border border-white/10 rounded-2xl p-6 open:bg-white/10 transition-all text-white">
@@ -328,7 +328,7 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                                     <span className="text-primary-500 group-open:rotate-180 transition-transform text-xl">▾</span>
                                 </summary>
                                 <p className="text-slate-400 text-xs md:text-sm leading-relaxed mt-4 pt-4 border-t border-white/10">
-                                    Evet. 25. kata kadar ulaşabilen teleskopik hidrolik asansörlerimiz kompakt araç şasisi sayesinde dar sokaklara dahi kolayca yanaştırılabilmektedir.
+                                    Uygunluk adrese göre değişir. Kat yüksekliği, yol genişliği, cephe ve zemin bilgilerini paylaşarak kurulum değerlendirmesi isteyin.
                                 </p>
                             </details>
                             <details className="group bg-white/5 border border-white/10 rounded-2xl p-6 open:bg-white/10 transition-all text-white">
@@ -337,7 +337,7 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                                     <span className="text-primary-500 group-open:rotate-180 transition-transform text-xl">▾</span>
                                 </summary>
                                 <p className="text-slate-400 text-xs md:text-sm leading-relaxed mt-4 pt-4 border-t border-white/10">
-                                    Standart bir 2+1 veya 3+1 dairenin paketlenmesi, asansörle indirilmesi, sevkiyatı ve yeni evinizde montajı 4 ile 7 saat arasında aynı gün tamamlanmaktadır.
+                                    Süre; eşya miktarı, erişim, paketleme ve kurulum ihtiyacına göre değişir. Her iki adresin ayrıntılarıyla bir zaman planı isteyin.
                                 </p>
                             </details>
                         </div>
@@ -346,9 +346,9 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
             </section>
 
             {/* ── 2026 MAHALLE PRICING TABLE ── */}
-            <PricingTable 
+            <PricingTable
                 title={`${ilce.name} ${mahalle.name} Nakliyat Fiyatları (2026)`}
-                subtitle={`${ilce.name} ${mahalle.name} genelinde geçerli, şeffaf, sigortalı ve marangozlu evden eve nakliyat fiyat tarifesi. Sürpriz ek maliyet olmadan güvenle taşının.`}
+                subtitle={`${ilce.name} ${mahalle.name} için eşya, erişim ve tarih bilgilerinize göre teklif alın. Dahil hizmetleri ve ödeme koşullarını görüşün.`}
                 locationName={`${ilce.name} ${mahalle.name}`}
             />
 
@@ -368,12 +368,12 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                         <span className="px-6 py-2 bg-slate-100 rounded-full text-[8px] lg:text-[10px] font-black uppercase tracking-[0.3em] lg:tracking-[0.5em] text-slate-400">Komşu Bölgeler</span>
                         <h2 className="text-4xl md:text-6xl font-heading font-black text-slate-950 tracking-tighter leading-tight">{ilce.name} <br className="sm:hidden" /> <span className="text-slate-200 italic">Diğer Mahalleleri</span></h2>
                     </div>
-                    
+
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
                         {digerMahalleler.slice(0, 18).map((m) => (
-                            <Link 
-                                key={m.slug} 
-                                href={isIstanbul ? `/islemler/${ilce.slug}/${m.slug}` : `/islemler/ankara/${ilce.slug}/${m.slug}`} 
+                            <Link
+                                key={m.slug}
+                                href={isIstanbul ? `/islemler/${ilce.slug}/${m.slug}` : `/islemler/ankara/${ilce.slug}/${m.slug}`}
                                 className="group relative h-32 bg-slate-50 border border-slate-100 rounded-[2rem] flex items-center justify-center overflow-hidden hover:bg-slate-950 transition-all duration-700 p-4 text-center"
                             >
                                 <span className="relative z-10 text-[10px] font-black uppercase tracking-[0.1em] text-slate-500 group-hover:text-white transition-colors">{m.name}</span>
@@ -389,7 +389,7 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
             {/* ── FINAL SPATIAL CTA ── */}
             <section className="py-24 md:py-40 text-center relative overflow-hidden bg-white">
                 <div className="container-custom relative z-10">
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}

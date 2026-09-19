@@ -1,0 +1,294 @@
+[
+  {
+    "source": "/makaleler/cankaya-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/makaleler/cankaya-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/cankaya/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/cankaya-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/cankaya/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/cankaya-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/cankaya/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/kecioren-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/makaleler/kecioren-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/kecioren/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kecioren-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/kecioren/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/kecioren-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/kecioren/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/yenimahalle-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/makaleler/yenimahalle-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/yenimahalle/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/etimesgut-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/etimesgut"
+  },
+  {
+    "source": "/makaleler/etimesgut-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/etimesgut/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/etimesgut-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/etimesgut/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/sincan-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/sincan"
+  },
+  {
+    "source": "/makaleler/sincan-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/sincan/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/sincan-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/sincan/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/altindag-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/altindag"
+  },
+  {
+    "source": "/makaleler/altindag-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/altindag/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/pursaklar-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/pursaklar"
+  },
+  {
+    "source": "/makaleler/pursaklar-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/pursaklar/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/pursaklar-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/pursaklar/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/golbasi-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/golbasi"
+  },
+  {
+    "source": "/makaleler/golbasi-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/golbasi/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/polatli-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/polatli"
+  },
+  {
+    "source": "/makaleler/polatli-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/polatli/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/cubuk-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/cubuk"
+  },
+  {
+    "source": "/makaleler/kahramankazan-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/kahramankazan"
+  },
+  {
+    "source": "/makaleler/beypazari-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/beypazari/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/beypazari-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/beypazari/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/elmadag-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/elmadag"
+  },
+  {
+    "source": "/makaleler/elmadag-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/elmadag/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/akyurt-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/akyurt"
+  },
+  {
+    "source": "/makaleler/nallihan-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/nallihan/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/haymana-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/haymana"
+  },
+  {
+    "source": "/makaleler/haymana-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/haymana/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kizilcahamam-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/kizilcahamam/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kalecik-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/kalecik/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/ayas-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/ayas"
+  },
+  {
+    "source": "/makaleler/gudul-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/gudul"
+  },
+  {
+    "source": "/blog/cankaya-evden-eve-nakliyat-rehberi",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/blog/ankara-eskisehir-nakliyat-fiyatlari",
+    "destination": "/islemler/eskisehir"
+  },
+  {
+    "source": "/blog/ankara-kirikkale-nakliyat-fiyatlari",
+    "destination": "/islemler/kirikkale"
+  },
+  {
+    "source": "/makaleler/polatli-sehir-ici-nakliyat-fiyatlari-ve-yorumlar",
+    "destination": "/islemler/ankara/polatli/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/blog/ankara-duzce-nakliyat-fiyatlari",
+    "destination": "/islemler/duzce"
+  },
+  {
+    "source": "/blog/ankara-karabuk-nakliyat-fiyatlari",
+    "destination": "/islemler/karabuk"
+  },
+  {
+    "source": "/blog/etimesgut-evden-eve-nakliyat-rehberi",
+    "destination": "/islemler/ankara/etimesgut"
+  },
+  {
+    "source": "/blog/kecioren-evden-eve-nakliyat-rehberi",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/blog/sincan-evden-eve-nakliyat-rehberi",
+    "destination": "/islemler/ankara/sincan"
+  },
+  {
+    "source": "/blog/altindag-evden-eve-nakliyat-rehberi",
+    "destination": "/islemler/ankara/altindag"
+  },
+  {
+    "source": "/blog/ankara-bolu-nakliyat-hatti",
+    "destination": "/islemler/bolu"
+  },
+  {
+    "source": "/blog/ankara-konya-nakliyat-fiyatlari",
+    "destination": "/islemler/konya"
+  },
+  {
+    "source": "/blog/ankara-konya-nakliyat-rehberi",
+    "destination": "/islemler/konya"
+  },
+  {
+    "source": "/blog/ankara-tekirdag-nakliyat-fiyatlari",
+    "destination": "/islemler/tekirdag"
+  },
+  {
+    "source": "/makaleler/cankaya-evden-eve-nakliyat",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/blog/kahramankazan-evden-eve-nakliyat-rehberi",
+    "destination": "/islemler/ankara/kahramankazan"
+  },
+  {
+    "source": "/blog/ankara-zonguldak-nakliyat-fiyatlari",
+    "destination": "/islemler/zonguldak"
+  },
+  {
+    "source": "/blog/golbasi-evden-eve-nakliyat-rehberi",
+    "destination": "/islemler/ankara/golbasi"
+  },
+  {
+    "source": "/blog/ankara-aksaray-nakliyat-hatti",
+    "destination": "/islemler/aksaray"
+  },
+  {
+    "source": "/blog/ankara-bartin-nakliyat-fiyatlari",
+    "destination": "/islemler/bartin"
+  },
+  {
+    "source": "/blog/ankara-bilecik-nakliyat-rehberi",
+    "destination": "/islemler/bilecik"
+  },
+  {
+    "source": "/blog/ankara-cankiri-nakliyat-rehberi",
+    "destination": "/islemler/cankiri"
+  },
+  {
+    "source": "/blog/ankara-eskisehir-nakliyat-rehberi",
+    "destination": "/islemler/eskisehir"
+  },
+  {
+    "source": "/blog/ankara-kirikkale-nakliyat-rehberi",
+    "destination": "/islemler/kirikkale"
+  },
+  {
+    "source": "/blog/ankara-kocaeli-nakliyat-fiyatlari",
+    "destination": "/islemler/kocaeli"
+  },
+  {
+    "source": "/blog/ankara-tekirdag-nakliyat-rehberi",
+    "destination": "/islemler/tekirdag"
+  },
+  {
+    "source": "/blog/ankara-zonguldak-nakliyat-rehberi",
+    "destination": "/islemler/zonguldak"
+  },
+  {
+    "source": "/blog/elmadag-evden-eve-nakliyat-rehberi",
+    "destination": "/islemler/ankara/elmadag"
+  },
+  {
+    "source": "/blog/nallihan-evden-eve-nakliyat-rehberi",
+    "destination": "/islemler/ankara/nallihan"
+  },
+  {
+    "source": "/blog/polatli-evden-eve-nakliyat-rehberi",
+    "destination": "/islemler/ankara/polatli"
+  },
+  {
+    "source": "/blog/yenimahalle-evden-eve-nakliyat-rehberi",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/makaleler/kecioren-evden-eve-nakliyat",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/makaleler/kecioren-sehir-ici-nakliyat",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/makaleler/sereflikochisar-evden-eve-nakliyat-fiyatlari-ve-yorumlar",
+    "destination": "/islemler/ankara/sereflikochisar/nakliyat-fiyatlari"
+  }
+]

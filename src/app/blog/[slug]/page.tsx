@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             description: post.excerpt,
             url: `https://ankaraozdemirnakliyat.com/blog/${post.slug}`,
             type: "article",
-            publishedTime: post.date,
+
             images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: post.title }],
         },
         twitter: {
@@ -65,8 +65,8 @@ export default function BlogPostPage({ params }: Props) {
         headline: post.title,
         description: post.excerpt,
         image: "https://ankaraozdemirnakliyat.com/og-image.jpg",
-        datePublished: post.date,
-        dateModified: post.date,
+
+
         author: {
             "@type": "Organization",
             name: "Ankara Özdemir Nakliyat",

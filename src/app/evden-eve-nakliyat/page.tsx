@@ -5,13 +5,13 @@ import ServiceSchema from "@/components/ServiceSchema";
 
 export const metadata: Metadata = {
     title: {
-        absolute: "Ankara Evden Eve Nakliyat & Nakliye: %20 İndirimli Sabit Fiyat",
+        absolute: "Evden Eve Taşıma Süreci ve Paketleme | Özdemir Nakliyat",
     },
-    description: "Ankara evden eve nakliyat ve nakliye fiyatlarında %20 indirim fırsatı. K3 belgeli, asansörlü, sigortalı, marangoz ve su tesisatı montajı dahil net fiyat teklifi alın!",
+    description: "Ev taşıma süreci, paketleme, söküm ve kurulum ihtiyaçları. Eşya listenizi ve bina erişimini paylaşın; taşıma kapsamını ve teklif koşullarını görüşün.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/evden-eve-nakliyat" },
     openGraph: {
-        title: "Ankara Evden Eve Nakliyat & Nakliye: %20 İndirimli Sabit Fiyat",
-        description: "Ankara evden eve nakliyat ve nakliye fiyatlarında %20 indirim fırsatı. K3 belgeli, asansörlü, sigortalı, marangoz ve su tesisatı montajı dahil net fiyat teklifi alın!",
+        title: "Evden Eve Taşıma Süreci ve Paketleme | Özdemir Nakliyat",
+        description: "Ev taşıma süreci, paketleme, söküm ve kurulum ihtiyaçları. Eşya listenizi ve bina erişimini paylaşın; taşıma kapsamını ve teklif koşullarını görüşün.",
         url: "https://ankaraozdemirnakliyat.com/evden-eve-nakliyat",
         type: "website",
         images: [
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Ankara Evden Eve Nakliyat & Nakliye: %20 İndirimli Sabit Fiyat",
-        description: "Ankara evden eve nakliyat ve nakliye fiyatlarında %20 indirim fırsatı. K3 belgeli, asansörlü, sigortalı, marangoz ve su tesisatı montajı dahil net fiyat teklifi alın!",
+        title: "Evden Eve Taşıma Süreci ve Paketleme | Özdemir Nakliyat",
+        description: "Ev taşıma süreci, paketleme, söküm ve kurulum ihtiyaçları. Eşya listenizi ve bina erişimini paylaşın; taşıma kapsamını ve teklif koşullarını görüşün.",
     }
 };
 

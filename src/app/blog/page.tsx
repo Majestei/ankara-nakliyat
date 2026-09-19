@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import BlogClient from "@/components/BlogClient";
+import { blogPosts } from "@/data/blogData";
 
 export const metadata: Metadata = {
     title: "Blog - Nakliyat Rehberi ve Taşınma İpuçları",
@@ -19,5 +20,8 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-    return <BlogClient />;
+    const summaries = blogPosts.map(({ id, slug, title, excerpt, category, date }) => ({
+        id, slug, title, excerpt, category, date,
+    }));
+    return <BlogClient posts={summaries} />;
 }

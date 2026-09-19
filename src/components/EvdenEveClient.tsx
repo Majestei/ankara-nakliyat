@@ -4,9 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring, useMotionValue, AnimatePresence } from "framer-motion";
-import { firmaBilgileri, ankaraIlceleri, turkiyeIlleri, toplamIlSayisi } from "@/data/siteData";
-import { 
-    IconBox, IconShield, IconWrench, IconCog, IconTruck, 
+import { firmaBilgileri, ankaraIlceleri, turkiyeIlleri } from "@/data/siteData";
+import {
+    IconBox, IconShield, IconWrench, IconCog, IconTruck,
     IconClipboard, IconPhone, IconHome, IconCheck, IconMapPin,
     IconArrow, IconPlus, IconStar
 } from "@/components/Icons";
@@ -18,12 +18,12 @@ import VolumeCalculator from "@/components/VolumeCalculator";
 
 const PerspectiveGrid = () => (
     <div className="absolute inset-0 z-0 opacity-10 pointer-events-none overflow-hidden hidden md:block">
-        <div className="absolute inset-0" 
-             style={{ 
-                backgroundImage: "linear-gradient(to right, rgba(249,115,22,0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(249,115,22,0.1) 1px, transparent 1px)", 
+        <div className="absolute inset-0"
+             style={{
+                backgroundImage: "linear-gradient(to right, rgba(249,115,22,0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(249,115,22,0.1) 1px, transparent 1px)",
                 backgroundSize: "80px 80px",
-                transform: "perspective(1200px) rotateX(65deg) translateY(-200px) scale(3)" 
-             }} 
+                transform: "perspective(1200px) rotateX(65deg) translateY(-200px) scale(3)"
+             }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-transparent to-slate-950" />
     </div>
@@ -70,10 +70,10 @@ function MagneticButton({ children, className, href, isAnchor = false }: { child
 
 // FAQ Data
 const evdenEveFaq = [
-    { q: "Evden eve nakliyat kaç saat sürer?", a: "Ortalama bir 2+1 dairenin taşınması, eşya yoğunluğu ve kat durumuna bağlı olarak 4 ile 7 saat arasında tamamlanmaktadır." },
+    { q: "Evden eve nakliyat kaç saat sürer?", a: "Süre; eşya miktarı, paketleme, katlar, erişim ve mesafeye göre değişir. Adres ve eşya bilgileriyle bir zaman planı isteyin." },
     { q: "Mobilyaların sökülüp kurulması kime ait?", a: "Alanında uzman marangozlarımız tüm mobilyalarınızın demontaj ve yeni evinizde montaj işlemlerini profesyonelce gerçekleştirmektedir." },
-    { q: "Şehirler arası nakliyat yapıyor musunuz?", a: "Evet, Ankara merkezli olarak Türkiye'nin 81 iline sigortalı ve garantili şehirler arası evden eve nakliyat hizmeti sunuyoruz." },
-    { q: "Asansörlü nakliyat ücretli mi?", a: "Asansör kullanımı binanın kat durumuna göre belirlenir. Toplam teklifimizde asansör maliyeti açıkça belirtilir, sonradan ek ücret talep edilmez." }
+    { q: "Şehirler arası nakliyat yapıyor musunuz?", a: "Ankara çıkışlı şehirler arası taşıma için varış adresini, tarihi ve eşya miktarını paylaşın. Rota uygunluğunu ve hizmet kapsamını görüşelim." },
+    { q: "Asansörlü nakliyat ücretli mi?", a: "Asansör kullanımı binanın kat durumuna göre belirlenir. Kurulum uygunluğunu ve asansör ücretinin teklife dahil olup olmadığını önceden görüşün." }
 ];
 
 function HologramCard({ children }: { children: React.ReactNode }) {
@@ -101,8 +101,8 @@ function HologramCard({ children }: { children: React.ReactNode }) {
             >
                 <div style={{ transform: "translateZ(80px)" }}>{children}</div>
                 {/* Dynamic light effect */}
-                <motion.div 
-                    style={{ 
+                <motion.div
+                    style={{
                         left: useTransform(mouseX, [-0.5, 0.5], ["0%", "100%"]),
                         top: useTransform(mouseY, [-0.5, 0.5], ["0%", "100%"]),
                     }}
@@ -154,11 +154,11 @@ export default function EvdenEveClient() {
 
     const evdenEveOzellikleri = [
         { icon: <IconBox className="w-10 h-10" />, title: "Profesyonel Paketleme", desc: "Kırılacak eşyalarınız için çift katlı balonlu naylon ve özel köpük sistemleri kullanıyoruz.", detail: "Tam Koruma" },
-        { icon: <IconShield className="w-10 h-10" />, title: "Tam Kapsamlı Sigorta", desc: "Taşınma öncesi eşyalarınızın ekspertizi yapılarak gerçek değerinde sigortalanır.", detail: "Axa & Allianz" },
-        { icon: <IconWrench className="w-10 h-10" />, title: "Marangozluk & Tesisat Dahil", desc: "Gardırop demontaj/montajının yanı sıra çamaşır, bulaşık makinesi su tesisatı ve avize bağlantıları ücretsiz yapılır.", detail: "Ücretsiz Tesisat" },
-        { icon: <IconCog className="w-10 h-10" />, title: "Modüler Asansör", desc: "15. kata kadar ulaşabilen modüler asansörlerimizle eşyalarınız çizilmeden taşınır.", detail: "Dikey Lojistik" },
-        { icon: <IconTruck className="w-10 h-10" />, title: "Çelik Kasalı Filo", desc: "Hava süspansiyonlu, içi mobilya taşımaya uygun tasarlanmış özel araçlar.", detail: "Modern Filo" },
-        { icon: <IconClipboard className="w-10 h-10" />, title: "Yazılı Sözleşme & Sabit Fiyat", desc: "Taşınma günü sürpriz maliyetlerle karşılaşmamanız için noter onaylı nitelikte yazılı sözleşme imzalanır.", detail: "Sıfır Sürpriz" },
+        { icon: <IconShield className="w-10 h-10" />, title: "Poliçe ve Hizmet Kapsamı", desc: "Varsa poliçenin kapsamını, limitlerini ve istisnalarını taşıma öncesinde görüşün.", detail: "Kapsamı İnceleyin" },
+        { icon: <IconWrench className="w-10 h-10" />, title: "Söküm ve Kurulum İhtiyacı", desc: "Mobilya söküm ve kurulumunu teklif kapsamına ekletin. Cihaz ve tesisat bağlantılarında yetkili servis gereksinimini görüşün.", detail: "Kapsamı Görüşün" },
+        { icon: <IconCog className="w-10 h-10" />, title: "Modüler Asansör", desc: "Asansör ihtiyacını ve kurulum uygunluğunu kat, cephe ve zemin bilgilerine göre görüşün.", detail: "Dikey Lojistik" },
+        { icon: <IconTruck className="w-10 h-10" />, title: "Araç Planlaması", desc: "Araç ihtiyacı eşya hacmine, yükleme alanına ve rota koşullarına göre değerlendirilir.", detail: "Eşyaya Göre Araç" },
+        { icon: <IconClipboard className="w-10 h-10" />, title: "Yazılı Teklif ve Kapsam", desc: "Dahil işleri, ek hizmetleri, fiyat ve ödeme koşullarını taşıma öncesinde yazılı olarak netleştirin.", detail: "Açık Koşullar" },
     ];
 
     return (
@@ -168,11 +168,11 @@ export default function EvdenEveClient() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
             />
-            
+
             {/* ── CINEMATIC 3D HERO ── */}
             <section className="relative min-h-[85dvh] md:min-h-screen flex items-center justify-center pt-24 md:pt-32 pb-20 overflow-hidden bg-slate-950">
                 <PerspectiveGrid />
-                
+
                 {/* Layered Background Scenes */}
                 <div className="absolute inset-0 z-0 scale-110 blur-sm opacity-30 grayscale pointer-events-none">
                     <Image src="/images/hizmetler/evden-eve-nakliyat.webp" alt="Ankara Evden Eve Nakliyat Hizmeti" fill priority sizes="100vw" className="object-cover" />
@@ -188,14 +188,14 @@ export default function EvdenEveClient() {
                                 transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                             >
                                 <div className="inline-flex items-center gap-4 px-6 md:px-8 py-3 bg-white/5 border border-white/10 backdrop-blur-3xl rounded-full mb-8 md:mb-12 shadow-2xl">
-                                    <motion.span 
+                                    <motion.span
                                         animate={{ scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5] }}
                                         transition={{ duration: 2, repeat: Infinity }}
-                                        className="w-3 h-3 bg-primary-500 rounded-full" 
+                                        className="w-3 h-3 bg-primary-500 rounded-full"
                                     />
                                     <span className="text-white font-black text-[9px] md:text-[10px] uppercase tracking-[0.4em] md:tracking-[0.6em]">Premium Deneyim Sanatı</span>
                                 </div>
-                                
+
                                 <h1 className="text-5xl md:text-8xl lg:text-[8rem] font-heading font-black text-white leading-[0.95] md:leading-[0.9] tracking-tighter mb-8 md:mb-10">
                                     Ankara <br />
                                     <span className="text-transparent bg-clip-text bg-gradient-to-br from-primary-400 via-orange-500 to-primary-600">
@@ -203,22 +203,22 @@ export default function EvdenEveClient() {
                                     </span> <br />
                                     <span className="text-white/20">Nakliyat &amp; Nakliye</span>
                                 </h1>
-                                
+
                                 <p className="text-white/40 text-base md:text-3xl font-medium max-w-2xl leading-relaxed mb-12 md:mb-16 mx-auto lg:mx-0 px-4 md:px-0">
                                     Lojistiğin geleceğini bugünden inşa ediyoruz. <br />
-                                    <span className="text-white">Sigortalı, asansörlü ve ultra profesyonel taşınma.</span>
+                                    <span className="text-white">Eşya, bina ve tarihe göre taşınma planlaması.</span>
                                 </p>
 
                                 <div className="flex flex-wrap justify-center lg:justify-start gap-6 md:gap-10 px-4 md:px-0">
-                                    <MagneticButton 
+                                    <MagneticButton
                                         isAnchor
                                         href={`tel:${firmaBilgileri.phone.replace(/\s/g, "")}`}
                                         className="px-10 md:px-16 py-6 md:py-8 bg-primary-500 text-white rounded-2xl md:rounded-[2.5rem] font-black uppercase tracking-[0.3em] text-[10px] md:text-sm shadow-[0_30px_60px_rgba(249,115,22,0.4)] hover:shadow-[0_40px_80px_rgba(249,115,22,0.6)]"
                                     >
                                         Hemen Arayın <IconPhone className="inline-block ml-4 w-5 h-5 md:w-6 md:h-6" />
                                     </MagneticButton>
-                                    
-                                    <MagneticButton 
+
+                                    <MagneticButton
                                         href="/iletisim"
                                         className="px-10 md:px-16 py-6 md:py-8 bg-white/5 border border-white/10 text-white backdrop-blur-3xl rounded-2xl md:rounded-[2.5rem] font-black uppercase tracking-[0.3em] text-[10px] md:text-sm hover:bg-white/10"
                                     >
@@ -236,11 +236,11 @@ export default function EvdenEveClient() {
                             >
                                 <HologramCard>
                                     <div className="text-center text-white py-6 md:py-10">
-                                        <div className="text-7xl md:text-9xl font-black mb-2 md:mb-4 tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/20">15+</div>
-                                        <div className="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] md:tracking-[0.8em] text-primary-400">Yıllık Güven</div>
+                                        <div className="text-7xl md:text-9xl font-black mb-2 md:mb-4 tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-white to-white/20">Planlı</div>
+                                        <div className="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] md:tracking-[0.8em] text-primary-400">Taşıma Planlaması</div>
                                         <div className="mt-8 md:mt-12 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                                         <p className="mt-6 md:mt-8 text-white/40 text-[9px] md:text-[10px] font-black uppercase tracking-widest leading-loose">
-                                            Ankara&apos;nın her köşesinde <br /> binlerce mutlu yuva.
+                                            Ankara&apos;nın her köşesinde <br /> adresinize göre taşıma planı.
                                         </p>
                                     </div>
                                 </HologramCard>
@@ -258,15 +258,15 @@ export default function EvdenEveClient() {
             <section className="py-24 md:py-40 lg:py-60 bg-white relative">
                 <div className="container-custom">
                     <div className="text-center mb-16 md:mb-32 space-y-6 md:space-y-8 px-4">
-                        <motion.span 
-                            initial={{ opacity: 0 }} 
+                        <motion.span
+                            initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             className="text-primary-500 font-black text-[10px] md:text-xs uppercase tracking-[0.5em] lg:tracking-[1em]"
                         >
-                            Uzmanlık Alanlarımız
+                            Evden Eve Nakliyat Hizmet Standartlarımız
                         </motion.span>
                         <h2 className="text-5xl md:text-9xl font-heading font-black text-slate-950 leading-none tracking-tighter">
-                            Standartları <br /> <span className="text-slate-200 italic">Biz Belirliyoruz.</span>
+                            Hizmet <br /> <span className="text-slate-200 italic">Standartlarımız.</span>
                         </h2>
                     </div>
 
@@ -300,7 +300,7 @@ export default function EvdenEveClient() {
                             </span>
                         </h2>
                         <p className="text-slate-400 text-base md:text-xl leading-relaxed max-w-3xl mx-auto">
-                            Ankara içi taşınmalarda sürpriz ek masraflarla karşılaşmamanız için oda sayısına ve hizmet kapsamına göre şeffaf ortalama fiyatlandırma tablomuz aşağıdadır. Tüm fiyatlarımıza KDV, marangozluk ve sigorta dahildir.
+                            Oda sayısı tek başına fiyatı belirlemez. Eşya listesi, katlar, erişim ve mesafe bilgisiyle güncel teklif alın; dahil işleri ve vergi koşullarını önceden netleştirin.
                         </p>
                     </div>
 
@@ -309,24 +309,24 @@ export default function EvdenEveClient() {
                         {[
                             {
                                 type: "1+1 Daire Taşıma",
-                                price: "8.000 ₺ – 12.000 ₺",
-                                team: "2-3 Uzman Personel",
-                                vehicle: "Kompakt Kapalı Kasa Araç",
-                                duration: "3 - 5 Saat",
+                                price: "Teklif İsteyin",
+                                team: "Eşya ve erişime göre ekip planı",
+                                vehicle: "Eşya hacmine göre araç planı",
+                                duration: "Tarih ve süreyi görüşün",
                                 features: [
                                     "Mobilya demontaj ve montajı",
                                     "Çift katlı balonlu ambalajlama",
                                     "Beyaz eşya koruma kılıfları",
-                                    "Tam kapsamlı emtia sigortası",
+                                    "Varsa poliçe kapsamının incelenmesi",
                                 ],
                                 popular: false,
                             },
                             {
                                 type: "2+1 Daire Taşıma",
-                                price: "12.000 ₺ – 16.500 ₺",
-                                team: "3-4 Uzman Personel",
-                                vehicle: "Orta Boy Çelik Kasalı Kamyon",
-                                duration: "4 - 6 Saat",
+                                price: "Teklif İsteyin",
+                                team: "Eşya ve erişime göre ekip planı",
+                                vehicle: "Eşya hacmine göre araç planı",
+                                duration: "Tarih ve süreyi görüşün",
                                 features: [
                                     "Profesyonel marangoz desteği",
                                     "Kraft kağıt ve patpat sarım",
@@ -337,29 +337,29 @@ export default function EvdenEveClient() {
                             },
                             {
                                 type: "3+1 Daire Taşıma",
-                                price: "16.500 ₺ – 23.000 ₺",
-                                team: "4-5 Uzman Personel",
-                                vehicle: "Büyük Boy Geniş Hacimli Filo",
-                                duration: "5 - 8 Saat",
+                                price: "Teklif İsteyin",
+                                team: "Eşya ve erişime göre ekip planı",
+                                vehicle: "Eşya hacmine göre araç planı",
+                                duration: "Tarih ve süreyi görüşün",
                                 features: [
                                     "A'dan Z'ye anahtar teslim paketleme",
                                     "Tüm dolap ve ünite demontajı",
                                     "Özel dış cephe asansörü imkanı",
-                                    "Sıfır risk ve hasar teminatı",
+                                    "Teslim ve hasar bildirimi koşulları",
                                 ],
                                 popular: false,
                             },
                             {
                                 type: "4+1 & Villa Taşıma",
-                                price: "23.000 ₺ – 35.000 ₺",
-                                team: "5-6 Kıdemli Personel",
-                                vehicle: "Maksimum Boy Çelik Kasa Kamyon",
-                                duration: "Tam Gün Operasyon",
+                                price: "Teklif İsteyin",
+                                team: "Eşya ve erişime göre ekip planı",
+                                vehicle: "Eşya hacmine göre araç planı",
+                                duration: "Tarih ve süreyi görüşün",
                                 features: [
                                     "VIP kişiye özel taşıma planı",
                                     "Kırılacaklar için özel ahşap sandık",
                                     "Çift asansör kurulum desteği",
-                                    "Aynı gün kurulum ve yerleşim",
+                                    "Kurulum ve teslim takvimi",
                                 ],
                                 popular: false,
                             },
@@ -457,7 +457,7 @@ export default function EvdenEveClient() {
                             {[
                                 {
                                     step: "01",
-                                    title: "Ücretsiz Keşif & Sözleşme",
+                                    title: "Eşya Listesi ve Teklif",
                                     desc: "Eksperimiz eşyalarınızı inceler, net sabit fiyat teklifini sunar ve karşılıklı resmi taşıma sözleşmesi imzalanır.",
                                 },
                                 {
@@ -468,12 +468,12 @@ export default function EvdenEveClient() {
                                 {
                                     step: "03",
                                     title: "Modüler Asansörle Yükleme",
-                                    desc: "Bina merdivenlerine çarpmadan, 15. kata kadar ulaşan yük asansörümüzle eşyalar güvenle doğrudan araca indirilir.",
+                                    desc: "Kat, cephe ve zemin bilgilerine göre taşıma yöntemi ve asansör ihtiyacı değerlendirilir.",
                                 },
                                 {
                                     step: "04",
-                                    title: "Sigortalı Güvenli Sevkiyat",
-                                    desc: "Kapalı çelik kasalı araçlarımızda sabitleme aparatlarıyla bağlanan eşyalar tam kapsamlı emtia poliçesiyle sevk edilir.",
+                                    title: "Sevkiyat ve Teslim Planı",
+                                    desc: "Yükleme yöntemi, teslim takvimi ve varsa poliçe koşulları taşıma öncesinde netleştirilir.",
                                 },
                                 {
                                     step: "05",
@@ -508,7 +508,7 @@ export default function EvdenEveClient() {
                             </div>
                             <div className="border-l-2 border-primary-500 pl-4">
                                 <strong className="text-white block mb-1">Keçiören & Mamak:</strong>
-                                Yüksek katlı apartmanlarda bina asansörlerinin yıpranmasını önlemek için 15+ kata ulaşan teleskopik hidrolik asansörlerimiz kurulur.
+                                Yüksek katlı apartmanlarda merdiven, bina asansörü ve dış cephe erişimini önceden değerlendirin.
                             </div>
                             <div className="border-l-2 border-primary-500 pl-4">
                                 <strong className="text-white block mb-1">Yenimahalle, Batıkent & Çayyolu:</strong>
@@ -516,15 +516,15 @@ export default function EvdenEveClient() {
                             </div>
                             <div className="border-l-2 border-primary-500 pl-4">
                                 <strong className="text-white block mb-1">Etimesgut, Sincan & Eryaman:</strong>
-                                Merkez operasyon üssümüzün bulunduğu bölgede aynı gün acil ekspertiz ve hızlı araç tahsisi avantajı sunulur.
+                                Taşınma tarihi ve adres erişimini paylaşarak uygun zaman aralığını görüşün.
                             </div>
                             <div className="border-l-2 border-primary-500 pl-4">
                                 <strong className="text-white block mb-1">Gölbaşı & İncek:</strong>
                                 Villa, dubleks ve müstakil konutlarda geniş hacimli eşyalar için çift araç ve çoklu ambalaj ekibi görevlendirilir.
                             </div>
                             <div className="border-l-2 border-primary-500 pl-4">
-                                <strong className="text-white block mb-1">K3 Yetki Belgesi & Yasal Güvence:</strong>
-                                T.C. Ulaştırma ve Altyapı Bakanlığı K3 Karayolu Taşıma Yetki Belgesi ve Axa/Allianz emtia sigortası ile kurumsal güvence.
+                                <strong className="text-white block mb-1">Belge ve Hizmet Kapsamı:</strong>
+                                Taşıma için ilgili firma belgelerini ve varsa poliçe koşullarını önceden inceleyin.
                             </div>
                         </div>
                     </div>
@@ -537,7 +537,7 @@ export default function EvdenEveClient() {
             {/* ── THE SPOTLIGHT REVIEW ── */}
             <section className="py-32 md:py-60 lg:py-80 bg-white relative overflow-hidden">
                 <div className="container-custom relative z-10 text-center">
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
@@ -550,34 +550,23 @@ export default function EvdenEveClient() {
                                 </motion.div>
                             ))}
                         </div>
-                        
-                        <h2 className="text-4xl md:text-9xl font-heading font-black text-slate-950 leading-[1] md:leading-[0.95] tracking-tighter px-4 md:px-0">
-                            &ldquo;Taşınmanın <span className="text-primary-500">Sanata</span> Dönüştüğü Tek Adres.&rdquo;
+
+                        <h2 className="text-4xl md:text-8xl font-heading font-black text-slate-950 leading-[1] md:leading-[0.95] tracking-tighter px-4 md:px-0">
+                            &ldquo;Taşınmanın <span className="text-primary-500">Güvenle</span> Buluştuğu Adres.&rdquo;
                         </h2>
-                        
-                        <div className="flex flex-col items-center gap-8">
-                            <div className="relative">
-                                <div className="w-24 h-24 rounded-full border-4 border-white shadow-2xl overflow-hidden relative">
-                                    <Image 
-                                        src="/images/yorumlar/mert-yilmaz.webp" 
-                                        alt="Mert Yılmaz" 
-                                        fill 
-                                        sizes="96px"
-                                        className="object-cover" 
-                                    />
-                                </div>
-                                <div className="absolute -bottom-2 -right-2 bg-primary-500 text-white p-2 rounded-full shadow-xl">
-                                    <IconCheck className="w-4 h-4" />
-                                </div>
+
+                        <div className="flex flex-col items-center gap-4">
+                            <div className="inline-flex items-center gap-3 bg-primary-50 border border-primary-200 px-6 py-3 rounded-full">
+                                <IconShield className="w-5 h-5 text-primary-600" />
+                                <span className="text-primary-900 font-black text-xs uppercase tracking-widest">Taşıma Kapsamını Önceden Görüşün</span>
                             </div>
-                            <div>
-                                <p className="text-slate-950 font-black uppercase tracking-[0.5em] text-sm">Mert Yılmaz</p>
-                                <p className="text-slate-400 text-[10px] font-bold uppercase tracking-[0.3em] mt-2">Elite Müşteri & Yerel Rehber</p>
-                            </div>
+                            <p className="text-slate-500 text-sm max-w-xl text-center leading-relaxed">
+                                Paketleme, yükleme, teslim ve varsa poliçe koşullarını teklif görüşmesinde yazılı olarak netleştirin.
+                            </p>
                         </div>
                     </motion.div>
                 </div>
-                
+
                 {/* Background Text Decor */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40rem] font-black text-slate-50 -z-10 select-none pointer-events-none opacity-50 tracking-tighter">
                     TRUST
@@ -590,21 +579,21 @@ export default function EvdenEveClient() {
                     <div className="flex flex-col lg:flex-row items-center justify-between mb-16 md:mb-32 gap-10 px-4">
                         <div className="max-w-2xl text-center lg:text-left">
                             <h2 className="text-4xl md:text-7xl font-heading font-black text-slate-950 tracking-tighter leading-none mb-6 md:mb-8">
-                                Ankara&apos;nın <br /> <span className="text-primary-500">Her Köşesindeyiz.</span>
+                                Ankara İçin <br /> <span className="text-primary-500">Taşınma Rehberi.</span>
                             </h2>
-                            <p className="text-slate-500 text-lg md:text-xl font-medium">Hizmet ağımızı her gün genişletiyor, Ankara&apos;nın nabzını tutuyoruz.</p>
+                            <p className="text-slate-500 text-lg md:text-xl font-medium">İlçe sayfalarından hazırlık bilgilerine ulaşın; adresiniz ve tarihiniz için hizmet uygunluğunu iletişimde teyit edin.</p>
                         </div>
                         <div className="flex gap-4">
                             <div className="px-6 md:px-10 py-4 md:py-5 bg-white border border-slate-200 rounded-2xl md:rounded-3xl font-black uppercase tracking-widest text-[9px] md:text-[10px] shadow-sm">{ankaraIlceleri.length}+ İlçe</div>
-                            <div className="px-6 md:px-10 py-4 md:py-5 bg-primary-500 text-white rounded-2xl md:rounded-3xl font-black uppercase tracking-widest text-[9px] md:text-[10px] shadow-xl">{toplamIlSayisi} İl</div>
+                            <div className="px-6 md:px-10 py-4 md:py-5 bg-primary-500 text-white rounded-2xl md:rounded-3xl font-black uppercase tracking-widest text-[9px] md:text-[10px] shadow-xl">Ankara Çıkışlı</div>
                         </div>
                     </div>
-                    
+
                     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
                         {ankaraIlceleri.map((ilce, i) => (
-                            <Link 
-                                key={ilce.slug} 
-                                href={`/islemler/ankara/${ilce.slug}`} 
+                            <Link
+                                key={ilce.slug}
+                                href={`/islemler/ankara/${ilce.slug}`}
                                 className="group relative bg-white border border-slate-100 rounded-2xl md:rounded-[3rem] p-4 md:p-12 text-center hover:bg-slate-950 hover:border-slate-950 transition-all duration-700 shadow-sm hover:shadow-2xl hover:-translate-y-3 flex flex-col items-center justify-center h-full"
                             >
                                 <div className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 md:mb-8 bg-slate-50 rounded-xl md:rounded-2xl flex items-center justify-center text-primary-500 group-hover:bg-primary-500 group-hover:text-white transition-all duration-500">
@@ -626,8 +615,8 @@ export default function EvdenEveClient() {
                 <div className="container-custom max-w-5xl">
                     <div className="text-center mb-16 md:mb-32 space-y-6 md:space-y-8">
                         <span className="text-primary-500 font-black text-[10px] md:text-xs uppercase tracking-[0.8em]">Sıkça Sorulanlar</span>
-                        <h2 className="text-5xl md:text-9xl font-heading font-black text-slate-950 leading-none tracking-tighter">
-                            Merak <br /> <span className="text-slate-200">Edilenler.</span>
+                        <h2 className="text-4xl sm:text-6xl md:text-8xl font-heading font-black text-slate-950 leading-tight tracking-tighter">
+                            Evden Eve Nakliyat <br /> <span className="text-slate-400">Merak Edilenler (SSS)</span>
                         </h2>
                     </div>
                     <div className="space-y-8">
@@ -660,11 +649,11 @@ export default function EvdenEveClient() {
                         className="max-w-5xl mx-auto"
                     >
                         <h2 className="text-5xl md:text-[12rem] font-heading font-black text-white mb-12 md:mb-20 leading-[1] md:leading-[0.8] tracking-tighter">
-                            Yeni Bir <br /> 
+                            Yeni Bir <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-orange-500 to-primary-600 italic">Başlangıca</span> <br />
                             Adım Atın.
                         </h2>
-                        <MagneticButton 
+                        <MagneticButton
                             isAnchor
                             href={`tel:${firmaBilgileri.phone.replace(/\s/g, "")}`}
                             className="inline-flex items-center gap-6 md:gap-8 bg-white text-slate-950 hover:bg-primary-500 hover:text-white font-black rounded-3xl md:rounded-[4rem] px-12 md:px-24 py-6 md:py-12 text-xl md:text-3xl shadow-[0_50px_100px_rgba(255,255,255,0.1)] transition-all"

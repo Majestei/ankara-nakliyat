@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { permanentRedirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { turkiyeIlleri, civarIller, firmaBilgileri, hizmetler } from "@/data/siteData";
 import { IconPhone, IconMobile, IconTruck, IconShield, IconMoney, IconBox, IconSearch, IconHeadset, IconMapPin, IconCog } from "@/components/Icons";
 import AnkaraIlceClient from "@/components/AnkaraIlceClient";
 
 interface Props { params: { sehir: string } }
 
-export async function generateStaticParams() { 
-    return civarIller.map((il) => ({ sehir: il.slug })); 
+export async function generateStaticParams() {
+    return civarIller.map((il) => ({ sehir: il.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!il) return {};
 
     const title = `Ankara ${il.name} Evden Eve Nakliyat`;
-    const description = `Ankara - ${il.name} arası şehirler arası profesyonel evden eve nakliyat. Asansörlü, ambalajlı ve sigortalı taşımacılık ile eşyalarınız güvende.`;
+    const description = `Ankara - ${il.name} arası şehirler arası profesyonel evden eve nakliyat. Taşıma tarihi, eşya hacmi ve adres erişimine göre kapsamı görüşün.`;
     const url = `https://ankaraozdemirnakliyat.com/islemler/${params.sehir}`;
 
     return {
@@ -47,7 +47,7 @@ const serviceIconMap: Record<string, React.ReactNode> = {
 
 export default function SehirPage({ params }: Props) {
     const il = civarIller.find((i) => i.slug === params.sehir);
-    if (!il) permanentRedirect('/islemler');
+    if (!il) notFound();
 
     const digerIlceler = civarIller.filter(i => i.slug !== params.sehir).slice(0, 12);
 

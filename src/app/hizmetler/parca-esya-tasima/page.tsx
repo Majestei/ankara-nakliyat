@@ -6,18 +6,18 @@ import TrustBadgesSection from "@/components/TrustBadgesSection";
 
 export const metadata: Metadata = {
     title: "Ankara Parça Eşya Taşıma: Küçük Nakliye & Kamyonet Servisi",
-    description: "Ankara parça eşya taşıma ve küçük nakliye hizmeti. Tek koltuk, beyaz eşya, öğrenci evi ve kamyonet nakliye ihtiyaçlarınıza aynı gün sabit fiyatlı çözüm!",
+    description: "Ankara parça eşya taşıma için eşya ölçüsü, adet, kat ve adres bilgileriyle teklif alın. Tek eşya ve küçük taşınmalarda tarih ve araç uygunluğunu görüşün.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler/parca-esya-tasima" },
     openGraph: {
         title: "Ankara Parça Eşya Taşıma: Küçük Nakliye & Kamyonet Servisi",
-        description: "Ankara parça eşya taşıma ve küçük nakliye hizmeti. Tek koltuk, beyaz eşya, öğrenci evi ve kamyonet nakliye ihtiyaçlarınıza aynı gün sabit fiyatlı çözüm!",
+        description: "Ankara parça eşya taşıma için eşya ölçüsü, adet, kat ve adres bilgileriyle teklif alın. Tek eşya ve küçük taşınmalarda tarih ve araç uygunluğunu görüşün.",
         url: "https://ankaraozdemirnakliyat.com/hizmetler/parca-esya-tasima",
         type: "website"
     },
     twitter: {
         card: "summary_large_image",
         title: "Ankara Parça Eşya Taşıma: Küçük Nakliye & Kamyonet Servisi",
-        description: "Ankara parça eşya taşıma ve küçük nakliye hizmeti. Tek koltuk, beyaz eşya, öğrenci evi ve kamyonet nakliye ihtiyaçlarınıza aynı gün sabit fiyatlı çözüm!"
+        description: "Ankara parça eşya taşıma için eşya ölçüsü, adet, kat ve adres bilgileriyle teklif alın. Tek eşya ve küçük taşınmalarda tarih ve araç uygunluğunu görüşün."
     }
 };
 
@@ -25,25 +25,25 @@ export default function ParcaEsyaPage() {
     const parcaFiyatlari = [
         {
             title: "Tek Parça Eşya",
-            price: "2.000 ₺ – 3.500 ₺",
+            price: "Teklif İsteyin",
             items: "Buzdolabı, çamaşır makinesi, tekli koltuk veya baza",
             features: ["Ambalajlama dahil", "1-2 personel desteği", "Aynı gün teslimat"],
         },
         {
             title: "2-4 Parça Mobilya",
-            price: "3.500 ₺ – 5.500 ₺",
+            price: "Teklif İsteyin",
             items: "Koltuk takımı, TV ünitesi veya yemek masası seti",
-            features: ["Marangozlu demontaj/montaj", "Patpat balonlu koruma", "Sigortalı transfer"],
+            features: ["Marangozlu demontaj/montaj", "Patpat balonlu koruma", "Taşıma koşullarını görüşün"],
         },
         {
             title: "Öğrenci & Bekar Evi",
-            price: "5.500 ₺ – 8.500 ₺",
+            price: "Teklif İsteyin",
             items: "1 oda eşyası, yatak, çalışma masası, mini buzdolabı ve koli",
             features: ["Kompakt kamyonet tahsisi", "Ekonomik öğrenci indirimi", "Kapıdan kapıya taşıma"],
         },
         {
             title: "Saatlik Kamyonet Nakliye",
-            price: "3.000 ₺ – 5.000 ₺",
+            price: "Teklif İsteyin",
             items: "Ankara içi acil şoförlü kapalı kasa araç",
             features: ["Trafik ve yakıt dahil", "Hızlı yükleme ve boşaltma", "25 ilçeye anında erişim"],
         },
@@ -109,7 +109,7 @@ export default function ParcaEsyaPage() {
                             <li>✅ <strong>Bütçe Dostu:</strong> Sadece taşınan eşya hacmi kadar ödeme yaparsınız, komple araç parası vermezsiniz.</li>
                             <li>✅ <strong>Aynı Gün Teslimat:</strong> Çankaya, Keçiören, Yenimahalle, Mamak ve Etimesgut başta olmak üzere 2 saat içinde araç tahsisi.</li>
                             <li>✅ <strong>Profesyonel Ambalaj:</strong> Tek parça bile olsa kraft kağıt ve patpat naylon ile sarılmadan araca yüklenmez.</li>
-                            <li>✅ <strong>K3 Lisansı ve Sigorta:</strong> Korsan nakliyecilerin aksine tüm yükleriniz resmi poliçe güvencesindedir.</li>
+                            <li>✅ <strong>Taşıma Koşulları:</strong> Dahil işleri, teslim planını ve varsa poliçe kapsamını teklif öncesinde yazılı olarak inceleyin.</li>
                         </ul>
 
                         <div className="mt-12 p-8 bg-gradient-to-br from-primary-600 to-orange-600 rounded-3xl text-white text-center shadow-xl not-prose">

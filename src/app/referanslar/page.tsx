@@ -6,76 +6,34 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import GoogleReviewsClient from "@/components/GoogleReviewsClient";
 
 export const metadata: Metadata = {
-    title: "Müşteri Yorumları & Referanslar | Google Haritalar 5.0★ | Ankara Özdemir Nakliyat",
-    description: "Ankara Özdemir Nakliyat Google Haritalar doğrulanmış müşteri değerlendirmeleri ve nakliyat referansları. Gerçek müşteri yorumları ile 5.0 tam puan.",
+    title: {
+        absolute: "Müşteri Yorumları & Referanslar | Özdemir Nakliyat",
+    },
+    description: "Ankara Özdemir Nakliyat müşteri değerlendirmeleri ve evden eve nakliyat referansları. Taşıma kapsamı ve iletişim bilgileri.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/referanslar" },
     robots: { index: true, follow: true },
     openGraph: {
-        title: "Müşteri Yorumları & Referanslar | Google Haritalar 5.0★ | Ankara Özdemir Nakliyat",
-        description: "Ankara Özdemir Nakliyat Google Haritalar doğrulanmış müşteri değerlendirmeleri ve nakliyat referansları. Gerçek müşteri yorumları ile 5.0 tam puan.",
+        title: "Müşteri Yorumları & Referanslar | Özdemir Nakliyat",
+        description: "Ankara Özdemir Nakliyat müşteri değerlendirmeleri ve evden eve nakliyat referansları. Taşıma kapsamı ve iletişim bilgileri.",
         url: "https://ankaraozdemirnakliyat.com/referanslar",
         type: "website",
         images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Ankara Özdemir Nakliyat Referanslar" }]
     },
     twitter: {
         card: "summary_large_image",
-        title: "Müşteri Yorumları & Referanslar | Google Haritalar 5.0★ | Ankara Özdemir Nakliyat",
-        description: "Ankara Özdemir Nakliyat Google Haritalar doğrulanmış müşteri yorumları.",
+        title: "Müşteri Yorumları & Referanslar | Özdemir Nakliyat",
+        description: "Ankara Özdemir Nakliyat müşteri değerlendirmeleri ve referansları.",
         images: ["/og-image.jpg"]
     }
 };
 
 export default function ReferanslarPage() {
-    // Structured Data: MovingCompany with AggregateRating & Review Array for Google Rich Snippets
-    const reviewsJsonLd = {
-        "@context": "https://schema.org",
-        "@type": "MovingCompany",
-        name: firmaBilgileri.name,
-        url: "https://ankaraozdemirnakliyat.com",
-        telephone: firmaBilgileri.phone.replace(/\s/g, ""),
-        address: {
-            "@type": "PostalAddress",
-            streetAddress: firmaBilgileri.address,
-            addressLocality: "Çankaya",
-            addressRegion: "Ankara",
-            addressCountry: "TR"
-        },
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: googleReviewsData.rating.toString(),
-            reviewCount: googleReviewsData.user_ratings_total.toString(),
-            bestRating: "5",
-            worstRating: "1"
-        },
-        review: googleReviewsData.reviews.slice(0, 6).map((rev) => ({
-            "@type": "Review",
-            author: {
-                "@type": "Person",
-                name: rev.author_name
-            },
-            datePublished: new Date(rev.time < 10000000000 ? rev.time * 1000 : rev.time).toISOString().split("T")[0],
-            reviewBody: rev.text,
-            reviewRating: {
-                "@type": "Rating",
-                ratingValue: rev.rating.toString(),
-                bestRating: "5",
-                worstRating: "1"
-            }
-        }))
-    };
-
     return (
         <>
             <BreadcrumbSchema items={[
                 { name: "Ana Sayfa", href: "/" },
                 { name: "Referanslar & Yorumlar", href: "/referanslar" },
             ]} />
-
-            {/* JSON-LD Rich Snippet for Google Search Stars */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsJsonLd) }}
-            />
 
             <main className="bg-slate-50 py-16 md:py-24 min-h-screen">
                 <div className="container-custom max-w-6xl">
@@ -90,7 +48,7 @@ export default function ReferanslarPage() {
                         </nav>
 
                         <span className="inline-block text-xs font-black tracking-[0.2em] text-primary-600 uppercase bg-primary-50 px-3.5 py-1.5 rounded-full border border-primary-100">
-                            Şeffaf ve Doğrulanmış Müşteri Deneyimi
+                            Müşteri Deneyimleri
                         </span>
 
                         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-black text-slate-900 tracking-tight leading-tight">
@@ -98,7 +56,7 @@ export default function ReferanslarPage() {
                         </h1>
 
                         <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-                            Ankara Özdemir Nakliyat olarak hiçbir yapay veya anonim yoruma yer vermiyoruz. Taşınma hizmeti almış gerçek müşterilerimizin Google Haritalar (Business Profile) üzerindeki bağımsız değerlendirmelerini anlık ve şeffaf olarak sunuyoruz.
+                            Google değerlendirmeleri, kaynağa erişilebildiğinde bu sayfada gösterilir. Taşıma kapsamı ve planlama hakkında doğrudan bilgi almak için bizimle iletişime geçebilirsiniz.
                         </p>
                     </div>
 

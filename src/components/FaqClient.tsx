@@ -77,10 +77,10 @@ export default function FaqClient() {
         : faqData.filter(faq => faq.category === activeCategory);
 
     const trustItems = [
-        { icon: <IconShield className="w-6 h-6" />, title: "Tam Kapsamlı Sigorta", desc: "Tüm eşyalarınız A+ sigorta poliçesi ile korunur" },
-        { icon: <IconCheck className="w-6 h-6" />, title: "Sözleşmeli Hizmet", desc: "Fiyat garantili resmi taşıma sözleşmesi" },
+        { icon: <IconShield className="w-6 h-6" />, title: "Poliçe ve Hizmet Kapsamı", desc: "Teminat ve istisnaları taşıma öncesinde görüşün" },
+        { icon: <IconCheck className="w-6 h-6" />, title: "Yazılı Hizmet Kapsamı", desc: "Fiyata dahil işlemleri teklif üzerinde kontrol edin" },
         { icon: <IconUsers className="w-6 h-6" />, title: "Uzman Kadro", desc: "Eğitimli ve deneyimli profesyonel ekip" },
-        { icon: <IconTruck className="w-6 h-6" />, title: "Modern Filo", desc: "GPS takipli kapalı kasa araç filosu" },
+        { icon: <IconTruck className="w-6 h-6" />, title: "Modern Filo", desc: "Eşya ve güzergâha göre araç planlaması" },
     ];
 
     return (
@@ -147,9 +147,9 @@ export default function FaqClient() {
                                 transition={{ delay: 0.45 }}
                                 className="flex flex-wrap justify-center gap-4 pt-6"
                             >
-                                <StatPill value="15+" label="Yıl Deneyim" icon={<IconStar className="w-5 h-5" />} />
-                                <StatPill value="10K+" label="Mutlu Müşteri" icon={<IconUsers className="w-5 h-5" />} />
-                                <StatPill value="%100" label="Sigortalı" icon={<IconShield className="w-5 h-5" />} />
+                                <StatPill value="Planlama" label="Taşınma Öncesi" icon={<IconStar className="w-5 h-5" />} />
+                                <StatPill value="İletişim" label="Sorularınızı İletin" icon={<IconUsers className="w-5 h-5" />} />
+                                <StatPill value="Kapsam" label="Önceden Görüşün" icon={<IconShield className="w-5 h-5" />} />
                             </motion.div>
                         </div>
                     </div>
@@ -202,6 +202,8 @@ export default function FaqClient() {
                                                 }`}
                                         >
                                             <button
+                                                aria-expanded={isOpen}
+                                                aria-controls={`faq-answer-${faq.id}`}
                                                 onClick={() => setOpenIndex(isOpen ? null : index)}
                                                 className="w-full flex items-center justify-between p-6 md:p-8 text-left gap-6"
                                             >
@@ -226,9 +228,10 @@ export default function FaqClient() {
                                             </button>
 
                                             <AnimatePresence>
-                                                {isOpen && (
                                                     <motion.div
-                                                        initial={{ height: 0, opacity: 0 }}
+                                                        id={`faq-answer-${faq.id}`}
+                                                        hidden={!isOpen}
+                                                        initial={false}
                                                         animate={{ height: "auto", opacity: 1 }}
                                                         exit={{ height: 0, opacity: 0 }}
                                                         transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
@@ -250,7 +253,6 @@ export default function FaqClient() {
                                                             </div>
                                                         </div>
                                                     </motion.div>
-                                                )}
                                             </AnimatePresence>
                                         </motion.div>
                                     );

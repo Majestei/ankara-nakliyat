@@ -12,7 +12,7 @@ interface PricingTableProps {
 
 export default function PricingTable({
     title = "2026 Ankara Evden Eve Nakliyat Fiyatları",
-    subtitle = "Ankara içi taşınmalarda sürpriz ek masraflarla karşılaşmamanız için oda sayısına ve hizmet kapsamına göre şeffaf ortalama fiyatlandırma tablomuz. Tüm fiyatlarımıza KDV, marangozluk ve sigorta dahildir.",
+    subtitle = "Oda sayısı tek başına fiyatı belirlemez. Eşya hacmi, mesafe, katlar ve ek hizmetleri paylaşarak güncel teklif alın; dahil hizmetleri yazılı olarak görüşün.",
     locationName = "Ankara",
 }: PricingTableProps) {
     const [packageType, setPackageType] = useState<"standart" | "toplamali">("standart");
@@ -21,25 +21,25 @@ export default function PricingTable({
         standart: [
             {
                 type: "1+1 Daire Taşıma",
-                price: "8.000 ₺ – 12.000 ₺",
-                team: "2-3 Uzman Personel",
+                price: "Teklif alın",
+                team: "Eşya listesine göre planlanır",
                 vehicle: "Kompakt Kapalı Kasa Araç",
-                duration: "3 - 5 Saat",
+                duration: "Adres ve kapsama göre görüşülür",
                 features: [
                     "Mobilya demontaj ve montajı",
                     "Beyaz eşya koruyucu kılıflama",
                     "Büyük mobilyaların patpat sarımı",
-                    "Tam kapsamlı emtia sigortası",
+                    "Varsa poliçe kapsamını görüşme",
                     "Ufak eşyaları müşteri koliler",
                 ],
                 popular: false,
             },
             {
                 type: "2+1 Daire Taşıma",
-                price: "12.000 ₺ – 16.500 ₺",
-                team: "3-4 Uzman Personel",
+                price: "Teklif alın",
+                team: "Eşya listesine göre planlanır",
                 vehicle: "Orta Boy Çelik Kasalı Kamyon",
-                duration: "4 - 6 Saat",
+                duration: "Adres ve kapsama göre görüşülür",
                 features: [
                     "Profesyonel marangoz desteği",
                     "Kraft kağıt ve patpat zırhlama",
@@ -51,10 +51,10 @@ export default function PricingTable({
             },
             {
                 type: "3+1 Daire Taşıma",
-                price: "16.500 ₺ – 23.000 ₺",
-                team: "4-5 Uzman Personel",
+                price: "Teklif alın",
+                team: "Eşya listesine göre planlanır",
                 vehicle: "Büyük Boy Geniş Hacimli Filo",
-                duration: "5 - 8 Saat",
+                duration: "Adres ve kapsama göre görüşülür",
                 features: [
                     "Tüm oda mobilyalarının montajı",
                     "Çift kat patpat ambalajlama",
@@ -66,10 +66,10 @@ export default function PricingTable({
             },
             {
                 type: "4+1 & Villa Taşıma",
-                price: "23.000 ₺ – 35.000 ₺",
-                team: "5-6 Kıdemli Personel",
+                price: "Teklif alın",
+                team: "Eşya listesine göre planlanır",
                 vehicle: "Maksimum Boy Çelik Kasa Kamyon",
-                duration: "Tam Gün Operasyon",
+                duration: "Adres ve kapsama göre görüşülür",
                 features: [
                     "Kişiye özel operasyon planı",
                     "Ağır mobilya ve piyano taşıma",
@@ -83,61 +83,61 @@ export default function PricingTable({
         toplamali: [
             {
                 type: "1+1 VIP Anahtar Teslim",
-                price: "11.500 ₺ – 15.500 ₺",
-                team: "3-4 Uzman Personel",
+                price: "Teklif alın",
+                team: "Eşya listesine göre planlanır",
                 vehicle: "Kompakt Kapalı Kasa Araç",
-                duration: "4 - 6 Saat",
+                duration: "Adres ve kapsama göre görüşülür",
                 features: [
                     "A'dan Z'ye tüm evi ekibimiz toplar",
                     "Mutfak eşyaları kraft kağıtla sarılır",
                     "Giysiler askılı dolaplara aktarılır",
                     "Tüm mobilya montajı ve yerleşimi",
-                    "Elinizi hiçbir şeye sürmezsiniz",
+                    "Paketleme kapsamını görüşme",
                 ],
                 popular: false,
             },
             {
                 type: "2+1 VIP Anahtar Teslim",
-                price: "16.500 ₺ – 22.500 ₺",
-                team: "4-5 Uzman Personel",
+                price: "Teklif alın",
+                team: "Eşya listesine göre planlanır",
                 vehicle: "Orta Boy Çelik Kasalı Kamyon",
-                duration: "5 - 7 Saat",
+                duration: "Adres ve kapsama göre görüşülür",
                 features: [
                     "Tüm mutfak, salon ve odalar kutulanır",
                     "Porselen & cam eşyalar özel kolilenir",
                     "Marangozlu gardırop ve baza kurulumu",
                     "Beyaz eşya tesisat bağlantıları",
-                    "Elinizi hiçbir şeye sürmezsiniz",
+                    "Paketleme kapsamını görüşme",
                 ],
                 popular: true,
             },
             {
                 type: "3+1 VIP Anahtar Teslim",
-                price: "22.500 ₺ – 31.000 ₺",
-                team: "5-6 Uzman Personel",
+                price: "Teklif alın",
+                team: "Eşya listesine göre planlanır",
                 vehicle: "Büyük Boy Geniş Hacimli Filo",
-                duration: "Tam Gün VIP Operasyon",
+                duration: "Adres ve kapsama göre görüşülür",
                 features: [
                     "Eviniz A'dan Z'ye paketlenir ve açılır",
                     "Kıyafetler yeni gardıroba yerleştirilir",
                     "Tüm ambalaj atıkları toplanıp atılır",
                     "Dış cephe asansörü ve çift ekip",
-                    "Elinizi hiçbir şeye sürmezsiniz",
+                    "Paketleme kapsamını görüşme",
                 ],
                 popular: false,
             },
             {
                 type: "4+1 & Villa VIP Teslim",
-                price: "32.000 ₺ – 48.000 ₺",
-                team: "6-8 Kıdemli Personel",
+                price: "Teklif alın",
+                team: "Eşya listesine göre planlanır",
                 vehicle: "Çift Kamyon veya Maksimum Filo",
-                duration: "1-2 Günlük Özel Operasyon",
+                duration: "Adres ve kapsama göre görüşülür",
                 features: [
                     "Özel ahşap sandıklama ve paketleme",
                     "Avize, perde, tablo montaj uzmanı",
-                    "Eksiksiz anahtar teslim yerleşim",
-                    "Vip koordinatör eşliğinde taşıma",
-                    "Elinizi hiçbir şeye sürmezsiniz",
+                    "Yerleştirme kapsamını görüşme",
+                    "Taşıma sorumlusunu belirleme",
+                    "Paketleme kapsamını görüşme",
                 ],
                 popular: false,
             },
@@ -219,7 +219,7 @@ export default function PricingTable({
                                 </span>
                             ) : (
                                 <span>
-                                    ⭐ <strong className="text-white">Anahtar Teslim VIP:</strong> Elinizi hiçbir şeye sürmezsiniz! Tüm mutfak bardakları, elbiseler, kitaplar ve aksesuarlar ekibimizce özel kolilenir ve yeni evde yerleştirilir.
+                                    ⭐ <strong className="text-white">Anahtar Teslim VIP:</strong> Paketleme kapsamını görüşme! Tüm mutfak bardakları, elbiseler, kitaplar ve aksesuarlar ekibimizce özel kolilenir ve yeni evde yerleştirilir.
                                 </span>
                             )}
                         </div>
@@ -310,7 +310,7 @@ export default function PricingTable({
                             <div className="space-y-1.5 border-l-2 border-primary-500/40 pl-4">
                                 <h4 className="text-white font-black">1. Kat Durumu & Asansör</h4>
                                 <p className="text-slate-400 text-xs leading-relaxed">
-                                    Binaların kat yüksekliği ve merdiven yapısı incelenir. 25. kata kadar modüler dış cephe asansörü kullanılarak eşyalar çizilmeden transfer edilir.
+                                    Kat yüksekliği, merdiven genişliği, bina cephesi ve kurulum alanı asansör gereksinimini ve uygulanabilirliğini etkiler.
                                 </p>
                             </div>
                             <div className="space-y-1.5 border-l-2 border-primary-500/40 pl-4">
@@ -341,10 +341,10 @@ export default function PricingTable({
                                 <IconShield className="w-7 h-7" />
                             </div>
                             <h4 className="text-2xl font-heading font-black text-white tracking-tight">
-                                Sabit Fiyat Taahhüdü
+                                Yazılı Teklif Kapsamı
                             </h4>
                             <p className="text-xs text-slate-300 leading-relaxed">
-                                Taşınma günü kapıda &ldquo;eşya çok çıktı&rdquo; veya &ldquo;kat zormuş&rdquo; gibi bahanelerle kesinlikle ek ücret talep etmiyoruz. Keşif sonrası verilen fiyat yazılı sözleşmeyle sabitlenir.
+                                Teklifte eşya listesini, adresleri, katları ve dahil hizmetleri belirtin. Kapsam değişirse uygulanacak ücretleri, vergi ve ödeme koşullarını önceden görüşün.
                             </p>
                         </div>
                         <div className="pt-8 border-t border-white/10 mt-8 space-y-3">

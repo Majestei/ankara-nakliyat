@@ -1,10 +1,14 @@
+// Recovery freeze: publishing more location/service combinations is prohibited.
+// Remove this guard only after a reviewed URL inventory and query ownership plan.
+throw new Error('SEO recovery freeze: programmatic article generation is disabled. Existing content has not been changed.');
+
 const fs = require('fs');
 
 const districts = [
-    "Çankaya", "Keçiören", "Yenimahalle", "Mamak", "Etimesgut", 
-    "Sincan", "Altındağ", "Pursaklar", "Gölbaşı", "Polatlı", 
-    "Çubuk", "Kahramankazan", "Beypazarı", "Elmadağ", "Şereflikoçhisar", 
-    "Akyurt", "Nallıhan", "Haymana", "Kızılcahamam", "Bala", 
+    "Çankaya", "Keçiören", "Yenimahalle", "Mamak", "Etimesgut",
+    "Sincan", "Altındağ", "Pursaklar", "Gölbaşı", "Polatlı",
+    "Çubuk", "Kahramankazan", "Beypazarı", "Elmadağ", "Şereflikoçhisar",
+    "Akyurt", "Nallıhan", "Haymana", "Kızılcahamam", "Bala",
     "Kalecik", "Ayaş", "Çamlıdere", "Güdül", "Evren"
 ];
 
@@ -34,13 +38,13 @@ districts.forEach(district => {
         variations.forEach(variation => {
             const title = `${district} ${service.key} ${variation.type}`;
             const slug = generateSlug(title);
-            
+
             let content = `## ${title} Rehberi\n\n`;
             content += `Ankara'nın en önemli bölgelerinden biri olan **${district}** ilçesinde profesyonel taşımacılık hizmetleri giderek daha fazla önem kazanmaktadır. Bu rehberimizde, bölgedeki **${service.key}** hizmetlerine dair tüm detayları ve ${variation.type.toLowerCase()} hakkında bilinmesi gerekenleri uzman ekibimizle birlikte derledik.\n\n`;
-            
+
             content += `### Neden Ankara Özdemir Nakliyat?\n\n`;
             content += `${district} bölgesinde uzun yıllardır faaliyet gösteren firmamız, tamamen bölgenin mimari yapısına, trafik saatlerine ve binaların fiziksel koşullarına hakimdir. Özelikle ${service.key.toLowerCase()} ihtiyacınızda, eşyalarınızın güvenliği bizim birincil önceliğimizdir.\n\n`;
-            
+
             if (variation.type === "Fiyatları") {
                 content += `### ${district} Bölgesi Nakliye Fiyatları Nasıl Hesaplanır?\n\n`;
                 content += `Müşterilerimizin en çok merak ettiği konulardan biri olan maliyetler, tamamen şeffaf bir şekilde hesaplanmaktadır:\n`;
@@ -56,13 +60,13 @@ districts.forEach(district => {
                 content += `- **Kendi Araç Filosu:** Kiralık araçlarla değil, özmal kapalı kasa araçlarla hizmet verilmelidir.\n\n`;
                 content += `> [!IMPORTANT]\n> Ankara Özdemir Nakliyat olarak, ${district} konumundaki tüm operasyonlarımızı kendi kadrolu, uzman personelimiz ve kendi asansörlü araçlarımızla yürütmekteyiz.\n\n`;
             }
-            
+
             content += `### Süreç Nasıl İşliyor?\n\n`;
             content += `1. **Ücretsiz Ekspertiz:** Sizi adresinizde ziyaret ederek eşya analizi yapıyoruz.\n`;
             content += `2. **Profesyonel Ambalajlama:** Patpat naylonlar, streç filmler ve özel kutularla eşyalarınız güvenceye alınıyor.\n`;
             content += `3. **Güvenli Taşıma:** Eğitimli personelimiz ve teknolojik asansörlerimizle hızlı nakliye gerçekleştiriliyor.\n`;
             content += `4. **Kurulum ve Teslimat:** Yeni adresinizde mobilyalarınız demonte edildiği gibi monte ediliyor.\n\n`;
-            
+
             content += `Eşyalarınızın değerini biliyor, onları kendi eşyamız gibi taşıyoruz. ${district} genelinde kusursuz **${service.key}** ayrıcalığıyla tanışmak için hemen çağrı merkezimizi arayın.`;
 
             makaleler.push({

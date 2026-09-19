@@ -4,19 +4,19 @@ import ServiceSchema from "@/components/ServiceSchema";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-    title: "Ankara Ofis Taşıma: Kurumsal & Sigortalı Nakliyat",
-    description: "Ankara ofis ve iş yeri taşıma hizmeti. IT altyapı güvenliği, arşiv kolileme ve hafta sonu taşıma ile sıfır iş kaybı. Hemen kurumsal teklif alın!",
+    title: "Ankara Ofis Taşıma: Ekipman, Arşiv ve Planlama",
+    description: "Ankara ofis taşıma için mobilya, elektronik ekipman ve arşiv listesini hazırlayın. İş takvimi, erişim ve kurulum kapsamına göre teklif alın.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler/ofis-tasima" },
     openGraph: {
-        title: "Ankara Ofis Taşıma: Kurumsal & Sigortalı Nakliyat",
-        description: "Ankara ofis ve iş yeri taşıma hizmeti. IT altyapı güvenliği, arşiv kolileme ve hafta sonu taşıma ile sıfır iş kaybı. Hemen kurumsal teklif alın!",
+        title: "Ankara Ofis Taşıma: Ekipman, Arşiv ve Planlama",
+        description: "Ankara ofis taşıma için mobilya, elektronik ekipman ve arşiv listesini hazırlayın. İş takvimi, erişim ve kurulum kapsamına göre teklif alın.",
         url: "https://ankaraozdemirnakliyat.com/hizmetler/ofis-tasima",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Ankara Ofis Taşıma: Kurumsal & Sigortalı Nakliyat",
-        description: "Ankara ofis ve iş yeri taşıma hizmeti. IT altyapı güvenliği, arşiv kolileme ve hafta sonu taşıma ile sıfır iş kaybı. Hemen kurumsal teklif alın!",
+        title: "Ankara Ofis Taşıma: Ekipman, Arşiv ve Planlama",
+        description: "Ankara ofis taşıma için mobilya, elektronik ekipman ve arşiv listesini hazırlayın. İş takvimi, erişim ve kurulum kapsamına göre teklif alın.",
     }
 };
 
@@ -31,11 +31,11 @@ export default function OfisTasimaPage() {
             <section className="bg-slate-50 border-b border-slate-200 py-20 md:py-28 relative overflow-hidden">
                 <div className="absolute inset-0 overflow-hidden pointer-events-none"><div className="absolute -top-40 -right-40 w-[400px] h-[400px] bg-primary-100 rounded-full blur-[100px]"></div></div>
                 <div className="container-custom relative z-10 text-center">
-                    <span className="inline-block bg-primary-100 text-primary-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-4 border border-primary-200 shadow-sm">Kurumsal Çözüm & Sıfır İş Kaybı</span>
+                    <span className="inline-block bg-primary-100 text-primary-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-4 border border-primary-200 shadow-sm">İş Takvimine Göre Planlama</span>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black mb-5 text-slate-900">
                         Ankara <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-orange-500">Ofis & Büro Taşıma</span>
                     </h1>
-                    <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">Kurumsal şirketinizi, IT altyapınızı ve arşivinizi hafta sonu veya mesai dışı saatlerde sıfır iş kaybı ile taşıyoruz.</p>
+                    <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">Ofis mobilyaları, elektronik ekipman ve arşivlerin taşınmasını iş takviminiz, bina erişimi ve kurulum ihtiyaçlarıyla birlikte planlayın.</p>
                 </div>
             </section>
 
@@ -51,21 +51,21 @@ export default function OfisTasimaPage() {
                             <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
                                 <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Küçük İş Yeri</span>
                                 <h3 className="text-xl font-bold text-slate-900 mb-2">1 - 5 Çalışanlı Ofis</h3>
-                                <div className="text-2xl font-black text-slate-900 mb-2">12.000 - 18.000 ₺</div>
+                                <div className="text-2xl font-black text-slate-900 mb-2">Teklif İsteyin</div>
                                 <p className="text-xs text-slate-500">Masa takımları, koltuklar, temel arşiv kolileme ve demonte/monte dahil.</p>
                             </div>
                             <div className="p-6 bg-primary-50/50 rounded-2xl border-2 border-primary-500/30 relative">
-                                <span className="absolute -top-3 right-4 bg-primary-500 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded-full">Popüler Kurumsal</span>
+                                <span className="absolute -top-3 right-4 bg-primary-500 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded-full">Teklif Kapsamı</span>
                                 <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Orta Ölçek</span>
                                 <h3 className="text-xl font-bold text-slate-900 mb-2">6 - 15 Çalışanlı Ofis</h3>
-                                <div className="text-2xl font-black text-slate-900 mb-2">20.000 - 38.000 ₺</div>
+                                <div className="text-2xl font-black text-slate-900 mb-2">Teklif İsteyin</div>
                                 <p className="text-xs text-slate-500">Departman bazlı renkli etiketleme, IT altyapı koruma ve hafta sonu taşıma.</p>
                             </div>
                             <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
                                 <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Büyük Kurumsal</span>
                                 <h3 className="text-xl font-bold text-slate-900 mb-2">Plaza & Şirket Merkezi</h3>
                                 <div className="text-2xl font-black text-slate-900 mb-2">Özel Keşif</div>
-                                <p className="text-xs text-slate-500">Ücretsiz fiziki keşif, detaylı iş planı, sözleşmeli sabit fiyat teklifi.</p>
+                                <p className="text-xs text-slate-500">Eşya envanteri, erişim ve zaman planına göre kapsamı ve fiyatı görüşün.</p>
                             </div>
                         </div>
 
@@ -75,9 +75,9 @@ export default function OfisTasimaPage() {
                                 { title: "IT Altyapı ve Sunucu Güvenliği", desc: "Bilgisayar, sunucu ve hassas elektronik cihazlar antistatik hava kanallı korumalarla paketlenir." },
                                 { title: "Numaralı Arşiv Yönetimi", desc: "Dosyalar departman ve raf sırasına göre numaralandırılarak yeni ofiste eksiksiz dizilir." },
                                 { title: "Mobilya Demontaj & Montaj", desc: "Ofis masaları, yönetici takımları ve bölme paneller profesyonel marangozlarımızca sökülüp kurulur." },
-                                { title: "Hafta Sonu / Gece Taşıma", desc: "Şirketinizin mesaisini ve müşteri iletişimini aksatmamak için Cuma akşamı başlayıp Pazartesi sabahı bitiriyoruz." },
+                                { title: "Hafta Sonu / Gece Taşıma", desc: "Mesai dışı veya hafta sonu taşıma için bina yönetimi, ekip ve tarih uygunluğunu önceden teyit edin." },
                                 { title: "Departman Bazlı Etiketleme", desc: "Her departmanın eşyası ve kolisi ayrı renk kodlarıyla etiketlenir, karışıklık yaşanmaz." },
-                                { title: "Geniş Teminatlı Kurumsal Sigorta", desc: "Tüm mobilya, teknolojik cihaz ve demirbaşlar taşıma süresince resmi sigorta poliçesi altındadır." },
+                                { title: "Poliçe Kapsamı", desc: "Elektronik cihazlar ve demirbaşlar için varsa poliçenin kapsamını, limitlerini ve istisnalarını inceleyin." },
                             ].map((item, i) => (
                                 <div key={i} className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
                                     <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
@@ -91,13 +91,13 @@ export default function OfisTasimaPage() {
                             <li><strong>Ön Planlama & Keşif:</strong> Ofisinizi ziyaret ederek eşya hacmini, kat durumunu ve zaman çizelgesini belirliyoruz.</li>
                             <li><strong>Etiketleme & Kodlama:</strong> Tüm masa, dolap ve koliler ilgili personelin ismi ve departman koduyla etiketlenir.</li>
                             <li><strong>Profesyonel Paketleme:</strong> Elektronikler statik korumalı balonlu naylonla, dosyalar kilitli kolilerle ambalajlanır.</li>
-                            <li><strong>Güvenli Lojistik:</strong> Çelik kapalı kasa araçlarımız ve modüler asansörlerimizle hasarsız taşıma yapılır.</li>
+                            <li><strong>Güvenli Lojistik:</strong> Araç ve yükleme yöntemi; eşya hacmi, hassasiyet ve bina erişimine göre görüşülür.</li>
                             <li><strong>Anahtar Teslim Kurulum:</strong> Yeni ofiste mobilyalar monte edilir, masalar yerleştirilir ve kullanıma hazır teslim edilir.</li>
                         </ol>
 
                         <div className="mt-12 p-8 bg-gradient-to-br from-primary-600 to-orange-600 rounded-3xl text-white text-center shadow-xl not-prose">
                             <h3 className="text-2xl font-bold mb-4">Kurumsal Ofis Taşıma Teklifi Alın</h3>
-                            <p className="mb-6 opacity-90">İş kaybı yaşamadan, profesyonel sözleşmeli ofis taşımacılığı için kurumsal temsilcimizi arayın!</p>
+                            <p className="mb-6 opacity-90">Ofis envanteriniz ve iş takviminizle taşıma kapsamını, teslim planını ve güncel fiyatı görüşün.</p>
                             <a href={`tel:${firmaBilgileri.phone.replace(/\s/g, "")}`} className="inline-block bg-white text-primary-600 font-bold px-8 py-4 rounded-full shadow-lg hover:bg-slate-50 transition-all hover:scale-105">
                                 Hemen Arayın: {firmaBilgileri.phone}
                             </a>

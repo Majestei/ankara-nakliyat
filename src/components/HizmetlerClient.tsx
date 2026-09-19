@@ -53,16 +53,16 @@ function AnimatedIconCycle() {
         <IconShield key="shield" className="w-64 h-64" />,
         <IconMapPin key="map" className="w-64 h-64" />
     ];
-    
+
     const [index, setIndex] = React.useState(0);
-    
+
     React.useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prev) => (prev + 1) % icons.length);
         }, 3000);
         return () => clearInterval(interval);
     }, [icons.length]);
-    
+
     return (
         <AnimatePresence mode="wait">
             <motion.div
@@ -84,22 +84,22 @@ function getServiceDetails(id: string) {
         case "evden-eve-nakliyat":
             return { tag: "Anahtar Teslim Taşınma", badgeTitle: "VIP Paketleme", badgeDesc: "Beyaz Eşya & Mobilya Koruma" };
         case "sehir-ici-nakliyat":
-            return { tag: "Aynı Gün Teslimat", badgeTitle: "Hızlı Lojistik", badgeDesc: "Ankara'nın Her Köşesine Erişim" };
+            return { tag: "Tarih ve Rota Planı", badgeTitle: "Hızlı Lojistik", badgeDesc: "Adres Bazında Uygunluk" };
         case "sehirler-arasi-nakliyat":
-            return { tag: "81 İlde Hizmet Ağı", badgeTitle: "Rota Güvencesi", badgeDesc: "GPS Takip & Sigortalı Yolculuk" };
+            return { tag: "Şehirler Arası Planlama", badgeTitle: "Rota Planlaması", badgeDesc: "Teslim ve Kapsamı Görüşün" };
         case "ofis-tasima":
-            return { tag: "İş Sürekliliği Garantisi", badgeTitle: "IT & Arşiv Koruma", badgeDesc: "Hassas Ekipman Taşımacılığı" };
+            return { tag: "İş Takvimine Göre Planlama", badgeTitle: "IT & Arşiv Koruma", badgeDesc: "Hassas Ekipman Taşımacılığı" };
         case "parca-esya-tasima":
             return { tag: "Ekonomik Çözümler", badgeTitle: "Parsiyel Lojistik", badgeDesc: "Küçük Hacimli Eşya Güvencesi" };
         case "asansorlu-tasima":
-            return { tag: "Dikey Lojistik Çözümü", badgeTitle: "15. Kat Erişimi", badgeDesc: "Dar Merdivenlere Modern Çözüm" };
+            return { tag: "Dikey Lojistik Çözümü", badgeTitle: "Kurulum Uygunluğu", badgeDesc: "Dar Merdivenlere Modern Çözüm" };
         case "paketleme":
-            return { tag: "Sıfır Hasar Politikası", badgeTitle: "Ultra Koruma", badgeDesc: "Profesyonel Ambalaj Teknikleri" };
+            return { tag: "Eşyaya Uygun Paketleme", badgeTitle: "Ultra Koruma", badgeDesc: "Profesyonel Ambalaj Teknikleri" };
         case "nakliyat-sigortasi":
         case "sigorta":
-            return { tag: "Maddi Risk Koruması", badgeTitle: "Kapsamlı Poliçe", badgeDesc: "Taşıma Boyunca %100 Teminat" };
+            return { tag: "Maddi Risk Koruması", badgeTitle: "Poliçe Koşulları", badgeDesc: "Limit ve İstisnaları Görüşün" };
         default:
-            return { tag: "Premium Servis", badgeTitle: "Kurumsal Güvence", badgeDesc: "Profesyonel Hizmet Garantisi" };
+            return { tag: "Premium Servis", badgeTitle: "Kurumsal Güvence", badgeDesc: "Hizmet Kapsamını Görüşün" };
     }
 }
 
@@ -312,7 +312,7 @@ export default function HizmetlerClient() {
                             >
                                 <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
                                 <AnimatedIconCycle />
-                                
+
                                 {/* Decorative elements inside the box */}
                                 <div className="absolute top-8 left-8 w-4 h-4 rounded-full bg-white/20 blur-sm" />
                                 <div className="absolute bottom-12 right-12 w-8 h-8 rounded-full bg-white/10 blur-md" />
@@ -344,9 +344,9 @@ export default function HizmetlerClient() {
             ))}
 
             {/* ── 2026 PRICING TABLE ── */}
-            <PricingTable 
+            <PricingTable
                 title="2026 Ankara Nakliyat Fiyatları"
-                subtitle="Tüm nakliyat hizmetlerimizde geçerli, oda sayısına ve operasyon kapsamına göre şeffaf ortalama fiyatlandırma tarifesi. Fiyatlarımıza KDV, marangozluk ve sigorta dahildir."
+                subtitle="Eşya hacmi, erişim, mesafe ve ek hizmetleri paylaşarak teklif alın. Dahil işleri, vergi ve ödeme koşullarını önceden görüşün."
                 locationName="Ankara"
             />
 
@@ -356,13 +356,13 @@ export default function HizmetlerClient() {
             {/* ── FINAL TRUST BANNER ── */}
             <section className="py-24 md:py-40 bg-slate-50 relative overflow-hidden">
                 <div className="container-custom text-center relative z-10 px-4 md:px-0">
-                    <h3 className="text-4xl md:text-7xl font-heading font-black text-slate-950 mb-12 md:mb-20 tracking-tighter">Bize Güvenen 10.000+ Mutlu Yuva</h3>
+                    <h3 className="text-4xl md:text-7xl font-heading font-black text-slate-950 mb-12 md:mb-20 tracking-tighter">Taşınma Öncesi Görüşülecek Başlıklar</h3>
                     <ul className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
-                            { label: "Yıllık Deneyim", val: "15+", icon: <IconShield /> },
-                            { label: "Tamamlanan İş", val: "10K+", icon: <IconTruck /> },
-                            { label: "Google Puanı", val: "4.9", icon: <IconStar /> },
-                            { label: "Araç Filosu", val: "10+", icon: <IconBox /> },
+                            { label: "Taşıma Kapsamı", val: "Ev & Ofis", icon: <IconShield /> },
+                            { label: "Eşya Hazırlığı", val: "Paketleme", icon: <IconTruck /> },
+                            { label: "Adres Bilgisi", val: "Erişim", icon: <IconStar /> },
+                            { label: "Zaman Planı", val: "Takvim", icon: <IconBox /> },
                         ].map((stat, i) => (
                             <motion.li
                                 key={i}

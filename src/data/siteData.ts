@@ -147,11 +147,11 @@ export const hizmetler = [
         title: "Evden Eve Nakliyat",
         icon: "🚚",
         shortDesc: "Profesyonel ekibimizle güvenli ve hızlı evden eve taşımacılık hizmeti.",
-        description: "Ankara ve tüm Türkiye genelinde profesyonel evden eve nakliyat hizmeti sunuyoruz. Deneyimli ekibimiz, modern araç filomuz ve **eşya paketleme teknikleri** ile sigortalı taşımacılık anlayışımızla eşyalarınızı en güvenli şekilde yeni adresinize taşıyoruz.",
+        description: "Ankara evden eve nakliyat için eşya listesi, adresler, kat ve tarih bilgisiyle taşıma kapsamını planlayın. Paketleme, söküm ve kurulum ihtiyaçlarını teklif öncesinde paylaşın.",
         features: [
             "Ücretsiz ekspertiz ve fiyat teklifi",
             "Profesyonel paketleme hizmeti",
-            "Sigortalı taşıma poliçesi",
+            "Poliçe koşullarının görüşülmesi",
             "Mobilya sökme ve kurulum",
             "Asansörlü taşıma imkanı",
         ],
@@ -161,26 +161,26 @@ export const hizmetler = [
         title: "Şehir İçi Nakliyat",
         icon: "🏙️",
         shortDesc: "Ankara şehir içi hızlı ve ekonomik nakliyat çözümleri.",
-        description: "Ankara'nın tüm ilçelerinde şehir içi nakliyat hizmeti veriyoruz. **Şehirler arası lojistik maliyetleri** göz önünde bulundurularak, şehir içi taşımalarda en ekonomik çözümleri sunuyoruz.",
+        description: "Ankara içi taşınmalarda iki adresin erişimi, yükleme alanı ve taşınma saati birlikte değerlendirilir. Eşya miktarı ve paketleme ihtiyacınıza göre güncel teklif isteyin.",
         features: [
-            "Aynı gün teslimat",
+            "Teslim saatinin planlanması",
             "Ekonomik fiyatlar",
-            "Tüm ilçelere hizmet",
+            "Adres uygunluğunun değerlendirilmesi",
             "Profesyonel ekip",
-            "Sigortalı taşıma",
+            "Varsa poliçe kapsamının görüşülmesi",
         ],
     },
     {
         id: "sehirler-arasi-nakliyat",
         title: "Şehirler Arası Nakliyat",
         icon: "🛣️",
-        shortDesc: "Türkiye'nin 20 iline güvenli şehirler arası nakliyat.",
-        description: "Ankara'dan Türkiye'nin her köşesine şehirler arası nakliyat hizmeti sunuyoruz. Geniş araç filomuz ve deneyimli şoförlerimizle eşyalarınız güvende. **Sigortalı taşıma poliçesi** ile eşyalarınız yol boyunca koruma altındadır.",
+        shortDesc: "Ankara çıkışlı şehirler arası taşıma planlaması.",
+        description: "Ankara çıkışlı şehirler arası nakliyat için çıkış ve varış adreslerini, eşya hacmini ve teslim tarihini paylaşın. Araç, güzergâh, paketleme ve varsa poliçe koşullarını teklif sırasında görüşün.",
         features: [
-            "20 ile hizmet",
+            "Güzergâh uygunluğu değerlendirmesi",
             "Parsiyel ve komple taşıma",
-            "GPS takip sistemi",
-            "Sigortalı taşımacılık",
+            "Sevkiyat bilgilendirmesi",
+            "Poliçe ve teslim koşullarının görüşülmesi",
             "Kapıdan kapıya hizmet",
         ],
     },
@@ -196,7 +196,7 @@ export const hizmetler = [
             "Elektronik cihaz koruması",
             "Arşiv taşımacılığı",
             "Mobilya montaj/demontaj",
-            "IT altyapı taşıma desteği",
+            "Elektronik cihaz taşıma planı",
         ],
     },
     {
@@ -204,13 +204,13 @@ export const hizmetler = [
         title: "Parça Eşya Taşıma",
         icon: "📦",
         shortDesc: "Tek parça eşyalarınız için ekonomik taşıma çözümleri.",
-        description: "Sadece birkaç parça eşyanızı mı taşımak istiyorsunuz? Parça eşya taşıma hizmetimizle ekonomik ve hızlı çözümler sunuyoruz. **Küçük araç filosu** ile dar sokaklara erişim sağlıyoruz.",
+        description: "Bir veya birkaç eşyanın taşınması için adet, ölçü, fotoğraf ve adres bilgilerinizi paylaşın. Paketleme, yükleme yardımı ve teslim tarihini teklifin kapsamıyla birlikte değerlendirin.",
         features: [
             "Ekonomik fiyatlar",
             "Hızlı teslimat",
             "Tek parçadan taşıma",
-            "Paketleme dahil",
-            "Sigortalı taşıma",
+            "Paketleme kapsamının görüşülmesi",
+            "Varsa poliçe kapsamının görüşülmesi",
         ],
     },
     {
@@ -218,13 +218,13 @@ export const hizmetler = [
         title: "Asansörlü Taşımacılık",
         icon: "🏗️",
         shortDesc: "Yüksek katlı binalar için asansörlü taşıma hizmeti.",
-        description: "Dar merdivenler ve yüksek katlar artık sorun değil! Asansörlü taşıma hizmetimizle eşyalarınızı güvenle taşıyoruz. **15. kata kadar ulaşan asansör sistemimizle** hizmetinizdeyiz.",
+        description: "Asansör gereksinimi; kat yüksekliği, bina cephesi, eşya boyutu ve kurulum alanının uygunluğuna göre değerlendirilir.",
         features: [
-            "10+ kata kadar hizmet",
+            "Kat ve zemine göre asansör değerlendirmesi",
             "Ağır eşya taşıma",
             "Güvenli eşya indirme/çıkartma",
             "Profesyonel operatörler",
-            "Tüm ilçelerde hizmet",
+            "Adres özelinde uygunluk kontrolü",
         ],
     },
     {
@@ -245,14 +245,14 @@ export const hizmetler = [
         id: "nakliyat-sigortasi",
         title: "Nakliyat Sigortası",
         icon: "🛡️",
-        shortDesc: "Tam kapsamlı nakliyat sigortası ile güvende olun.",
-        description: "Taşıma sürecinde eşyalarınız tam kapsamlı sigorta ile güvence altındadır. Olası hasarlarda hızlı ve adil tazminat süreci sunuyoruz.",
+        shortDesc: "Taşıma öncesinde poliçe kapsamını ve koşullarını inceleyin.",
+        description: "Varsa taşıma poliçesinin kapsamını, limitlerini, istisnalarını ve hasar bildirim koşullarını yazılı olarak inceleyin. Eşya değerini ve paketleme sorumluluğunu teklif öncesinde netleştirin.",
         features: [
-            "Tam kapsamlı koruma",
-            "Hızlı hasar tespit",
-            "Adil tazminat süreci",
-            "Tüm eşya kategorileri",
-            "Anlaşmalı sigorta şirketleri",
+            "Kapsam ve limit kontrolü",
+            "Eşya durumunun kayıt altına alınması",
+            "Hasar bildirim koşulları",
+            "İstisnaların incelenmesi",
+            "Poliçe bilgilerinin teyidi",
         ],
     },
 ];
@@ -264,7 +264,7 @@ export const firmaBilgileri = {
     phone: "0545 656 81 03",
     phoneSecondary: "0541 878 78 60",
     email: "bilgi@ankaraozdemirnakliyat.com",
-    address: "Atatürk Mahallesi Mithatpaşa Caddesi, Özmert Apartmanı No: 6/8",
+    address: "Atatürk Mahallesi Mithatpaşa Caddesi, Özmert Apartmanı No: 6/8, Sincan / Ankara",
     workingHours: "Pazartesi - Cumartesi: 07:00 - 21:00 | Pazar: 09:00 - 18:00",
     mapUrl: "https://www.google.com/maps/place/Ankara+%C3%96zdemir+Nakliyat+-+Ankara+Evden+Eve+Nakliyat/@39.7535708,32.1973644,9z/data=!3m1!4b1!4m6!3m5!1s0x6e092525bb874c41:0x3bceb88d30a5fe73!8m2!3d39.75438!4d32.856727!16s%2Fg%2F11zb75hrp0",
     mapsCid: "4309584809986227827",
@@ -304,7 +304,7 @@ export const sss = [
     },
     {
         question: "Taşıma sigortası var mı?",
-        answer: "Evet, tüm taşımalarımız sigorta kapsamındadır. Eşyalarınız taşıma süresince tam kapsamlı sigorta ile güvence altındadır.",
+        answer: "Varsa poliçenin kapsamını, limitlerini ve istisnalarını teklif görüşmesinde inceleyin. Paketleme ve hasar bildirim koşullarını yazılı olarak netleştirin.",
     },
     {
         question: "Paketleme hizmeti dahil mi?",
@@ -312,143 +312,119 @@ export const sss = [
     },
     {
         question: "Hangi bölgelere hizmet veriyorsunuz?",
-        answer: "Ankara'nın tüm ilçelerinde ve Türkiye'nin 20 ilinde hizmet vermekteyiz. Şehir içi, şehirler arası ve uluslararası taşımacılık yapıyoruz.",
+        answer: "Ankara içi ve Ankara çıkışlı taşınmalar için iki adresi ve istediğiniz tarihi paylaşın. Güzergâh ve hizmet uygunluğunu görüşelim.",
     },
     {
         question: "Taşınma günü ne kadar sürer?",
-        answer: "Taşınma süresi eşya miktarına ve mesafeye göre değişir. Ortalama bir ev taşıması 4-8 saat arasında tamamlanmaktadır.",
+        answer: "Taşınma süresi; eşya miktarı, bina erişimi, yol, paketleme ve kurulum ihtiyacına göre değişir. Adres bilgileriyle size uygun bir zaman planı isteyin.",
     },
     {
         question: "Ağır eşyaları taşıyor musunuz?",
-        answer: "Evet, piyano, çelik kasa, endüstriyel makineler gibi ağır eşyaları özel ekipmanlarımızla güvenle taşıyoruz.",
+        answer: "Piyano, çelik kasa veya başka bir ağır eşya için ölçü, ağırlık ve iki adresin erişim bilgilerini paylaşın. Gerekli ekipman ve hizmet uygunluğunu taşıma öncesinde teyit edin.",
     },
 ];
 
 // İlçe Bazlı SEO İçerikleri
 export const ilceIcerikleri: Record<string, string[]> = {
     "cankaya": [
-        "Çankaya nakliyat hizmetlerimizle, Ankara'nın en yoğun ve elit bölgelerinde profesyonel çözümler sunuyoruz. **Ayrancı'nın dar sokakları**ndan **Yıldız'ın yüksek katlı siteleri**ne kadar her noktada tecrübeli ekibimizle hizmetinizdeyiz.",
-        "Özellikle **Çukurambar ve Çayyolu** bölgelerindeki modern rezidanslar için geliştirdiğimiz **15. kata kadar ulaşan asansörlü taşıma** sistemimizle, eşyalarınızı sıfır riskle taşıyoruz. Çankaya evden eve nakliyat süreçlerinde, bölgenin trafik yoğunluğunu ve park sorunlarını önceden planlayarak operasyonlarımızı aksatmadan yürütüyoruz.",
-        "Mithatpaşa, Kızılay ve Bahçelievler gibi merkezi noktalarda ofis taşıma hizmetlerimizde, kurumsal dosyalarınızın ve elektronik cihazlarınızın güvenliğini ön planda tutuyoruz. Çankaya'da nakliyat firması arıyorsanız, 15 yıllık tecrübemizle en doğru adres Ankara Özdemir'dir."
+        "Çankaya için evden eve taşıma teklifi alırken Ayrancı, Çukurambar, Yıldız veya başka bir mahalledeki açık adresinizi belirtin. İlçe adı tek başına bina girişini, kat yüksekliğini ve aracın yanaşabileceği alanı göstermez.",
+        "Site veya apartman yönetiminin taşıma saatlerini, yük asansörü kullanımını ve ortak alan kurallarını önceden öğrenin. Dış cephe asansörü düşünülüyorsa her iki adresteki kurulum alanının uygunluğunu ayrıca değerlendirin.",
+        "Ev taşınması ile ofis taşınmasının eşya listesi farklıdır. Ofiste arşiv, bilgisayar ve mobilyaları ayrı gruplandırın; teslim alacak kişiyi ve yeniden çalışmaya başlama tarihini planlayın."
     ],
     "kecioren": [
-        "Keçiören nakliyat operasyonlarımızda, Ankara'nın en büyük ilçelerinden birinde olmanın getirdiği lojistik zorlukları ustalıkla yönetiyoruz. **Etlik, İncirli ve Ayvalı** bölgelerindeki eski yapıların dar merdiven boşlukları, bizim için sorun değil.",
-        "**Keçiören asansörlü nakliyat** sistemimizle, eşyalarınızı bina dışından güvenli bir şekilde indirip yüklüyoruz. Kuşcağız ve Bağlum gibi yeni gelişen bölgelerde ise modern araç filomuzla hızlı ve ekonomik çözümler sunmaktayız.",
-        "Keçiören evden eve nakliyat ihtiyaçlarınızda, uzman paketleme ekibimizle mutfak eşyalarınızdan beyaz eşyalarınıza kadar her şeyi özel koruyucu malzemelerle sarıyoruz. Keçiören'de güvenilir taşımacılık için bize günün her saati ulaşabilirsiniz."
+        "Keçiören içinde Etlik, İncirli, Ayvalı veya Bağlum adresiniz için teklif isterken bina girişi ile daire kapısı arasındaki taşıma yolunu tarif edin. Merdivenden geçmesi belirsiz büyük mobilyaların ölçülerini ve fotoğraflarını paylaşın.",
+        "Sökülebilen dolapları ve tek parça taşınacak eşyaları ayrı listelemek, paketleme ve ekip planını kolaylaştırır. Asansör kurulumunun mümkün olup olmadığı ve hangi işlerin fiyata dahil olduğu adres bilgileriyle netleşmelidir."
     ],
     "yenimahalle": [
-        "Yenimahalle nakliyat hizmetlerimizde, özellikle **Batıkent'teki geniş site yerleşimleri** ve **Demetevler'in yoğun yapılaşması** için farklı stratejiler uyguluyoruz. Batıkent evden eve nakliyat süreçlerinde geniş araç filomuzla hızlı bir operasyon sunarken, merkez Yenimahalle'de daha pratik çözümler üretiyoruz.",
-        "İvedik Organize Sanayi bölgesine yakınlığımız sayesinde **iş yeri ve fabrika taşımacılığı** konusunda da uzmanlaşmış durumdayız. Yenimahalle asansörlü taşıma imkanlarımızla, yüksek katlı binalardaki taşınma stresini ortadan kaldırıyoruz.",
-        "Ostim ve Şentepe bölgelerinde de aktif olarak hizmet veren ekiplerimiz, Yenimahalle nakliyat firmaları arasında kalitesiyle öne çıkmaktadır. Sigortalı ve garantili taşımacılık için Yenimahalle ekibimizle tanışın."
+        "Yenimahalle taşınma planında Batıkent, Demetevler, Ostim veya diğer mahallelerdeki iki adresi birlikte değerlendirin. Site girişinden bina kapısına kadar taşıma mesafesi ve aracın bekleyebileceği alan teklif için önemli bilgilerdir.",
+        "İş yeri taşınıyorsa masa ve dolap sayısının yanında arşiv koli adedini, elektronik cihazları ve özel ekipmanları ayrıca belirtin. Ağ kurulumu veya cihaz bağlantısının taşıma kapsamına dahil olduğunu varsaymadan sorumluları belirleyin."
     ],
     "etimesgut": [
-        "Etimesgut nakliyat servisimizle, Ankara'nın batı aksında yer alan **Eryaman, Bağlıca ve Elvankent** gibi bölgelerde premium hizmet sunuyoruz. Eryaman'daki modern sitelerin yüksek katlarına özel asansör sistemlerimizle eşyalarınızı hasarsız taşıyoruz.",
-        "Bağlıca bölgesindeki müstakil ev ve villa taşımacılığında, antika eşyalarınız ve değerli mobilyalarınız için **özel paketleme teknikleri** kullanıyoruz. Etimesgut evden eve nakliyat süreçlerinde müşteri memnuniyetini en üst düzeyde tutuyoruz.",
-        "Elvankent ve Şeker mahallesi gibi yerleşim alanlarında günlük rutin taşımalarımızla, bölge halkına ekonomik ve güvenilir nakliye seçenekleri sunuyoruz. Etimesgut'ta profesyonel bir partner arıyorsanız doğru yerdesiniz."
+        "Etimesgut için Eryaman, Bağlıca veya Elvankent adresinizi paylaşırken blok, giriş ve kat bilgilerini de ekleyin. Aynı site içindeki iki blokta bile araç erişimi ve ortak alan kuralları farklı olabilir; her adresin koşullarını ayrı öğrenin.",
+        "Tam ev taşınması, birkaç beyaz eşyanın taşınması ve ofis taşınması için aynı teklif kapsamı kullanılmaz. Eşya listenize göre paketleme, söküm, kurulum ve yükleme yardımını netleştirin; teklifleri aynı kapsam üzerinden karşılaştırın."
     ],
     "mamak": [
-        "Mamak nakliyat hizmetlerimizde, ilçenin engebeli arazisi ve dik yokuşlarını (Akdere, Boğaziçi gibi) hesaba katan özel araçlarımızla hizmet veriyoruz. **Mamak evden eve nakliyat** süreçlerinde araçlarımızın güvenli yükleme sistemleri sayesinde eşyalarınız sarsıntısız taşınır.",
-        "Nato Yolu ve Ege Mahallesi gibi yeni konut projelerinde **asansörlü nakliye** imkanlarımızla hızlı kurulum sağlıyoruz. Mamak nakliyat firmaları arasında sigortalı taşımacılığı standart olarak sunan nadir firmalardan biriyiz.",
-        "Kıbrıs Köyü ve Lalahan gibi uzak noktalara da servis sağlayan lojistik ağımızla, Mamak'ın her mahallesine hakimiz. Ekonomik fiyatlarla kaliteli hizmet almak için Mamak ekibimizle iletişime geçin."
+        "Mamak içinde Akdere, Ege Mahallesi veya başka bir adresten taşınırken araç yaklaşımını ve bina girişini gösteren fotoğraflar hazırlayın. Yol eğimi, park düzeni ve erişim engelleri varsa bunları teklif aşamasında belirtin.",
+        "Büyük eşyaların daireden nasıl çıkarılacağını önceden görüşün. Merdiven kullanımı ile dış cephe asansörü seçeneği, eşya boyutu ve bina cephesi değerlendirilmeden kesinleştirilmemelidir."
     ],
     "sincan": [
-        "Sincan nakliyat operasyonlarımızla, Ankara'nın sanayi ve yerleşim kalbi olan bu bölgede 7/24 hizmetinizdeyiz. **Fatih, Yenikent ve Törekent** bölgelerindeki yoğun taşınma taleplerine profesyonel ekibimizle cevap veriyoruz.",
-        "Sincan evden eve nakliyat hizmetlerimizde, geniş araç filomuzun avantajıyla en uygun fiyatları sunabiliyoruz. **Sincan Organize Sanayi** bölgesindeki firmalar için sunduğumuz profesyonel ofis ve depo taşıma hizmetlerimizle kurumsal çözümler üretiyoruz.",
-        "Plevne ve İstasyon mahallelerindeki dar sokak yapılarına uygun küçük araç seçeneklerimizle her kapıya ulaşıyoruz. Sincan'da taşınmak artık dert değil, Ankara Özdemir ile çok kolay."
+        "Sincan için Fatih, Yenikent, Törekent veya diğer mahallelerdeki açık adresinizi, taşınma tarihini ve eşya listesini paylaşın. Alım ve teslim saatlerinin bina yönetimi kurallarına uygunluğunu önceden kontrol edin.",
+        "Ev eşyası ile ofis veya depo envanterini aynı şekilde değerlendirmeyin. Raf, masa, arşiv ve ağır parçalar varsa adetlerini ve ölçülerini listeleyin; söküm, montaj ve özel ekipman gereksinimini ayrı görüşün."
     ],
     "golbasi": [
-        "Gölbaşı nakliyat hizmetlerimiz, özellikle **İncek, Tuluntaş ve Kızılcaşar** bölgelerindeki villa ve lüks konut taşımacılığı üzerine uzmanlaşmıştır. Değerli eşyalarınızın paketlenmesinden yerleştirilmesine kadar her aşamada 'VIP Nakliyat' standartlarını uyguluyoruz.",
-        "Gölbaşı evden eve nakliyat süreçlerinde, mesafelerin uzaklığını minimize eden lojistik planlamamızla zaman tasarrufu sağlıyoruz. Gölbaşı merkez ve Mogan gölü çevresindeki yerleşimlerde de aktif olarak hizmet veriyoruz.",
-        "Üniversite yerleşkelerine yakınlığımız nedeniyle öğrenci ve akademisyen dostu nakliye çözümleri sunuyoruz. Gölbaşı'nda güvenilir ve profesyonel bir taşıma ekibi arıyorsanız bizi arayın."
+        "Gölbaşı için İncek, Tuluntaş veya Kızılcaşar adresinden teklif alırken bina ve varsa site girişini tarif edin. Ev birden fazla kattan oluşuyorsa her kattaki eşya miktarını ve iç merdiven kullanımını ayrıca belirtin.",
+        "Antika, cam yüzeyli mobilya veya özel bakım isteyen eşyalar için paketleme ihtiyacını önceden paylaşın. Eşyanın mevcut durumunu fotoğraflayın; taşıma kapsamı, teslim kontrolü ve varsa poliçe koşullarını yazılı olarak görüşün."
     ],
     "pursaklar": [
-        "Pursaklar nakliyat servisimizle, Ankara'nın kuzey kapısında hızla gelişen bu bölgede modern taşımacılık sunuyoruz. **Saray ve Altınova** gibi bölgelerdeki sanayi ve konut projelerine hakimiz.",
-        "Pursaklar evden eve nakliyat operasyonlarımızda, havalimanı yoluna yakınlığın getirdiği trafik akışını yöneterek eşyalarınızı vaktinde teslim ediyoruz. Asansörlü taşıma sistemlerimizle Pursaklar'daki yüksek binalarda konforlu bir taşınma sağlıyoruz.",
-        "Mimar Sinan ve Yavuz Selim mahallelerindeki taşınma ihtiyaçlarınızda, uzman personelimizle mobilya montaj ve demontaj işlemlerini kusursuz gerçekleştiriyoruz. Pursaklar'da nakliyenin tek adresi."
+        "Pursaklar içindeki taşınmanızda alım ve teslim adreslerini, katları ve tercih ettiğiniz saat aralığını bildirin. Bina asansörünün eşya için kullanılabilirliğini ve yönetimin izin verdiği saatleri teyit edin.",
+        "Mobilya sökümü, montaj ve beyaz eşya bağlantısını ayrı işler olarak değerlendirin. Hangi işlemin taşıma ekibine, hangisinin yetkili servise ait olacağını randevudan önce netleştirin."
     ],
     "altindag": [
-        "Altındağ nakliyat hizmetlerimizle, Ankara'nın tarihi dokusuna ve kentsel dönüşüm bölgelerine özel çözümler üretiyoruz. **Ulus, Karapürçek ve Aydınlıkevler** gibi farklı yapılaşmaya sahip mahallelerde geniş tecrübe sahibiyiz.",
-        "Altındağ evden eve nakliyat süreçlerinde, özellikle dar sokakları ve eski binaları olan bölgeler için **modüler asansörlü taşıma** sistemlerimizi devreye alıyoruz. Karapürçek'teki yeni konut projelerinde ise yüksek katlara hızlı ve güvenli erişim sağlıyoruz.",
-        "Siteler bölgesindeki mobilya imalatçıları ve mağazalar için sunduğumuz profesyonel sevkiyat ve taşıma hizmetleriyle kurumsal partneriniziz. Altındağ'da güvenilir nakliye için Ankara Özdemir her an yanınızda."
+        "Altındağ için Ulus, Karapürçek, Aydınlıkevler veya başka bir adresteki taşınmada yalnız daire katını değil, bina kapısı ve araç arasındaki mesafeyi de paylaşın. Kapı, merdiven veya sokak erişiminde sınırlama varsa fotoğrafla bildirin.",
+        "Mobilya veya iş yeri eşyası taşınacaksa ürünleri ölçü ve adetleriyle listeleyin. Paketlemenin kim tarafından yapılacağını, yükleme yardımını ve teslimde montaj beklentinizi teklifte açıkça belirtin."
     ],
     "polatli": [
-        "Polatlı nakliyat operasyonlarımızla, Ankara'nın bu stratejik ilçesinde şehir içi ve şehirler arası taşımacılığın lideriyiz. **Gülveren ve Cumhuriyet** mahalleleri başta olmak üzere tüm ilçeye 7/24 hizmet veriyoruz.",
-        "Polatlı evden eve nakliyat ihtiyaçlarınızda, tarım ve sanayi kenti olmanın getirdiği dinamikleri bilerek hareket ediyoruz. Eşyalarınızı özel paketleme sistemlerimizle toz ve nemden arındırarak taşıyoruz.",
-        "Şehirler arası nakliyat ana güzergahında yer alan Polatlı'dan Türkiye'nin her yerine günlük seferlerimiz mevcuttur. Polatlı asansörlü taşıma çözümlerimizle yüksek katlı binalarda taşınmayı kolaylaştırıyoruz."
+        "Polatlı içindeki bir taşınma ile başka şehre giden taşınmanın rota ve teslim planı farklıdır. Çıkış ve varış adreslerini, beklenen teslim tarihini ve tarihin esnek olup olmadığını paylaşın.",
+        "Teklifte tam araç veya parça eşya planını, paketleme kapsamını ve yükleme-boşaltma yardımını sorun. Günlük sefer veya aynı gün teslim varsaymadan araç ve tarih uygunluğunu teyit edin."
     ],
     "cubuk": [
-        "Çubuk nakliyat servisimiz, özellikle üniversite yerleşkesi ve sanayi bölgelerine yakınlığıyla hızlı çözümler üretmektedir. **Yavuz Selim ve Cumhuriyet** mahallelerindeki taşınma taleplerine profesyonel ekibimizle cevap veriyoruz.",
-        "Çubuk evden eve nakliyat süreçlerinde, bölgenin iklim koşullarına uygun kapalı kasa araçlarımızla eşyalarınızı koruma altına alıyoruz. Asansörlü taşıma sistemimizle Çubuk'taki yeni konut projelerinde hızlı kurulum sağlıyoruz.",
-        "Havalimanı aksındaki lojistik tecrübemizi Çubuk halkının hizmetine sunuyoruz. Ekonomik ve kaliteli nakliye için Çubuk ekibimizle iletişime geçin."
+        "Çubuk için teklif hazırlığında mahalle ve açık adresin yanında taşınacak büyük eşyaları, koli sayısını ve her iki binanın katlarını belirtin. Bina veya site girişinde araç sınırı varsa önceden bildirin.",
+        "Eşyalar bir süre bekletilecekse depolama ihtiyacını taşımadan ayrı görüşün. Bekleme süresi, alım-iade koşulları ve ikinci taşıma bedeli netleşmeden tek bir toplam fiyat varsaymayın."
     ],
     "kahramankazan": [
-        "Kahramankazan nakliyat hizmetlerimizde, bölgenin sanayi yoğunluğunu ve hızla artan konut ihtiyacını karşılayan profesyonel çözümler sunuyoruz. **Satıkadın ve Kayı** mahallelerinde aktif olarak hizmet vermekteyiz.",
-        "Kahramankazan evden eve nakliyat süreçlerinde, lojistik üslerine yakınlığımız sayesinde her türlü eşyayı en güvenli rotalardan taşıyoruz. Fabrika ve ofis taşıma konusundaki uzmanlığımızı bölgedeki işletmelere sunuyoruz.",
-        "Asansörlü nakliye imkanlarımızla Kahramankazan'daki modern binalarda hasarsız taşınma sağlıyoruz. Sigortalı ve garantili nakliye için bizi tercih edin."
+        "Kahramankazan taşınmanızda ev, ofis veya depo ihtiyacını baştan ayırın. Ofis ve depo eşyalarında masa, raf, arşiv ve özel ekipman listesini ayrı hazırlamak araç ve ekip değerlendirmesini kolaylaştırır.",
+        "Ağır veya hacimli parçalarda yaklaşık ağırlık ve ölçüleri, yükleme alanını ve kullanılabilecek girişleri paylaşın. Özel ekipman gereksinimini ve hizmet uygunluğunu taşıma gününden önce teyit edin."
     ],
     "akyurt": [
-        "Akyurt nakliyat operasyonlarımızda, havalimanı ve sanayi bölgeleriyle iç içe olan bu bölgede dakik hizmet sunuyoruz. **Yıldırım ve Beyazıt** mahallelerindeki yerleşim birimlerine hakimiz.",
-        "Akyurt evden eve nakliyat ihtiyaçlarınızda, kurumsal filomuzla eşyalarınızı Türkiye'nin her yerine güvenle ulaştırıyoruz. Akyurt sanayi bölgesindeki firmalar için depo ve antrepo taşıma çözümleri üretiyoruz.",
-        "Profesyonel paketleme ve asansörlü taşıma sistemlerimizle Akyurt'ta nakliye stresini ortadan kaldırıyoruz. Hızlı teklif için Akyurt ekibimizle görüşün."
+        "Akyurt için ev veya iş yeri taşıma planında iki açık adresi, eşya listesini ve tercih ettiğiniz tarihi paylaşın. İş yerinde giriş kaydı, yükleme saati veya araç sınırlaması bulunuyorsa bunları önceden bildirin.",
+        "Depo rafları, elektronik cihazlar ve özel ekipmanların sökümünü kimin yapacağını belirleyin. Taşıma teklifi ile teknik kurulum işlerini ayrı sorarak teslim sonrası sorumlulukları netleştirin."
     ],
     "beypazari": [
-        "Beypazarı nakliyat hizmetlerimizle, tarihi dokuya zarar vermeden, modern ekipmanlarımızla taşımacılık yapıyoruz. **Kurtuluş ve Rüstempaşa** mahallelerinde profesyonel ev taşıma desteği sağlıyoruz.",
-        "Beypazarı evden eve nakliyat süreçlerinde, antika ve değerli eşyalarınız için özel ambalajlama teknikleri uyguluyoruz. Dar sokaklara uygun araç seçeneklerimizle her kapıya ulaşıyoruz.",
-        "Şehirler arası nakliyatta Beypazarı'ndan tüm Türkiye'ye düzenli seferler düzenliyoruz. Beypazarı'nda güvenilir nakliye ortağınız."
+        "Beypazarı için bina kapısı, merdiven ve araç yaklaşımını gösteren fotoğraflarla teklif isteyin. Büyük mobilyaların geçişi belirsizse ölçülerini paylaşın; adres incelenmeden her kapıya araç veya asansör erişimi varsaymayın.",
+        "Hassas ve değerli eşyaları ayrı bir listeye alın. Paketleme yöntemi, söküm ihtiyacı ve teslimde yapılacak kontrolü önceden görüşün; eşyanın mevcut durumunu kayıt altına alın."
     ],
     "elmadag": [
-        "Elmadağ nakliyat servisimizle, Ankara'nın doğu girişinde güvenli lojistik köprüleri kuruyoruz. **Yenimahalle ve Tatlıca** bölgelerindeki taşınma ihtiyaçlarınızda uzman ekibimizle yanınızdayız.",
-        "Elmadağ evden eve nakliyat süreçlerinde, bölgenin engebeli yapısına uygun güçlü araç filomuzla hizmet veriyoruz. Kış şartlarında bile eşyalarınızı kapalı kasalarımızda güvenle taşıyoruz.",
-        "Hasanoğlan sanayi bölgesindeki işletmeler için sunduğumuz ağır yük ve ofis taşıma hizmetleriyle profesyonel çözümler üretiyoruz. Elmadağ'da nakliyenin tek adresi."
+        "Elmadağ içinden veya Elmadağ dışına taşınırken rota kadar teslim saatinin uygunluğu da önemlidir. İki adresin bina erişimini, eşya miktarını ve varsa yönetim saatlerini birlikte paylaşın.",
+        "İş yeri eşyası için ağır yük veya makine taşınmasını standart ev taşıma kapsamı içinde varsaymayın. Ölçü, ağırlık ve ekipman ihtiyacıyla hizmet uygunluğunu ayrıca görüşün."
     ],
     "haymana": [
-        "Haymana nakliyat hizmetlerimizde, bölgenin coğrafi yapısını bilen yerel tecrübemizle hareket ediyoruz. **Seyran ve Medrese** mahallelerindeki taşınma taleplerine hızlı cevap veriyoruz.",
-        "Haymana evden eve nakliyat operasyonlarımızda, eşyalarınızı şehir içi ve şehirler arası uzun yollara hazırlayan ultra korumalı paketleme yapıyoruz.",
-        "Ekonomik fiyatlarımız ve sigortalı taşımacılık anlayışımızla Haymana halkının güvenini kazanıyoruz. Profesyonel nakliye için Haymana ekibimizi arayın."
+        "Haymana için fiyat isteğinde açık adresleri ve taşınma tarihini birlikte verin. Adres tarifinde yol veya yükleme alanı kısıtı varsa belirtin; mesafe dışında kat ve taşıma mesafesi de değerlendirilmelidir.",
+        "Farklı firmalardan gelen tekliflerde paketleme malzemesi, söküm-kurulum, asansör ve vergi koşullarını karşılaştırın. Eşya listesi değiştiğinde ücretin nasıl hesaplanacağını yazılı olarak sorun."
     ],
     "kizilcahamam": [
-        "Kızılcahamam nakliyat servisimizle, doğayla iç içe olan bu ilçemizde eşyalarınızı titizlikle taşıyoruz. **Yenice ve Akçay** mahallelerinde aktif olarak hizmet sunmaktayız.",
-        "Kızılcahamam evden eve nakliyat süreçlerinde, asansörlü taşıma sistemlerimizle yüksek katlı otel ve konutlarda hasarsız operasyon yürütüyoruz.",
-        "Termal tesislerin ve kurumsal işletmelerin lojistik ihtiyaçlarına özel çözümler üretiyoruz. Kızılcahamam'da kaliteli nakliyenin adresi."
+        "Kızılcahamam için ev veya işletme taşınmasında teslim tarihini, bina erişimini ve eşya listesini paylaşın. Mevsim ve hava koşulları nedeniyle plan değişmesi gerekirse iletişim ve yeni randevu koşullarını önceden görüşün.",
+        "Otel, ofis veya başka bir iş yeri taşınıyorsa oda ya da bölüm bazında liste hazırlayın. Öncelikle yerleştirilmesi gereken eşyaları ve teslim alacak sorumluyu belirleyin."
     ],
     "nallihan": [
-        "Nallıhan nakliyat hizmetlerimizde, Ankara'nın en batı ucuna kadar uzanan servis ağımızla hizmet veriyoruz. **Nasuhpaşa ve Aliağa** mahallelerinde profesyonel taşımacılık sağlıyoruz.",
-        "Nallıhan evden eve nakliyat operasyonlarımızda, mesafeleri sorun etmeden eşyalarınızı sigortalı ve garantili olarak Türkiye'nin her yerine ulaştırıyoruz.",
-        "Geniş araç filomuz ve deneyimli şoförlerimizle Nallıhan'da nakliye hizmetini premium standartlara taşıyoruz."
+        "Nallıhan için teklif alırken başlangıç ve varış adreslerini, taşınacak eşyaların yaklaşık hacmini ve teslim tarihini netleştirin. Şehirler arası bir taşıma varsa yol ve teslim planını ayrıca görüşün.",
+        "Tek araç veya parça eşya seçeneğini karşılaştırırken aktarma, teslim aralığı ve yükleme yardımını sorun. Fiyatın yanında hangi işlerin kapsama dahil olduğunu da yazılı olarak değerlendirin."
     ],
     "sereflikochisar": [
-        "Şereflikoçhisar nakliyat operasyonlarımızla, Tuz Gölü kıyısındaki bu ilçemizde güvenli taşımacılık sunuyoruz. **Sanayi ve İstiklal** mahallelerinde yoğun olarak hizmet vermekteyiz.",
-        "Şereflikoçhisar evden eve nakliyat ihtiyaçlarınızda, toz ve tuz etkisine karşı eşyalarınızı özel koruyucu filmlerle kaplayarak paketliyoruz.",
-        "Şehirler arası nakliyatın merkezi güzergahında olmanın avantajıyla, Şereflikoçhisar'dan her yöne hızlı teslimat yapıyoruz."
+        "Şereflikoçhisar için taşınma planında alım ve teslim adreslerini, kat durumlarını ve eşya miktarını birlikte belirtin. Paketleme ihtiyacını eşyanın malzemesine ve taşıma koşullarına göre görüşün.",
+        "Yol ve teslim süresi için garanti varsaymadan size önerilen zaman aralığını teyit edin. Teslim adresinde anahtar ve bina erişiminin hazır olacağı saati, bekleme ihtimaliyle birlikte paylaşın."
     ],
     "ayas": [
-        "Ayaş nakliyat hizmetlerimizle, bölgenin yerel dokusuna uygun pratik ve güvenilir çözümler üretiyoruz. **Hacımemi ve Ömeroğlu** mahallelerinde ev taşıma hizmeti veriyoruz.",
-        "Ayaş evden eve nakliyat süreçlerinde, mobilyalarınızın demontaj ve montaj işlemlerini marangoz personelimizle titizlikle yapıyoruz.",
-        "Tarım ürünleri ve kişisel eşya taşımacılığında Ayaş halkına ekonomik seçenekler sunuyoruz."
+        "Ayaş için ev taşıma teklifinde sökülmesi gereken mobilyaları ve kurulum beklentinizi listeleyin. Daire kapısı veya merdivenden geçmesi belirsiz parçaların ölçülerini önceden paylaşın.",
+        "Birkaç eşya taşınacaksa tam ev yerine adet ve ölçü üzerinden teklif isteyin. Paketleme, yükleme yardımı ve teslimde yerleştirme kapsamının aynı teklifte açıkça belirtilmesini sağlayın."
     ],
     "bala": [
-        "Balâ nakliyat servisimizle, Ankara'nın bu geniş coğrafyalı ilçesinde her köye ve mahalleye ulaşıyoruz. **Şentepe ve Kartaltepe** bölgelerinde aktif hizmet veriyoruz.",
-        "Balâ evden eve nakliyat operasyonlarımızda, eşyalarınızı engebeli yollarda bile sarsılmadan taşıyan süspansiyonlu araçlar kullanıyoruz.",
-        "Samimi hizmet ve profesyonel yaklaşımımızla Balâ'da nakliye stresine son veriyoruz."
+        "Balâ için mahalle adıyla birlikte tam adresi ve mümkünse konum bilgisini paylaşın. Araç yaklaşımını etkileyen yol veya giriş koşulları varsa taşıma planına dahil edilmelidir.",
+        "Eşya miktarını, paketleme ihtiyacını ve her iki adreste yardım gerekip gerekmediğini belirtin. Tarih, rota ve araç uygunluğunu teklif görüşmesinde teyit edin."
     ],
     "camlidere": [
-        "Çamlıdere nakliyat hizmetlerimizde, yayla ve ormanlık alanlardaki zorlu yollara uygun araçlarımızla hizmet veriyoruz. **Körler ve Beyler** mahallelerinde güvenli taşımacılık sağlıyoruz.",
-        "Çamlıdere evden eve nakliyat süreçlerinde, yazlık ve tatil evi taşımacılığına özel paketleme ve depolama çözümleri sunuyoruz.",
-        "Doğa dostu ve titiz çalışma prensibimizle Çamlıdere'de yanınızdayız."
+        "Çamlıdere için sürekli oturulan ev veya dönemsel kullanılan bir ev taşınacaksa hangi eşyaların gideceğini listeleyin. Giriş anahtarı ve teslim alacak kişinin uygun olduğu tarihi önceden belirleyin.",
+        "Bir bölümü bekletilecek eşyalarda depolama süresi ile alım-iade ihtiyaçlarını ayrıca görüşün. Paketleme ve bekleme koşullarını eşya türüne göre netleştirin."
     ],
     "evren": [
-        "Evren nakliyat servisimizle, Ankara'nın en güney ucundaki bu ilçemizde kesintisiz hizmet sunuyoruz. Hirfanlı barajı çevresindeki yerleşimlere hakimiz.",
-        "Evren evden eve nakliyat ihtiyaçlarınızda, uzak mesafe taşımacılığında eşyalarınızı tam kapsamlı sigorta ile güvence altına alıyoruz.",
-        "Küçük ama etkili ekibimizle Evren'de butik ve kaliteli nakliye hizmeti veriyoruz."
+        "Evren için fiyat isteğinde çıkış ve varış adresleri ile teslim tarihinizi birlikte paylaşın. Yol planı kadar binaların katları, yükleme alanı ve eşya miktarı da taşıma kapsamını etkiler.",
+        "Varsa poliçeyi yalnız sigortalı ifadesiyle değerlendirmeyin; kapsam, limit, istisna ve hasar bildirim koşullarını inceleyin. Değerli eşyalar ile kişisel evrakların nasıl taşınacağını ayrıca planlayın."
     ],
     "gudul": [
-        "Güdül nakliyat hizmetlerimizle, sakin şehir (Cittaslow) unvanına uygun, gürültüsüz ve düzenli bir taşıma operasyonu yürütüyoruz.",
-        "Güdül evden eve nakliyat süreçlerinde, tarihi konakların ve dar sokakların hassasiyetini gözeterek küçük araçlarımızla hizmet veriyoruz.",
-        "Güdül'ün huzurunu bozmadan eşyalarınızı yeni adresine güvenle taşıyoruz."
+        "Güdül için taşınma hazırlığında bina girişini, merdivenleri ve aracın durabileceği alanı gösteren fotoğraflar paylaşın. Gürültü veya çalışma saatlerine ilişkin bina kuralları varsa randevu öncesinde bildirin.",
+        "Geçişi zor büyük parçalar için söküm ve taşıma yöntemini görüşün. Asansör seçeneği ancak cephe, zemin ve kurulum alanı uygunluğu değerlendirildikten sonra netleşebilir."
     ],
     "kalecik": [
-        "Kalecik nakliyat operasyonlarımızla, bölgenin bağ ve bahçe kültürüyle harmanlanmış yerleşim alanlarında profesyonel hizmet sunuyoruz.",
-        "Kalecik evden eve nakliyat ihtiyaçlarınızda, eşyalarınızı her türlü darbe ve sarsıntıya karşı çift katlı balonlu naylonlarla koruyoruz.",
-        "Hızlı ve ekonomik Kalecik nakliye çözümleri için bizi arayın."
+        "Kalecik için evden eve veya parça eşya taşıma ihtiyacını eşya listesiyle tanımlayın. Mobilya, beyaz eşya ve kolilerin adetlerini, iki adresi ve taşınma tarihini paylaşın.",
+        "Fiyat karşılaştırırken ambalaj malzemesi, söküm-kurulum ve yükleme yardımının kapsamını kontrol edin. Teklifin hangi bilgilerle hazırlandığını ve kapsam değişikliği koşullarını yazılı olarak netleştirin."
     ]
 };

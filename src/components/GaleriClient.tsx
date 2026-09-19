@@ -184,9 +184,9 @@ export default function GaleriClient() {
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 mt-12 md:mt-20 max-w-6xl mx-auto">
                             {[
-                                { val: "10K+", label: "BAŞARILI TAŞINMA", i: <IconHome /> },
-                                { val: "50+", label: "ARAÇ FİLOSU", i: <IconTruck /> },
-                                { val: "%100", label: "GÜVENCE SİGORTASI", i: <IconShield /> }
+                                { val: "Hazırlık", label: "EŞYA VE ADRES BİLGİSİ", i: <IconHome /> },
+                                { val: "Planlama", label: "ARAÇ VE ERİŞİM", i: <IconTruck /> },
+                                { val: "Planlı", label: "TAŞIMA KAPSAMI", i: <IconShield /> }
                             ].map((stat, i) => (
                                 <div key={i} className="px-8 md:px-10 py-6 md:py-8 bg-white/5 border border-white/10 rounded-2xl md:rounded-[3rem] backdrop-blur-xl group hover:bg-white/10 transition-all flex flex-row sm:flex-col items-center justify-center gap-4 sm:gap-2">
                                     <div className="flex items-center justify-center gap-3 md:gap-4 sm:mb-2">

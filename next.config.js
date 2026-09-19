@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     trailingSlash: false,
+    // Middleware combines historical, host and slash normalization in one hop.
+    skipTrailingSlashRedirect: true,
     compress: true,
     images: {
         formats: ['image/avif', 'image/webp'],
@@ -11,44 +13,17 @@ const nextConfig = {
     compiler: {
         removeConsole: process.env.NODE_ENV === 'production',
     },
-    async redirects() {
-        return [
-            {
-                source: '/:path*',
-                has: [{ type: 'host', value: 'www.ankaraozdemirnakliyat.com' }],
-                destination: 'https://ankaraozdemirnakliyat.com/:path*',
-                permanent: true,
-            },
-            {
-                source: '/hizmetler/evden-eve-nakliyat',
-                destination: '/evden-eve-nakliyat',
-                permanent: true,
-            },
-            {
-                source: '/hizmetler/sigorta',
-                destination: '/hizmetler/nakliyat-sigortasi',
-                permanent: true,
-            },
-            {
-                source: '/sitemap-2.xml',
-                destination: '/sitemap.xml',
-                permanent: true,
-            },
-            {
-                source: '/sitemap-3.xml',
-                destination: '/sitemap.xml',
-                permanent: true,
-            }
-        ];
-    },
     async headers() {
+        // Explicit hosts used by the existing Google Ads tag and Cloudflare Web Analytics.
+        // Keep the policy scoped; no new analytics service or script is introduced here.
         const cspHeader = `
           default-src 'self';
-          script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com;
+          script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.googleadservices.com https://www.google.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://static.cloudflareinsights.com;
           style-src 'self' 'unsafe-inline';
           img-src 'self' data: https:;
           font-src 'self' data:;
-          connect-src 'self' https://formsubmit.co https://www.google-analytics.com https://*.google-analytics.com https://stats.g.doubleclick.net;
+          connect-src 'self' https://formsubmit.co https://www.google-analytics.com https://*.google-analytics.com https://stats.g.doubleclick.net https://www.googleadservices.com https://googleads.g.doubleclick.net https://ad.doubleclick.net https://www.google.com https://google.com https://pagead2.googlesyndication.com https://cloudflareinsights.com;
+          frame-src 'self' https://www.googletagmanager.com;
           object-src 'none';
           base-uri 'self';
           frame-ancestors 'self';

@@ -42,6 +42,7 @@ const sitemapData = [
             { name: "Parça Eşya Taşıma", url: "/hizmetler/parca-esya-tasima" },
             { name: "Eşya Paketleme", url: "/hizmetler/paketleme" },
             { name: "Eşya Depolama", url: "/hizmetler/depolama" },
+            { name: "Uluslararası Taşıma Bilgileri", url: "/hizmetler/uluslararasi-tasimacilik" },
             { name: "Nakliyat Sigortası", url: "/hizmetler/nakliyat-sigortasi" },
         ]
     },
@@ -102,8 +103,8 @@ export default function SiteHaritasiPage() {
                                 <ul className="space-y-4">
                                     {category.links.map((link, idx) => (
                                         <li key={idx}>
-                                            <Link 
-                                                href={link.url} 
+                                            <Link
+                                                href={link.url}
                                                 className="text-slate-600 hover:text-primary-600 font-medium transition-colors flex items-center gap-2 group"
                                             >
                                                 <span className="w-1.5 h-1.5 bg-slate-300 rounded-full group-hover:bg-primary-500 transition-colors"></span>

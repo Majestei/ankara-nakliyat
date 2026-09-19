@@ -3,16 +3,18 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { blogPosts } from "@/data/blogData";
+import type { BlogPost } from "@/data/blogData";
 import { firmaBilgileri } from "@/data/siteData";
-import { 
-    IconArrow, 
+import {
+    IconArrow,
     IconPhone,
     IconStar,
     IconCheck
 } from "@/components/Icons";
 
-export default function BlogClient() {
+type BlogSummary = Pick<BlogPost, "id" | "slug" | "title" | "excerpt" | "category" | "date">;
+
+export default function BlogClient({ posts: blogPosts }: { posts: BlogSummary[] }) {
     const itemsPerPage = 15;
     const [visibleCount, setVisibleCount] = useState(itemsPerPage);
     const [searchQuery, setSearchQuery] = useState("");
@@ -36,8 +38,8 @@ export default function BlogClient() {
 
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
-            mouseX.set(e.clientX - 225); 
-            mouseY.set(e.clientY - 140); 
+            mouseX.set(e.clientX - 225);
+            mouseY.set(e.clientY - 140);
         };
 
         window.addEventListener("mousemove", handleMouseMove);
@@ -81,7 +83,7 @@ export default function BlogClient() {
 
     return (
         <div className="bg-[#010204] min-h-screen font-sans selection:bg-[#0055FF] selection:text-white pt-32 pb-32 overflow-hidden relative">
-            
+
             {/* Ambient Background Glow */}
             <div className="fixed inset-0 pointer-events-none z-0">
                 <div className="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] rounded-full blur-[150px] opacity-10 bg-gradient-to-tr from-white to-transparent" />
@@ -159,21 +161,18 @@ export default function BlogClient() {
             <section className="relative z-10 w-full border-t border-white/10">
                 {visiblePosts.map((post, index) => (
                     <Link href={`/blog/${post.slug}`} key={post.id} className="block group">
-                        <div 
+                        <div
                             className="w-full border-b border-white/5 transition-colors duration-500 group-hover:bg-white/[0.02]"
                             onMouseEnter={() => setHoveredIndex(index)}
                             onMouseLeave={() => setHoveredIndex(null)}
                         >
                             <div className="max-w-[100rem] mx-auto px-6 md:px-12 lg:px-24 py-12 md:py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 relative overflow-hidden">
-                                
+
                                 {/* Background Highlight on Hover */}
                                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#0055FF] scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
 
                                 {/* Meta Information */}
                                 <div className="flex flex-row md:flex-col gap-4 md:gap-2 w-full md:w-48 shrink-0 md:opacity-50 group-hover:opacity-100 transition-opacity duration-500">
-                                    <span className="text-[#8892B0] group-hover:text-white font-mono text-xs uppercase tracking-widest transition-colors duration-500">
-                                        {formatDate(post.date)}
-                                    </span>
                                     <span className="text-[#0055FF] font-black text-[10px] uppercase tracking-[0.2em]">
                                         {post.category}
                                     </span>
@@ -199,7 +198,7 @@ export default function BlogClient() {
             {/* Pagination / Load More */}
             {hasMore && (
                 <div className="max-w-[100rem] mx-auto px-6 mt-20 flex justify-center relative z-10">
-                    <button 
+                    <button
                         onClick={loadMore}
                         className="px-8 py-4 rounded-full border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all font-mono tracking-widest text-xs uppercase"
                     >
@@ -223,16 +222,16 @@ export default function BlogClient() {
                     <div className="flex-1 flex flex-col justify-end">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                             <div className="p-8 border-l border-[#0055FF] bg-white/[0.01]">
-                                <h4 className="text-white text-3xl font-black mb-2">15+</h4>
-                                <p className="text-[#8892B0] text-xs font-bold uppercase tracking-[0.2em]">Yıllık Deneyim</p>
+                                <h4 className="text-white text-3xl font-black mb-2">Planlama</h4>
+                                <p className="text-[#8892B0] text-xs font-bold uppercase tracking-[0.2em]">Taşınma Öncesi Hazırlık</p>
                             </div>
                             <div className="p-8 border-l border-white/20 bg-white/[0.01]">
-                                <h4 className="text-white text-3xl font-black mb-2">%100</h4>
-                                <p className="text-[#8892B0] text-xs font-bold uppercase tracking-[0.2em]">Müşteri Memnuniyeti</p>
+                                <h4 className="text-white text-3xl font-black mb-2">İletişim</h4>
+                                <p className="text-[#8892B0] text-xs font-bold uppercase tracking-[0.2em]">Kapsamı Birlikte Görüşün</p>
                             </div>
                             <div className="p-8 border-l border-white/20 bg-white/[0.01]">
-                                <h4 className="text-white text-3xl font-black mb-2">Sigortalı</h4>
-                                <p className="text-[#8892B0] text-xs font-bold uppercase tracking-[0.2em]">Kapsamlı Koruma</p>
+                                <h4 className="text-white text-3xl font-black mb-2">Paketleme</h4>
+                                <p className="text-[#8892B0] text-xs font-bold uppercase tracking-[0.2em]">Eşyaya Uygun Hazırlık</p>
                             </div>
                         </div>
                     </div>
@@ -243,7 +242,7 @@ export default function BlogClient() {
             <section className="max-w-[100rem] mx-auto px-6 md:px-12 lg:px-24 mt-40 relative z-10 text-center">
                 <div className="border border-white/10 rounded-[3rem] p-12 md:p-24 relative overflow-hidden bg-[#02040A]">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[600px] max-h-[600px] bg-[#0055FF]/10 rounded-full blur-[100px] pointer-events-none" />
-                    
+
                     <div className="relative z-10 max-w-2xl mx-auto">
                         <IconStar className="w-12 h-12 text-[#0055FF] mx-auto mb-10" />
                         <h2 className="text-4xl md:text-6xl font-heading font-black text-white tracking-tight mb-8">
@@ -254,9 +253,9 @@ export default function BlogClient() {
                         </p>
 
                         <div className="relative group">
-                            <input 
-                                type="email" 
-                                placeholder="E-posta Adresiniz" 
+                            <input
+                                type="email"
+                                placeholder="E-posta Adresiniz"
                                 className="w-full bg-transparent border-b-2 border-white/20 text-white text-xl md:text-2xl px-4 py-6 focus:outline-none focus:border-[#0055FF] transition-colors placeholder:text-white/20 font-light"
                             />
                             <button className="absolute right-0 top-1/2 -translate-y-1/2 text-[#0055FF] font-black uppercase tracking-[0.2em] text-xs hover:text-white transition-colors">

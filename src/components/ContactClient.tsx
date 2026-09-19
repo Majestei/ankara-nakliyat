@@ -11,35 +11,35 @@ import { trackConversion } from "@/lib/gtag";
 // ── ADVANCED SPATIAL COMPONENTS ──
 
 const PerspectiveGrid = () => (
-    <div className="absolute inset-0 z-0 opacity-[0.07] pointer-events-none overflow-hidden hidden md:block" 
-         style={{ 
-            backgroundImage: "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)", 
+    <div className="absolute inset-0 z-0 opacity-[0.07] pointer-events-none overflow-hidden hidden md:block"
+         style={{
+            backgroundImage: "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
             backgroundSize: "80px 80px",
             transform: "perspective(1000px) rotateX(60deg) translateY(-200px) translateZ(-500px) scale(3)",
             maskImage: "radial-gradient(ellipse at center, black, transparent 80%)"
-         }} 
+         }}
     />
 );
 
 const AuroraBackground = () => (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <motion.div 
-            animate={{ 
+        <motion.div
+            animate={{
                 scale: [1, 1.2, 1],
                 opacity: [0.1, 0.2, 0.1],
                 rotate: [0, 90, 0]
             }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute -top-[20%] -left-[10%] w-[100%] h-[100%] bg-primary-500/20 blur-[150px] rounded-full hidden md:block" 
+            className="absolute -top-[20%] -left-[10%] w-[100%] h-[100%] bg-primary-500/20 blur-[150px] rounded-full hidden md:block"
         />
-        <motion.div 
-            animate={{ 
+        <motion.div
+            animate={{
                 scale: [1.2, 1, 1.2],
                 opacity: [0.1, 0.15, 0.1],
                 rotate: [0, -90, 0]
             }}
             transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-            className="absolute -bottom-[20%] -right-[10%] w-[100%] h-[100%] bg-orange-500/10 blur-[150px] rounded-full hidden md:block" 
+            className="absolute -bottom-[20%] -right-[10%] w-[100%] h-[100%] bg-orange-500/10 blur-[150px] rounded-full hidden md:block"
         />
     </div>
 );
@@ -86,7 +86,7 @@ function SmartLogisticsForm() {
         message: ""
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
-    
+
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -110,14 +110,14 @@ function SmartLogisticsForm() {
         <div className="relative w-full max-w-2xl group">
             {/* Holographic Border Glow */}
             <div className="absolute -inset-1 bg-gradient-to-r from-primary-500/30 via-orange-500/30 to-primary-600/30 rounded-[4rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-            
+
             <div className="relative bg-slate-900/40 backdrop-blur-3xl border border-white/10 rounded-3xl md:rounded-[4rem] p-8 md:p-12 lg:p-16 overflow-hidden shadow-3xl">
                 {/* Step Indicators (Nodes) */}
                 <div className="flex items-center justify-center gap-4 mb-10 md:mb-20">
                     {[1, 2, 3].map((s) => (
                         <React.Fragment key={s}>
-                            <motion.div 
-                                animate={{ 
+                            <motion.div
+                                animate={{
                                     scale: step === s ? 1.2 : 1,
                                     backgroundColor: step >= s ? "rgb(249 115 22)" : "rgba(255,255,255,0.1)"
                                 }}
@@ -130,9 +130,9 @@ function SmartLogisticsForm() {
                     ))}
                 </div>
 
-                <form 
+                <form
                     onKeyDown={(e) => { if (e.key === 'Enter' && step < 3) e.preventDefault(); }}
-                    onSubmit={(e) => { 
+                    onSubmit={(e) => {
                         if (step < 3) {
                             e.preventDefault();
                         } else {
@@ -140,8 +140,8 @@ function SmartLogisticsForm() {
                             trackConversion();
                         }
                     }}
-                    action="https://formsubmit.co/bilgi@ankaraozdemirnakliyat.com" 
-                    method="POST" 
+                    action="https://formsubmit.co/bilgi@ankaraozdemirnakliyat.com"
+                    method="POST"
                     className="min-h-[400px] md:min-h-[450px] flex flex-col justify-between"
                 >
                     <input type="hidden" name="_subject" value="Ankara Özdemir Nakliyat - Yeni Teklif Talebi" />
@@ -153,7 +153,7 @@ function SmartLogisticsForm() {
                     <input type="hidden" name="from" value={formData.from} />
                     <input type="hidden" name="to" value={formData.to} />
                     <input type="hidden" name="service" value={formData.service} />
-                    
+
                     <AnimatePresence mode="wait">
                         {step === 1 && (
                             <motion.div
@@ -245,9 +245,9 @@ function SmartLogisticsForm() {
                         {step > 1 ? (
                             <button type="button" onClick={prevStep} className="text-[10px] font-black uppercase tracking-[0.5em] text-white/20 hover:text-white transition-colors">Geri Dön</button>
                         ) : <div />}
-                        
+
                         {step < 3 ? (
-                            <button 
+                            <button
                                 type="button"
                                 onClick={(e) => nextStep(e)}
                                 className="px-8 md:px-16 py-5 md:py-8 bg-white text-slate-950 rounded-2xl md:rounded-[2.5rem] font-black uppercase tracking-[0.4em] text-[10px] hover:bg-primary-500 hover:text-white transition-all duration-500 shadow-2xl flex items-center gap-4 md:gap-6"
@@ -255,7 +255,7 @@ function SmartLogisticsForm() {
                                 Devam Et <IconArrow className="w-5 h-5" />
                             </button>
                         ) : (
-                            <button 
+                            <button
                                 type="submit"
                                 disabled={isSubmitting}
                                 className="px-8 md:px-16 py-5 md:py-8 bg-primary-500 text-slate-900 rounded-2xl md:rounded-[2.5rem] font-black uppercase tracking-[0.4em] text-[10px] hover:bg-slate-900 hover:text-white transition-all duration-500 shadow-2xl flex items-center gap-4 md:gap-6 disabled:opacity-50"
@@ -275,7 +275,7 @@ function SmartLogisticsForm() {
 export default function ContactClient() {
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll();
-    
+
     // Kinetic transform effects
     const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
     const heroScale = useTransform(scrollYProgress, [0, 0.2], [1, 0.85]);
@@ -290,7 +290,7 @@ export default function ContactClient() {
             <section className="relative min-h-[85dvh] md:min-h-screen flex items-center pt-24 pb-20 md:pt-32 md:pb-40 z-10">
                 <div className="container-custom">
                     <div className="grid lg:grid-cols-2 gap-32 items-center">
-                        
+
                         {/* Left: Branding & 3D Pods */}
                         <motion.div style={{ opacity: heroOpacity, scale: heroScale }} className="space-y-20 text-center lg:text-left">
                             <div className="space-y-12">
@@ -298,11 +298,11 @@ export default function ContactClient() {
                                     <IconGlobe className="w-4 h-4 text-primary-500 animate-spin-slow" />
                                     <span className="text-white font-black text-[10px] uppercase tracking-[0.6em]">Dijital Lojistik Ağı</span>
                                 </span>
-                                
+
                                 <h1 className="text-5xl md:text-[10rem] font-heading font-black text-white leading-[0.85] md:leading-[0.75] tracking-tighter">
                                     İletişim <br />
                                 </h1>
-                                
+
                                 <p className="text-white/30 text-base md:text-3xl font-medium leading-tight max-w-xl px-4 md:px-0">
                                     Gelecek nesil lojistik operasyonunuzu <br />
                                     <span className="text-white">şimdi buradan başlatın.</span>
@@ -327,7 +327,7 @@ export default function ContactClient() {
                         </motion.div>
 
                         {/* Right: Technical Form */}
-                        <motion.div 
+                        <motion.div
                             initial={{ opacity: 0, x: 50, rotateY: 20 }}
                             animate={{ opacity: 1, x: 0, rotateY: 0 }}
                             transition={{ duration: 1.2, ease: "circOut" }}
@@ -347,17 +347,17 @@ export default function ContactClient() {
                             Güven Üzerine <br /> <span className="text-primary-500">İnşa Ettik.</span>
                         </h2>
                         <p className="text-slate-400 text-base md:text-xl font-medium max-w-2xl mx-auto">
-                            Tüm taşımacılık operasyonlarımız şeffaflık, teknoloji ve %100 sigorta güvencesiyle yönetilir.
+                            Taşınma kapsamını, zamanlamayı ve teklif koşullarını önceden görüşebilirsiniz.
                         </p>
                     </div>
 
                     <div className="grid lg:grid-cols-3 gap-12">
                         {[
                             { title: "Merkez Üssü", desc: firmaBilgileri.address, i: <IconMapPin />, delay: 0.1 },
-                            { title: "Güvenlik Katmanı", desc: "A Sınıfı HDI Sigorta ile tüm eşyalarınız koruma kalkanımız altında.", i: <IconShield />, delay: 0.2 },
-                            { title: "Zirve Memnuniyet", desc: "Google MyBusiness üzerinde %100 gerçek kullanıcı onayı.", i: <IconStar />, delay: 0.3 }
+                            { title: "Güvenlik Katmanı", desc: "Paketleme yöntemini ve varsa poliçenin kapsamı, limitleri ve istisnalarını teklif sırasında görüşün.", i: <IconShield />, delay: 0.2 },
+                            { title: "Doğrudan İletişim", desc: "Taşınma tarihiniz, eşya listeniz ve adres bilgilerinizle telefon veya WhatsApp üzerinden bilgi alın.", i: <IconStar />, delay: 0.3 }
                         ].map((box, i) => (
-                            <motion.div 
+                            <motion.div
                                 key={i}
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -390,7 +390,7 @@ export default function ContactClient() {
                             className="flex flex-col md:flex-row items-stretch gap-0 bg-white border border-slate-100 rounded-3xl md:rounded-[4rem] overflow-hidden shadow-2xl hover:shadow-primary-500/20 hover:border-primary-200 transition-all duration-500 group"
                         >
                             {/* Left: Google branding strip */}
-                            <a 
+                            <a
                                 href="https://maps.app.goo.gl/7soWnTCHGLBfguVt9"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -409,21 +409,17 @@ export default function ContactClient() {
                                         <h3 className="text-2xl md:text-3xl font-black text-slate-950 tracking-tight leading-tight group-hover:text-primary-600 transition-colors duration-300">
                                             Ankara Özdemir Nakliyat
                                         </h3>
-                                        <span className="shrink-0 bg-green-50 border border-green-200 text-green-700 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full">Açık</span>
+                                        <span className="shrink-0 bg-green-50 border border-green-200 text-green-700 text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full">İletişim</span>
                                     </div>
                                     <p className="text-slate-400 text-sm font-semibold">Nakliyat Şirketi · Sincan, Ankara</p>
 
-                                    {/* Star Rating */}
-                                    <div className="flex items-center gap-3 pt-1">
-                                        <span className="text-3xl font-black text-slate-950">4.9</span>
-                                        <div className="flex gap-1">
-                                            {[1,2,3,4,5].map(s => (
-                                                <svg key={s} className="w-5 h-5 text-[#FBBC05]" fill="currentColor" viewBox="0 0 20 20">
-                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                                                </svg>
-                                            ))}
+                                    {/* Trust & Satisfaction Badge */}
+                                    <div className="flex flex-wrap items-center gap-3 pt-1">
+                                        <div className="flex items-center gap-2 bg-primary-50 border border-primary-200 px-3 py-1 rounded-full">
+                                            <IconShield className="w-4 h-4 text-primary-600" />
+                                            <span className="text-primary-800 text-xs font-bold uppercase tracking-wider">Taşınma Planlaması</span>
                                         </div>
-                                        <span className="text-slate-400 text-sm font-semibold">Müşteri Memnuniyeti</span>
+                                        <span className="text-slate-500 text-sm font-semibold">Hizmet Kapsamını Önceden Görüşün</span>
                                     </div>
                                 </div>
 
@@ -434,7 +430,7 @@ export default function ContactClient() {
                                         </div>
                                         <div>
                                             <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Adres</p>
-                                            <p className="text-sm font-bold text-slate-700 leading-relaxed">Atatürk Mah. Mithatpaşa Cad. Özmert Apt. No:6/8, Sincan / Ankara</p>
+                                            <p className="text-sm font-bold text-slate-700 leading-relaxed">{firmaBilgileri.address}</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">
@@ -462,16 +458,16 @@ export default function ContactClient() {
                                             <IconCheck className="w-4 h-4" />
                                         </div>
                                         <div>
-                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Doğrulandı</p>
-                                            <p className="text-sm font-bold text-slate-700">Google İşletme Profili</p>
-                                            <p className="text-xs text-green-600 font-bold">✓ Doğrulanmış Firma</p>
+                                            <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-0.5">Taşıma Planı</p>
+                                            <p className="text-sm font-bold text-slate-700">Kapsam ve tarih</p>
+                                            <p className="text-xs text-green-600 font-bold">Teklif öncesi görüşün</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="flex items-center justify-between pt-2 border-t border-slate-100">
                                     <span className="text-xs text-slate-400 font-semibold">ankaraozdemirnakliyat.com</span>
-                                    <a 
+                                    <a
                                         href="https://maps.app.goo.gl/7soWnTCHGLBfguVt9"
                                         target="_blank"
                                         rel="noopener noreferrer"

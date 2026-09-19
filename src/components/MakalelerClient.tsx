@@ -3,13 +3,21 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import makalelerData from "@/data/makalelerData.json";
-import { 
-    IconArrow, 
+import {
+    IconArrow,
     IconStar
 } from "@/components/Icons";
 
-export default function MakalelerClient() {
+interface ArticleSummary {
+    id: string;
+    slug: string;
+    title: string;
+    category: string;
+    location: string;
+    date: string;
+}
+
+export default function MakalelerClient({ posts: makalelerData }: { posts: ArticleSummary[] }) {
     // Pagination state
     const itemsPerPage = 30;
     const [visibleCount, setVisibleCount] = useState(itemsPerPage);
@@ -34,8 +42,8 @@ export default function MakalelerClient() {
 
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
-            mouseX.set(e.clientX - 225); 
-            mouseY.set(e.clientY - 140); 
+            mouseX.set(e.clientX - 225);
+            mouseY.set(e.clientY - 140);
         };
 
         window.addEventListener("mousemove", handleMouseMove);
@@ -79,7 +87,7 @@ export default function MakalelerClient() {
 
     return (
         <div className="bg-[#010204] min-h-screen font-sans selection:bg-[#F5B913] selection:text-black pt-32 pb-32 overflow-hidden relative">
-            
+
             {/* Ambient Background Glow */}
             <div className="fixed inset-0 pointer-events-none z-0">
                 <div className="absolute top-[-20%] left-[-10%] w-[50vw] h-[50vw] rounded-full blur-[150px] opacity-10 bg-gradient-to-tr from-white to-transparent" />
@@ -157,21 +165,18 @@ export default function MakalelerClient() {
             <section className="relative z-10 w-full border-t border-white/10">
                 {visibleMakaleler.map((post, index) => (
                     <Link href={`/makaleler/${post.slug}`} key={post.id} className="block group">
-                        <div 
+                        <div
                             className="w-full border-b border-white/5 transition-colors duration-500 group-hover:bg-white/[0.02]"
                             onMouseEnter={() => setHoveredIndex(index)}
                             onMouseLeave={() => setHoveredIndex(null)}
                         >
                             <div className="max-w-[100rem] mx-auto px-6 md:px-12 lg:px-24 py-10 md:py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 relative overflow-hidden">
-                                
+
                                 {/* Background Highlight on Hover */}
                                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#F5B913] scale-y-0 group-hover:scale-y-100 origin-bottom transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]" />
 
                                 {/* Meta Information */}
                                 <div className="flex flex-row md:flex-col gap-4 md:gap-2 w-full md:w-56 shrink-0 md:opacity-50 group-hover:opacity-100 transition-opacity duration-500">
-                                    <span className="text-[#8892B0] group-hover:text-white font-mono text-[10px] uppercase tracking-widest transition-colors duration-500">
-                                        {formatDate(post.date)}
-                                    </span>
                                     <span className="text-[#F5B913] font-black text-[11px] uppercase tracking-[0.2em]">
                                         {post.location}
                                     </span>
@@ -197,11 +202,11 @@ export default function MakalelerClient() {
             {/* Pagination / Load More */}
             {hasMore && (
                 <div className="max-w-[100rem] mx-auto px-6 mt-16 flex justify-center relative z-10">
-                    <button 
+                    <button
                         onClick={loadMore}
                         className="px-8 py-4 rounded-full border border-white/20 text-white hover:bg-white/10 hover:border-white/40 transition-all font-mono tracking-widest text-xs uppercase"
                     >
-                        Daha Fazla Yükle ({makalelerData.length - visibleCount} makale kaldı)
+                        Daha Fazla Yükle ({filteredMakaleler.length - visibleCount} makale kaldı)
                     </button>
                 </div>
             )}

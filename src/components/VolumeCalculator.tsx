@@ -8,11 +8,6 @@ interface RoomOption {
     id: string;
     label: string;
     sublabel: string;
-    baseVolume: number; // m3
-    truckType: string;
-    crew: string;
-    basePriceMin: number;
-    basePriceMax: number;
 }
 
 const ROOM_OPTIONS: RoomOption[] = [
@@ -20,59 +15,34 @@ const ROOM_OPTIONS: RoomOption[] = [
         id: "parca",
         label: "Parça Eşya / Öğrenci",
         sublabel: "1-5 parça veya tek oda",
-        baseVolume: 12,
-        truckType: "Kamyonet (Panelvan)",
-        crew: "2 Uzman Personel",
-        basePriceMin: 3500,
-        basePriceMax: 6500,
     },
     {
         id: "1plus1",
         label: "1+1 Daire",
         sublabel: "Standart eşya yoğunluğu",
-        baseVolume: 25,
-        truckType: "Kompakt Çelik Kasa Kamyon",
-        crew: "1 Marangoz + 2 Personel",
-        basePriceMin: 8000,
-        basePriceMax: 12000,
     },
     {
         id: "2plus1",
         label: "2+1 Daire",
-        sublabel: "En çok tercih edilen aile evi",
-        baseVolume: 42,
-        truckType: "Orta Boy Kapalı Kasa Kamyon",
-        crew: "1 Marangoz + 3 Personel",
-        basePriceMin: 12000,
-        basePriceMax: 16500,
+        sublabel: "Eşya listesini birlikte değerlendirin",
     },
     {
         id: "3plus1",
         label: "3+1 Daire",
         sublabel: "Geniş hacimli eşya yoğunluğu",
-        baseVolume: 62,
-        truckType: "Büyük Boy Geniş Hacimli Filo",
-        crew: "1 Marangoz + 4 Personel",
-        basePriceMin: 16500,
-        basePriceMax: 23000,
     },
     {
         id: "4plus1",
         label: "4+1 & Villa",
         sublabel: "Maksimum kapasite veya dubleks",
-        baseVolume: 90,
-        truckType: "Mega Kamyon veya Çift Araç",
-        crew: "2 Marangoz + 5 Personel",
-        basePriceMin: 23000,
-        basePriceMax: 35000,
     },
 ];
 
 const FLOOR_OPTIONS = [
-    { id: "low", label: "Zemin - 3. Kat", note: "Bina asansörü veya merdiven uygun", elevatorNeed: false, priceMod: 0 },
-    { id: "mid", label: "4 - 8. Kat", note: "Modüler asansör tavsiye edilir", elevatorNeed: true, priceMod: 2500 },
-    { id: "high", label: "9 - 15. Kat", note: "Dış cephe asansörü zorunlu", elevatorNeed: true, priceMod: 3500 },
-    { id: "veryhigh", label: "16 - 25. Kat", note: "25. kata kadar teleskopik asansör", elevatorNeed: true, priceMod: 5000 },
+    { id: "low", label: "Zemin - 3. Kat", note: "Merdiven ve bina asansörünü değerlendirin", elevatorNeed: false },
+    { id: "mid", label: "4 - 8. Kat", note: "Kat ve cephe bilgisi paylaşın", elevatorNeed: true },
+    { id: "high", label: "9 - 15. Kat", note: "Erişim ve asansör uygunluğunu görüşün", elevatorNeed: true },
+    { id: "veryhigh", label: "16. Kat ve Üzeri", note: "Yükseklik ve kurulum alanını teyit edin", elevatorNeed: true },
 ];
 
 export default function VolumeCalculator() {
@@ -84,25 +54,13 @@ export default function VolumeCalculator() {
     const room = ROOM_OPTIONS.find((r) => r.id === selectedRoom) || ROOM_OPTIONS[2];
     const floor = FLOOR_OPTIONS.find((f) => f.id === selectedFloor) || FLOOR_OPTIONS[1];
 
-    // Calculations
-    const vipMultiplier = isVipPacking ? 1.35 : 1.0;
-    const pianoExtra = hasPianoOrSafe ? 3000 : 0;
-    const totalMin = Math.round(room.basePriceMin * vipMultiplier + floor.priceMod + pianoExtra);
-    const totalMax = Math.round(room.basePriceMax * vipMultiplier + floor.priceMod + pianoExtra);
-
-    const formatPrice = (num: number) => {
-        return num.toLocaleString("tr-TR") + " ₺";
-    };
-
     const whatsappMessage = encodeURIComponent(
-        `Merhaba, web sitenizdeki Nakliyat Hesaplama Aracından hesaplama yaptım:\n` +
+        `Merhaba, taşınma teklifi için hazırladığım bilgiler:\n` +
         `- Ev Tipi: ${room.label}\n` +
         `- Kat Durumu: ${floor.label}\n` +
-        `- Paketleme: ${isVipPacking ? "Anahtar Teslim VIP (Toplamalı)" : "Standart (Müşteri Koliler)"}\n` +
-        `- Özel Eşya: ${hasPianoOrSafe ? "Piyano/Kasa Var" : "Yok"}\n` +
-        `- Tahmini Hacim: ${room.baseVolume} m³\n` +
-        `- Hesaplanan Tutar: ${formatPrice(totalMin)} - ${formatPrice(totalMax)}\n` +
-        `Uygun bir tarih için net teklif almak istiyorum.`
+        `- Paketleme Desteği: ${isVipPacking ? "İstiyorum" : "Kapsamı görüşmek istiyorum"}\n` +
+        `- Özel Eşya: ${hasPianoOrSafe ? "Piyano/Kasa Var" : "Belirtilmedi"}\n` +
+        "Adres ve tarih uygunluğunu görüşüp güncel teklif almak istiyorum."
     );
 
     return (
@@ -125,19 +83,19 @@ export default function VolumeCalculator() {
                     <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-2.5 rounded-full backdrop-blur-xl shadow-lg">
                         <span className="w-2 h-2 rounded-full bg-primary-500 animate-pulse shadow-[0_0_10px_rgba(249,115,22,0.8)]" />
                         <span className="text-white font-black text-[10px] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.5em]">
-                            Akıllı Kapasite ve Hacim Motoru
+                            Taşınma Teklifi Hazırlığı
                         </span>
                     </div>
 
                     <h2 className="text-4xl md:text-7xl lg:text-8xl font-heading font-black tracking-tighter leading-[0.95] text-white">
-                        Eşya Hacmi & <br />
+                        Taşınma Detayları & <br />
                         <span className="font-serif text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-orange-400 to-amber-400 italic font-normal">
-                            Kamyon Kapasitesi.
+                            Teklif Hazırlığı.
                         </span>
                     </h2>
 
                     <p className="text-white/40 text-base md:text-xl font-medium leading-relaxed max-w-3xl mx-auto">
-                        Evinizin oda sayısını ve kat durumunu seçin; gereken araç boyunu, personel sayısını ve 2026 ortalama taşınma maliyetinizi saniyeler içinde hesaplayın.
+                        Oda ve kat bilgisini, paketleme ihtiyacını ve özel eşyaları seçin. Hazırladığınız özeti WhatsApp üzerinden paylaşarak adresinize ve tarihinize uygun teklif isteyin.
                     </p>
                 </div>
 
@@ -176,7 +134,7 @@ export default function VolumeCalculator() {
                                             </div>
                                             <div className="text-xs text-slate-400 mt-1">{opt.sublabel}</div>
                                             <div className="inline-block px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] font-mono text-primary-400 mt-3 font-semibold">
-                                                ~{opt.baseVolume} m³ Hacim
+                                                Eşya listesini paylaşın
                                             </div>
                                         </button>
                                     );
@@ -217,7 +175,7 @@ export default function VolumeCalculator() {
                                             <div className="text-xs text-slate-400 mt-1">{f.note}</div>
                                             {f.elevatorNeed && (
                                                 <div className="inline-block text-[10px] uppercase tracking-wider text-amber-400 mt-2.5 font-bold">
-                                                    ★ Modüler Asansör Dahil
+                                                    Kurulum uygunluğunu görüşün
                                                 </div>
                                             )}
                                         </button>
@@ -251,7 +209,7 @@ export default function VolumeCalculator() {
                                             Anahtar Teslim VIP Paketleme (Tüm Evi Ekibimiz Toplasın)
                                         </span>
                                         <span className="text-xs text-slate-400 block mt-1 leading-relaxed">
-                                            Mutfak porselenleri, bardaklar, giysiler ve kitaplar dahil hiçbir şeye dokunmazsınız. Ekibimiz özel kolilerle toplar ve yeni evinizde yerleştirir.
+                                            Mutfak eşyaları, giysiler ve kitaplar için toplama ve paketleme desteğini teklifinize ekletmek istediğinizi belirtin.
                                         </span>
                                     </div>
                                 </label>
@@ -272,7 +230,7 @@ export default function VolumeCalculator() {
                                             Ağır Eşya & Özel Yük (Kuyruklu/Duvar Piyanosu veya Çelik Kasa)
                                         </span>
                                         <span className="text-xs text-slate-400 block mt-1 leading-relaxed">
-                                            Özel kızaklı taşıma aparatları ve deneyimli ağır yük personeli tahsis edilir.
+                                            Eşyanın ölçüsünü, ağırlığını ve bina erişimini paylaşın; taşıma uygunluğu ve gereken ekipmanı önceden görüşün.
                                         </span>
                                     </div>
                                 </label>
@@ -286,52 +244,38 @@ export default function VolumeCalculator() {
                         <div className="flex items-center justify-between pb-6 border-b border-white/10">
                             <div>
                                 <span className="text-[10px] font-black text-primary-400 uppercase tracking-widest block">
-                                    Öngörülen Taşınma Tutarı
+                                    Hazırlanan Taşıma Özeti
                                 </span>
                                 <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-primary-300 mt-1 tracking-tight">
-                                    {formatPrice(totalMin)} – {formatPrice(totalMax)}
+                                    {room.label}
                                 </div>
                             </div>
                             <span className="px-3.5 py-1.5 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded-full text-[11px] font-bold">
-                                KDV &amp; Sigorta Dahil
+                                Teklif İçin Görüşün
                             </span>
-                        </div>
-
-                        {/* Live Volume Meter Bar */}
-                        <div className="space-y-2">
-                            <div className="flex justify-between text-xs font-semibold">
-                                <span className="text-slate-400">Kamyon Doluluk Oranı</span>
-                                <span className="text-primary-400 font-mono font-bold">~{room.baseVolume} m³ / 90 m³</span>
-                            </div>
-                            <div className="w-full h-2.5 bg-white/10 rounded-full overflow-hidden p-0.5">
-                                <div
-                                    className="h-full bg-gradient-to-r from-primary-500 via-orange-500 to-amber-400 rounded-full transition-all duration-500 shadow-[0_0_12px_rgba(249,115,22,0.8)]"
-                                    style={{ width: `${Math.min(100, Math.round((room.baseVolume / 90) * 100))}%` }}
-                                />
-                            </div>
                         </div>
 
                         {/* Calculated Specifications */}
                         <div className="space-y-3.5 text-xs sm:text-sm pt-2">
                             <div className="flex items-center justify-between py-2 border-b border-white/5">
                                 <span className="text-slate-400 flex items-center gap-2">
-                                    <IconBox className="w-4 h-4 text-primary-400" /> Tahmini Eşya Hacmi:
+                                    <IconBox className="w-4 h-4 text-primary-400" /> Konut / Eşya Tipi:
                                 </span>
-                                <span className="font-bold text-white font-mono">{room.baseVolume} m³</span>
+                                <span className="font-bold text-white font-mono">{room.label}</span>
                             </div>
 
                             <div className="flex items-center justify-between py-2 border-b border-white/5">
                                 <span className="text-slate-400 flex items-center gap-2">
-                                    <IconTruck className="w-4 h-4 text-primary-400" /> Gerekli Araç:
+                                    <IconTruck className="w-4 h-4 text-primary-400" /> Araç Planlaması:
                                 </span>
-                                <span className="font-bold text-white text-right text-xs sm:text-sm">{room.truckType}</span>
+                                <span className="font-bold text-white text-right text-xs sm:text-sm">Eşya listesine göre</span>
                             </div>
 
                             <div className="flex items-center justify-between py-2 border-b border-white/5">
                                 <span className="text-slate-400 flex items-center gap-2">
-                                    <IconCog className="w-4 h-4 text-primary-400" /> Ekip Dağılımı:
+                                    <IconCog className="w-4 h-4 text-primary-400" /> Ekip Planlaması:
                                 </span>
-                                <span className="font-bold text-white text-right text-xs sm:text-sm">{room.crew}</span>
+                                <span className="font-bold text-white text-right text-xs sm:text-sm">Erişim ve kapsama göre</span>
                             </div>
 
                             <div className="flex items-center justify-between py-2 border-b border-white/5">
@@ -339,7 +283,7 @@ export default function VolumeCalculator() {
                                     <IconShield className="w-4 h-4 text-primary-400" /> Dış Cephe Asansörü:
                                 </span>
                                 <span className="font-bold text-white">
-                                    {floor.elevatorNeed ? "Kurulacak (Dahil)" : "Merdiven / İsteğe Bağlı"}
+                                    {floor.elevatorNeed ? "Kurulum için adres kontrolü" : "Bina erişimini görüşün"}
                                 </span>
                             </div>
                         </div>
@@ -347,25 +291,25 @@ export default function VolumeCalculator() {
                         {/* Free Extras Guarantee Box */}
                         <div className="bg-white/[0.04] border border-white/10 rounded-2xl p-4 text-xs space-y-2">
                             <div className="font-bold text-primary-300 flex items-center gap-1.5">
-                                <IconCheck className="w-4 h-4 text-emerald-400 shrink-0" /> Fiyata Dahil Ücretsiz Hizmetlerimiz:
+                                <IconCheck className="w-4 h-4 text-emerald-400 shrink-0" /> Teklifte Netleştirilecek Hizmetler:
                             </div>
                             <ul className="text-slate-300 space-y-1 list-disc list-inside text-[11px] leading-relaxed">
-                                <li>Kadrolu marangoz ile gardırop &amp; baza montajı</li>
-                                <li>Çamaşır ve bulaşık makinesi su tesisat bağlantısı</li>
-                                <li>Tüm mobilyaların çift kat patpat naylonla zırhlanması</li>
-                                <li>Taşınma anından teslimata Axa/Allianz emtia sigortası</li>
+                                <li>Gardırop ve baza söküm / kurulum ihtiyacı</li>
+                                <li>Cihaz bağlantılarında yetkili servis gereksinimi</li>
+                                <li>Mobilya ve kırılacak eşyaların paketleme yöntemi</li>
+                                <li>Varsa poliçenin kapsamı, limitleri ve istisnaları</li>
                             </ul>
                         </div>
 
                         {/* Direct Action Buttons */}
                         <div className="space-y-3 pt-2">
                             <a
-                                href={`https://wa.me/90${firmaBilgileri.phone.replace(/\D/g, "")}?text=${whatsappMessage}`}
+                                href={`https://wa.me/90${firmaBilgileri.phone.replace(/\D/g, "").replace(/^0/, "")}?text=${whatsappMessage}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-3 w-full py-4 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white font-black text-xs uppercase tracking-widest transition-all duration-300 shadow-xl shadow-emerald-500/20"
                             >
-                                <span>WhatsApp İle Bu Fiyata Teklif Al</span>
+                                <span>Özeti WhatsApp İle Paylaş</span>
                                 <span>↗</span>
                             </a>
 
@@ -374,12 +318,12 @@ export default function VolumeCalculator() {
                                 className="btn-primary !w-full !py-4 text-xs font-black uppercase tracking-widest text-center flex items-center justify-center gap-3 shadow-xl shadow-primary-500/30"
                             >
                                 <IconPhone className="w-4 h-4" />
-                                <span>Eksper Çağır: {firmaBilgileri.phone}</span>
+                                <span>Detayları Görüşün: {firmaBilgileri.phone}</span>
                             </a>
                         </div>
 
                         <p className="text-[11px] text-slate-500 text-center italic">
-                            * Kesin fiyat taşınma günü öncesi ücretsiz video veya fiziki ekspertiz ile sabitlenir. Kapıda sürpriz masraf çıkmaz.
+                            Bu araç fiyat veya kapasite hesabı yapmaz. İki adres, eşya listesi ve tarih bilgisiyle güncel teklif alın; dahil hizmetleri ve vergi koşullarını yazılı olarak görüşün.
                         </p>
                     </div>
                 </div>

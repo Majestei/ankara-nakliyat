@@ -29,7 +29,7 @@ const checklistItems: ChecklistItem[] = [
         id: "c3",
         stage: "2_weeks",
         title: "Resmi Sözleşmeli Nakliyat Rezervasyonu",
-        desc: "Ankara Özdemir Nakliyat ile iletişime geçerek K3 yetki belgeli, sabit fiyat garantili ve sigortalı taşıma tarihinizi kesinleştirin.",
+        desc: "Ankara Özdemir Nakliyat ile tarih ve adres uygunluğunu görüşün. Dahil hizmetleri, fiyat koşullarını ve varsa poliçe kapsamını yazılı olarak netleştirin.",
     },
     {
         id: "c4",
@@ -140,7 +140,7 @@ export default function MovingChecklistSection() {
                     </h2>
 
                     <p className="text-slate-400 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed">
-                        Taşınma gününün kaosa dönüşmesini engelleyin. 15 yıllık başkent tecrübemizle hazırladığımız interaktif kontrol listesi ile süreci adım adım tamamlayın.
+                        Taşınma gününün kaosa dönüşmesini engelleyin. Bu interaktif kontrol listesi ile süreci adım adım tamamlayın.
                     </p>
 
                     {/* İlerleme Çubuğu - Neon Glow & Frosted Card */}
@@ -246,7 +246,7 @@ export default function MovingChecklistSection() {
                             <span>Profesyonel Destek</span>
                         </div>
                         <h4 className="text-xl md:text-2xl font-black text-white tracking-tight">Taşınma Sürecini Profesyonellere Bırakın</h4>
-                        <p className="text-xs md:text-sm text-slate-400">Ücretsiz ekspertiz ve sabit fiyat teklifi için haftanın 7 günü arayabilirsiniz.</p>
+                        <p className="text-xs md:text-sm text-slate-400">Adres, eşya ve tarih bilgilerinizle hizmet kapsamını ve güncel teklifi görüşebilirsiniz.</p>
                     </div>
                     <a
                         href={`tel:${firmaBilgileri.phone.replace(/\s/g, "")}`}

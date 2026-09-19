@@ -140,7 +140,7 @@ ${ilce.name} bölgesinde binalar her geçen gün yükselirken, apartman içi mer
 - **Eşya Güvenliği**: Mobilyalarınız bina içinde köşelere çarpmaz, çizilmez.
 - **Hız**: 4-5 saat sürecek yükleme işlemi asansörle 1-2 saatte tamamlanır.
 - **Bina Koruması**: Apartman asansörü ve merdivenleri zarar görmez, komşular rahatsız olmaz.
-- **Yükseklik**: 15. kata kadar ulaşabilen modüler sistemlerimizle her yere ulaşıyoruz.
+- **Yükseklik**: 25. kata kadar ulaşabilen modüler sistemlerimizle her yere ulaşıyoruz.
 
 ## ${ilce.name} Asansörlü Taşıma Operasyonu
 
@@ -509,8 +509,5 @@ Ankara Özdemir Nakliyat olarak, teknolojiye yaptığımız yatırımlarla Ankar
 }
 
 // Tüm ek blog yazılarını birleştir
-export const ekBlogPosts: BlogPost[] = [
-    ...generateIlceBlogPosts(),
-    ...generateSehirlerarasiBlogPosts(),
-    ...generateGenelBlogPosts(),
-];
+// Recovery freeze: archived generators must not silently publish new URLs.
+export const ekBlogPosts: BlogPost[] = [];

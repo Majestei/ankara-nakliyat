@@ -37,3 +37,7 @@ next-env.d.ts
 /.agents/reports/
 /.agents/seo.local.json
 /.agents/*credentials*.json
+
+# Recovery reports include private Search Console business/query evidence.
+/docs/seo/recovery/
+__pycache__/

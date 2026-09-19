@@ -112,7 +112,7 @@ function getServiceIcon(id: string) {
 const steps = [
     { num: "01", title: "Ücretsiz Yerinde Keşif", desc: "Uzman ekibimiz adresinize gelerek taşınma planınızı en doğru şekilde yerinde analiz eder.", icon: <IconClipboard />, image: "/images/genel/hero-bg-2.webp" },
     { num: "02", title: "Premium Paket", desc: "Eşyalarınız için özel üretilen, darbe emici materyallerle paketleme.", icon: <IconBox />, image: "/images/hizmetler/paketleme.webp" },
-    { num: "03", title: "Güvenli Sevkiyat", desc: "A+ sigorta koruması ve anlık takip sistemli kapalı kasa transfer.", icon: <IconTruck />, image: "/images/hizmetler/sehirler-arasi-nakliyat.webp" },
+    { num: "03", title: "Güvenli Sevkiyat", desc: "Eşya hacmi, rota ve teslimat koşullarına göre sevkiyat planı.", icon: <IconTruck />, image: "/images/hizmetler/sehirler-arasi-nakliyat.webp" },
     { num: "04", title: "Eksiksiz Teslim", desc: "Yeni adresinizde uzman marangoz ekibimizle anahtar teslim kurulum.", icon: <IconHome />, image: "/images/hizmetler/evden-eve-nakliyat.webp" },
 ];
 
@@ -305,9 +305,9 @@ export default function HomeClient() {
             </section>
 
             {/* ── 2026 PRICING TABLE (1+1, 2+1, 3+1, 4+1) ── */}
-            <PricingTable 
-                title="2026 Ankara Evden Eve Nakliyat Fiyatları" 
-                subtitle="Ankara içi ve ilçeler arası taşınmalarda sürpriz ek masrafsız, oda sayısına ve hizmet kapsamına göre şeffaf ortalama fiyatlandırma tablomuz. Fiyatlarımıza KDV, profesyonel marangozluk ve sigorta dahildir."
+            <PricingTable
+                title="2026 Ankara Evden Eve Nakliyat Fiyatları"
+                subtitle="Ankara içi ve ilçeler arası taşınmalarda eşya hacmi, katlar, bina erişimi ve paketleme ihtiyacını paylaşarak güncel teklif alın. Dahil hizmetleri ve vergi koşullarını görüşün."
                 locationName="Ankara"
             />
 
@@ -378,7 +378,7 @@ export default function HomeClient() {
 
                         <div className="grid lg:grid-cols-1 gap-6">
                             {sss.slice(0, 5).map((item, i) => (
-                                <motion.div 
+                                <motion.div
                                     key={i}
                                     initial={{ opacity: 0, x: -20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
@@ -403,7 +403,7 @@ export default function HomeClient() {
                                 </motion.div>
                             ))}
                         </div>
-                        
+
                         <div className="mt-20 flex justify-center">
                             <Link href="/sss" className="group flex items-center gap-4 px-10 py-5 bg-slate-900 text-white rounded-full font-black text-[10px] uppercase tracking-[0.4em] hover:bg-primary-500 transition-all shadow-2xl">
                                 Tümünü Gör <IconArrow className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
@@ -416,12 +416,12 @@ export default function HomeClient() {
             {/* ── TRUST & CERTIFICATES BAR (Point 4) ── */}
             <section className="py-24 md:py-32 bg-white relative overflow-hidden">
                 {/* Cinematic Background Elements */}
-                <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" 
-                     style={{ 
-                        backgroundImage: "linear-gradient(to right, #000 1px, transparent 1px), linear-gradient(to bottom, #000 1px, transparent 1px)", 
+                <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
+                     style={{
+                        backgroundImage: "linear-gradient(to right, #000 1px, transparent 1px), linear-gradient(to bottom, #000 1px, transparent 1px)",
                         backgroundSize: "60px 60px",
                         transform: "perspective(1000px) rotateX(20deg) translateY(-50px) scale(1.5)",
-                     }} 
+                     }}
                 />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(249,115,22,0.05)_0%,_transparent_70%)] pointer-events-none" />
 
@@ -433,11 +433,11 @@ export default function HomeClient() {
                             { title: "Taşıma Seçenekleri", desc: "Ev, ofis ve parça eşya", icon: <IconTruck className="w-10 h-10" />, color: "from-emerald-500 to-teal-500" },
                             { title: "Teklif Desteği", desc: "Telefon ve iletişim formu", icon: <IconUsers className="w-10 h-10" />, color: "from-purple-500 to-pink-500" }
                         ].map((item, i) => (
-                            <motion.div 
+                            <motion.div
                                 key={i}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                whileHover={{ 
+                                whileHover={{
                                     y: -10,
                                     rotateX: 5,
                                     rotateY: -5,
@@ -451,7 +451,7 @@ export default function HomeClient() {
                                 <div className="h-full p-8 md:p-10 bg-white border border-slate-100 rounded-[2.5rem] shadow-[0_10px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] transition-all duration-500 flex flex-col items-center text-center relative overflow-hidden">
                                     {/* Hover Gradient Overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-br from-white via-white to-slate-50 opacity-100 transition-opacity" />
-                                    
+
                                     {/* Icon Container */}
                                     <div className="relative z-10 mb-8">
                                         <div className={`w-20 h-20 rounded-3xl bg-slate-50 flex items-center justify-center text-slate-400 group-hover:text-white transition-all duration-500 relative`}>

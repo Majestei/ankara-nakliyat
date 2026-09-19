@@ -11,71 +11,11 @@ import ContractGuaranteeSection from "@/components/ContractGuaranteeSection";
 import MovingChecklistSection from "@/components/MovingChecklistSection";
 import { getDistrictServiceContent } from "@/data/districtServiceData";
 
-// Hizmet alt sayfa tanımları
+// Existing route names only; editorial content comes from districtServiceData.
 const ilceHizmetler = [
-    {
-        slug: "evden-eve-nakliyat",
-        title: "Evden Eve Nakliyat",
-        getContent: (ilce: string) => ({
-            h1: `${ilce} Evden Eve Nakliyat`,
-            description: `${ilce} evden eve nakliyat hizmeti. Profesyonel ekibimizle ${ilce}'da güvenli, sigortalı ve ekonomik evden eve taşımacılık.`,
-            paragraphs: [
-                `${ilce} evden eve nakliyat hizmetimiz kapsamında eşyalarınızı profesyonel ekibimizle güvenle taşıyoruz. ${ilce}'da 15 yılı aşkın deneyimimizle evden eve nakliyat sektöründe hizmet veriyoruz.`,
-                `${ilce} evden eve nakliyat fiyatları, taşınacak eşya miktarına, kat durumuna ve mesafeye göre belirlenmektedir. Ücretsiz ekspertiz hizmetimizle ${ilce}'da en uygun nakliyat fiyatını sunuyoruz.`,
-                `${ilce} evden eve nakliyat hizmetimiz; profesyonel paketleme, mobilya sökme-kurulum, asansörlü taşıma, sigortalı taşımacılık ve taşınma sonrası yerleştirme hizmetlerini kapsamaktadır. ${ilce}'da evden eve taşınma planınız için hemen bizi arayın.`,
-            ],
-            features: [
-                `${ilce}'da ücretsiz ekspertiz ve fiyat teklifi`,
-                `${ilce} evden eve nakliyat sigortası`,
-                `${ilce}'da profesyonel paketleme hizmeti`,
-                `${ilce} mobilya sökme ve kurulum`,
-                `${ilce}'da asansörlü taşıma imkanı`,
-                `${ilce} 7/24 müşteri desteği`,
-            ],
-        }),
-    },
-    {
-        slug: "ofis-tasima",
-        title: "Ofis Taşıma",
-        getContent: (ilce: string) => ({
-            h1: `${ilce} Ofis Taşıma`,
-            description: `${ilce} ofis taşıma hizmeti. Kurumsal taşınmalarınızı minimum iş kaybıyla gerçekleştiriyoruz. Profesyonel ofis nakliyat.`,
-            paragraphs: [
-                `${ilce} ofis taşıma hizmetimizle kurumsal taşınmalarınızı profesyonelce yönetiyoruz. ${ilce}'da ofis taşıma sürecinde iş kaybınızı minimuma indirmeyi hedefliyoruz.`,
-                `${ilce} ofis taşıma hizmetimiz kapsamında; ofis mobilyaları, elektronik cihazlar, arşiv dosyaları ve IT altyapısı güvenle taşınmaktadır. ${ilce}'da hafta sonu ofis taşıma seçeneği ile iş günü kaybınızı sıfıra indirebilirsiniz.`,
-                `${ilce}'da ofis taşıma fiyatları, ofis büyüklüğüne ve taşınacak eşya miktarına göre belirlenmektedir. ${ilce} kurumsal nakliyat çözümlerimiz hakkında detaylı bilgi almak için bizi arayın.`,
-            ],
-            features: [
-                `${ilce}'da hafta sonu ofis taşıma`,
-                `${ilce} ofis mobilya montaj/demontaj`,
-                `${ilce}'da elektronik cihaz koruması`,
-                `${ilce} arşiv taşımacılığı`,
-                `${ilce}'da IT altyapı taşıma desteği`,
-                `${ilce} sigortalı ofis taşıma`,
-            ],
-        }),
-    },
-    {
-        slug: "nakliyat-fiyatlari",
-        title: "Nakliyat Fiyatları",
-        getContent: (ilce: string) => ({
-            h1: `${ilce} Nakliyat Fiyatları`,
-            description: `${ilce} nakliyat fiyatları 2026. ${ilce}'da evden eve nakliyat, ofis taşıma, asansörlü taşıma fiyatları. Ücretsiz teklif alın.`,
-            paragraphs: [
-                `${ilce} nakliyat fiyatları, taşınacak eşya miktarı, mesafe, kat durumu ve tercih edilen ek hizmetlere göre belirlenmektedir. ${ilce}'da en uygun nakliyat fiyatlarını sunmak için ücretsiz ekspertiz hizmetimizden yararlanabilirsiniz.`,
-                `${ilce} evden eve nakliyat fiyatları genellikle 1+1 daireler için uygun fiyatlarla başlamaktadır. ${ilce}'da 2+1, 3+1 ve daha büyük daireler için fiyatlar eşya miktarına göre artmaktadır. Asansörlü taşıma, paketleme ve sigorta gibi ek hizmetler fiyata dahil edilebilir.`,
-                `${ilce} nakliyat fiyatları hakkında en doğru bilgiyi almak için ücretsiz yerinde ekspertiz hizmetimizi kullanmanızı öneriyoruz. ${ilce}'da nakliyat fiyat teklifi almak için hemen bizi arayın.`,
-            ],
-            features: [
-                `${ilce}'da ücretsiz ekspertiz ve keşif`,
-                `${ilce} en uygun nakliyat fiyatları`,
-                `${ilce}'da fiyat garantisi`,
-                `${ilce} ek hizmet seçenekleri`,
-                `${ilce}'da taksit imkanı`,
-                `${ilce} şeffaf fiyatlandırma`,
-            ],
-        }),
-    },
+    { slug: "evden-eve-nakliyat", title: "Evden Eve Nakliyat" },
+    { slug: "ofis-tasima", title: "Ofis Taşıma" },
+    { slug: "nakliyat-fiyatlari", title: "Nakliyat Fiyatları" },
 ];
 
 interface Props {
@@ -84,7 +24,7 @@ interface Props {
 
 export async function generateStaticParams() {
     const params: { ilce: string, slug: string }[] = [];
-    
+
     ankaraIlceleri.forEach(ilce => {
         // Hizmetler
         ilceHizmetler.forEach(hizmet => {
@@ -115,24 +55,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const hizmet = ilceHizmetler.find((h) => h.slug === params.slug);
     if (hizmet) {
         const content = getDistrictServiceContent(ilce.slug, hizmet.slug as any, ilce.name);
-        const title = `${content.h1} | Özdemir Nakliyat`;
+        const pageTitle = `${ilce.name} ${hizmet.title}${hizmet.slug === "evden-eve-nakliyat" ? ": Taşıma Süreci" : ""} | Özdemir Nakliyat`;
         const description = content.description;
         const url = `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}/${params.slug}`;
 
         return {
-            title,
+            title: {
+                absolute: pageTitle,
+            },
             description,
             alternates: { canonical: url },
             openGraph: {
-                title,
+                title: pageTitle,
                 description,
                 url,
                 type: "website",
-                images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: title }],
+                images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: pageTitle }],
             },
             twitter: {
                 card: "summary_large_image",
-                title,
+                title: pageTitle,
                 description,
                 images: ["/og-image.jpg"],
             },
@@ -143,24 +85,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const mahalleler = neighborhoodsByDistrict[ilce.slug] || [];
     const mahalle = mahalleler.find(m => m.slug === params.slug);
     if (mahalle) {
-        const title = `Ankara ${ilce.name} ${mahalle.name} Evden Eve Nakliyat`;
-        const description = `Ankara ${ilce.name} ${mahalle.name} mahallesinde asansörlü, ambalajlı ve sigortalı profesyonel evden eve nakliyat. Hemen arayın, uygun fiyatları kaçırmayın!`;
+        const pageTitle = `${ilce.name} ${mahalle.name} Nakliyat | Özdemir Nakliyat`;
+        const description = `${mahalle.name}, ${ilce.name} evden eve nakliyat için eşya miktarı, kat ve bina erişimine göre taşıma planı. Paketleme kapsamını görüşün, güncel teklif alın.`;
         const url = `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}/${params.slug}`;
 
         return {
-            title,
+            title: {
+                absolute: pageTitle,
+            },
             description,
             alternates: { canonical: url },
             openGraph: {
-                title,
+                title: pageTitle,
                 description,
                 url,
                 type: "website",
-                images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: title }]
+                images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: pageTitle }]
             },
             twitter: {
                 card: "summary_large_image",
-                title,
+                title: pageTitle,
                 description,
                 images: ["/og-image.jpg"]
             }
@@ -176,7 +120,7 @@ export default function CombinedIlceSubPage({ params }: Props) {
 
     // Check if it's a hizmet
     const hizmet = ilceHizmetler.find((h) => h.slug === params.slug);
-    
+
     // Check if it's a mahalle
     const mahalleler = neighborhoodsByDistrict[ilce.slug] || [];
     const mahalle = mahalleler.find(m => m.slug === params.slug);
@@ -200,7 +144,7 @@ export default function CombinedIlceSubPage({ params }: Props) {
             "@context": "https://schema.org",
             "@type": "Service",
             name: `${ilce.name} ${mahalle.name} Evden Eve Nakliyat`,
-            description: `${ilce.name} ${mahalle.name} mahallesinde asansörlü, ambalajlı ve sigortalı profesyonel evden eve nakliyat.`,
+            description: `${mahalle.name}, ${ilce.name} için eşya miktarı, kat, bina erişimi ve paketleme ihtiyacına göre evden eve taşıma planlaması.`,
             provider: {
                 "@type": "MovingCompany",
                 name: "Ankara Özdemir Nakliyat",
@@ -340,6 +284,33 @@ export default function CombinedIlceSubPage({ params }: Props) {
                                 ))}
                             </div>
 
+                            {hizmet.slug === "nakliyat-fiyatlari" && (
+                                <div className="mt-8 space-y-5 text-slate-600 leading-relaxed">
+                                    <h2 className="text-2xl font-bold text-slate-900">Hizmet türüne göre teklifi karşılaştırın</h2>
+                                    <p>
+                                        Ev taşımasında eşya hacmi, katlar, paketleme ve söküm-kurulum kapsamı birlikte değerlendirilir.
+                                        Asansör ihtiyacında yalnız kat sayısını belirtmek yeterli değildir: tek veya iki adreste kurulum,
+                                        bina cephesi, yükleme alanı ve kullanım süresi teklifin kapsamını etkiler.
+                                    </p>
+                                    <p>
+                                        Parça eşya için oda sayısı yerine eşyanın adedini, ölçüsünü ve fotoğrafını paylaşın.
+                                        Yükleme yardımı, ambalaj ve teslimde yerleştirmenin fiyata dahil olup olmadığını sorun.
+                                        Şehirler arası taşınmada iki açık adresi ve teslim tarihini belirtin; tam araç veya ortak araç planı,
+                                        olası bekleme ve varsa aktarma koşullarını karşılaştırın.
+                                    </p>
+                                    <p>
+                                        Ofis taşınmasında bölüm ve cihaz envanteri, arşiv koli sayısı, çalışma saatleri ve yeniden kurulum
+                                        sorumlulukları ayrıca görüşülmelidir. Her firmadan aynı liste ve tarihle teklif isteyin;
+                                        vergi, ek iş ve kapsam değişikliği koşullarını yazılı olarak değerlendirin.
+                                    </p>
+                                    <div className="flex flex-wrap gap-x-6 gap-y-2">
+                                        <Link href="/hizmetler/asansorlu-tasima" className="font-semibold text-primary-600 hover:underline">Asansör uygunluğu</Link>
+                                        <Link href="/hizmetler/parca-esya-tasima" className="font-semibold text-primary-600 hover:underline">Parça eşya kapsamı</Link>
+                                        <Link href="/hizmetler/sehirler-arasi-nakliyat" className="font-semibold text-primary-600 hover:underline">Şehirler arası taşıma</Link>
+                                    </div>
+                                </div>
+                            )}
+
                             {/* Bölgesel Zorluk & Çözüm Kartları */}
                             <div className="grid md:grid-cols-2 gap-6 my-10 not-prose">
                                 <div className="p-6 bg-red-50/70 border border-red-200/80 rounded-2xl">
@@ -406,9 +377,9 @@ export default function CombinedIlceSubPage({ params }: Props) {
                 )}
 
                 {/* 2026 District Service Pricing Table */}
-                <PricingTable 
+                <PricingTable
                     title={`${ilce.name} ${hizmet.title} Fiyatları (2026)`}
-                    subtitle={`${ilce.name} genelinde geçerli şeffaf fiyat tarifemiz. K3 lisansı, tam kapsamlı sigorta ve profesyonel montaj dahildir.`}
+                    subtitle={`${ilce.name} için eşya, mesafe, kat ve hizmet kapsamına göre güncel teklif isteyin. Dahil işleri, ek hizmetleri ve vergi koşullarını yazılı olarak netleştirin.`}
                     locationName={`${ilce.name}`}
                 />
 

@@ -19,27 +19,27 @@ export default function TrustBadgesSection() {
     const badges = [
         {
             icon: <IconClipboard className="w-7 h-7 text-primary-400" />,
-            title: "K3 Yetki Belgesi",
-            badge: "Resmi Belge",
-            desc: "T.C. Ulaştırma ve Altyapı Bakanlığı onaylı yurtiçi ev ve büro eşyası taşımacılığı yasal yetki lisansı.",
+            title: "Taşıma Kapsamı",
+            badge: "Planlama",
+            desc: "Taşınacak eşya listesi, iki adres ve tarih bilgisi teklif görüşmesinin temelini oluşturur.",
         },
         {
             icon: <IconShield className="w-7 h-7 text-primary-400" />,
-            title: "%100 Emtia Sigortası",
-            badge: "Axa & Allianz",
-            desc: "Taşınma anından teslimata kadar tüm mobilya ve beyaz eşyalarınız resmi sigorta poliçesiyle teminat altındadır.",
+            title: "Koruma Koşulları",
+            badge: "Kapsam",
+            desc: "Paketleme yöntemi ile varsa sigorta poliçesinin kapsamını ve istisnalarını taşıma öncesinde görüşün.",
         },
         {
             icon: <IconTruck className="w-7 h-7 text-primary-400" />,
-            title: "Özmal Çelik Filo",
-            badge: "Taşeron Yok",
-            desc: "Aracı komisyoncu veya yabancı taşeron araçlar değil; firmamıza ait kapalı kasa logolu araçlarımızla hizmet veriyoruz.",
+            title: "Araç ve Erişim",
+            badge: "Lojistik",
+            desc: "Araç seçimi için eşya hacmi, bina girişi ve yükleme alanını birlikte değerlendirin.",
         },
         {
             icon: <IconWrench className="w-7 h-7 text-primary-400" />,
-            title: "Kadrolu Marangoz",
-            badge: "Usta Ekip",
-            desc: "Gardırop, baza ve dolaplarınız uzman marangozlarımızca profesyonelce demonte edilir ve yeni evinizde kurulur.",
+            title: "Söküm ve Kurulum",
+            badge: "Mobilya",
+            desc: "Sökülmesi gereken mobilyaları ve yeni adreste istenen kurulumları teklif kapsamına ekletin.",
         },
     ];
 
@@ -55,19 +55,19 @@ export default function TrustBadgesSection() {
                     <span className="inline-flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-2 rounded-full backdrop-blur-xl">
                         <span className="w-2 h-2 rounded-full bg-primary-500 animate-pulse shadow-[0_0_10px_rgba(249,115,22,0.8)]" />
                         <span className="text-white font-black text-[10px] md:text-xs uppercase tracking-[0.4em]">
-                            Yasal ve Kurumsal Güvence
+                            Taşınma Öncesi Planlama
                         </span>
                     </span>
 
                     <h2 className="text-3xl sm:text-4xl md:text-6xl font-heading font-black tracking-tighter leading-tight text-white">
-                        Neden Ankara <br />
+                        Taşınma Planında <br />
                         <span className="font-serif text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-orange-400 to-amber-400 italic font-normal">
-                            Özdemir Nakliyat?
+                            Neler Görüşülmeli?
                         </span>
                     </h2>
 
                     <p className="text-slate-400 text-sm md:text-base leading-relaxed">
-                        Korsan ve belgesiz taşımacılara karşı eşyalarınızı resmi güvence ve kurumsal yetki belgeleriyle taşıyoruz.
+                        Hizmetin kapsamını, taşıma koşullarını ve sorumlulukları önceden netleştirmek için bu başlıkları kullanabilirsiniz.
                     </p>
                 </div>
 
@@ -96,7 +96,7 @@ export default function TrustBadgesSection() {
                             <div className="mt-6 pt-5 border-t border-white/10 flex items-center">
                                 <span className="inline-flex items-center gap-2 text-[11px] font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
                                     <IconCheck className="w-3.5 h-3.5" />
-                                    <span>Doğrulanmış Standart</span>
+                                    <span>Teklifte Görüşün</span>
                                 </span>
                             </div>
                         </div>

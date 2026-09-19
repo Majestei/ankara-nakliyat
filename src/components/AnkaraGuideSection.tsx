@@ -16,7 +16,7 @@ export default function AnkaraGuideSection() {
             name: "Keçiören & Mamak",
             slug: "kecioren",
             tag: "Yüksek Kat & Dikey Lojistik",
-            desc: "15+ kata kadar uzanan hidrolik teleskopik asansörlerimiz ile bina içi merdivenleri ve site asansörlerini meşgul etmeden hızlı ve hasarsız tahliye.",
+            desc: "Yüksek katlarda merdiven ölçüsü, bina asansörünün kullanım izni ve dış cephe ekipmanının kurulum alanı birlikte değerlendirilmelidir.",
         },
         {
             name: "Yenimahalle, Batıkent & Çayyolu",
@@ -27,8 +27,8 @@ export default function AnkaraGuideSection() {
         {
             name: "Etimesgut, Sincan & Eryaman",
             slug: "etimesgut",
-            tag: "Aynı Gün Hızlı Sevkiyat",
-            desc: "Merkez filo ve operasyon üssümüze yakınlık avantajıyla aynı gün acil ekspertiz ve dakik araç tahsisi ile en ekonomik fiyat garantisi.",
+            tag: "Tarih ve Araç Planı",
+            desc: "Adres, eşya listesi ve tercih edilen tarihi paylaşarak araç uygunluğunu görüşün. Site giriş koşulları ile yükleme mesafesini önceden belirtin.",
         },
         {
             name: "Gölbaşı & İncek",
@@ -66,7 +66,7 @@ export default function AnkaraGuideSection() {
                     </h2>
 
                     <p className="text-slate-600 text-sm md:text-lg leading-relaxed">
-                        Ankara&apos;nın her semtinin kendine has mimari, sokak ve bina koşulları vardır. 15 yılı aşkın başkent tecrübemizle her bölgeye özel lojistik stratejisi uyguluyoruz.
+                        Ankara&apos;nın her semtinin kendine has mimari, sokak ve bina koşulları vardır. Taşınma planını iki adresin erişim koşulları ve eşya bilgilerine göre oluşturmak gerekir.
                     </p>
                 </div>
 

@@ -5,18 +5,18 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
     title: "Nakliyat Hizmet Bölgeleri | Ankara ve 81 İl Taşımacılık Ağı",
-    description: "Ankara'nın 25 ilçesinde ve Türkiye'nin 81 ilinde profesyonel lojistik hizmeti sunuyoruz. Şehir içi ve şehirler arası sigortalı taşımacılık.",
+    description: "Ankara ilçeleri ve mevcut şehirler arası rotalar için taşınma planı. Adres, eşya, kat ve tarih bilgileriyle hizmet uygunluğunu görüşün.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/islemler" },
     openGraph: {
         title: "Nakliyat Hizmet Bölgeleri | Ankara ve 81 İl Taşımacılık Ağı",
-        description: "Ankara'nın 25 ilçesinde ve Türkiye'nin 81 ilinde profesyonel lojistik hizmeti sunuyoruz. Şehir içi ve şehirler arası sigortalı taşımacılık.",
+        description: "Ankara ilçeleri ve mevcut şehirler arası rotalar için taşınma planı. Adres, eşya, kat ve tarih bilgileriyle hizmet uygunluğunu görüşün.",
         url: "https://ankaraozdemirnakliyat.com/islemler",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
         title: "Nakliyat Hizmet Bölgeleri | Ankara ve 81 İl Taşımacılık Ağı",
-        description: "Ankara'nın 25 ilçesinde ve Türkiye'nin 81 ilinde profesyonel lojistik hizmeti sunuyoruz. Şehir içi ve şehirler arası sigortalı taşımacılık.",
+        description: "Ankara ilçeleri ve mevcut şehirler arası rotalar için taşınma planı. Adres, eşya, kat ve tarih bilgileriyle hizmet uygunluğunu görüşün.",
     }
 };
 

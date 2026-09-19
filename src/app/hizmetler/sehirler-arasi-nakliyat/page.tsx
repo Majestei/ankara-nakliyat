@@ -6,19 +6,19 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import TrustBadgesSection from "@/components/TrustBadgesSection";
 
 export const metadata: Metadata = {
-    title: "Ankara Şehirler Arası Nakliyat: 81 İle Sigortalı Taşıma",
-    description: "Ankara'dan Türkiye'nin 81 iline sigortalı ve sözleşmeli şehirler arası nakliyat. Kapalı çelik kasalı araçlar ve anlık takip ile hemen sabit fiyat alın!",
+    title: "Ankara Şehirler Arası Nakliyat: Rota ve Teklif",
+    description: "Ankara çıkışlı şehirler arası nakliyat için varış adresi, eşya miktarı ve teslim takvimini görüşün. Rota uygunluğu ve taşıma kapsamına göre teklif alın.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/hizmetler/sehirler-arasi-nakliyat" },
     openGraph: {
-        title: "Ankara Şehirler Arası Nakliyat: 81 İle Sigortalı Taşıma",
-        description: "Ankara'dan Türkiye'nin 81 iline sigortalı ve sözleşmeli şehirler arası nakliyat. Kapalı çelik kasalı araçlar ve anlık takip ile hemen sabit fiyat alın!",
+        title: "Ankara Şehirler Arası Nakliyat: Rota ve Teklif",
+        description: "Ankara çıkışlı şehirler arası nakliyat için varış adresi, eşya miktarı ve teslim takvimini görüşün. Rota uygunluğu ve taşıma kapsamına göre teklif alın.",
         url: "https://ankaraozdemirnakliyat.com/hizmetler/sehirler-arasi-nakliyat",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Ankara Şehirler Arası Nakliyat: 81 İle Sigortalı Taşıma",
-        description: "Ankara'dan Türkiye'nin 81 iline sigortalı ve sözleşmeli şehirler arası nakliyat. Kapalı çelik kasalı araçlar ve anlık takip ile hemen sabit fiyat alın!",
+        title: "Ankara Şehirler Arası Nakliyat: Rota ve Teklif",
+        description: "Ankara çıkışlı şehirler arası nakliyat için varış adresi, eşya miktarı ve teslim takvimini görüşün. Rota uygunluğu ve taşıma kapsamına göre teklif alın.",
     }
 };
 
@@ -27,7 +27,7 @@ export default function SehirlerArasiPage() {
         <>
             <ServiceSchema
                 serviceName="Şehirler Arası Nakliyat"
-                serviceDescription="Ankara'dan Türkiye'nin 81 iline sigortalı şehirler arası nakliyat hizmeti. Parsiyel ve komple taşıma."
+                serviceDescription="Ankara çıkışlı şehirler arası taşımalarda rota, tarih ve eşya miktarına göre teklif planlaması."
                 serviceType="Şehirler Arası Nakliyat"
                 areaServed="Türkiye"
             />
@@ -47,7 +47,7 @@ export default function SehirlerArasiPage() {
                         Şehirler Arası <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-orange-500">Nakliyat</span>
                     </h1>
                     <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
-                        Ankara&apos;dan Türkiye&apos;nin 81 iline güvenli, sigortalı ve GPS takipli şehirler arası nakliyat hizmeti.
+                        Ankara çıkışlı taşınmada varış adresini, eşya listesini ve teslim beklentinizi paylaşın; rota ve tarih uygunluğunu önceden görüşün.
                     </p>
                 </div>
             </section>
@@ -56,7 +56,7 @@ export default function SehirlerArasiPage() {
                 <div className="container-custom max-w-4xl">
                     <div className="prose prose-lg text-slate-600 leading-relaxed space-y-8">
                         <p className="text-xl font-medium text-slate-800">
-                            <strong>Ankara Özdemir Nakliyat</strong> olarak, Ankara merkezli şehirler arası nakliyat hizmetimizle Türkiye&apos;nin dört bir yanına güvenli taşımacılık sunuyoruz. İstanbul, İzmir, Antalya, Bursa, Konya başta olmak üzere 81 ile düzenli seferler düzenliyoruz.
+                            <strong>Ankara Özdemir Nakliyat</strong> ile şehirler arası taşıma planı oluştururken çıkış ve varış adreslerini, katları, eşya miktarını ve tarih aralığını paylaşın. İstenen rota için hizmet uygunluğu ve teslim koşulları teklif öncesinde teyit edilmelidir.
                         </p>
 
                         <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Şehirler Arası Nakliyat Hizmetlerimiz</h2>
@@ -64,8 +64,8 @@ export default function SehirlerArasiPage() {
                             {[
                                 { title: "Komple Ev Taşıma", desc: "Tüm eşyalarınız tek araçta, kapıdan kapıya güvenli teslimat." },
                                 { title: "Parsiyel Taşıma", desc: "Birkaç parça eşya için ekonomik parsiyel taşıma seçeneği." },
-                                { title: "GPS Takip", desc: "Araçlarımız anlık GPS ile takip edilir, süreç boyunca bilgilendirilirsiniz." },
-                                { title: "Sigortalı Taşıma", desc: "Tüm eşyalarınız yol boyunca emtia sigortası kapsamındadır." },
+                                { title: "Süreç İletişimi", desc: "Yükleme ve teslim için iletişim kişisini, bilgilendirme yöntemini ve zaman planını görüşün." },
+                                { title: "Poliçe Koşulları", desc: "Varsa poliçenin kapsamı, limitleri ve istisnaları teklif öncesinde incelenmelidir." },
                                 { title: "Profesyonel Paketleme", desc: "Uzun yol şartlarına uygun darbe emici malzemelerle özel paketleme." },
                                 { title: "Mobilya Montaj", desc: "Hedef şehirde mobilyalarınız uzman marangozlarımızca kurulur." },
                             ].map((item, i) => (
@@ -110,27 +110,27 @@ export default function SehirlerArasiPage() {
                             <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
                                 <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Popüler Hat</span>
                                 <h3 className="text-xl font-bold text-slate-900 mb-2">Ankara ➔ İstanbul</h3>
-                                <div className="text-2xl font-black text-slate-900 mb-2">16.000 - 28.000 ₺</div>
-                                <p className="text-xs text-slate-500">Marmara bölgesi her gün çift yönlü sefer. Parsiyel 4.500 ₺&apos;den başlar.</p>
+                                <div className="text-2xl font-black text-slate-900 mb-2">Teklif İsteyin</div>
+                                <p className="text-xs text-slate-500">İstanbul varış adresi, yükleme erişimi ve teslim tarihiyle rota uygunluğunu ve güncel teklifi görüşün.</p>
                             </div>
                             <div className="p-6 bg-primary-50/50 rounded-2xl border-2 border-primary-500/30 relative">
                                 <span className="absolute -top-3 right-4 bg-primary-500 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded-full">Ege & Akdeniz</span>
                                 <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Güneş Hattı</span>
                                 <h3 className="text-xl font-bold text-slate-900 mb-2">Ankara ➔ İzmir / Antalya</h3>
-                                <div className="text-2xl font-black text-slate-900 mb-2">18.000 - 34.000 ₺</div>
+                                <div className="text-2xl font-black text-slate-900 mb-2">Teklif İsteyin</div>
                                 <p className="text-xs text-slate-500">Özel süspansiyonlu uzun yol çelik araçlar, 24 saat içinde kapıda teslim.</p>
                             </div>
                             <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
                                 <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Tüm Türkiye</span>
                                 <h3 className="text-xl font-bold text-slate-900 mb-2">Diğer 81 İl Seferleri</h3>
                                 <div className="text-2xl font-black text-slate-900 mb-2">Özel Fiyat</div>
-                                <p className="text-xs text-slate-500">Bursa, Adana, Samsun, Trabzon, Diyarbakır ve tüm Anadolu illerine sabit fiyat garantisi.</p>
+                                <p className="text-xs text-slate-500">Diğer varış şehirleri için adres, eşya miktarı ve tarih paylaşarak rota uygunluğunu teyit edin.</p>
                             </div>
                         </div>
 
                         <div className="mt-12 p-8 bg-gradient-to-br from-primary-600 to-orange-600 rounded-3xl text-white text-center shadow-xl not-prose">
                             <h3 className="text-2xl font-bold mb-4">Şehirler Arası Nakliyat Teklifi Alın</h3>
-                            <p className="mb-6 opacity-90">Hangi şehre taşınırsanız taşının, K3 belgeli ve sigortalı güvenceyle taşıyoruz!</p>
+                            <p className="mb-6 opacity-90">Çıkış ve varış adresi, tarih ve eşya listesiyle taşıma kapsamını ve varsa poliçe koşullarını görüşün.</p>
                             <a href={`tel:${firmaBilgileri.phone.replace(/\s/g, "")}`} className="inline-block bg-white text-primary-600 font-bold px-8 py-4 rounded-full shadow-lg hover:bg-slate-50 transition-all hover:scale-105">
                                 Hemen Arayın: {firmaBilgileri.phone}
                             </a>

@@ -6,20 +6,20 @@ import { istatistikler } from "@/data/siteData";
 
 export const metadata: Metadata = {
     title: {
-        absolute: "Ankara Nakliyat ve Nakliyeci: Sigortalı & Asansörlü Taşıma",
+        absolute: "Ankara Evden Eve Nakliyat | Özdemir Nakliyat",
     },
-    description: "Ankara nakliyat ve profesyonel nakliyeci hizmeti. Kendi asansörlü araç filomuzla %100 sigortalı, sözleşmeli evden eve taşıma. Sürpriz fiyatsız hemen teklif alın!",
+    description: "Ankara evden eve nakliyat ve ofis taşıma için eşya, kat ve adres bilgilerinizi paylaşın. Paketleme, asansör ihtiyacı ve taşıma kapsamına göre teklif alın.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com" },
     openGraph: {
-        title: "Ankara Nakliyat ve Nakliyeci: Sigortalı & Asansörlü Taşıma",
-        description: "Ankara nakliyat ve profesyonel nakliyeci hizmeti. Kendi asansörlü araç filomuzla %100 sigortalı, sözleşmeli evden eve taşıma. Sürpriz fiyatsız hemen teklif alın!",
+        title: "Ankara Evden Eve Nakliyat | Özdemir Nakliyat",
+        description: "Ankara evden eve nakliyat ve ofis taşıma için eşya, kat ve adres bilgilerinizi paylaşın. Paketleme, asansör ihtiyacı ve taşıma kapsamına göre teklif alın.",
         url: "https://ankaraozdemirnakliyat.com",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Ankara Nakliyat ve Nakliyeci: Sigortalı & Asansörlü Taşıma",
-        description: "Ankara nakliyat ve profesyonel nakliyeci hizmeti. Kendi asansörlü araç filomuzla %100 sigortalı, sözleşmeli evden eve taşıma. Sürpriz fiyatsız hemen teklif alın!",
+        title: "Ankara Evden Eve Nakliyat | Özdemir Nakliyat",
+        description: "Ankara evden eve nakliyat ve ofis taşıma. Eşya, kat ve adres bilgilerinize göre taşıma kapsamını görüşüp teklif alın.",
     }
 };
 

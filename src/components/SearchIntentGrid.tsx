@@ -12,17 +12,15 @@ const intentCards = [
         icon: <IconTruck className="w-8 h-8 text-primary-500" />,
         badge: "Acil & Günlük Nakliye",
         title: "Ankara Nakliyeci & Kamyonet Nakliye",
-        desc: "Ankara genelinde aynı gün acil nakliyeci ihtiyacınız için kapalı çelik kasa kamyonet ve deneyimli taşıma personeli tahsis ediyoruz.",
-        queries: ["ankara nakliyeci", "kamyonet nakliye ankara", "acil nakliyeci", "saatlik nakliye"],
+        desc: "Ankara içindeki taşımanız için eşya miktarını, iki adresi ve tarihi paylaşın; araç ve zaman uygunluğunu önceden görüşün.",
         link: "/hizmetler/sehir-ici-nakliyat",
         btnText: "Nakliyeci Çağır",
     },
     {
         icon: <IconCog className="w-8 h-8 text-primary-500" />,
-        badge: "25. Kata Kadar Dikey",
+        badge: "Kurulum Uygunluğu",
         title: "Asansörlü Nakliyat Ankara",
-        desc: "Dar apartman merdivenlerine ve bina asansörü yasaklarına son! Balkon veya pencereden modüler hidrolik asansörle sıfır hasarlı taşıma.",
-        queries: ["ankara asansörlü nakliyat", "asansörlü ev taşıma", "mobil asansör kiralama"],
+        desc: "Kat yüksekliği, merdiven ölçüleri, cephe ve zemin bilgilerini paylaşarak dış cephe asansörünün kuruluma uygunluğunu değerlendirin.",
         link: "/hizmetler/asansorlu-tasima",
         btnText: "Asansörlü Taşıma",
     },
@@ -31,7 +29,6 @@ const intentCards = [
         badge: "Ekonomik & Pratik",
         title: "Parça Eşya & Küçük Nakliye",
         desc: "Tek bir koltuk, buzdolabı, çamaşır makinesi veya öğrenci/bekar evi için komple kamyon tutmanıza gerek yok. Parça eşya tarifesiyle bütçenizi koruyun.",
-        queries: ["küçük nakliye ankara", "parça eşya taşıma", "öğrenci evi taşıma ankara", "tek parça nakliye"],
         link: "/hizmetler/parca-esya-tasima",
         btnText: "Parça Eşya Taşı",
     },
@@ -39,26 +36,23 @@ const intentCards = [
         icon: <IconBuilding className="w-8 h-8 text-primary-500" />,
         badge: "Kurumsal & IT Güvenlikli",
         title: "Ofis, Büro & İş Yeri Taşımacılığı",
-        desc: "Şirketinizin iş akışını kesintiye uğratmadan mesai dışı veya hafta sonu arşivleme, IT sunucu ve mobilya montaj uzmanlığıyla kurumsal nakliyat.",
-        queries: ["ankara ofis taşıma", "büro nakliyat ankara", "kurumsal şirket taşıma"],
+        desc: "Arşiv, mobilya ve elektronik ekipman listesini hazırlayın. İş takvimi, erişim saatleri ve kurulum sorumluluklarını teklif öncesinde görüşün.",
         link: "/hizmetler/ofis-tasima",
         btnText: "Ofis Taşıma Çözümleri",
     },
     {
         icon: <IconGlobe className="w-8 h-8 text-primary-500" />,
-        badge: "81 İlde Kesintisiz",
+        badge: "Rota ve Tarih Planı",
         title: "Şehirler Arası Evden Eve Nakliyat",
-        desc: "Ankara'dan İstanbul, İzmir, Antalya başta olmak üzere 81 ile kapalı kasa filomuz, GPS araç takibi ve tam kapsamlı emtia poliçesiyle güvenli sevkiyat.",
-        queries: ["ankara şehirler arası nakliyat", "ankara istanbul nakliyat", "şehirlerarası ev taşıma"],
+        desc: "Ankara çıkışlı şehirler arası taşınmada varış adresi, eşya miktarı ve teslim takvimine göre rota uygunluğunu ve taşıma koşullarını görüşün.",
         link: "/hizmetler/sehirler-arasi-nakliyat",
         btnText: "Şehirler Arası Rota",
     },
     {
         icon: <IconShield className="w-8 h-8 text-primary-500" />,
-        badge: "Kişiye Özel Kilitli Oda",
+        badge: "Depolama Koşulları",
         title: "Güvenli Eşya Depolama",
-        desc: "Tadilat, yurtdışı seyahati veya fazla eşyalarınız için 7/24 kamera kontrollü, nemsiz ve havalandırmalı özel kilitli oda depolama alanları.",
-        queries: ["ankara eşya depolama", "kiralık ev eşyası deposu", "güvenli eşya deposu ankara"],
+        desc: "Geçici depolama ihtiyacında eşya miktarı, süre, alan uygunluğu, erişim ve koruma koşulları hakkında bilgi isteyin.",
         link: "/hizmetler/depolama",
         btnText: "Depolama Alanları",
     },
@@ -130,18 +124,6 @@ export default function SearchIntentGrid() {
                                 <p className="text-xs md:text-sm text-slate-400 leading-relaxed mb-6">
                                     {card.desc}
                                 </p>
-
-                                {/* Arama Niyeti Etiketleri (Search Intent Tags) */}
-                                <div className="flex flex-wrap gap-1.5 mb-8 pt-4 border-t border-white/10">
-                                    {card.queries.map((q, qi) => (
-                                        <span
-                                            key={qi}
-                                            className="text-[10px] font-semibold text-slate-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full group-hover:border-primary-500/30 transition-colors"
-                                        >
-                                            #{q}
-                                        </span>
-                                    ))}
-                                </div>
                             </div>
 
                             <Link

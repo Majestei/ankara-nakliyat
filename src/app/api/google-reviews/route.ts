@@ -3,93 +3,45 @@ import { googleReviewsData, GoogleReviewItem, GoogleReviewsSummary } from "@/dat
 
 export const dynamic = "force-dynamic";
 
-export async function GET(request: Request) {
-    try {
-        const apiKey = process.env.GOOGLE_PLACES_API_KEY;
-        const placeId = process.env.GOOGLE_PLACE_ID;
-
-        // If credentials exist in environment, attempt live Google Places API call
-        if (apiKey && placeId) {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 5000);
-
-            try {
-                const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,user_ratings_total,reviews,url&language=tr&key=${apiKey}`;
-                const res = await fetch(url, {
-                    signal: controller.signal,
-                    next: { revalidate: 86400 } // 24 hours ISR cache
+export async function GET() {
+    const apiKey = process.env.GOOGLE_PLACES_API_KEY;
+    const placeId = process.env.GOOGLE_PLACE_ID;
+    if (apiKey && placeId) {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 5000);
+        try {
+            const query = new URLSearchParams({ place_id: placeId, fields: "name,rating,user_ratings_total,reviews,url", language: "tr", key: apiKey });
+            const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?${query}`, { signal: controller.signal, cache: "no-store" });
+            const body = response.ok ? await response.json() : null;
+            if (body?.status === "OK" && body.result) {
+                const result = body.result;
+                const reviews: GoogleReviewItem[] = (result.reviews || [])
+                    .filter((review: { rating?: number; time?: number; author_name?: string }) =>
+                        Number.isFinite(review.rating) && Number.isFinite(review.time) && typeof review.author_name === "string")
+                    .map((review: { author_name: string; author_url?: string; profile_photo_url?: string; rating: number; relative_time_description?: string; time: number; text?: string }, index: number) => ({
+                        id: `google-${review.time}-${index}`, author_name: review.author_name,
+                        author_url: review.author_url, profile_photo_url: review.profile_photo_url,
+                        avatar_color: "from-blue-600 to-indigo-700", rating: review.rating,
+                        relative_time_description: review.relative_time_description || "",
+                        time: review.time * 1000, district: "", service: "", text: review.text || "",
+                        verifiedGoogle: false,
+                    }));
+                const data: GoogleReviewsSummary = {
+                    placeName: result.name || googleReviewsData.placeName,
+                    rating: Number.isFinite(result.rating) ? result.rating : null,
+                    user_ratings_total: Number.isFinite(result.user_ratings_total) ? result.user_ratings_total : null,
+                    rating_breakdown: null,
+                    googleMapsUrl: result.url || "", writeReviewUrl: "", reviews,
+                };
+                return NextResponse.json({ success: true, source: "google_places_live", lastSynced: new Date().toISOString(), data }, {
+                    headers: { "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=3600" },
                 });
-                clearTimeout(timeoutId);
-
-                if (res.ok) {
-                    const data = await res.json();
-                    if (data.status === "OK" && data.result) {
-                        const result = data.result;
-                        
-                        // Map Google's live review payload to our standard interface
-                        const liveReviews: GoogleReviewItem[] = (result.reviews || []).map((r: any, idx: number) => ({
-                            id: `live-${idx}-${r.time || Date.now()}`,
-                            author_name: r.author_name,
-                            author_url: r.author_url,
-                            profile_photo_url: r.profile_photo_url,
-                            avatar_color: "from-blue-600 to-indigo-700",
-                            rating: r.rating || 5,
-                            relative_time_description: r.relative_time_description || "Yakın zamanda",
-                            time: r.time ? r.time * 1000 : Date.now(),
-                            district: "Ankara",
-                            service: "Doğrulanmış Taşımacılık",
-                            text: r.text || "",
-                            verifiedGoogle: true,
-                        }));
-
-                        // Merge live reviews with our enriched verified local dataset
-                        const combinedReviews = [...liveReviews, ...googleReviewsData.reviews.filter(
-                            cr => !liveReviews.some(lr => lr.author_name.toLowerCase() === cr.author_name.toLowerCase())
-                        )];
-
-                        const payload: GoogleReviewsSummary = {
-                            placeName: result.name || googleReviewsData.placeName,
-                            rating: Number(result.rating) || googleReviewsData.rating,
-                            user_ratings_total: Number(result.user_ratings_total) || googleReviewsData.user_ratings_total,
-                            rating_breakdown: googleReviewsData.rating_breakdown,
-                            googleMapsUrl: result.url || googleReviewsData.googleMapsUrl,
-                            writeReviewUrl: googleReviewsData.writeReviewUrl,
-                            reviews: combinedReviews,
-                        };
-
-                        return NextResponse.json({
-                            success: true,
-                            source: "google_places_live",
-                            lastSynced: new Date().toISOString(),
-                            data: payload
-                        }, {
-                            headers: {
-                                "Cache-Control": "public, s-maxage=86400, stale-while-revalidate=43200"
-                            }
-                        });
-                    }
-                }
-            } catch (fetchErr) {
-                console.warn("[Google Reviews API] Live fetch error, falling back to verified cached dataset:", fetchErr);
             }
-        }
-
-        // Return the verified Google Maps dataset
-        return NextResponse.json({
-            success: true,
-            source: "verified_cached",
-            lastSynced: new Date().toISOString(),
-            data: googleReviewsData
-        }, {
-            headers: {
-                "Cache-Control": "public, s-maxage=86400, stale-while-revalidate=43200"
-            }
-        });
-    } catch (err: any) {
-        return NextResponse.json({
-            success: false,
-            error: err?.message || "Internal error",
-            data: googleReviewsData
-        }, { status: 500 });
+        } catch {
+            // An unavailable provider must not become a fabricated rating or review.
+        } finally { clearTimeout(timeout); }
     }
+    return NextResponse.json({ success: false, source: "unavailable", lastSynced: null, data: googleReviewsData }, {
+        headers: { "Cache-Control": "no-store" },
+    });
 }

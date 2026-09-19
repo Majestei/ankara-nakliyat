@@ -5,10 +5,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import WhatsAppSticky from "@/components/WhatsAppSticky";
-import CustomCursor from "@/components/CustomCursor";
+import dynamic from "next/dynamic";
 import ConversionTracker from "@/components/ConversionTracker";
 import Script from "next/script";
 import { firmaBilgileri } from "@/data/siteData";
+
+const CustomCursor = dynamic(() => import("@/components/CustomCursor"), { ssr: false });
 
 const inter = Inter({
     subsets: ["latin", "latin-ext"],
@@ -26,11 +28,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
     metadataBase: new URL("https://ankaraozdemirnakliyat.com"),
     title: {
-        default: "Ankara Özdemir Nakliyat | Sigortalı Evden Eve Nakliyat",
+        default: "Ankara Özdemir Nakliyat | Ev ve Ofis Taşıma",
         template: "%s | Ankara Özdemir Nakliyat",
     },
     description:
-        "Ankara'da garantili ve asansörlü evden eve nakliyat hizmeti. Kırılmaya karşı sigortalı taşıma, ücretsiz ekspertiz ve uzman kadro. Hemen Ücretsiz Fiyat Alın",
+        "Ankara evden eve nakliyat, ofis taşıma ve paketleme hizmetleri. Eşya, adres ve tarih bilgilerinizi paylaşın; taşıma kapsamını görüşüp teklif alın.",
     authors: [{ name: "Ankara Özdemir Nakliyat" }],
     creator: "Ankara Özdemir Nakliyat",
     publisher: "Ankara Özdemir Nakliyat",
@@ -50,9 +52,9 @@ export const metadata: Metadata = {
         locale: "tr_TR",
         url: "https://ankaraozdemirnakliyat.com",
         siteName: "Ankara Özdemir Nakliyat",
-        title: "Ankara Özdemir Nakliyat | Sigortalı Evden Eve Nakliyat",
+        title: "Ankara Özdemir Nakliyat | Ev ve Ofis Taşıma",
         description:
-            "Ankara'da garantili ve asansörlü evden eve nakliyat hizmeti. Kırılmaya karşı sigortalı taşıma, ücretsiz ekspertiz ve uzman kadro. Hemen Ücretsiz Fiyat Alın",
+            "Ankara evden eve nakliyat, ofis taşıma ve paketleme hizmetleri. Eşya, adres ve tarih bilgilerinizi paylaşın; taşıma kapsamını görüşüp teklif alın.",
         images: [
             {
                 url: "/og-image.jpg",
@@ -64,8 +66,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Ankara Özdemir Nakliyat | Sigortalı Evden Eve Nakliyat",
-        description: "Ankara'da garantili ve asansörlü evden eve nakliyat hizmeti. Kırılmaya karşı sigortalı taşıma, ücretsiz ekspertiz ve uzman kadro. Hemen Ücretsiz Fiyat Alın",
+        title: "Ankara Özdemir Nakliyat | Ev ve Ofis Taşıma",
+        description: "Ankara evden eve nakliyat, ofis taşıma ve paketleme hizmetleri. Eşya, adres ve tarih bilgilerinizi paylaşın; taşıma kapsamını görüşüp teklif alın.",
         images: ["/og-image.jpg"],
     },
     verification: {
@@ -89,88 +91,14 @@ export const viewport: Viewport = {
 
 const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "MovingCompany",
+    "@type": "Organization",
     "@id": "https://ankaraozdemirnakliyat.com/#organization",
     name: "Ankara Özdemir Nakliyat",
-    alternateName: "Ankara Özdemir - Profesyonel Evden Eve Taşımacılık",
-    description: "Ankara evden eve nakliyat, şehirler arası nakliyat, ofis taşıma ve depolama hizmetleri.",
     url: "https://ankaraozdemirnakliyat.com",
     telephone: firmaBilgileri.phone.replace(/\s+/g, ''),
     email: firmaBilgileri.email,
-    address: {
-        "@type": "PostalAddress",
-        streetAddress: firmaBilgileri.address,
-        addressLocality: "Sincan",
-        addressRegion: "Ankara",
-        postalCode: "06930",
-        addressCountry: "TR",
-    },
-    geo: {
-        "@type": "GeoCoordinates",
-        latitude: "39.9575",
-        longitude: "32.5835",
-    },
-    priceRange: "₺₺",
-    openingHoursSpecification: [
-        {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            opens: "07:00",
-            closes: "21:00",
-        },
-        {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: "Sunday",
-            opens: "09:00",
-            closes: "18:00",
-        },
-    ],
-    areaServed: [
-        { "@type": "State", name: "Ankara" },
-        { "@type": "Country", name: "Turkey" },
-        { "@type": "City", name: "Altındağ" },
-        { "@type": "City", name: "Akyurt" },
-        { "@type": "City", name: "Ayaş" },
-        { "@type": "City", name: "Balâ" },
-        { "@type": "City", name: "Beypazarı" },
-        { "@type": "City", name: "Çamlıdere" },
-        { "@type": "City", name: "Çankaya" },
-        { "@type": "City", name: "Çubuk" },
-        { "@type": "City", name: "Elmadağ" },
-        { "@type": "City", name: "Etimesgut" },
-        { "@type": "City", name: "Evren" },
-        { "@type": "City", name: "Gölbaşı" },
-        { "@type": "City", name: "Güdül" },
-        { "@type": "City", name: "Haymana" },
-        { "@type": "City", name: "Kahramankazan" },
-        { "@type": "City", name: "Kalecik" },
-        { "@type": "City", name: "Keçiören" },
-        { "@type": "City", name: "Kızılcahamam" },
-        { "@type": "City", name: "Mamak" },
-        { "@type": "City", name: "Nallıhan" },
-        { "@type": "City", name: "Polatlı" },
-        { "@type": "City", name: "Pursaklar" },
-        { "@type": "City", name: "Sincan" },
-        { "@type": "City", name: "Şereflikoçhisar" },
-        { "@type": "City", name: "Yenimahalle" },
-    ],
-    image: "https://ankaraozdemirnakliyat.com/og-image.jpg",
     logo: "https://ankaraozdemirnakliyat.com/logo.svg",
-    sameAs: [
-        "https://www.instagram.com/ozdemirnakliyat_/",
-    ],
-    hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "Nakliyat Hizmetleri",
-        itemListElement: [
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Evden Eve Nakliyat", description: "Ankara evden eve nakliyat hizmeti" } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Şehirler Arası Nakliyat", description: "Şehirler arası nakliyat hizmeti" } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Ofis Taşıma", description: "Kurumsal ofis taşıma hizmeti" } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Asansörlü Taşıma", description: "Asansörlü nakliyat hizmeti" } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Paketleme", description: "Profesyonel paketleme hizmeti" } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Nakliyat Sigortası", description: "Nakliyat sigortası hakkında bilgi" } },
-        ],
-    },
+    sameAs: ["https://www.instagram.com/ozdemirnakliyat_/"],
 };
 
 const websiteJsonLd = {
@@ -198,8 +126,8 @@ export default function RootLayout({
                 <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
                 <meta name="geo.region" content="TR-06" />
                 <meta name="geo.placename" content="Ankara" />
-                <meta name="geo.position" content="39.9575;32.5835" />
-                <meta name="ICBM" content="39.9575, 32.5835" />
+
+
                 <meta name="format-detection" content="telephone=yes" />
                 <meta name="mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -217,9 +145,9 @@ export default function RootLayout({
                 {/* Google Tag (gtag.js) */}
                 <Script
                     src={`https://www.googletagmanager.com/gtag/js?id=AW-18303925044`}
-                    strategy="afterInteractive"
+                    strategy="lazyOnload"
                 />
-                <Script id="google-analytics" strategy="afterInteractive">
+                <Script id="google-analytics" strategy="lazyOnload">
                     {`
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}

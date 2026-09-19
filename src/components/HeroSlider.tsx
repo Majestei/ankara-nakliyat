@@ -9,27 +9,27 @@ import { IconPhone, IconStar, IconTruck, IconClock, IconUsers, IconShield, IconA
 const heroSlides = [
     {
         image: "/images/genel/hero-bg-1.webp",
-        tag: "Ankara'nın Lider Nakliyecisi",
+        tag: "Ankara Ev ve Ofis Taşıma",
         title1: "Ankara Evden Eve",
         titleHighlight: "Nakliyat",
-        title2: "Sigortalı & Asansörlü Taşıma",
-        description: "Ankara nakliyat ve asansörlü nakliyeci hizmetlerinde %100 sigorta garantisi, marangozlu montaj ve sabit fiyat sözüyle güvenle taşının.",
+        title2: "Taşıma ve Paketleme Planlaması",
+        description: "Ankara’da taşınma için eşya listenizi, kat ve adres bilgilerinizi paylaşın. Paketleme, asansör ve kurulum ihtiyacını birlikte görüşelim.",
     },
     {
         image: "/images/genel/hero-bg-2.webp",
-        tag: "Kendi Asansörlü Araç Filomuz",
+        tag: "Bina Erişimine Göre Planlama",
         title1: "Asansörlü ve",
         titleHighlight: "Güvenli",
-        title2: "Hasarsız Eşya Paketleme",
-        description: "25. kata kadar modüler dış cephe asansörleri ve Avrupa standartlarında darbe emici paketleme ile eşyalarınız tek bir çizik almadan taşınır.",
+        title2: "Eşyaya Uygun Paketleme",
+        description: "Asansör gereksinimini bina cephesi ve kurulum alanına göre değerlendirin. Mobilya, beyaz eşya ve kırılabilir parçalar için paketleme kapsamını görüşün.",
     },
     {
         image: "/images/genel/hero-bg-3.webp",
-        tag: "81 İle Sözleşmeli Taşıma",
+        tag: "Ankara Çıkışlı Taşıma",
         title1: "Şehirler Arası ve",
         titleHighlight: "Ofis",
-        title2: "Garantili Taşıma Çözümleri",
-        description: "Ankara'dan tüm Türkiye'ye kapalı çelik kasalı araçlar ve tam kapsamlı emtia sigortasıyla zamanında, güvenli teslimat.",
+        title2: "Taşınma Takvimi ve Kapsamı",
+        description: "Ankara çıkışlı şehirler arası ve ofis taşımalarında güzergâh, tarih, eşya hacmi ve teslimat koşullarını önceden netleştirin.",
     },
 ];
 
@@ -39,36 +39,36 @@ const AuroraBackground = () => {
     const shouldReduceMotion = useReducedMotion();
     return (
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-            <motion.div 
-                animate={shouldReduceMotion ? {} : { 
+            <motion.div
+                animate={shouldReduceMotion ? {} : {
                     scale: [1, 1.2, 1],
                     opacity: [0.05, 0.1, 0.05],
                     rotate: [0, 45, 0]
                 }}
                 transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute -top-[20%] -left-[10%] w-[100%] h-[100%] bg-primary-500/30 blur-[150px] rounded-full hidden md:block" 
+                className="absolute -top-[20%] -left-[10%] w-[100%] h-[100%] bg-primary-500/30 blur-[150px] rounded-full hidden md:block"
             />
-            <motion.div 
-                animate={shouldReduceMotion ? {} : { 
+            <motion.div
+                animate={shouldReduceMotion ? {} : {
                     scale: [1.2, 1, 1.2],
                     opacity: [0.05, 0.08, 0.05],
                     rotate: [0, -45, 0]
                 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -bottom-[20%] -right-[10%] w-[100%] h-[100%] bg-orange-500/20 blur-[150px] rounded-full hidden md:block" 
+                className="absolute -bottom-[20%] -right-[10%] w-[100%] h-[100%] bg-orange-500/20 blur-[150px] rounded-full hidden md:block"
             />
         </div>
     );
 };
 
 const PerspectiveGrid = () => (
-    <div className="absolute inset-0 z-0 opacity-[0.08] pointer-events-none hidden md:block" 
-         style={{ 
-            backgroundImage: "radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0)", 
+    <div className="absolute inset-0 z-0 opacity-[0.08] pointer-events-none hidden md:block"
+         style={{
+            backgroundImage: "radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0)",
             backgroundSize: "40px 40px",
             transform: "perspective(1000px) rotateX(60deg) translateY(-100px) translateZ(0)",
             maskImage: "linear-gradient(to bottom, transparent, black, transparent)"
-         }} 
+         }}
     />
 );
 
@@ -138,7 +138,7 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
     const resetTimer = useCallback(() => {
         if (timerRef.current) clearInterval(timerRef.current);
         if (shouldReduceMotion || isHovered) return;
-        
+
         timerRef.current = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
         }, 8000);
@@ -176,7 +176,7 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
     const parallaxY = useTransform(scrollY, [0, 1000], [0, 300]);
 
     return (
-        <section 
+        <section
             className="relative min-h-[100dvh] w-full flex items-center overflow-hidden bg-slate-950 selection:bg-primary-500/30 pt-32 pb-24 md:pt-40 md:pb-32"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -191,7 +191,7 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={currentSlide}
-                        initial={{ opacity: 0, scale: 1.02 }}
+                        initial={isMounted ? { opacity: 0, scale: 1.05 } : false}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 1.02 }}
                         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -215,19 +215,17 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
             {/* Main Interactive Content */}
             <div className="container-custom relative z-20">
                 <div className="grid lg:grid-cols-12 gap-10 lg:gap-20 items-center">
-                    
+
                     {/* Left: Cinematic Typography & CTAs */}
                     <div className="flex flex-col items-start lg:col-span-7">
-                        <motion.div
-                            initial={{ opacity: 0, x: -30 }}
-                            animate={{ opacity: 1, x: 0 }}
+                        <div
                             className="inline-flex items-center gap-4 bg-white/5 border border-white/10 backdrop-blur-xl px-6 md:px-8 py-3 rounded-full mb-8 md:mb-12"
                         >
                             <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(249,115,22,0.8)]" />
                             <AnimatePresence mode="wait">
                                 <motion.span
                                     key={currentSlide}
-                                    initial={{ opacity: 0, y: 10 }}
+                                    initial={isMounted ? { opacity: 0, y: 10 } : false}
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -10 }}
                                     className="text-white font-black text-[10px] uppercase tracking-[0.6em]"
@@ -235,45 +233,36 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
                                     {activeSlideData.tag}
                                 </motion.span>
                             </AnimatePresence>
-                        </motion.div>
+                        </div>
 
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={currentSlide}
-                                initial={{ opacity: 0, y: 80, skewY: 5 }}
-                                animate={{ opacity: 1, y: 0, skewY: 0 }}
-                                exit={{ opacity: 0, y: -40, skewY: -5 }}
-                                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                                initial={isMounted ? { opacity: 0, y: 30 } : false}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -20 }}
+                                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                                 className="space-y-10 overflow-visible"
                             >
                                 <h1 className="flex flex-col text-5xl md:text-8xl lg:text-[clamp(6rem,10vw,9rem)] font-heading font-black text-white tracking-tighter overflow-visible z-10 relative">
-                                    <motion.span 
-                                        initial={{ opacity: 0, x: -50 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                                    <span
                                         className="leading-none md:leading-[0.9] pr-4"
                                     >
                                         {activeSlideData.title1}
-                                    </motion.span>
+                                    </span>
                                     <div className="relative overflow-visible z-20 py-2 md:py-2">
-                                        <motion.span 
-                                            initial={{ opacity: 0, scale: 0.9, rotateX: -20 }}
-                                            animate={{ opacity: 1, scale: 1, rotateX: 0 }}
-                                            transition={{ duration: 1, delay: 0.2, ease: "circOut" }}
-                                            className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-orange-500 to-primary-600 animate-gradient-x italic py-2 md:py-4 pr-16 md:-my-4 text-6xl md:text-[clamp(6rem,10vw,9rem)] leading-none"
+                                        <span
+                                            className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-orange-500 to-primary-600 italic py-2 md:py-4 pr-16 md:-my-4 text-6xl md:text-[clamp(6rem,10vw,9rem)] leading-none"
                                         >
                                             {activeSlideData.titleHighlight}
-                                        </motion.span>
+                                        </span>
                                     </div>
-                                    <motion.span 
-                                        initial={{ opacity: 0, y: 30 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.8, delay: 0.4 }}
+                                    <span
                                         className="text-lg md:text-[0.4em] text-white/50 tracking-wide font-medium leading-none mt-2 md:mt-4 flex items-center gap-4 md:gap-6"
                                     >
                                         <div className="h-[2px] w-12 md:w-20 bg-gradient-to-r from-primary-500/50 to-transparent" />
                                         {activeSlideData.title2}
-                                    </motion.span>
+                                    </span>
                                 </h1>
                                 <p className="text-white/50 text-base md:text-2xl leading-relaxed max-w-xl font-medium mt-6">
                                     {activeSlideData.description}
@@ -314,7 +303,7 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
                                     whileHover={{ scale: 1.05, z: 50 }}
                                 >
                                     <motion.div
-                                        animate={{ 
+                                        animate={{
                                             y: [0, i % 2 === 0 ? -12 : 12, 0],
                                             rotateZ: [0, i % 2 === 0 ? 1.5 : -1.5, 0],
                                             rotateY: [0, i % 2 === 0 ? 10 : -10, 0]
@@ -323,12 +312,12 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
                                         className="p-8 bg-white/[0.03] border border-white/10 backdrop-blur-3xl rounded-[3.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)] flex flex-col items-center w-full max-w-[220px] group hover:bg-white/[0.08] hover:border-primary-500/50 transition-all duration-700 cursor-default relative overflow-hidden"
                                     >
                                         <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                                        
+
                                         <div className="w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-600 rounded-3xl flex items-center justify-center text-white mb-6 shadow-2xl group-hover:rotate-[10deg] transition-transform duration-500 relative z-10">
                                             {item.icon}
                                             <div className="absolute inset-0 bg-white/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
                                         </div>
-                                        
+
                                         <div className="text-5xl font-black text-white mb-1 tracking-tighter group-hover:scale-110 transition-transform duration-500 relative z-10">
                                             {item.stat.value}
                                         </div>
@@ -358,7 +347,7 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
                             0{i + 1}
                         </span>
                         <div className="relative w-8 md:w-12 h-[2px] bg-white/20 overflow-hidden rounded-full">
-                            <motion.div 
+                            <motion.div
                                 initial={false}
                                 animate={{ scaleX: currentSlide === i ? 1 : 0 }}
                                 className="h-full bg-primary-500 origin-left"

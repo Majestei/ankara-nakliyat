@@ -1,0 +1,12 @@
+{
+  "name": "ozdemir-canonical-redirect",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-09-19",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    { "pattern": "http://ankaraozdemirnakliyat.com/*", "zone_name": "ankaraozdemirnakliyat.com" },
+    { "pattern": "http://www.ankaraozdemirnakliyat.com/*", "zone_name": "ankaraozdemirnakliyat.com" },
+    { "pattern": "https://www.ankaraozdemirnakliyat.com/*", "zone_name": "ankaraozdemirnakliyat.com" }
+  ]
+}

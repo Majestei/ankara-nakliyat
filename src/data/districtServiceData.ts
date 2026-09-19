@@ -29,24 +29,24 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             intro: "Ankara'nın kalbi ve en yoğun nüfuslu ilçesi olan Çankaya'da ev taşımak, kendine has mimari ve trafik dinamiklerine hakim olmayı gerektirir.",
             paragraphs: [
                 "Ayrancı, Tunalı Hilmi, Gaziosmanpaşa ve Küçükesat gibi Çankaya'nın köklü semtlerinde 4-5 katlı eski binaların çoğunda bina içi yük asansörü bulunmamaktadır. Ankara Özdemir Nakliyat olarak bu bölgelerde geniş cadde veya sokak cephesine kurduğumuz dış cephe hidrolik asansörlerimizle eşyalarınızı bina merdivenlerine sürtmeden doğrudan dairenizin balkonundan araç kasasına indiriyoruz.",
-                "Dikmen, Oran ve Çayyolu gibi eğimli arazilerde ve yüksek katlı site projelerinde ise hem zemin eğimine kilitlenen özel destek ayaklı araçlarımız hem de site yönetim kurallarına uygun sessiz operasyon disiplinimiz devrededir. Eşyalarınızın her biri çift katlı kraft havalı naylonlarla paketlenir.",
-                "Büyükelçilik çalışanları, bürokratlar ve üniversite akademisyenlerinin yoğun yaşadığı Çankaya'da gizlilik, dakiklik ve resmi sözleşmeli güvence esastır. Taşınma öncesinde noter tasdikli nitelikte sözleşme düzenlenerek tüm mobilyalarınız Axa ve Allianz emtia sigortası kapsamına alınır."
+                "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün."
             ],
             localChallenge: {
                 title: "Dar Sokaklar & Dik Eğimler",
                 desc: "Ayrancı ve Tunalı'daki dar sokak parklanmaları ile Dikmen yokuşlarında standart kamyonların yanaşma güçlüğü."
             },
             logisticsSolution: {
-                title: "Kompakt Araç & 25 Kat Asansör",
-                desc: "Manevra kabiliyeti yüksek dar şasili kamyonlar ve 25. kata kadar dikey uzanan teleskopik hidrolik sepet sistemi."
+                title: "Erişim ve Hizmet Kapsamı",
+                desc: "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin."
             },
             features: [
                 "Ayrancı ve Tunalı dar sokaklarına uygun hidrolik asansör",
                 "Çukurambar ve Çayyolu sitelerinde peyzaj korumalı yanaşma",
-                "Gardırop, beyaz eşya ve avizelerin ücretsiz demontaj/montajı",
-                "Axa/Allianz tam kapsamlı taşınma sigortası poliçesi",
-                "Çamaşır ve bulaşık makinesi su tesisatı ücretsiz bağlantısı",
-                "Noter niteliğinde yazılı sabit fiyat sözleşmesi"
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün.",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün."
             ],
             faq: [
                 {
@@ -60,13 +60,13 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             ]
         },
         "ofis-tasima": {
-            h1: "Çankaya Ofis ve Büro Taşıma: Söğütözü & Çukurambar Plazalarında Sıfır İş Kaybı",
-            description: "Çankaya kurumsal ofis ve büro taşımacılığı. Çukurambar, Söğütözü plazalarında hafta sonu sıfır iş kaybıyla IT sunucu ve numaralı arşiv nakliyesi.",
+            h1: "Çankaya Ofis ve Büro Taşıma: Söğütözü & Çukurambar Plazalarında İş Sürekliliği Planı",
+            description: "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün.",
             intro: "Çankaya; Çukurambar, Söğütözü, Mustafa Kemal ve Armada-Tepe Prime aksıyla Ankara'nın kurumsal iş ve finans merkezidir.",
             paragraphs: [
-                "Plaza ve iş merkezlerindeki kurumsal taşınmalarda en kritik unsur şirket operasyonunun kesintiye uğramamasıdır. Ankara Özdemir Nakliyat olarak Çankaya ofis taşıma projelerimizi Cuma günü saat 18:00'de başlatıp, Pazar gecesi tamamlayarak Pazartesi sabahı şirketinizi çalışmaya hazır teslim ediyoruz.",
+                "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün.",
                 "Server odaları, rack kabinler, monitörler ve hassas elektronik altyapı antistatik darbe emici özel baloncuklu koruyucularla zırhlanır. Numaralı plastik kilitli sandık sistemimizle her departmanın klasörleri ve muhasebe arşivleri sıra numarası bozulmadan yeni ofisteki dolaplara aktarılır.",
-                "Yönetici masaları, toplantı odası sistemleri ve modüler çalışma istasyonları kadrolu marangozlarımızca sökülüp yeni adreste projesine uygun şekilde monte edilir."
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın."
             ],
             localChallenge: {
                 title: "Plaza Kuralları & Mesai Kesintisi",
@@ -74,7 +74,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             },
             logisticsSolution: {
                 title: "Hafta Sonu Gece Vardiyası",
-                desc: "Cuma 18:00 - Pazar 21:00 arası kesintisiz gece vardiyasıyla sıfır iş kaybı ve plaza yönetimi tam uyumu."
+                desc: "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün."
             },
             features: [
                 "Söğütözü & Çukurambar plazalarında hafta sonu taşıma",
@@ -87,7 +87,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             faq: [
                 {
                     q: "Ofis bilgisayarları ve sunucular nasıl taşınır?",
-                    a: "IT ekibinizin yönlendirmesiyle antistatik hava kanallı koruyuculara sarılır ve çelik kasalı araçlarımızdaki süspansiyonlu bölmelerde taşınır."
+                    a: "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün."
                 },
                 {
                     q: "Arşiv dosyalarının karışması nasıl önlenir?",
@@ -96,12 +96,12 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             ]
         },
         "nakliyat-fiyatlari": {
-            h1: "Çankaya Nakliyat Fiyatları (2026): Sabit Fiyat ve Şeffaf Maliyet Tarifesi",
+            h1: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
             description: "2026 Çankaya evden eve nakliyat fiyatları. 1+1, 2+1, 3+1 ve villa taşıma ücretleri, asansör ve marangozluk dahil net maliyet tablosu.",
             intro: "Çankaya genelinde nakliye fiyatları belirlenirken oda sayısı, kat yüksekliği, asansör gereksinimi ve semtler arası mesafe objektif kriterlerle hesaplanır.",
             paragraphs: [
-                "Çankaya'da ortalama bir 1+1 daire taşıma ücreti 8.500 ₺ – 12.500 ₺ aralığındayken; 2+1 aile evleri 12.500 ₺ – 17.000 ₺, 3+1 daireler ise 17.500 ₺ – 25.000 ₺ aralığında sabitlenmektedir. Çayyolu, İncek ve Bilkent hattındaki villa ve dubleks konutlarda ise oda ve bahçe mobilyası yoğunluğuna göre özel eksper fiyatı verilir.",
-                "Fiyatlarımıza çift katlı ambalajlama sarf malzemesi, gardırop ve yatak demontaj/montajı, beyaz eşyaların sökülüp yeni adreste su tesisatına bağlanması ve resmi Axa/Allianz sigortası dahildir. Kapıda 'eşyanız çokmuş', 'merdiven darmış' gibi bahanelerle ek ücret talep edilmez.",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
                 "Binanızda asansör kurulması gerekiyorsa bu bedel baştan yazılı teklifte açıkça belirtilir ve taşınma günü sonradan ilave maliyet çıkarılmaz."
             ],
             localChallenge: {
@@ -109,16 +109,16 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
                 desc: "Piyasada telefonda ucuz fiyat verip taşınma sabahı kapıda ekstra para isteyen komisyoncu ve aracılar."
             },
             logisticsSolution: {
-                title: "Yazılı Noter Niteliğinde Taahhüt",
-                desc: "Ücretsiz yerinde veya görüntülü ekspertiz ile sabitlenen, KDV ve montaj dahil değişmez net fiyat garantisi."
+                title: "Erişim ve Hizmet Kapsamı",
+                desc: "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın."
             },
             features: [
-                "1+1 daireler için 8.500 ₺'den başlayan ekonomik seçenekler",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
                 "Marangoz, paketleme ve sigorta fiyata dahildir",
-                "Çamaşır/bulaşık makinesi tesisat montajı ücretsiz",
-                "Resmi sözleşmeli kapıda sürpriz masraf çıkarmama taahhüdü",
-                "Kredi kartı veya taksitli ödeme kolaylığı",
-                "Ücretsiz yerinde ekspertiz ile kesinleşen maliyet"
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
+                "Ödeme yöntemini ve koşullarını teklif sırasında görüşün.",
+                "Keşif yöntemi, uygun tarih ve varsa ücretini randevu öncesinde görüşün."
             ],
             faq: [
                 {
@@ -135,7 +135,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
     "kecioren": {
         "evden-eve-nakliyat": {
             h1: "Keçiören Evden Eve Nakliyat: Etlik, Subayevleri ve Aktepe'de Asansörlü Güven",
-            description: "Keçiören evden eve nakliyat. Etlik, Subayevleri ve Aktepe'de yüksek katlı binalara 25. kata kadar hidrolik asansörlü, sigortalı ve marangozlu taşımacılık.",
+            description: "Keçiören evden eve nakliyat. Eşya, adres ve hizmet kapsamına göre taşıma planını görüşün.",
             intro: "Ankara'nın en yüksek apartman yoğunluğuna sahip ilçelerinden biri olan Keçiören'de taşınma operasyonları dikey lojistik uzmanlığı gerektirir.",
             paragraphs: [
                 "Etlik, Esertepe, Uyanış ve Atapark gibi Keçiören semtlerinde binaların büyük çoğunluğu 6 ila 14 kat arasındadır. Bu binalarda bina içi asansörlerin eşya taşımada kullanılması apartman yönetimlerince genellikle yasaklanmıştır. Ankara Özdemir Nakliyat olarak modüler teleskopik dış cephe asansörlerimizle eşyalarınızı doğrudan balkon veya pencereden araca indiriyoruz.",
@@ -148,20 +148,20 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             },
             logisticsSolution: {
                 title: "Sepetli Teleskopik Asansör",
-                desc: "Doğrudan balkon veya geniş pencereye yanaşan, sıfır sarsıntılı hidrolik sepetli dış cephe asansörü."
+                desc: "Eşyanın hassasiyetine göre ambalaj, yükleme ve sabitleme yöntemini önceden görüşün."
             },
             features: [
-                "Etlik ve Subayevleri'nde 25. kata kadar asansörlü kurulum",
+                "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin.",
                 "Geniş aile mobilyaları için 2 kıdemli marangoz desteği",
-                "Merdivensiz, duvara çarpmayan sıfır hasar protokolü",
-                "Axa/Allianz güvencesiyle tam kapsamlı emtia poliçesi",
-                "Çamaşır ve bulaşık makinesi su tesisatı ücretsiz montajı",
-                "Resmi K3 taşıma yetki belgesi ve kadrolu uzman ekip"
+                "Eşyanın hassasiyetine göre ambalaj, yükleme ve sabitleme yöntemini önceden görüşün.",
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün.",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Taşımayı yapacak firma bilgilerini ve hizmetle ilgili belgeleri inceleyin; eşya listesi, adresler ve teklif koşullarını yazılı olarak netleştirin."
             ],
             faq: [
                 {
                     q: "Keçiören'deki yüksek katlı binalarda asansörünüz kaçıncı kata ulaşır?",
-                    a: "Hidrolik teleskopik nakliyat asansörümüz 25. kata (yaklaşık 75 metre yükseklik) kadar güvenle ulaşabilmektedir."
+                    a: "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin."
                 },
                 {
                     q: "Büyük gardırobum sökülüp tekrar kurulabilir mi?",
@@ -176,7 +176,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             paragraphs: [
                 "Etlik Şehir Hastanesi'nin açılmasıyla birlikte Keçiören bölgesinde özel klinikler, tıp merkezleri, diş hekimliği muayenehaneleri ve medikal ofisler hızla artmıştır. Bu kurumlardaki hassas cihazların taşınması sıradan mobilya nakliyesinden tamamen farklı bir uzmanlık ister.",
                 "Medikal cihazlar, dijital görüntüleme ekranları ve laboratuvar donanımları özel antistatik havalı ambalajlarla sarılarak darbe emici süngerli kasalarımızda sevk edilir. Hasta ve müşteri kayıt arşivleri gizlilik protokolü kapsamında kilitli mühürlü kolilerle taşınır.",
-                "Etlik ve Sanatoryum caddelerindeki mağaza, showroom ve eğitim merkezlerinin taşınması hafta sonu planlanarak eğitim veya ticari akışta tek bir saat bile kayıp yaşanmaz."
+                "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün."
             ],
             localChallenge: {
                 title: "Hassas Klinik & Büro Donanımı",
@@ -184,7 +184,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             },
             logisticsSolution: {
                 title: "Antistatik Paketleme & Kilitli Transfer",
-                desc: "Özel koruyucu antistatik balonlu sarım ve numaralı kilitli sandıklarla gizlilik garantili lojistik."
+                desc: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
             },
             features: [
                 "Klinik, muayenehane ve laboratuvar donanımları özel taşımacılığı",
@@ -201,7 +201,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
                 },
                 {
                     q: "Hafta sonu taşıma için ekstra ücret alınıyor mu?",
-                    a: "Hayır, kurumsal müşterilerimize sunduğumuz hafta sonu ofis taşıma hizmetimizde standart sabit fiyat politikamız geçerlidir."
+                    a: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
                 }
             ]
         },
@@ -210,25 +210,25 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             description: "2026 Keçiören evden eve nakliyat fiyatları. 1+1, 2+1, 3+1 daireler için asansör ve marangozluk dahil güncel net fiyat tablosu.",
             intro: "Keçiören'de ev taşıma maliyetleri, geniş ailelerin bütçesini zorlamayacak şeffaf ve ekonomik paketlerle sunulmaktadır.",
             paragraphs: [
-                "Keçiören içi nakliyat fiyatlarımız 1+1 daireler için 8.000 ₺ – 11.500 ₺, 2+1 daireler için 11.500 ₺ – 15.500 ₺, 3+1 geniş aile daireleri için 15.500 ₺ – 22.000 ₺ aralığında değişmektedir. Dubleks ve çok odalı çatı katı dairelerde ise 22.000 ₺'den başlayan fiyatlar uygulanır.",
-                "Tüm paketlerimizde profesyonel marangozluk (gardırop söküm ve kurulumu), beyaz eşyaların çizilmez keçe ve balonlu naylonla zırhlanması, su tesisatı bağlantıları ve Axa/Allianz nakliyat emtia sigortası dahildir.",
-                "Keçiören'in dik yokuşlu sokaklarında yüksek katlara kurulum yapılacaksa teleskopik asansör maliyeti teklifte açıkça yazılır; kapıda kesinlikle ek masraf talep edilmez."
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
             ],
             localChallenge: {
                 title: "Ek Masraf Sürprizleri",
                 desc: "Piyasadaki korsan nakliyecilerin taşınma günü 'kat yüksekmiş', 'mobilya çokmuş' diyerek fiyat artırması."
             },
             logisticsSolution: {
-                title: "Sözleşmeli Sabit Fiyat Garantisi",
-                desc: "Ekspertiz sonrası yazılı imzalanan ve sonradan 1 TL bile artmayan resmi sözleşmeli net tarife."
+                title: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
+                desc: "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün."
             },
             features: [
-                "Keçiören içine özel 8.000 ₺'den başlayan şeffaf fiyatlar",
-                "Marangoz ve beyaz eşya tesisat bağlantısı ücretsiz",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
                 "Asansör bedeli sözleşmede şeffafça belirtilir",
-                "Öğrenci ve emeklilere özel %10 nakit indirimi",
-                "Kredi kartıyla taksitli ödeme seçeneği",
-                "Ücretsiz yerinde ve görüntülü keşif imkanı"
+                "Taşımayı yapacak firma bilgilerini ve hizmetle ilgili belgeleri inceleyin; eşya listesi, adresler ve teklif koşullarını yazılı olarak netleştirin.",
+                "Ödeme yöntemini ve koşullarını teklif sırasında görüşün.",
+                "Keşif yöntemi ve ücretini önceden görüşün imkanı"
             ],
             faq: [
                 {
@@ -249,7 +249,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             intro: "Yenimahalle; Batıkent'in planlı geniş siteleri, Çakırlar'ın modern villaları ve Şentepe'nin dik yamaçlarıyla birbirinden çok farklı lojistik yaklaşımlar gerektiren bir ilçedir.",
             paragraphs: [
                 "Batıkent ve Ergazi gibi toplu konut sitelerinde peyzaj alanları, site giriş güvenlikleri ve ortak alan kuralları çok katıdır. Ankara Özdemir Nakliyat olarak site yönetimleriyle önceden iletişime geçerek araç yanaşma saatlerini ve çim alanlara zarar vermeyecek asansör kurulum noktalarını belirliyoruz.",
-                "Şentepe, Pamuklar ve Barıştepe gibi eğimli bölgelerde ise dar sokak ve dik rampa manevra kabiliyeti yüksek kompakt çelik kasa araçlarımızı görevlendiriyoruz. Eşyalar sarsıntısız hava süspansiyonlu kasalarda güvenle sevk edilir.",
+                "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
                 "Çakırlar ve Batı Sitesi gibi villa ve dubleks konut bölgelerinde geniş bahçe yanaşmaları için çift araç ve 6 kişilik kıdemli personel desteği sunarak taşınmayı tek günde anahtar teslim tamamlıyoruz."
             ],
             localChallenge: {
@@ -265,8 +265,8 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
                 "Şentepe dik yokuşlarına uygun güçlü şasili filo",
                 "Çakırlar villa taşımalarına özel VIP çift araç desteği",
                 "Gardırop, baza ve ünitelerin marangozlu montajı",
-                "Çamaşır ve bulaşık makinesi tesisatı ücretsiz bağlantısı",
-                "Axa/Allianz tam kapsamlı emtia taşıma sigortası"
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün."
             ],
             faq: [
                 {
@@ -275,7 +275,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
                 },
                 {
                     q: "Şentepe'deki dar ve eğimli sokaklara kamyon girebilir mi?",
-                    a: "Büyük kamyonların giremediği dar sokaklar için filomuzda özel kısa şasili nakliye araçlarımız mevcuttur."
+                    a: "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün."
                 }
             ]
         },
@@ -284,9 +284,9 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             description: "Yenimahalle kurumsal ofis ve fabrika taşımacılığı. Ostim ve İvedik OSB'deki atölye, fabrika ve yönetim ofisleri için ağır yük ve IT nakliyesi.",
             intro: "Yenimahalle; Ostim OSB, İvedik Organize Sanayi ve Macunköy ile Türkiye'nin en büyük üretim ve ticaret merkezlerinden biridir.",
             paragraphs: [
-                "Ostim ve İvedik Organize Sanayi bölgelerindeki ticari işletmelerin taşınmasında sadece büro mobilyaları değil; CNC makineleri, laboratuvar test cihazları, ağır yedek parça rafları ve teknik donanımlar yer alır. Ağır yük vinç ve forklift destekli nakliye filomuzla sanayi taşımacılığında tam yetkiniz.",
+                "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
                 "Şirketlerin idari binalarındaki muhasebe evrakları, müşteri dosyaları ve sunucu altyapısı departman bazlı numaralı sandıklarla taşınır. Hafta sonu yürütülen operasyonlarımız sayesinde Pazartesi sabahı üretim ve faturalama kesintisiz devam eder.",
-                "T.C. Ulaştırma Bakanlığı K3 ve C2 yetki belgelerimiz ve 5 milyon TL'ye varan ağır sanayi taşıma emtia sigortamızla kurumsal güvence sağlıyoruz."
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün."
             ],
             localChallenge: {
                 title: "Ağır Sanayi Ekipmanı & Üretim Kesintisi",
@@ -302,12 +302,12 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
                 "Antistatik ambalajlı kurumsal IT ve sunucu nakliyesi",
                 "Arşivleme, kilitli sandıklama ve raf montaj desteği",
                 "Ağır sanayi teminatlı yüksek bedelli nakliyat sigortası",
-                "Hafta sonu sıfır iş ve üretim kaybı garantisi"
+                "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün."
             ],
             faq: [
                 {
                     q: "Ostim'deki atölyemizi hafta sonu taşıyabilir misiniz?",
-                    a: "Evet; sanayi işletmelerimizi Cuma akşamı başlayıp Pazar günü tamamlayarak Pazartesi sabahı faaliyete hazır hale getiriyoruz."
+                    a: "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün."
                 },
                 {
                     q: "Ağır sanayi makineleri için vinç sağlıyor musunuz?",
@@ -318,11 +318,11 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
         "nakliyat-fiyatlari": {
             h1: "Yenimahalle Nakliyat Fiyatları (2026): Batıkent & Çakırlar Net Fiyat Tablosu",
             description: "2026 Yenimahalle evden eve nakliyat fiyatları. 1+1, 2+1, 3+1 daireler, dubleks ve villa taşımaları için asansörlü şeffaf maliyet tablosu.",
-            intro: "Yenimahalle'de daire büyüklüğüne ve semt özelliklerine göre hazırladığımız şeffaf ve sabit fiyat tarifesi aşağıdadır.",
+            intro: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
             paragraphs: [
-                "Yenimahalle genelinde 1+1 daire nakliyat fiyatları 8.000 ₺ – 12.000 ₺, standart 2+1 daireler 12.000 ₺ – 16.500 ₺, 3+1 site daireleri 16.500 ₺ – 23.000 ₺ aralığındadır. Çakırlar ve Batı Sitesi'ndeki villa ve geniş bahçeli konutlarda ise eşya yoğunluğuna göre 23.000 ₺ – 35.000 ₺ arasında teklif sunulur.",
-                "Fiyatlarımıza profesyonel ambalaj sarf malzemeleri, mobilyaların usta marangozlarca sökülmesi ve kurulması, beyaz eşyaların su tesisatı bağlantısı ve Axa/Allianz emtia sigortası dahildir.",
-                "Ekspertizimiz yerinde ya da WhatsApp görüntülü görüşme ile eşyalarınızı inceler ve net yazılı sözleşme imzalanır. Taşınma günü hiçbir ek ücret talep edilmez."
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
             ],
             localChallenge: {
                 title: "Geniş Fiyat Yelpazesi & Güvensizlik",
@@ -330,15 +330,15 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             },
             logisticsSolution: {
                 title: "A'dan Z'ye Her Şey Dahil Net Tarife",
-                desc: "Marangoz, paketleme, sigorta ve tesisat dahil şeffaf sabit fiyat sözleşmesi."
+                desc: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
             },
             features: [
-                "1+1 daireler için 8.000 ₺'den başlayan net fiyat",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
                 "Marangozlu mobilya montajı ve demontajı fiyata dahil",
-                "Çamaşır/bulaşık makinesi tesisatı ücretsiz bağlanır",
-                "K3 yetki belgeli özmal araçlar ve faturalı kurumsal güvence",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Taşımayı yapacak firma bilgilerini ve hizmetle ilgili belgeleri inceleyin; eşya listesi, adresler ve teklif koşullarını yazılı olarak netleştirin.",
                 "Batıkent ve Çakırlar sakinlerine özel indirimli fiyatlar",
-                "Ücretsiz yerinde keşif ve sabit fiyat taahhüdü"
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
             ],
             faq: [
                 {
@@ -354,13 +354,13 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
     },
     "sincan": {
         "evden-eve-nakliyat": {
-            h1: "Sincan Evden Eve Nakliyat: Fatih, Yenikent ve Törekent'te Merkez Üssü Gücü",
-            description: "Sincan evden eve nakliyat. Merkez ofisimizin bulunduğu Sincan'da Fatih, Törekent, Yenikent'e en hızlı araç tahsisi, asansörlü ve garantili taşıma.",
+            h1: "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
+            description: "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
             intro: "Ankara Özdemir Nakliyat'ın ana operasyon üssü ve araç garajının bulunduğu Sincan'da, hemşehrilerimize en avantajlı fiyat ve en hızlı nakliye hizmetini sunuyoruz.",
             paragraphs: [
-                "Fatih, Törekent, Plevne, Selçuklu ve Yenikent mahallelerindeki geniş aile konutları ve yeni site projelerinde yılların tecrübesiyle çalışıyoruz. Araç filomuzun ve ekipman parkımızın Sincan'da yer alması sayesinde aynı gün acil taşınma taleplerine ve ekspertiz çağrılarına 30 dakika içinde yanıt veriyoruz.",
-                "Sincan'daki geniş ailelerin çok parçalı salon ve yatak odası takımları için kadrolu marangozlarımız görev yapar. Gardıroplar, baza başlıkları ve çocuk odası üniteleri çizilmez patpat naylonlarla sarılarak hasarsız taşınır.",
-                "Yüksek katlı TOKİ ve özel kooperatif sitelerinde 25. kata kadar ulaşabilen teleskopik hidrolik asansörlerimizle merdiven boşluklarını işgal etmeden taşınmayı 4-5 saatte tamamlıyoruz."
+                "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin."
             ],
             localChallenge: {
                 title: "Geniş Eşya Hacmi & Kalabalık Siteler",
@@ -371,12 +371,12 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
                 desc: "Sincan merkezli geniş hacimli özmal kamyon filosu, 2 marangoz ve anında araç takviyesi imkanı."
             },
             features: [
-                "Sincan merkez üssümüzden 30 dakikada adreste ekspertiz",
-                "Fatih, Yenikent ve Törekent'te 25. kata kadar asansörlü nakliye",
+                "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
+                "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin.",
                 "Geniş aile eşyalarına özel maksimum hacimli çelik kasa kamyon",
                 "Marangozlu gardırop demontaj ve yeni evde montajı dahil",
-                "Çamaşır ve bulaşık makinesi su tesisatı ücretsiz bağlantısı",
-                "Axa/Allianz emtia sigortası ve yazılı sözleşme güvencesi"
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün."
             ],
             faq: [
                 {
@@ -385,7 +385,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
                 },
                 {
                     q: "Yenikent'teki yeni yüksek katlı sitelere asansörünüz kurulabilir mi?",
-                    a: "Evet, 25. kata kadar uzanan hidrolik asansörlerimiz Yenikent'teki tüm yeni konut projelerine tam uyumludur."
+                    a: "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin."
                 }
             ]
         },
@@ -404,7 +404,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             },
             logisticsSolution: {
                 title: "Vardiyalı Kurumsal Proje Yönetimi",
-                desc: "Cuma akşamı başlayıp Pazar tamamlanan, numaralı arşiv ve IT korumalı kurumsal lojistik."
+                desc: "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün."
             },
             features: [
                 "Sincan 1. OSB ve Başkent OSB işletmelerine yerinde keşif",
@@ -412,12 +412,12 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
                 "Antistatik sarımlı sunucu ve teknoloji donanımı taşıması",
                 "Numaralı kilitli koli ve sandık sistemi",
                 "Geniş kapsamlı kurumsal nakliyat sigortası",
-                "Hafta sonu kesintisiz vardiyayla sıfır iş kaybı"
+                "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün."
             ],
             faq: [
                 {
                     q: "Fabrika ofisimiz için fatura ve resmi sözleşme düzenleniyor mu?",
-                    a: "Evet, kurumsal K3 yetki belgemizle resmi sözleşme, emtia sigortası poliçesi ve kurumsal e-fatura düzenliyoruz."
+                    a: "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün."
                 },
                 {
                     q: "Çok katlı fabrika idari binalarına dış asansör kurulabilir mi?",
@@ -426,38 +426,38 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             ]
         },
         "nakliyat-fiyatlari": {
-            h1: "Sincan Nakliyat Fiyatları (2026): En Uygun Merkez Üssü Fiyat Tarifesi",
-            description: "2026 Sincan evden eve nakliyat fiyatları. Merkez ofisimizin bulunduğu Sincan'da 1+1, 2+1, 3+1 daireler için en uygun net fiyat listesi.",
-            intro: "Araç garajımızın ve merkez üssümüzün Sincan'da olması sayesinde yakıt ve araç intikal maliyetlerini en aza indirerek Sincan halkına en ekonomik nakliyat fiyatlarını sunuyoruz.",
+            h1: "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
+            description: "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
+            intro: "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
             paragraphs: [
-                "Sincan içi evden eve nakliyat fiyatlarımız 1+1 daireler için 7.500 ₺ – 10.500 ₺, standart 2+1 daireler için 10.500 ₺ – 15.000 ₺, 3+1 aile daireleri için ise 15.000 ₺ – 21.000 ₺ aralığındadır. 4+1 ve dubleks daireler 21.000 ₺ – 30.000 ₺ arasında fiyatlandırılır.",
-                "Fiyatlarımıza ambalajlama sarf malzemesi, gardırop ve yatak demontaj/montajı, beyaz eşyaların su tesisatı bağlantısı ve Axa/Allianz emtia sigortası dahildir.",
-                "Sincan'daki hemşehrilerimize özel hiçbir aracı ve komisyoncu olmadan doğrudan kendi araç ve personelimizle hizmet verdiğimiz için sürpriz masraf yaşamazsınız."
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün."
             ],
             localChallenge: {
                 title: "Aracı & Komisyoncu Tuzağı",
                 desc: "İnternette ucuza ilan verip işi başkasına komisyonla devreden korsan firmaların yarattığı mağduriyetler."
             },
             logisticsSolution: {
-                title: "Kendi Özmal Filomuz & Merkez Üs Güvencesi",
-                desc: "Doğrudan Sincan Atatürk Mahallesi'ndeki merkez ofisimizden resmi sözleşmeli ve garantili hizmet."
+                title: "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
+                desc: "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün."
             },
             features: [
-                "Sincan içine özel 7.500 ₺'den başlayan en avantajlı fiyatlar",
-                "Merkez üssü güvencesiyle sıfır aracı komisyonu",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
                 "Marangoz, ambalajlama ve sigorta fiyata dahildir",
-                "Çamaşır ve bulaşık makinesi montajı ücretsiz",
-                "Kredi kartıyla taksit imkanı",
-                "Sincan genelinde 30 dakikada ücretsiz ekspertiz"
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Ödeme yöntemini ve koşullarını teklif sırasında görüşün.",
+                "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün."
             ],
             faq: [
                 {
                     q: "Sincan içi taşınmalarda fiyat neden diğer ilçelerden daha uygun?",
-                    a: "Araç filomuz ve ana personel kadromuz Sincan'da konuşlu olduğu için intikal ve yakıt maliyetimiz düşüktür; bu avantajı doğrudan müşterimize yansıtıyoruz."
+                    a: "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün."
                 },
                 {
                     q: "Fiyatta sonradan değişiklik olur mu?",
-                    a: "Kesinlikle hayır; ekspertiz sonrası imzalanan sözleşmedeki rakam sabittir, kapıda 1 TL bile artmaz."
+                    a: "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün."
                 }
             ]
         }
@@ -470,7 +470,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             paragraphs: [
                 "Eryaman ve Göksu bölgelerindeki yüksek katlı sitelerde 20. kata kadar ulaşabilen teleskopik hidrolik asansörlerimizle eşyalarınızı bina asansörlerine ve merdiven boşluklarına temas ettirmeden doğrudan dairenizin balkonundan araç kasasına yüklüyoruz.",
                 "Bağlıca bölgesindeki villa, çatı dubleksi ve geniş metrekareli lüks konutlarda VIP taşıma paketimiz devreye girer. Özel tasarım lake mobilyalar, kristal avizeler ve hassas mermer masalar kalın kraft balonlu naylonlar ve köşe koruyucularla zırhlanır.",
-                "Elvankent ve Piyade mahallelerindeki taşınmalarda ise marangozlarımız gardıropları ve bazaları titizlikle söküp yeni evinizde dilediğiniz odaya kurar, beyaz eşyalarınızın su tesisatı bağlantılarını ücretsiz tamamlar."
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın."
             ],
             localChallenge: {
                 title: "Site Kuralları & Yüksek Kat Yükü",
@@ -478,15 +478,15 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             },
             logisticsSolution: {
                 title: "VIP Ambalaj & Teleskopik Asansör",
-                desc: "Çizilmez koruyucu ambalajlama ve 20+ kat hidrolik dış cephe asansörü kurulumu."
+                desc: "Eşyanın hassasiyetine göre ambalaj, yükleme ve sabitleme yöntemini önceden görüşün."
             },
             features: [
                 "Eryaman ve Bağlıca'da 20. kata kadar hidrolik asansör",
                 "Lüks konut ve villalar için VIP kalın ambalaj paketi",
                 "Marangozlu demontaj, montaj ve oda yerleşimi dahil",
-                "Çamaşır ve bulaşık makinesi su tesisatı ücretsiz bağlantısı",
-                "Axa/Allianz tam kapsamlı nakliyat emtia sigortası",
-                "Etimesgut genelinde ücretsiz hızlı keşif ve sabit fiyat"
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün.",
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
             ],
             faq: [
                 {
@@ -501,10 +501,10 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
         },
         "ofis-tasima": {
             h1: "Etimesgut Ofis Taşıma: Bağlıca Bulvarı & Eryaman Ticari Merkez Nakliyesi",
-            description: "Etimesgut ofis ve büro taşımacılığı. Bağlıca ve Eryaman'daki kurumsal ofisler, klinikler, mimarlık büroları için hafta sonu sıfır iş kaybıyla taşıma.",
+            description: "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün.",
             intro: "Etimesgut ve Bağlıca aksında hızla gelişen iş merkezleri, mimarlık ofisleri, hukuk büroları ve özel klinikler için profesyonel taşıma hizmeti sunuyoruz.",
             paragraphs: [
-                "Bağlıca Bulvarı ve Eryaman 1-5 etaplarındaki ticari ofislerin taşınmasında müşteri randevularını ve iş akışını aksatmamak için hafta sonu ekspres nakliye uyguluyoruz. Cuma akşamı paketlenen ofis, Pazar günü yeni adresinde çalışmaya hazır teslim edilir.",
+                "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün.",
                 "Masaüstü bilgisayarlar, çok fonksiyonlu yazıcılar ve ağ anahtarları antistatik malzemelerle ambalajlanır. Numaralandırılmış dayanıklı plastik sandıklarla klasörler ve mali evraklar eksiksiz taşınır.",
                 "Toplantı masaları, ofis bölme panelleri ve makam takımları marangozlarımızca sökülüp yeni ofisteki mimari plana göre monte edilir."
             ],
@@ -514,7 +514,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             },
             logisticsSolution: {
                 title: "Hafta Sonu Sıfır Mesai Kaybı",
-                desc: "Cuma mesai bitiminden Pazar akşamına kadar anahtar teslim ofis kurulumu."
+                desc: "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün."
             },
             features: [
                 "Bağlıca ve Eryaman ofislerine hafta sonu kesintisiz taşıma",
@@ -538,32 +538,32 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
         "nakliyat-fiyatlari": {
             h1: "Etimesgut Nakliyat Fiyatları (2026): Eryaman & Bağlıca Şeffaf Fiyat Listesi",
             description: "2026 Etimesgut evden eve nakliyat fiyatları. Eryaman, Bağlıca, Elvankent 1+1, 2+1, 3+1 ve dubleks daire güncel nakliye fiyat tablosu.",
-            intro: "Etimesgut genelinde sürpriz ek masraf çıkarmayan, marangoz ve sigorta dahil net fiyat tarifemiz aşağıdadır.",
+            intro: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
             paragraphs: [
-                "Etimesgut içi taşınmalarda 1+1 daireler 8.000 ₺ – 11.500 ₺, 2+1 daireler 11.500 ₺ – 16.000 ₺, 3+1 daireler 16.000 ₺ – 22.500 ₺ aralığındadır. Bağlıca'daki villa ve dubleks konutlar için 22.500 ₺ – 34.000 ₺ arasında net eksper fiyatı verilir.",
-                "Fiyatlarımıza kaliteli patpat balonlu naylon ambalaj sarf malzemesi, mobilya söküm ve kurulum marangozluğu, beyaz eşya su tesisatı montajı ve Axa/Allianz nakliyat sigortası dahildir.",
-                "Ücretsiz yerinde veya görüntülü ekspertiz hizmetimizle eşyalarınızı inceliyor, net sabit fiyat sözleşmesi imzalıyoruz. Taşınma günü kapıda ilave para talep edilmez."
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
             ],
             localChallenge: {
                 title: "Taşınma Sabahı Ekstra Ücret Talebi",
                 desc: "Piyasada ucuz fiyatla anlaşıp taşınma günü 'asansör parası', 'kat parası' adı altında fahiş artış yapanlar."
             },
             logisticsSolution: {
-                title: "Sabit Fiyat Taahhütnamesi",
-                desc: "Noter onaylı nitelikte yazılı sözleşmeyle kesinleşen, kapıda değişmeyen sabit fiyat garantisi."
+                title: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
+                desc: "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün."
             },
             features: [
-                "1+1 daireler için 8.000 ₺'den başlayan şeffaf tarife",
-                "Marangoz ve beyaz eşya tesisat bağlantısı ücretsiz",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
                 "Asansör bedeli baştan teklifte net belirtilir",
                 "Bağlıca ve Eryaman sakinlerine özel indirimli fiyatlar",
-                "Kredi kartıyla ödeme ve taksit kolaylığı",
-                "Ücretsiz ekspertiz ile garantili fiyat tespiti"
+                "Ödeme yöntemini ve koşullarını teklif sırasında görüşün.",
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
             ],
             faq: [
                 {
                     q: "Etimesgut'tan Çankaya'ya taşınma fiyatı ne kadar fark eder?",
-                    a: "İlçeler arası mesafe yakıt farkı olarak eklenir, ortalama ilçe içi fiyata 1.500 - 2.500 ₺ mesafe farkı yansıtılır."
+                    a: "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün."
                 },
                 {
                     q: "Fiyata ambalaj malzemesi dahil midir?",
@@ -578,9 +578,9 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             description: "Mamak evden eve nakliyat. Akdere, Durali Alıç kentsel dönüşüm bölgeleri ve TOKİ konutlarında asansörlü, sigortalı, marangozlu taşımacılık.",
             intro: "Mamak; kentsel dönüşümle inşa edilen modern TOKİ konutları, Durali Alıç siteleri ve Akdere'nin dar sokaklarıyla karmaşık bir kentsel dokuya sahiptir.",
             paragraphs: [
-                "Durali Alıç, General Zeki Doğan ve Ege Mahallesi'ndeki yeni yüksek katlı konutlarda 25. kata kadar ulaşabilen modüler hidrolik asansörlerimizle eşyalarınızı sıfır hasarla taşıyoruz.",
-                "Akdere ve Abidinpaşa'nın dar sokaklarında ise manevra kabiliyeti yüksek kompakt araç filomuzla hizmet veriyor, trafiği kilitlemeden hızlı yükleme sağlıyoruz.",
-                "Geniş aile mobilyaları marangozlarımızca sökülür, beyaz eşyalar darbelere karşı çift katlı ambalajlanır ve yeni evinizde su tesisatı bağlantıları ücretsiz tamamlanır."
+                "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin.",
+                "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın."
             ],
             localChallenge: {
                 title: "Kentsel Dönüşüm & Dar Sokak Geçişleri",
@@ -591,12 +591,12 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
                 desc: "Dar sokaklara giren manevralı araçlar ve yüksek katlara hidrolik asansör."
             },
             features: [
-                "Durali Alıç ve TOKİ sitelerinde 25. kata kadar asansör",
+                "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin.",
                 "Akdere ve Abidinpaşa dar sokaklarına uygun kompakt araç",
                 "Marangozlu mobilya montaj ve demontajı dahil",
-                "Çamaşır ve bulaşık makinesi su tesisatı ücretsiz montajı",
-                "Axa/Allianz nakliyat sigortası güvencesi",
-                "Mamak genelinde ücretsiz hızlı ekspertiz"
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün.",
+                "Keşif yöntemi, uygun tarih ve varsa ücretini randevu öncesinde görüşün."
             ],
             faq: [
                 {
@@ -605,7 +605,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
                 },
                 {
                     q: "Beyaz eşyalar yeni evde bağlanıyor mu?",
-                    a: "Evet, çamaşır ve bulaşık makinelerinin temiz ve pis su bağlantıları ücretsiz yapılır."
+                    a: "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın."
                 }
             ]
         },
@@ -614,9 +614,9 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             description: "Mamak ofis ve iş yeri taşıma. Mamak Caddesi, Samsun Yolu showroom, mağaza, büro ve atölyeler için sigortalı kurumsal nakliyat.",
             intro: "Mamak Caddesi ve Samsun Yolu aksında yer alan mağazalar, showroomlar, toptancılar ve bürolar için profesyonel taşıma sunuyoruz.",
             paragraphs: [
-                "Ticari işletmelerin taşınmasında ürünlerin ve arşivlerin hasar görmemesi birincil önceliktir. Özel raflı çelik kasalı araçlarımızla ticari ürünlerinizi deforme olmadan yeni adresine taşıyoruz.",
+                "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
                 "Ofis bilgisayarları ve muhasebe arşivleri numaralandırılarak kayıpsız transfer edilir. Hafta sonu operasyonlarımızla ticari faaliyetlerinizde tek bir gün bile kesinti yaşanmaz.",
-                "T.C. Ulaştırma Bakanlığı onaylı K3 yetki belgemiz ve resmi kurumsal sigortamızla tüm ticari varlıklarınız güvence altındadır."
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün."
             ],
             localChallenge: {
                 title: "Ticari Malların Korunması & Trafik",
@@ -641,34 +641,34 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
                 },
                 {
                     q: "Hafta sonu mağaza taşıması yapabilir misiniz?",
-                    a: "Evet, Cumartesi ve Pazar günleri işletmenizi kapatmadan gece vardiyasında taşıyabiliyoruz."
+                    a: "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün."
                 }
             ]
         },
         "nakliyat-fiyatlari": {
-            h1: "Mamak Nakliyat Fiyatları (2026): Ekonomik ve Sabit Fiyat Tarifesi",
+            h1: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
             description: "2026 Mamak evden eve nakliyat fiyatları. 1+1, 2+1, 3+1 daireler için asansör, marangoz ve sigorta dahil güncel maliyet tablosu.",
-            intro: "Mamak ilçesinde bütçe dostu, şeffaf ve kapıda sürpriz masraf çıkarmayan güncel nakliyat fiyat tarifemiz aşağıdadır.",
+            intro: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
             paragraphs: [
-                "Mamak içi evden eve nakliyat fiyatları 1+1 daireler için 7.500 ₺ – 11.000 ₺, 2+1 daireler için 11.000 ₺ – 15.500 ₺, 3+1 daireler için ise 15.500 ₺ – 21.500 ₺ aralığında sabitlenmektedir.",
-                "Fiyatlarımıza çift katlı ambalajlama sarf malzemeleri, gardırop ve yatak odası mobilya marangozluğu, beyaz eşyaların su tesisatı montajı ve resmi Axa/Allianz sigortası dahildir.",
-                "Ücretsiz yerinde veya görüntülü ekspertiz hizmetimizle eşyalarınızı inceler ve yazılı sabit fiyat sözleşmesi imzalarız. Taşınma günü hiçbir ek ücret çıkmaz."
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
             ],
             localChallenge: {
                 title: "Düşük Fiyat Tuzağı",
                 desc: "Piyasada gerçek dışı ucuz fiyat verip eşyayı araca yükledikten sonra fiyat artıran korsanlar."
             },
             logisticsSolution: {
-                title: "Resmi Sözleşmeli Garanti",
-                desc: "Önceden imzalanan, K3 belgeli ve faturalı değişmez sabit fiyat taahhüdü."
+                title: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
+                desc: "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün."
             },
             features: [
-                "Mamak içine özel 7.500 ₺'den başlayan fiyatlar",
-                "Marangoz ve beyaz eşya tesisatı ücretsiz",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
                 "Asansör bedeli sözleşmede şeffafça yazılır",
-                "Öğrenci ve emeklilere özel %10 indirim",
-                "Kredi kartıyla taksit imkanı",
-                "Ücretsiz yerinde ekspertiz desteği"
+                "Taşımayı yapacak firma bilgilerini ve hizmetle ilgili belgeleri inceleyin; eşya listesi, adresler ve teklif koşullarını yazılı olarak netleştirin.",
+                "Ödeme yöntemini ve koşullarını teklif sırasında görüşün.",
+                "Keşif yöntemi, uygun tarih ve varsa ücretini randevu öncesinde görüşün."
             ],
             faq: [
                 {
@@ -694,7 +694,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             ],
             localChallenge: {
                 title: "Lüks Mobilyalar & Geniş Hacim",
-                desc: "İncek villalarındaki hassas antika ve masif mobilyaların hasarsız transferi."
+                desc: "Eşyanın hassasiyetine göre ambalaj, yükleme ve sabitleme yöntemini önceden görüşün."
             },
             logisticsSolution: {
                 title: "VIP Sandıklama & Çoklu Ekip",
@@ -705,7 +705,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
                 "Antika, piyano ve para kasası özel taşıma donanımı",
                 "Kristal avize ve cam mobilyalar için ahşap sandıklama",
                 "Bahçe mobilyaları ve teras eşyaları özel ambalajı",
-                "Axa/Allianz yüksek teminatlı villa emtia sigortası",
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün.",
                 "Marangozlu kusursuz montaj ve anahtar teslim yerleşim"
             ],
             faq: [
@@ -724,7 +724,7 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             description: "Gölbaşı ofis ve laboratuvar taşımacılığı. Gölbaşı Teknokent, üniversiteler ve kurumsal tesisler için hassas cihaz ve IT altyapı nakliyesi.",
             intro: "Gölbaşı Teknokent, üniversite kampüsleri ve kurumsal araştırma merkezlerindeki teknoloji ofisleri ve laboratuvarlar için özel taşımacılık sunuyoruz.",
             paragraphs: [
-                "Teknokent firmalarının yazılım sunucuları, hassas test cihazları ve AR-GE prototipleri antistatik koruyucu kılıflarla ambalajlanarak sarsıntısız araçlarımızda sevk edilir.",
+                "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
                 "Akademik arşivler, tez kütüphaneleri ve kurumsal evraklar numaralı barkod sistemiyle kodlanarak yeni binadaki odalara eksiksiz dizilir.",
                 "Hafta sonu yürütülen esnek operasyonlarımız sayesinde üniversite ve teknoloji şirketlerinde araştırma süreçleri aksamadan taşınma tamamlanır."
             ],
@@ -734,24 +734,24 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             },
             logisticsSolution: {
                 title: "Antistatik Paket & Gizlilik Sözleşmesi",
-                desc: "Numaralı kilitli sandıklar, antistatik ambalaj ve gizlilik taahhütnamesi."
+                desc: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
             },
             features: [
                 "Teknokent ve AR-GE ofisleri özel nakliyatı",
                 "Antistatik ambalajlı sunucu ve laboratuvar cihazı taşıması",
                 "Numaralı kütüphane ve arşiv taşıma sistemi",
-                "Hafta sonu sıfır iş kaybı ile anahtar teslim transfer",
+                "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün.",
                 "Yüksek teminatlı kurumsal sigorta poliçesi",
                 "Gölbaşı ve tüm Ankara'ya aynı gün teslimat"
             ],
             faq: [
                 {
                     q: "AR-GE ve laboratuvar cihazları nasıl taşınır?",
-                    a: "Teknik ekibinizle koordineli olarak cihazların sarsıntı emici özel sandıklarda ve hava süspansiyonlu araçlarımızda transferi sağlanır."
+                    a: "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün."
                 },
                 {
                     q: "Gizlilik sözleşmesi imzalıyor musunuz?",
-                    a: "Evet, kurumsal ve teknoloji firmalarımızla gizlilik ve veri güvenliği taahhütnamesi imzalıyoruz."
+                    a: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
                 }
             ]
         },
@@ -760,9 +760,9 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
             description: "2026 Gölbaşı evden eve nakliyat fiyatları. İncek villaları ve standart daireler için asansörlü güncel net maliyet tablosu.",
             intro: "Gölbaşı ilçesinde standart dairelerden lüks villalara kadar her konut tipine uygun şeffaf fiyatlandırma politikamız aşağıdadır.",
             paragraphs: [
-                "Gölbaşı merkezindeki standart 1+1 daireler 8.500 ₺ – 12.000 ₺, 2+1 daireler 12.000 ₺ – 17.000 ₺, 3+1 daireler 17.000 ₺ – 24.000 ₺ aralığındadır. İncek ve Mogan kıyısındaki geniş villa ve malikanelerde ise 23.000 ₺ – 38.000 ₺ arasında özel eksper fiyatı verilir.",
-                "Fiyatlarımıza kaliteli ambalajlama malzemeleri, marangozlu söküm ve montaj, beyaz eşya su tesisatı bağlantıları ve Axa/Allianz sigortası dahildir.",
-                "Ücretsiz yerinde keşif hizmetimizle eşya hacminizi yerinde görüp net sözleşmeli sabit fiyat teklifimizi sunuyoruz."
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
             ],
             localChallenge: {
                 title: "Villa ve Malikane Maliyet Belirsizliği",
@@ -773,12 +773,12 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
                 desc: "Çift araç, personel ve sandıklama maliyetinin baştan belirlendiği net sözleşme."
             },
             features: [
-                "Standart daireler için 8.500 ₺'den başlayan fiyatlar",
-                "İncek villalarına özel sabit fiyatlı VIP paket",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
                 "Marangoz, paketleme ve sigorta fiyata dahildir",
                 "Piyano ve kasa için şeffaf fiyatlandırma",
                 "Kredi kartıyla ödeme imkanı",
-                "Ücretsiz yerinde keşif hizmeti"
+                "Keşif yöntemi, uygun tarih ve varsa ücretini randevu öncesinde görüşün."
             ],
             faq: [
                 {
@@ -787,8 +787,376 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
                 },
                 {
                     q: "Taşınma günü ekstra masraf çıkar mı?",
-                    a: "Hayır; imzalanan resmi sözleşmedeki tutar kesindir ve sonradan ek ücret talep edilmez."
+                    a: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
                 }
+            ]
+        }
+    },
+    "altindag": {
+        "evden-eve-nakliyat": {
+            h1: "Altındağ Evden Eve Nakliyat: Siteler Mobilya Montajı & Dar Sokak Uzmanlığı",
+            description: "Altındağ evden eve nakliyat hizmeti. Aydınlıkevler, Siteler, Karapürçek ve Ulus'ta asansörlü, sigortalı, Siteler imalatı mobilya montajı dahil ev taşıma.",
+            intro: "Ankara'nın köklü ilçelerinden Altındağ'da ev taşımak; Siteler mobilya merkezinin ahşap inceliklerine hakimiyeti, Aydınlıkevler ve Örnek mahallelerindeki 4-5 katlı eski binaların dar dik merdivenlerini yönetebilmeyi gerektirir.",
+            paragraphs: [
+                "Altındağ; Aydınlıkevler, Dışkapı ve Örnek gibi tarihi ve köklü mahallelerde bina içi yük asansörü bulunmayan 40-50 yıllık apartmanlarla doludur. Bu binalarda bina içi merdivenlerden büyük gardırop ve köşe takımlarını indirmek hem bina duvarlarını çizer hem mobilyayı yıpratır. Ankara Özdemir Nakliyat olarak dar sokaklara rahatça yanaşabilen kompakt şasili teleskopik dış cephe asansörlerimizle balkon veya geniş salon pencerelerinden eşyaları doğrudan kapalı kasa kamyonumuza alıyoruz.",
+                "Siteler Mobilyacılar Çarşısı'nın Altındağ sınırlarında yer alması sebebiyle bölgedeki müşterilerimizin pek çoğu masif, lake ve özel tasarım ağır ahşap mobilyalara sahiptir. Kadrolu kıdemli marangozlarımız Siteler işçiliği gardıropları, oymalı konsolları ve yemek masalarını numaralandırarak söker, çift katlı kraft balonlu patpatlarla sarar ve yeni evinizde fabrikasyon hassasiyetiyle monte eder.",
+                "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin."
+            ],
+            localChallenge: {
+                title: "Siteler Ahşap Mobilyaları & Dar Sokak Merdivenleri",
+                desc: "Aydınlıkevler'deki dar sokak parklanmaları ile Siteler üretimi ağır özel tasarım mobilyaların demontaj hassasiyeti."
+            },
+            logisticsSolution: {
+                title: "Siteler Usta Marangozluğu & Kompakt Dış Asansör",
+                desc: "Özel mobilya marangozları, çift katlı kraft koruma ve dar sokaklara yanaşabilen hidrolik dış cephe asansörü."
+            },
+            features: [
+                "Siteler üretimi özel tasarım mobilyalara uzman marangoz montajı",
+                "Aydınlıkevler ve Örnek dar sokaklarına manevralı kompakt araçlar",
+                "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin.",
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün.",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün."
+            ],
+            faq: [
+                {
+                    q: "Aydınlıkevler'deki dar sokaklarda asansör kurulabilir mi?",
+                    a: "Evet, dar sokaklara özel tasarlanmış kompakt sepetli asansörümüz sayesinde araç trafiğini tıkamadan bina balkonuna kurulum yapabiliyoruz."
+                },
+                {
+                    q: "Siteler'den yeni aldığımız mobilyaları da taşıyıp monte ediyor musunuz?",
+                    a: "Evet, Siteler'deki atölye veya mağazalardan alınan demonte mobilyaların teslim alınıp yeni evinize taşınması ve montajı hizmetimiz mevcuttur."
+                }
+            ]
+        },
+        "ofis-tasima": {
+            h1: "Altındağ Ofis ve Mağaza Taşıma: Ulus, Siteler & Rüzgarlı Ticari Nakliyat",
+            description: "Altındağ ofis, mağaza ve atölye taşımacılığı. Ulus büroları, Siteler imalathaneleri ve Rüzgarlı yapı marketleri için hafta sonu sigortalı ticari nakliye.",
+            intro: "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün.",
+            paragraphs: [
+                "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün.",
+                "Eşyanın hassasiyetine göre ambalaj, yükleme ve sabitleme yöntemini önceden görüşün.",
+                "Arşiv klasörleri ve kurumsal evraklar departman kodlu kilitli güvenlik sandıklarında taşınarak evrak sırasının bozulması kesin olarak önlenir."
+            ],
+            localChallenge: {
+                title: "Ulus Trafiği & Tarihi İş Hanları",
+                desc: "Tarihi iş hanlarının dar koridorları ve Ulus merkezindeki gündüz trafik kısıtlamaları."
+            },
+            logisticsSolution: {
+                title: "Gece / Hafta Sonu Vardiyası",
+                desc: "Trafiğin sakin olduğu mesai dışı saatlerde hızlı yükleme ve numaralı arşiv transferi."
+            },
+            features: [
+                "Ulus ve Rüzgarlı iş merkezlerine hafta sonu kesintisiz taşıma",
+                "Siteler mağaza ve showroom demirbaşları özel nakliyesi",
+                "Numaralı ve kilitli arşiv taşıma sandığı güvencesi",
+                "Antistatik ambalajlı sunucu ve bilgisayar nakli",
+                "Geniş teminatlı kurumsal emtia poliçesi",
+                "Resmi faturalı ve yazılı sözleşmeli taşımacılık"
+            ],
+            faq: [
+                {
+                    q: "Ulus'taki tarihi hanlarda eşya nasıl indirilir?",
+                    a: "Merdiven boşlukları elverişli değilse cephe pencerelerinden mobil dış asansör veya askılı sistemler kullanılır."
+                },
+                {
+                    q: "Ofis dosyaları karışır mı?",
+                    a: "Her klasör ve dolap numaralandırılarak yeni ofiste aynı sıra düzeniyle yerleştirilir."
+                }
+            ]
+        },
+        "nakliyat-fiyatlari": {
+            h1: "Altındağ Nakliyat Fiyatları (2026): Siteler & Aydınlıkevler Net Fiyat Tarifesi",
+            description: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
+            intro: "Altındağ genelinde bütçenizi zorlamayan, kapıda sonradan ilave ücret çıkarmayan fiyatı etkileyen koşullar ve teklif öncesi hazırlık bilgileri aşağıdadır.",
+            paragraphs: [
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
+            ],
+            localChallenge: {
+                title: "Düşük Fiyat Verip Kapıda Artıranlar",
+                desc: "Piyasada telefonda ucuz söyleyip taşınma sabahı 'merdiven dar', 'mobilya ağır' diyerek ek ücret talep eden korsanlar."
+            },
+            logisticsSolution: {
+                title: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
+                desc: "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün."
+            },
+            features: [
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Asansör ücreti baştan sözleşmede açıkça belirtilir",
+                "Taşımayı yapacak firma bilgilerini ve hizmetle ilgili belgeleri inceleyin; eşya listesi, adresler ve teklif koşullarını yazılı olarak netleştirin.",
+                "Ödeme yöntemini ve koşullarını teklif sırasında görüşün.",
+                "Keşif yöntemi, uygun tarih ve varsa ücretini randevu öncesinde görüşün."
+            ],
+            faq: [
+                {
+                    q: "Altındağ içi nakliyatta fiyatı ne belirler?",
+                    a: "Oda sayısı, eşya yoğunluğu, binanın katı ve dış cephe asansörü gereksinimi ana maliyet unsurlarıdır."
+                },
+                {
+                    q: "Taşınma günü ekstra ücret çıkar mı?",
+                    a: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
+                }
+            ]
+        }
+    },
+    "akyurt": {
+        "evden-eve-nakliyat": {
+            h1: "Akyurt Evden Eve Nakliyat: Esenboğa Aksı, TOKİ & Müstakil Konut Taşımacılığı",
+            description: "Akyurt evden eve nakliyat. Eşya, adres ve hizmet kapsamına göre taşıma planını görüşün.",
+            intro: "Ankara'nın kuzeydoğu giriş kapısı olan Akyurt; Esenboğa Havalimanı yakınlığı, Çankırı Yolu sanayi tesisleri, yeni TOKİ blokları ve geniş bahçeli müstakil konutlarıyla kendine özgü bir lojistik planlama gerektirir.",
+            paragraphs: [
+                "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin.",
+                "Saracalar, Büğdüz ve Balıkhisar gibi kırsal ve müstakil mahallelerdeki geniş bahçeli evler, villalar ve çiftlik tipi konutlar için geniş hacimli çelik kasa kamyonlar tahsis ediyoruz. Bahçe mobilyaları, atölye aletleri ve kiler eşyaları özel dayanıklı kolilerle paketlenir.",
+                "Akyurt - Ankara şehir merkezi arasındaki 35 kilometrelik güzergahta, eşyalarınızın yol sarsıntısından etkilenmemesi için araç kasasında gergi kemerleri ve strafor sünger bariyerler kullanılarak seyir güvenliği sağlanır."
+            ],
+            localChallenge: {
+                title: "35 km Şehir İntikali & Müstakil Konut Hacmi",
+                desc: "Ankara merkezine olan mesafe, Çankırı yolu ağır vasıta trafiği ve müstakil evlerdeki yoğun eşya hacmi."
+            },
+            logisticsSolution: {
+                title: "Geniş Hacimli Çelik Kasa & Çift Marangoz",
+                desc: "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün."
+            },
+            features: [
+                "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin.",
+                "Müstakil ve bahçeli evler için ekstra geniş hacimli araçlar",
+                "Esenboğa ve Çankırı Yolu sanayi personeline özel indirimler",
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün.",
+                "Marangozlu gardırop demontaj ve montajı fiyata dahil",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın."
+            ],
+            faq: [
+                {
+                    q: "Akyurt'tan Ankara merkeze taşınma kaç saat sürer?",
+                    a: "Sabah 08:00'de başlayan paketleme ve yükleme, 35 km'lik intikal ve yeni adreste montaj dahil ortalama 5-6 saatte tamamlanır."
+                },
+                {
+                    q: "Köy ve çiftlik evlerindeki bahçe eşyaları da taşınıyor mu?",
+                    a: "Evet, bahçe oturma grupları, çim biçme makineleri ve kiler malzemeleri özel sarımla güvenle nakledilir."
+                }
+            ]
+        },
+        "ofis-tasima": {
+            h1: "Akyurt Fabrika ve Ofis Taşıma: Sanayi Bölgesi & Lojistik Depo Nakliyesi",
+            description: "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün.",
+            intro: "Akyurt Sanayi Bölgesi ve Çankırı Yolu üzerindeki imalat tesisleri, lojistik antrepolar ve fabrika idari ofisleri için endüstriyel kurumsal taşıma çözümleri sunuyoruz.",
+            paragraphs: [
+                "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün.",
+                "Server odaları, IT anahtarlama ekipmanları ve hassas test aygıtları antistatik hava kanallı malzemelerle zırhlanır. Kurumsal arşiv klasörleri numaralı mühürlü plastik kasalarla sıra bozulmadan taşınır.",
+                "Yönetici odaları, modüler toplantı masaları ve showroom üniteleri usta marangozlarımızca sökülüp yeni fabrika idari binasında projesine uygun kurulur."
+            ],
+            localChallenge: {
+                title: "Sanayi Mesaisi & Ağır Ekipmanlar",
+                desc: "Üretim vardiyalarının bölünmemesi ve teknik cihazların toz/darbe koruması."
+            },
+            logisticsSolution: {
+                title: "Hafta Sonu Endüstriyel Nakliye",
+                desc: "Mesai dışı kesintisiz operasyon, antistatik koruma ve numaralı arşiv sistemi."
+            },
+            features: [
+                "Keşif yöntemi, uygun tarih ve varsa ücretini randevu öncesinde görüşün.",
+                "Hafta sonu mesai kaybı olmadan anahtar teslim fabrika ofis nakli",
+                "Antistatik IT ekipmanı ve sunucu ambalajlama",
+                "Numaralı kilitli arşiv taşıma sandığı güvencesi",
+                "Yüksek teminatlı kurumsal emtia taşıma poliçesi",
+                "Taşımayı yapacak firma bilgilerini ve hizmetle ilgili belgeleri inceleyin; eşya listesi, adresler ve teklif koşullarını yazılı olarak netleştirin."
+            ],
+            faq: [
+                {
+                    q: "Fabrika ofisimiz için kurumsal fatura kesiliyor mu?",
+                    a: "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün."
+                },
+                {
+                    q: "Ağır ofis kasaları taşınabilir mi?",
+                    a: "Evet, ağır çelik kasalar hidrolik kızaklı özel ekipmanlarımızla taşınır."
+                }
+            ]
+        },
+        "nakliyat-fiyatlari": {
+            h1: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
+            description: "2026 Akyurt evden eve nakliyat fiyatları. 1+1, 2+1, 3+1 ve müstakil konutlar için asansör, marangoz ve sigorta dahil güncel net fiyat tablosu.",
+            intro: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
+            paragraphs: [
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
+            ],
+            localChallenge: {
+                title: "Mesafe Bahanesiyle Fiyat Artırma",
+                desc: "Akyurt'un merkeze mesafesini gerekçe gösterip taşınma ortasında ilave para isteyen nakliyeciler."
+            },
+            logisticsSolution: {
+                title: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
+                desc: "Taşımayı yapacak firma bilgilerini ve hizmetle ilgili belgeleri inceleyin; eşya listesi, adresler ve teklif koşullarını yazılı olarak netleştirin."
+            },
+            features: [
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Mesafe farkı sözleşmede şeffafça netleştirilir",
+                "Taşımayı yapacak firma bilgilerini ve hizmetle ilgili belgeleri inceleyin; eşya listesi, adresler ve teklif koşullarını yazılı olarak netleştirin.",
+                "Ödeme yöntemini ve koşullarını teklif sırasında görüşün.",
+                "Keşif yöntemi, uygun tarih ve varsa ücretini randevu öncesinde görüşün."
+            ],
+            faq: [
+                {
+                    q: "Akyurt'tan Ankara içine nakliyat fiyatı neye göre hesaplanır?",
+                    a: "Eşya hacmi, kat durumu, asansör ihtiyacı ve gidilecek ilçenin km mesafesi baştan şeffafça hesaplanır."
+                },
+                {
+                    q: "Kapıda sonradan ek ücret çıkar mı?",
+                    a: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
+                }
+            ]
+        }
+    },
+    "pursaklar": {
+        "evden-eve-nakliyat": {
+            h1: "Pursaklar Evden Eve Nakliyat: Saray, Tevfik İleri & Protokol Yolu Taşımacılığı",
+            description: "Pursaklar evden eve nakliyat. Eşya, adres ve hizmet kapsamına göre taşıma planını görüşün.",
+            intro: "Protokol Yolu üzerinde hızla gelişen Pursaklar'da geniş aile daireleri ve modern kooperatif siteleri için uzman nakliye hizmeti veriyoruz.",
+            paragraphs: [
+                "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin.",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün."
+            ],
+            localChallenge: { title: "Protokol Yolu Trafiği & Yüksek Siteler", desc: "Sabah saatlerindeki havalimanı trafiği ve yüksek katlı site bloklarında eşya indirme güçlüğü." },
+            logisticsSolution: { title: "Erken Sevkiyat & Dış Cephe Asansörü", desc: "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin." },
+            features: [
+                "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin.",
+                "Marangozlu gardırop demontaj ve montajı fiyata dahil",
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün.",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
+            ],
+            faq: [
+                { q: "Pursaklar'da asansör kurulurken site yönetimi izin veriyor mu?", a: "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün." },
+                { q: "Mobilyalarım garantili mi?", a: "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün." }
+            ]
+        },
+        "ofis-tasima": {
+            h1: "Pursaklar Ofis Taşıma: Saray Sanayi & Ticari İş Yeri Nakliyesi",
+            description: "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün.",
+            intro: "Pursaklar ve Saray Sanayi aksındaki ticari ofisler için hızlı ve sigortalı kurumsal taşımacılık çözümleri sunuyoruz.",
+            paragraphs: [
+                "İşletmenizin faaliyetini aksatmamak amacıyla mesai dışı saatlerde veya hafta sonu taşıma gerçekleştiriyoruz.",
+                "Bilgisayarlar ve teknolojik aletler antistatik koruyucularla sarılır; klasörler numaralandırılır.",
+                "Ofis masaları ve üniteleri marangozumuzca sökülüp yeni adreste hızla kurulur."
+            ],
+            localChallenge: { title: "Mesai Sürekliliği", desc: "Ofis taşınırken müşteri iletişiminin ve işlerin aksamaması." },
+            logisticsSolution: { title: "Hafta Sonu Transferi", desc: "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün." },
+            features: [
+                "Hafta sonu mesai dışı taşıma desteği",
+                "Antistatik IT ekipmanı paketleme",
+                "Numaralı arşiv taşıma sandıkları",
+                "Kurumsal nakliyat sigortası poliçesi",
+                "Marangozlu ofis montajı",
+                "Taşımayı yapacak firma bilgilerini ve hizmetle ilgili belgeleri inceleyin; eşya listesi, adresler ve teklif koşullarını yazılı olarak netleştirin."
+            ],
+            faq: [
+                { q: "Arşiv dosyaları karışır mı?", a: "Numaralandırılmış kilitli sandıklarla her klasör aynı sırayla yeni ofise aktarılır." },
+                { q: "Fatura kesiliyor mu?", a: "Evet, tüm kurumsal taşımalarda resmi e-fatura düzenlenir." }
+            ]
+        },
+        "nakliyat-fiyatlari": {
+            h1: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
+            description: "2026 Pursaklar evden eve nakliyat fiyatları. 1+1, 2+1, 3+1 daireler için asansör ve marangoz dahil güncel maliyet tablosu.",
+            intro: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin.",
+            paragraphs: [
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
+            ],
+            localChallenge: { title: "Fiyat Belirsizliği", desc: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin." },
+            logisticsSolution: { title: "Erişim ve Hizmet Kapsamı", desc: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin." },
+            features: [
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Asansör bedeli sözleşmede şeffafça yazılır",
+                "Ödeme yöntemini ve koşullarını teklif sırasında görüşün.",
+                "Keşif yöntemi, uygun tarih ve varsa ücretini randevu öncesinde görüşün.",
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün."
+            ],
+            faq: [
+                { q: "Fiyata montaj dahil midir?", a: "Evet, gardırop ve yatak demontaj/montajı fiyata dahildir." },
+                { q: "Kapıda sonradan fiyat artar mı?", a: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin." }
+            ]
+        }
+    },
+    "polatli": {
+        "evden-eve-nakliyat": {
+            h1: "Polatlı Evden Eve Nakliyat: Ankara - Polatlı Hattında Güvenli Lojistik",
+            description: "Polatlı evden eve nakliyat. Eşya, adres ve hizmet kapsamına göre taşıma planını görüşün.",
+            intro: "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
+            paragraphs: [
+                "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün.",
+                "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin.",
+                "Ankara merkez ile Polatlı arasındaki 75 km'lik intikal güzergahında eşyalarınız darbe emici süngerler ve gergi halatlarıyla sarsıntısız sevk edilir."
+            ],
+            localChallenge: { title: "75 km Şehirler Arası Standart & Geniş Hacim", desc: "Ankara merkez mesafesi ve geniş aile evlerinin yoğun eşya yükü." },
+            logisticsSolution: { title: "Süspansiyonlu Kamyon & Sabitleme", desc: "Adres erişimini, eşya ölçülerini ve tarihi paylaşarak araç ve ekip uygunluğunu görüşün." },
+            features: [
+                "Ankara - Polatlı arası günlük düzenli sefer",
+                "Asansör kurulumu için kat yüksekliği, bina cephesi, zemin ve yükleme alanının uygunluğunu adres özelinde değerlendirin.",
+                "Marangozlu mobilya demontaj ve montajı dahil",
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün.",
+                "Söküm, kurulum ve cihaz bağlantısının kapsamını ayrı ayrı görüşün; gerektiğinde yetkili servisle planlayın.",
+                "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin."
+            ],
+            faq: [
+                { q: "Polatlı'dan Ankara içine taşınma ne kadar sürer?", a: "Yükleme, 75 km yol ve boşaltma dahil aynı gün içinde 6-7 saatte anahtar teslim bitirilir." },
+                { q: "Geniş ev eşyaları tek araca sığar mı?", a: "Geniş hacimli büyük boy çelik kasa kamyonlarımız sayesinde tüm eşyalar tek seferde taşınır." }
+            ]
+        },
+        "ofis-tasima": {
+            h1: "Polatlı Ofis Taşıma: Çarşı & Sanayi İş Yeri Nakliyatı",
+            description: "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün.",
+            intro: "Polatlı merkez çarşı ve sanayi bölgesindeki ticari işletmeler için hızlı ve sigortalı kurumsal nakliyat sunuyoruz.",
+            paragraphs: [
+                "Ofis mobilyaları, teknik cihazlar ve muhasebe evrakları özel koruyucu kılıflarla ambalajlanarak güvenle aktarılır.",
+                "Çalışma takvimi, bina giriş saatleri ve teslim sırasına göre ofis taşıma planını önceden görüşün.",
+                "Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını inceleyin. Paketleme ve teslim koşullarını yazılı hizmet kapsamıyla birlikte görüşün."
+            ],
+            localChallenge: { title: "Ticari Kesinti Riski", desc: "Taşınma esnasında işletmenin müşteri hizmetlerinin durmaması." },
+            logisticsSolution: { title: "Mesai Dışı Transfer", desc: "Hafta sonu veya akşam saatlerinde hızlı ve planlı yerleşim." },
+            features: [
+                "Hafta sonu kesintisiz taşıma imkanı",
+                "Numaralı klasör ve arşiv sandıklama",
+                "Antistatik IT ekipmanı ambalajı",
+                "Kurumsal emtia sigortası",
+                "Marangozlu ofis mobilyası montajı",
+                "Faturalı ve sözleşmeli kurumsal güvence"
+            ],
+            faq: [
+                { q: "Ofis eşyaları sigortalanıyor mu?", a: "Evet, tüm ofis demirbaşları kurumsal poliçe ile teminat altındadır." },
+                { q: "Hafta sonu ekstra ücret var mı?", a: "Teklifte dahil işleri ve kapsam değişikliği koşullarını yazılı olarak kontrol edin." }
+            ]
+        },
+        "nakliyat-fiyatlari": {
+            h1: "Polatlı Nakliyat Fiyatları (2026): Net ve Şeffaf Fiyat Listesi",
+            description: "2026 Polatlı evden eve nakliyat fiyatları. 1+1, 2+1, 3+1 daireler ve Ankara intikali için güncel maliyet tablosu.",
+            intro: "Polatlı ilçe içi ve Ankara merkez bağlantılı taşınmalar için fiyatı etkileyen koşullar ve teklif öncesi hazırlık bilgileri aşağıdadır.",
+            paragraphs: [
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "İntikal maliyeti baştan sözleşmede açıkça belirtilir, yol, yakıt ve ek hizmet bedellerinin dahil olup olmadığını kontrol edin."
+            ],
+            localChallenge: { title: "Yol ve Yakıt Sürprizleri", desc: "Mesafeyi bahane ederek taşınma günü fiyat artıran fırsatçılar." },
+            logisticsSolution: { title: "Yazılı Teklif Kapsamı", desc: "Taşımayı yapacak firma bilgilerini ve hizmetle ilgili belgeleri inceleyin; eşya listesi, adresler ve teklif koşullarını yazılı olarak netleştirin." },
+            features: [
+                "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün.",
+                "Ankara - Polatlı mesafesi için teklif kapsamı",
+                "Montaj ve cihaz bağlantısının kapsamını görüşün",
+                "Asansör bedeli sözleşmede açıkça yazılır",
+                "Ödeme yöntemlerini teklif öncesinde görüşün",
+                "Keşif yöntemi ve ücretini önceden görüşün"
+            ],
+            faq: [
+                { q: "Polatlı'dan Ankara merkeze fiyat ne kadar?", a: "Eşya hacmi, mesafe, katlar, paketleme ve kurulum ihtiyaçlarını paylaşarak teklif alın. Dahil işleri, vergi ve ek hizmet koşullarını yazılı olarak görüşün." },
+                { q: "Kapıda sonradan ek masraf çıkar mı?", a: "Dahil işler ve kapsam değişikliği koşullarını yazılı teklifte kontrol edin." }
             ]
         }
     }
@@ -797,119 +1165,64 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
 // Fallback generator for other districts with rich custom facts
 export function getDistrictServiceContent(districtSlug: string, serviceSlug: "evden-eve-nakliyat" | "ofis-tasima" | "nakliyat-fiyatlari", districtName: string): DistrictServiceDetail {
     if (districtServiceData[districtSlug] && districtServiceData[districtSlug][serviceSlug]) {
-        return districtServiceData[districtSlug][serviceSlug];
+        const content = districtServiceData[districtSlug][serviceSlug];
+        const serviceLabel = serviceSlug === "ofis-tasima" ? "ofis taşıma" : serviceSlug === "nakliyat-fiyatlari" ? "nakliyat fiyatları" : "evden eve nakliyat";
+        return { ...content,
+            h1: `${districtName} ${serviceLabel.charAt(0).toLocaleUpperCase("tr-TR") + serviceLabel.slice(1)}: Hazırlık ve Teklif`,
+            description: `${districtName} ${serviceLabel} için eşya, adres, kat ve tarih bilgileriyle planlama. Dahil işleri ve teklif koşullarını önceden görüşün.`
+        };
     }
 
-    if (serviceSlug === "evden-eve-nakliyat") {
-        return {
-            h1: `${districtName} Evden Eve Nakliyat: Asansörlü, Sigortalı ve Sabit Fiyatlı Taşıma`,
-            description: `${districtName} evden eve nakliyat hizmeti. ${districtName} genelinde 25. kata kadar asansörlü, sigortalı, marangozlu ve anahtar teslim ev taşıma çözümleri.`,
-            intro: `${districtName} bölgesinde ev taşıma operasyonlarında 15 yılı aşkın deneyimimiz, uzman kadromuz ve modern araç filomuzla hizmet veriyoruz.`,
-            paragraphs: [
-                `${districtName} ilçesinde gerçekleştirdiğimiz evden eve nakliyat hizmetlerimizde binaların kat durumu, sokak yapısı ve yol koşullarına uygun araç tahsisi yapıyoruz. Eşyalarınız profesyonel ekibimizce çift katlı darbe emici balonlu naylonlarla ambalajlanarak tam koruma altına alınır.`,
-                `${districtName} asansörlü nakliyat çözümlerimizle yüksek katlı apartmanlarda bina merdivenlerine ve asansörlerine zarar vermeden eşyalarınızı doğrudan araç kasasına indiriyoruz. Alanında uzman marangozlarımız gardıroplarınızı demonte edip yeni evinizde monte ederken, beyaz eşyalarınızın su tesisatı bağlantıları ücretsiz yapılmaktadır.`,
-                `Taşınma öncesinde noter niteliğinde yazılı sözleşme düzenlenerek tüm eşyalarınız Axa ve Allianz emtia sigortası kapsamına alınır. ${districtName} genelinde kapıda sürpriz masraf çıkarmayan şeffaf sabit fiyat politikamızla güvenle taşınabilirsiniz.`
-            ],
-            localChallenge: {
-                title: `${districtName} Bölgesel Lojistik Koşulları`,
-                desc: `${districtName} yerleşim alanlarında kat yükseklikleri, dar sokak manevraları ve eşya güvenliğinin sağlanması.`
-            },
-            logisticsSolution: {
-                title: "Asansörlü & Sigortalı Çözüm",
-                desc: "Modüler teleskopik dış cephe asansörü ve çift katlı koruma ambalajı ile sıfır riskli transfer."
-            },
-            features: [
-                `${districtName} genelinde 25. kata kadar asansörlü taşıma`,
-                "Marangozlu mobilya söküm ve montajı fiyata dahil",
-                "Çamaşır ve bulaşık makinesi su tesisatı ücretsiz bağlantısı",
-                "Axa/Allianz tam kapsamlı emtia sigortası poliçesi",
-                "Yazılı sözleşmeli sabit fiyat garantisi (kapıda ek ücret yok)",
-                "Ücretsiz yerinde ve görüntülü ekspertiz hizmeti"
-            ],
-            faq: [
-                {
-                    q: `${districtName} evden eve nakliyat ne kadar sürer?`,
-                    a: "Ortalama bir 2+1 veya 3+1 dairenin paketlenmesi, yüklenmesi ve yeni adreste montajı 4 ile 7 saat arasında tamamlanmaktadır."
-                },
-                {
-                    q: `${districtName} taşınmasında mobilya montajını kim yapıyor?`,
-                    a: "Ekibimizdeki kadrolu uzman marangoz tüm dolap, gardırop ve yatak demontaj ve montajını eksiksiz tamamlar."
-                }
-            ]
-        };
-    } else if (serviceSlug === "ofis-tasima") {
-        return {
-            h1: `${districtName} Ofis ve İş Yeri Taşıma: Kurumsal & Sıfır İş Kaybı Garantisi`,
-            description: `${districtName} ofis ve iş yeri taşımacılığı. ${districtName} bölgesindeki şirketler, bürolar, klinikler ve mağazalar için hafta sonu sigortalı kurumsal nakliyat.`,
-            intro: `${districtName} bölgesindeki kurumsal şirketler, bürolar ve ticari işletmeler için iş kaybını sıfıra indiren profesyonel ofis nakliyesi sunuyoruz.`,
-            paragraphs: [
-                `${districtName} ofis taşıma hizmetlerimizde şirketinizin müşteri iletişimini ve operasyonunu aksatmamak için taşıma sürecini mesai dışı saatlerde veya hafta sonu yürütüyoruz. Cuma akşamı başlayan paketleme süreci Pazar günü tamamlanarak Pazartesi sabahı faaliyete hazır teslim edilir.`,
-                `Bilgisayarlar, sunucu kabinleri ve hassas teknolojik cihazlar antistatik koruyucu malzemelerle paketlenir. Şirketinizin muhasebe ve arşiv klasörleri numaralı mühürlü sandık sistemimizle sıra numarası bozulmadan yeni ofise transfer edilir.`,
-                `Tüm ofis demirbaşları ve mobilyaları K3 yetki belgemiz ve Axa/Allianz kurumsal emtia poliçesiyle teminat altına alınır. Uzman marangozlarımız çalışma masaları ve toplantı ünitelerini kusursuz monte eder.`
-            ],
-            localChallenge: {
-                title: "Kurumsal Mesai & Veri Güvenliği",
-                desc: "Ofis taşınırken iş akışının kesintiye uğramaması ve kurumsal arşivin gizliliğinin korunması."
-            },
-            logisticsSolution: {
-                title: "Hafta Sonu Transfer & Numaralı Arşiv",
-                desc: "Hafta sonu kesintisiz vardiya, antistatik IT ambalajı ve numaralandırılmış sandıklama."
-            },
-            features: [
-                `${districtName} şirketlerine hafta sonu kesintisiz nakliye`,
-                "Antistatik IT ekipmanı ve sunucu ambalajlama",
-                "Numaralı ve kilitli arşiv taşıma sandıkları",
-                "Modüler ofis masaları marangozlu söküm ve montajı",
-                "Yüksek teminatlı kurumsal nakliyat sigortası",
-                "Resmi sözleşmeli ve faturalı kurumsal güvence"
-            ],
-            faq: [
-                {
-                    q: `${districtName} ofis taşıması hafta sonu yapılabilir mi?`,
-                    a: "Evet, şirketinizin mesaisini aksatmamak için Cuma akşamından Pazar gecesine kadar kesintisiz taşıma yapabiliyoruz."
-                },
-                {
-                    q: "Arşiv dosyalarının karışması nasıl önlenir?",
-                    a: "Her klasör departman ve personel koduyla numaralandırılır, yeni ofiste aynı dolap sırasına yerleştirilir."
-                }
-            ]
-        };
-    } else {
-        return {
-            h1: `${districtName} Nakliyat Fiyatları (2026): Şeffaf ve Sabit Fiyat Tarifesi`,
-            description: `2026 ${districtName} evden eve nakliyat fiyatları. 1+1, 2+1, 3+1 daireler için asansör, marangoz ve sigorta dahil güncel net fiyat tablosu.`,
-            intro: `${districtName} genelinde ev ve ofis taşıma maliyetleri için oda sayısı, kat durumu ve mesafeye göre şeffaf fiyatlandırma tablomuz aşağıdadır.`,
-            paragraphs: [
-                `${districtName} içi evden eve nakliyat fiyatlarımız 1+1 daireler için 8.000 ₺ – 11.500 ₺, standart 2+1 daireler için 11.500 ₺ – 16.000 ₺, 3+1 aile daireleri için 16.000 ₺ – 22.500 ₺ aralığındadır. Dubleks ve villa tipi konutlar için 22.500 ₺'den başlayan fiyatlar uygulanır.`,
-                `Fiyatlarımıza kaliteli patpat naylon sarf malzemesi, gardırop ve yatak demontaj/montaj marangozluğu, beyaz eşyaların su tesisatı bağlantısı ve Axa/Allianz emtia sigortası dahildir.`,
-                `Ücretsiz yerinde veya görüntülü ekspertiz hizmetimizle taşınma günü öncesinde net sözleşmeli fiyat verilir. Kapıda ek ücret talep edilmez.`
-            ],
-            localChallenge: {
-                title: "Belirsiz Fiyatlar & Gizli Ek Maliyetler",
-                desc: "Piyasada telefonda ucuz söyleyip taşınma günü kapıda bahanelerle fiyat artıran firmalar."
-            },
-            logisticsSolution: {
-                title: "Yazılı Sözleşmeli Sabit Fiyat",
-                desc: "Ekspertizle sabitlenen, KDV ve montaj dahil sonradan değişmeyen net taahhüt."
-            },
-            features: [
-                `${districtName} genelinde 8.000 ₺'den başlayan şeffaf fiyatlar`,
-                "Marangoz ve beyaz eşya tesisatı ücretsiz",
-                "Asansör bedeli teklifte açıkça belirtilir",
-                "Öğrenci ve emeklilere özel indirim seçenekleri",
-                "Kredi kartıyla taksitli ödeme kolaylığı",
-                "Ücretsiz yerinde ekspertiz ve sabit fiyat garantisi"
-            ],
-            faq: [
-                {
-                    q: `${districtName} içi taşınmada fiyatı ne belirler?`,
-                    a: "Eşya hacmi (oda sayısı), kat yükseklikleri ve dış cephe asansörü gereksinimi en temel maliyet kriterleridir."
-                },
-                {
-                    q: "Kapıda sonradan ek ücret çıkar mı?",
-                    a: "Hayır; imzalanan yazılı sözleşmedeki fiyat kesindir ve sonradan hiçbir ek masraf talep edilmez."
-                }
-            ]
-        };
-    }
+    const shared = {
+        localChallenge: { title: "Adres ve Erişim", desc: `${districtName} için çıkış ve varış adresinin kat, park, bina girişi ve yükleme mesafesini birlikte değerlendirin.` },
+        logisticsSolution: { title: "Teklif Öncesi Plan", desc: "Eşya listesi, tarih, paketleme, söküm ve kurulum kapsamını yazılı olarak netleştirin." },
+    };
+    if (serviceSlug === "evden-eve-nakliyat") return {
+        ...shared,
+        h1: `${districtName} Evden Eve Nakliyat: Hazırlık ve Taşıma Planı`,
+        description: `${districtName} evden eve nakliyat için eşya listesi, bina erişimi, paketleme ve montaj hazırlığı. Adres ve tarihe göre hizmet kapsamını görüşün.`,
+        intro: `${districtName} içinde veya ilçeyle bağlantılı bir taşınmada, iki adreste de yapılacak işleri aynı eşya listesi üzerinden planlayın.`,
+        paragraphs: [
+            "Oda sayısı tek başına yeterli değildir. Büyük mobilyaların ölçülerini, beyaz eşyaları, kolileri ve hassas eşyaları listeleyin. Taşınmayacak eşyaları listeden ayırın.",
+            "Merdiven ve kapı ölçülerini, bina asansörünün kullanım koşullarını ve aracın park edebileceği alanı bildirin. Dış cephe asansörü gerekiyorsa kurulum alanı ile ekipman uygunluğunu önceden değerlendirin.",
+            "Sökülecek mobilyalar ve cihaz bağlantıları için sorumluluğu ayrı ayrı görüşün. Teknik veya garanti kapsamındaki cihaz işlemlerinde yetkili servis gerekip gerekmediğini kontrol edin."
+        ],
+        features: ["İki adres için kat ve erişim bilgisi", "Ölçülü eşya ve koli listesi", "Paketleme malzemesi ve iş paylaşımı", "Mobilya söküm ve kurulum kapsamı", "Yükleme ve teslim zaman aralığı", "Varsa poliçenin kapsam ve istisnaları"],
+        faq: [
+            { q: `${districtName} evden eve nakliyat ne kadar sürer?`, a: "Eşya miktarı, erişim, mesafe, paketleme ve montaj süresi birlikte değerlendirilir. Adres bilgileriyle başlangıç ve teslim aralığını görüşün." },
+            { q: "Mobilya kurulumu teklife dahil mi?", a: "Kurulum gerektiren parçaları listede belirtin; hangi işlemlerin dahil olduğunu teklif üzerinde kontrol edin." }
+        ]
+    };
+    if (serviceSlug === "ofis-tasima") return {
+        ...shared,
+        h1: `${districtName} Ofis Taşıma: Envanter ve Teslim Planı`,
+        description: `${districtName} ofis taşıma için departman envanteri, arşiv, bilgisayar ve mobilya hazırlığı. Çalışma takvimi ve teslim sorumluluklarını görüşün.`,
+        intro: `${districtName} ofis taşınmasında iş sürekliliği için taşıma sırasını, çalışanların ihtiyaçlarını ve yeni ofisin yerleşim planını birlikte hazırlayın.`,
+        paragraphs: [
+            "Her departmanın cihaz, mobilya ve arşiv listesine bir sorumlu atayın. Koli ve cihazları yeni ofiste yerleşecekleri oda ya da masa koduyla etiketleyin.",
+            "Veri yedeklerini ve sistemlerin kapatma/açma işlemlerini kendi teknik ekibinizle planlayın. Taşıma hizmeti ile bilişim kurulumu aynı iş değildir; sorumlulukları yazılı olarak ayırın.",
+            "Mesai dışı çalışma gerekiyorsa bina giriş saatlerini, güvenlik iznini ve taşıma ekibinin uygunluğunu önceden görüşün. Kritik cihazlar için teslim sırasını belirleyin."
+        ],
+        features: ["Departman ve oda bazında envanter", "Arşivlerin etiketlenmesi ve erişim kontrolü", "Hassas cihazlar için ambalaj planı", "Söküm ve kurulum işlerinin listesi", "Bina yönetimiyle yükleme saatleri", "Teslim kontrolü ve sorumlu kişiler"],
+        faq: [
+            { q: `${districtName} ofis taşıması hafta sonu yapılabilir mi?`, a: "İstenen gün ve saat için ekip uygunluğunu ve her iki binanın giriş koşullarını önceden teyit edin." },
+            { q: "Arşiv dosyalarının karışması nasıl önlenir?", a: "Koli içerik listesini ve departman kodlarını hazırlayın. Teslimde bu liste üzerinden sayım yapacak kişileri belirleyin." }
+        ]
+    };
+    return {
+        ...shared,
+        h1: `${districtName} Nakliyat Fiyatları: Maliyet Etkenleri ve Teklif`,
+        description: `${districtName} nakliyat fiyatlarını etkileyen eşya hacmi, mesafe, kat ve ek hizmetler. Aynı kapsamla yazılı teklifleri karşılaştırmak için kontrol listesi.`,
+        intro: `${districtName} nakliyat fiyatını değerlendirmek için yalnız oda sayısını değil, taşınacak eşya ve yapılacak işlerin tamamını belirtin.`,
+        paragraphs: [
+            "Teklif talebine iki adresi, katları, bina asansörü bilgisini, araca kadar yükleme mesafesini ve tercih edilen tarihi ekleyin. Büyük mobilya ölçüleri ve fotoğraflar eşya listesini tamamlar.",
+            "Paketleme, mobilya sökümü, kurulum, dış cephe asansörü ve varsa depolama işlemlerini ayrı başlıklar halinde görüşün. Parça eşya taşınmasında teslim aralığı ve aynı güzergâhta araç uygunluğunu ayrıca belirtin.",
+            "Teklifleri aynı iş listesi üzerinden karşılaştırın. Vergi, yol, otopark, bekleme ve kapsam değişikliği koşullarının yazılı olup olmadığını kontrol edin; rakamın hangi işleri kapsadığını netleştirin."
+        ],
+        features: ["Ölçülü eşya listesi", "Adres, mesafe ve kat bilgisi", "Paketleme ve kurulumun kapsamı", "Asansör uygunluğu ve ayrı bedeli", "Tarih ve teslim aralığı", "Vergi ve ek hizmet koşulları"],
+        faq: [
+            { q: `${districtName} içi taşınmada fiyatı ne belirler?`, a: "Eşya hacmi, iki adresteki erişim, mesafe, tarih ve dahil işlemler birlikte değerlendirilir." },
+            { q: "Sonradan ek ücret çıkar mı?", a: "Teklifin hangi eşya ve hizmet listesini kapsadığını kontrol edin. Adres, eşya veya hizmet değişirse uygulanacak koşulları işlem öncesinde görüşün." }
+        ]
+    };
 }
