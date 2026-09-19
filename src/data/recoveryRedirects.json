@@ -8,10 +8,6 @@
     "destination": "/islemler/ankara/cankaya/nakliyat-fiyatlari"
   },
   {
-    "source": "/makaleler/cankaya-ofis-tasima-firmalari",
-    "destination": "/islemler/ankara/cankaya/ofis-tasima"
-  },
-  {
     "source": "/makaleler/cankaya-ofis-tasima-fiyatlari",
     "destination": "/islemler/ankara/cankaya/ofis-tasima"
   },

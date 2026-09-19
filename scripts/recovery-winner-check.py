@@ -4,7 +4,9 @@ from pathlib import Path
 from urllib.parse import urlsplit
 root=Path(__file__).resolve().parent.parent;base=root/'.agents/reports/recovery-2026-09-16';out=root/'docs/seo/recovery/2026-09-16'
 phase=sys.argv[1] if len(sys.argv)>1 else 'local-final'
-before=json.loads((base/'baseline/crawl.json').read_text(encoding='utf8'));after=json.loads((base/phase/'crawl.json').read_text(encoding='utf8'));g=json.loads((base/'gsc.json').read_text(encoding='utf8'))
+before=json.loads((base/'baseline/crawl.json').read_text(encoding='utf8'));after=json.loads((base/phase/'crawl.json').read_text(encoding='utf8'))
+latest=base/'release-benchmark/gsc.json'
+g=json.loads((latest if latest.exists() else base/'gsc.json').read_text(encoding='utf8'))
 key=lambda u:urlsplit(u).path.rstrip('/') or '/'
 m={}
 for row in g['periods']['history']['datasets']['page']['rows']:
