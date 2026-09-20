@@ -79,7 +79,7 @@ export default function FaqClient() {
     const trustItems = [
         { icon: <IconShield className="w-6 h-6" />, title: "Poliçe ve Hizmet Kapsamı", desc: "Teminat ve istisnaları taşıma öncesinde görüşün" },
         { icon: <IconCheck className="w-6 h-6" />, title: "Yazılı Hizmet Kapsamı", desc: "Fiyata dahil işlemleri teklif üzerinde kontrol edin" },
-        { icon: <IconUsers className="w-6 h-6" />, title: "Uzman Kadro", desc: "Eğitimli ve deneyimli profesyonel ekip" },
+        { icon: <IconUsers className="w-6 h-6" />, title: "Görev Planı", desc: "Paketleme, taşıma ve kurulum sorumlularını teklif sırasında netleştirin" },
         { icon: <IconTruck className="w-6 h-6" />, title: "Modern Filo", desc: "Eşya ve güzergâha göre araç planlaması" },
     ];
 
@@ -326,7 +326,7 @@ export default function FaqClient() {
                             </h2>
                             <p className="text-white/40 text-base md:text-xl max-w-xl mx-auto font-medium leading-relaxed px-4 md:px-0">
                                 Hemen bizi arayın veya iletişim formunu doldurun.{" "}
-                                <span className="text-white">Nakliyat uzmanlarımız anında yanıt versin.</span>
+                                <span className="text-white">Talebinizi eşya ve adres bilgileriyle iletin.</span>
                             </p>
                         </motion.div>
 

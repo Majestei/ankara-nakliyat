@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Ankara Özdemir Nakliyat',
     short_name: 'Ankara Özdemir',
-    description: 'Ankara ve tüm Türkiye genelinde profesyonel evden eve nakliyat, ofis taşıma ve depolama hizmetleri.',
+    description: 'Ankara merkezli evden eve nakliyat, ofis taşıma ve depolama hizmetleri için bilgi ve teklif sayfaları.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

@@ -71,7 +71,7 @@ function MagneticButton({ children, className, href, isAnchor = false }: { child
 // FAQ Data
 const evdenEveFaq = [
     { q: "Evden eve nakliyat kaç saat sürer?", a: "Süre; eşya miktarı, paketleme, katlar, erişim ve mesafeye göre değişir. Adres ve eşya bilgileriyle bir zaman planı isteyin." },
-    { q: "Mobilyaların sökülüp kurulması kime ait?", a: "Alanında uzman marangozlarımız tüm mobilyalarınızın demontaj ve yeni evinizde montaj işlemlerini profesyonelce gerçekleştirmektedir." },
+    { q: "Mobilyaların sökülüp kurulması kime ait?", a: "Sökülecek ve kurulacak mobilyaları listeleyin; bu işlerin teklife dahil olup olmadığını ve sorumlu kişiyi önceden netleştirin." },
     { q: "Şehirler arası nakliyat yapıyor musunuz?", a: "Ankara çıkışlı şehirler arası taşıma için varış adresini, tarihi ve eşya miktarını paylaşın. Rota uygunluğunu ve hizmet kapsamını görüşelim." },
     { q: "Asansörlü nakliyat ücretli mi?", a: "Asansör kullanımı binanın kat durumuna göre belirlenir. Kurulum uygunluğunu ve asansör ücretinin teklife dahil olup olmadığını önceden görüşün." }
 ];
@@ -328,7 +328,7 @@ export default function EvdenEveClient() {
                                 vehicle: "Eşya hacmine göre araç planı",
                                 duration: "Tarih ve süreyi görüşün",
                                 features: [
-                                    "Profesyonel marangoz desteği",
+                                    "Mobilya söküm ve kurulum kapsamı",
                                     "Kraft kağıt ve patpat sarım",
                                     "Askılı tekstil taşıma dolabı",
                                     "Asansör kurulumuna uygun",
@@ -342,9 +342,9 @@ export default function EvdenEveClient() {
                                 vehicle: "Eşya hacmine göre araç planı",
                                 duration: "Tarih ve süreyi görüşün",
                                 features: [
-                                    "A'dan Z'ye anahtar teslim paketleme",
-                                    "Tüm dolap ve ünite demontajı",
-                                    "Özel dış cephe asansörü imkanı",
+                                    "Paketleme işlerinin yazılı kapsamı",
+                                    "Sökülecek dolap ve ünitelerin listesi",
+                                    "Dış cephe asansörü uygunluk kontrolü",
                                     "Teslim ve hasar bildirimi koşulları",
                                 ],
                                 popular: false,

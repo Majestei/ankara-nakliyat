@@ -5,18 +5,18 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
     title: "Galeri - Nakliyat Fotoğrafları ve Videoları",
-    description: "Ankara evden eve nakliyat, ofis taşıma ve asansörlü nakliyat projelerimizden gerçek fotoğraflar. Profesyonel araç filomuzu yakından inceleyin.",
+    description: "Evden eve nakliyat, ofis taşıma, paketleme ve asansörlü taşıma için kullanılan görselleri inceleyin.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/galeri" },
     openGraph: {
         title: "Galeri - Nakliyat Fotoğrafları ve Videoları",
-        description: "Ankara evden eve nakliyat, ofis taşıma ve asansörlü nakliyat projelerimizden gerçek fotoğraflar. Profesyonel araç filomuzu yakından inceleyin.",
+        description: "Evden eve nakliyat, ofis taşıma, paketleme ve asansörlü taşıma için kullanılan görselleri inceleyin.",
         url: "https://ankaraozdemirnakliyat.com/galeri",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
         title: "Galeri - Nakliyat Fotoğrafları ve Videoları",
-        description: "Ankara evden eve nakliyat, ofis taşıma ve asansörlü nakliyat projelerimizden gerçek fotoğraflar. Profesyonel araç filomuzu yakından inceleyin.",
+        description: "Evden eve nakliyat, ofis taşıma, paketleme ve asansörlü taşıma için kullanılan görselleri inceleyin.",
     }
 };
 

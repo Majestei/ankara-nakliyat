@@ -257,10 +257,10 @@ export default function IslemlerClient() {
 
                             <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
                                 {[
-                                    { title: "Hızlı Teslimat", desc: "Şehirler arası rotalarda 24-48 saat içinde anahtar teslim.", i: <IconTruck /> },
+                                    { title: "Teslim Takvimi", desc: "Şehirler arası rotada yükleme ve teslim aralığını adres ve tarihe göre yazılı olarak görüşün.", i: <IconTruck /> },
                                     { title: "Dijital Takip", desc: "Sevkiyat bilgisi alacağınız iletişim kişisini ve kanalını önceden görüşün.", i: <IconGlobe /> },
-                                    { title: "Ekonomik Çözüm", desc: "Az miktardaki eşyalarınız için parsiyel taşıma desteği.", i: <IconMoney /> },
-                                    { title: "Dönüş Araçları", desc: "Dönüş yükü sistemiyle %30'a varan maliyet avantajı.", i: <IconCheck /> }
+                                    { title: "Parça Eşya Kapsamı", desc: "Az miktardaki eşya için araç uygunluğunu ve teslim aralığını ayrıca görüşün.", i: <IconMoney /> },
+                                    { title: "Araç Uygunluğu", desc: "Aynı güzergâhtaki araç seçeneğinin tarih, teslim ve fiyat koşullarını teyit edin.", i: <IconCheck /> }
                                 ].map((box, i) => (
                                     <div key={i} className="p-8 md:p-10 bg-white/5 border border-white/10 rounded-3xl md:rounded-[3rem] hover:border-primary-500 transition-colors group">
                                         <div className="w-10 h-10 md:w-12 md:h-12 bg-primary-500 rounded-xl md:rounded-2xl flex items-center justify-center mb-6 md:mb-8 text-white shadow-3xl group-hover:scale-110 transition-transform">
@@ -303,7 +303,7 @@ export default function IslemlerClient() {
                             Nereye Taşınmak <br /> <span className="text-primary-500">İstersiniz?</span>
                         </h2>
                         <p className="text-white/40 text-lg md:text-2xl font-medium max-w-2xl mx-auto">
-                            Hemen ücretsiz ekspertiz randevusu oluşturun, mesafe gözetmeksizin size en uygun teklifi hazırlayalım.
+                            Çıkış ve varış adresini, eşya listesini ve tercih edilen tarihi paylaşarak teklif kapsamını görüşün.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10 pt-6 md:pt-10">

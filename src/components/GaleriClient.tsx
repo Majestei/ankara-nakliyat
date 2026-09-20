@@ -251,18 +251,18 @@ export default function GaleriClient() {
                                         gerçek iş sahalarında, en zorlu koşullarda bile taviz vermediği kalite standardını yansıtır.
                                     </p>
                                     <p>
-                                        <strong className="text-slate-950">Paketleme disiplinimiz</strong>, eşyanın ömrünü koruyan bir mühendislik sürecidir.
-                                        Patpatlı naylonlardan, özel köşebentlere kadar her detay sıfır hasar vizyonumuzun bir parçasıdır.
+                                        <strong className="text-slate-950">Paketleme planında</strong>, her eşyanın yüzeyi, ağırlığı ve geçiş yolu ayrı değerlendirilmelidir.
+                                        Kullanılacak malzeme ile paketleme sorumluluğunu taşıma öncesinde yazılı olarak netleştirin.
                                     </p>
                                 </div>
                             </div>
 
                             <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
                                 {[
-                                    { title: "Steril Filo", desc: "Her taşıma sonrası dezenfekte edilen kapalı kasa araçlar.", i: <IconTruck /> },
-                                    { title: "Uzman Kadro", desc: "Taşıma, marangozluk ve paketleme uzmanı sabit personel.", i: <IconCheck /> },
-                                    { title: "Modern Sistem", desc: "Çizilmelere karşı özel köşebent ve askılı dolap sistemleri.", i: <IconShield /> },
-                                    { title: "Hassas Lojistik", desc: "Antika ve değerli eşyalar için özel aparatlı taşıma çözümleri.", i: <IconGlobe /> }
+                                    { title: "Araç Planı", desc: "Araç türünü eşya hacmi ve rota koşullarına göre teklif sırasında görüşün.", i: <IconTruck /> },
+                                    { title: "Görev Dağılımı", desc: "Taşıma, paketleme, söküm ve kurulum işlerinin sorumlularını önceden belirleyin.", i: <IconCheck /> },
+                                    { title: "Malzeme Seçimi", desc: "Köşe, yüzey ve tekstil korumasında kullanılacak malzemeleri eşya listesine göre görüşün.", i: <IconShield /> },
+                                    { title: "Hassas Eşya", desc: "Özel taşıma gerektiren eşyaları ölçü ve mevcut durum bilgisiyle ayrıca bildirin.", i: <IconGlobe /> }
                                 ].map((box, i) => (
                                     <div key={i} className="p-8 md:p-10 bg-slate-50 border border-slate-100 rounded-3xl md:rounded-[3rem] hover:border-primary-500 transition-all group">
                                         <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl md:rounded-2xl flex items-center justify-center mb-6 md:mb-8 text-primary-500 shadow-xl group-hover:bg-primary-500 group-hover:text-white transition-all">
@@ -351,7 +351,7 @@ export default function GaleriClient() {
                             Geleceğinizi <br /> <span className="text-primary-500">Kuralım.</span>
                         </h2>
                         <p className="text-white/40 text-lg md:text-2xl font-medium max-w-2xl mx-auto px-4">
-                            Görsellerimizdeki kaliteyi bizzat deneyimlemek için hemen ücretsiz ekspertiz randevusu alın.
+                            Eşya ve iki adresin bilgileriyle taşıma kapsamını görüşmek için teklif talebi oluşturun.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-10">

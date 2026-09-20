@@ -94,10 +94,10 @@ function getServiceIcon(id: string) {
 }
 
 const steps = [
-    { num: "01", title: "Ücretsiz Yerinde Keşif", desc: "Uzman ekibimiz adresinize gelerek taşınma planınızı en doğru şekilde yerinde analiz eder.", icon: <IconClipboard />, image: "/images/genel/hero-bg-2.webp" },
-    { num: "02", title: "Premium Paket", desc: "Eşyalarınız için özel üretilen, darbe emici materyallerle paketleme.", icon: <IconBox />, image: "/images/hizmetler/paketleme.webp" },
+    { num: "01", title: "Adres Değerlendirmesi", desc: "Eşya listesi, iki adresin erişimi ve gerekirse fotoğraflarla taşıma kapsamını değerlendirin.", icon: <IconClipboard />, image: "/images/genel/hero-bg-2.webp" },
+    { num: "02", title: "Paketleme Planı", desc: "Eşya türüne göre ambalaj malzemesini ve paketlemeyi kimin yapacağını belirleyin.", icon: <IconBox />, image: "/images/hizmetler/paketleme.webp" },
     { num: "03", title: "Güvenli Sevkiyat", desc: "Eşya hacmi, rota ve teslimat koşullarına göre sevkiyat planı.", icon: <IconTruck />, image: "/images/hizmetler/sehirler-arasi-nakliyat.webp" },
-    { num: "04", title: "Eksiksiz Teslim", desc: "Yeni adresinizde uzman marangoz ekibimizle anahtar teslim kurulum.", icon: <IconHome />, image: "/images/hizmetler/evden-eve-nakliyat.webp" },
+    { num: "04", title: "Teslim Kontrolü", desc: "Boşaltma, kurulacak mobilyalar ve teslim kontrolü için görevleri önceden netleştirin.", icon: <IconHome />, image: "/images/hizmetler/evden-eve-nakliyat.webp" },
 ];
 
 // ── MAIN CLIENT COMPONENT ──

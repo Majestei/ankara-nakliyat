@@ -6,11 +6,11 @@ import { firmaBilgileri } from "@/data/siteData";
 
 export const metadata: Metadata = {
     title: "İletişim - Profesyonel Nakliye Teklifi Alın",
-    description: "Ankara nakliyat iletişim ve ücretsiz teklif formu. Evden eve nakliyat, asansörlü taşıma ve şehirler arası taşımacılık için bize ulaşın.",
+    description: "Ankara nakliyat iletişim ve teklif formu. Evden eve nakliyat, asansörlü taşıma ve şehirler arası taşıma için eşya ve adres bilgilerinizi paylaşın.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/iletisim" },
     openGraph: {
         title: "İletişim - Profesyonel Nakliye Teklifi Alın",
-        description: "Ankara nakliyat iletişim ve ücretsiz teklif formu. Evden eve nakliyat, asansörlü taşıma ve şehirler arası taşımacılık için bize ulaşın.",
+        description: "Ankara nakliyat iletişim ve teklif formu. Evden eve nakliyat, asansörlü taşıma ve şehirler arası taşıma için eşya ve adres bilgilerinizi paylaşın.",
         url: "https://ankaraozdemirnakliyat.com/iletisim",
         type: "website",
         images: [{ url: "https://ankaraozdemirnakliyat.com/og-image.jpg" }],
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "İletişim - Profesyonel Nakliye Teklifi Alın",
-        description: "Ankara nakliyat iletişim ve ücretsiz teklif formu. Evden eve nakliyat, asansörlü taşıma ve şehirler arası taşımacılık için bize ulaşın.",
+        description: "Ankara nakliyat iletişim ve teklif formu. Evden eve nakliyat, asansörlü taşıma ve şehirler arası taşıma için eşya ve adres bilgilerinizi paylaşın.",
         images: ["https://ankaraozdemirnakliyat.com/og-image.jpg"],
     }
 };
@@ -27,7 +27,7 @@ const contactJsonLd = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "name": "Ankara Özdemir Nakliyat İletişim",
-    "description": "Ankara Özdemir Nakliyat iletişim bilgileri ve ücretsiz teklif formu",
+    "description": "Ankara Özdemir Nakliyat iletişim bilgileri ve teklif formu",
     "mainEntity": {
         "@type": "Organization",
         "name": "Ankara Özdemir Nakliyat",

@@ -6,7 +6,7 @@ import { IconCheck, IconPhone, IconChat, IconArrow } from "@/components/Icons";
 
 export const metadata: Metadata = {
     title: "Teşekkürler | Talebiniz Alındı",
-    description: "Teklif talebiniz başarıyla alındı. Uzman ekibimiz en kısa sürede sizinle iletişime geçecektir.",
+    description: "Teklif talebiniz alındı. İletişim bilgileriniz üzerinden talebinizle ilgili dönüş yapılacaktır.",
     robots: {
         index: false,
         follow: false,

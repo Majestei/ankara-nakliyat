@@ -9,8 +9,8 @@ export default function AnkaraGuideSection() {
         {
             name: "Çankaya, Ayrancı & Dikmen",
             slug: "cankaya",
-            tag: "Yokuş & Dar Sokak Uzmanlığı",
-            desc: "Dik yokuşlar, dar sokaklar ve yoğun cadde trafiğinde kompakt araçlarımız ve emniyetli dış cephe asansör kurulum planlamamız ile sorunsuz nakliye.",
+            tag: "Dar Sokak ve Erişim Planı",
+            desc: "Yokuş, dar sokak ve yoğun trafik bulunan adreslerde araç durma noktasını, bina girişini ve gerekirse dış cephe ekipmanı uygunluğunu önceden değerlendirin.",
         },
         {
             name: "Keçiören & Mamak",
@@ -21,8 +21,8 @@ export default function AnkaraGuideSection() {
         {
             name: "Yenimahalle, Batıkent & Çayyolu",
             slug: "yenimahalle",
-            tag: "Site İçi Yönetim Uyumlu",
-            desc: "Geniş site yerleşimlerinde yönetim izinleri, peyzaj koruma ve kapalı otopark giriş saatlerine tam riayet ederek gürültüsüz, düzenli taşınma.",
+            tag: "Site Girişi ve Saat Planı",
+            desc: "Site yönetiminin taşıma saati, araç girişi, ortak alan ve kapalı otopark koşullarını iki adres için de önceden öğrenin.",
         },
         {
             name: "Etimesgut, Sincan & Eryaman",
@@ -33,14 +33,14 @@ export default function AnkaraGuideSection() {
         {
             name: "Gölbaşı & İncek",
             slug: "golbasi",
-            tag: "Villa & Geniş Konutlar",
-            desc: "Müstakil konutlar, dubleks daireler ve geniş bahçeli villalar için çoklu kamyon filosu, özel ahşap sandıklama ve VIP paketleme hizmeti.",
+            tag: "Büyük Eşya ve Erişim",
+            desc: "Müstakil veya çok katlı konutlarda katları, bahçe geçişini, büyük eşyaları ve gereken paketleme işlerini teklif öncesi listeleyin.",
         },
         {
             name: "Pursaklar & Akyurt",
             slug: "pursaklar",
-            tag: "Havaalanı Yolu & Sanayi Ağı",
-            desc: "Hızlı çevre yolu bağlantısı sayesinde hem şehir içi ev taşıma hem de parsiyel parça eşya sevkiyatlarında kesintisiz lojistik destek.",
+            tag: "Rota ve Teslim Planı",
+            desc: "Şehir içi veya parça eşya talebinde çıkış ve varış adresini, teslim aralığını ve güncel rota koşullarını birlikte görüşün.",
         },
     ];
 
@@ -54,7 +54,7 @@ export default function AnkaraGuideSection() {
                     <span className="inline-flex items-center gap-3 bg-white border border-slate-200/80 px-6 py-2 rounded-full shadow-sm">
                         <span className="w-2 h-2 rounded-full bg-primary-500 animate-pulse shadow-[0_0_8px_rgba(249,115,22,0.8)]" />
                         <span className="text-slate-700 font-black text-[10px] md:text-xs uppercase tracking-[0.4em]">
-                            Yerel Saha Hakimiyeti
+                            İlçe Bazlı Planlama
                         </span>
                     </span>
 

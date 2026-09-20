@@ -4,18 +4,18 @@ import { blogPosts } from "@/data/blogData";
 
 export const metadata: Metadata = {
     title: "Blog - Nakliyat Rehberi ve Taşınma İpuçları",
-    description: "Evden eve nakliyat, eşya paketleme ve şehirler arası taşımacılık hakkında uzman görüşleri. Sorunsuz taşınma süreci için tüm bilgiler burada.",
+    description: "Evden eve nakliyat, eşya paketleme ve şehirler arası taşıma için hazırlık, teklif ve teslim kontrolü rehberleri.",
     alternates: { canonical: "https://ankaraozdemirnakliyat.com/blog" },
     openGraph: {
         title: "Blog - Nakliyat Rehberi ve Taşınma İpuçları",
-        description: "Evden eve nakliyat, eşya paketleme ve şehirler arası taşımacılık hakkında uzman görüşleri. Sorunsuz taşınma süreci için tüm bilgiler burada.",
+        description: "Evden eve nakliyat, eşya paketleme ve şehirler arası taşıma için hazırlık, teklif ve teslim kontrolü rehberleri.",
         url: "https://ankaraozdemirnakliyat.com/blog",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
         title: "Blog - Nakliyat Rehberi ve Taşınma İpuçları",
-        description: "Evden eve nakliyat, eşya paketleme ve şehirler arası taşımacılık hakkında uzman görüşleri. Sorunsuz taşınma süreci için tüm bilgiler burada.",
+        description: "Evden eve nakliyat, eşya paketleme ve şehirler arası taşıma için hazırlık, teklif ve teslim kontrolü rehberleri.",
     }
 };
 

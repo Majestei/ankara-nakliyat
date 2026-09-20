@@ -31,14 +31,14 @@ export default function PaketlemePage() {
                 <div className="container-custom relative z-10 text-center">
                     <span className="inline-block bg-primary-100 text-primary-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-4 border border-primary-200 shadow-sm">Hizmetlerimiz</span>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black mb-5 text-slate-900">Profesyonel <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-orange-500">Paketleme</span></h1>
-                    <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">Eşyalarınızın güvenliği bizim önceliğimiz. Uzman ekibimizle özenle paketliyoruz.</p>
+                    <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">Eşya türünü ve hassas yüzeyleri belirtin; kullanılacak malzemeyi ve paketleme sorumluluğunu teklif sırasında görüşün.</p>
                 </div>
             </section>
 
             <section className="section-padding bg-white">
                 <div className="container-custom max-w-4xl">
                     <div className="prose prose-lg text-slate-600 leading-relaxed space-y-8">
-                        <p className="text-xl font-medium text-slate-800">Doğru paketlenmeyen bir eşya, en iyi nakliyat firması tarafından taşınsa bile hasar görebilir. <strong>Ankara Özdemir Nakliyat</strong> profesyonel paketleme hizmetiyle eşyalarınızı en üst düzeyde koruma altına alıyoruz.</p>
+                        <p className="text-xl font-medium text-slate-800">Doğru paketlenmeyen bir eşya taşıma sırasında zarar görebilir. <strong>Ankara Özdemir Nakliyat</strong> ile görüşürken eşya türüne uygun malzemeyi, paketleme görevini ve teslim kontrolünü teklif kapsamında netleştirin.</p>
 
                         <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Paketleme Hizmetlerimiz</h2>
                         <div className="grid md:grid-cols-2 gap-4">

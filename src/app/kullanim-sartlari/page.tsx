@@ -71,7 +71,7 @@ export default function KullanimSartlariPage() {
                 "Taşıma tarihinden en az 48 saat önce yapılan iptallerde herhangi bir ücret alınmaz",
                 "48 saatten daha kısa sürede yapılan iptallerde operasyonel hazırlık bedeli talep edilebilir",
                 "Erteleme talepleri, müsaitlik durumuna göre değerlendirilir",
-                "Hava koşulları nedeniyle şirketimiz tarafından yapılan ertelemeler ücretsizdir",
+                "Hava koşullarında uygulanacak erteleme ve ücret şartları yazılı teklif veya sözleşme üzerinden değerlendirilir",
             ]
         },
         {
