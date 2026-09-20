@@ -41,24 +41,8 @@ const PerspectiveGrid = ({ opacity = "0.05", color = "#000" }) => (
 
 const AuroraBackground = () => (
     <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <motion.div
-            animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.05, 0.1, 0.05],
-                rotate: [0, 45, 0]
-            }}
-            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-            className="absolute -top-[20%] -left-[10%] w-[100%] h-[100%] bg-primary-500/20 blur-[150px] rounded-full hidden md:block"
-        />
-        <motion.div
-            animate={{
-                scale: [1.2, 1, 1.2],
-                opacity: [0.05, 0.08, 0.05],
-                rotate: [0, -45, 0]
-            }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute -bottom-[20%] -right-[10%] w-[100%] h-[100%] bg-orange-500/10 blur-[150px] rounded-full hidden md:block"
-        />
+        <div className="home-aurora home-aurora-first absolute -top-[20%] -left-[10%] w-[100%] h-[100%] bg-primary-500/20 blur-[150px] rounded-full hidden md:block" />
+        <div className="home-aurora home-aurora-second absolute -bottom-[20%] -right-[10%] w-[100%] h-[100%] bg-orange-500/10 blur-[150px] rounded-full hidden md:block" />
     </div>
 );
 
@@ -127,7 +111,7 @@ export default function HomeClient() {
     const visionScale = useTransform(visionScroll, [0, 0.5], [0.95, 1]);
 
     return (
-        <div className="bg-white selection:bg-primary-500 selection:text-white overflow-hidden">
+        <div className="home-sections bg-white selection:bg-primary-500 selection:text-white overflow-hidden">
 
             {/* ── VISION: THE COMMAND CENTER INTRO ── */}
             <section ref={visionRef} className="relative py-32 md:py-40 lg:py-80 overflow-hidden bg-slate-950">

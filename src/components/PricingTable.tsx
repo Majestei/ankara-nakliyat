@@ -23,7 +23,7 @@ export default function PricingTable({
                 type: "1+1 Daire Taşıma",
                 price: "Teklif alın",
                 team: "Eşya listesine göre planlanır",
-                vehicle: "Kompakt Kapalı Kasa Araç",
+                vehicle: "Eşya hacmine uygun araç",
                 duration: "Adres ve kapsama göre görüşülür",
                 features: [
                     "Mobilya demontaj ve montajı",
@@ -38,13 +38,13 @@ export default function PricingTable({
                 type: "2+1 Daire Taşıma",
                 price: "Teklif alın",
                 team: "Eşya listesine göre planlanır",
-                vehicle: "Orta Boy Çelik Kasalı Kamyon",
+                vehicle: "Ölçü ve erişime göre araç",
                 duration: "Adres ve kapsama göre görüşülür",
                 features: [
-                    "Profesyonel marangoz desteği",
-                    "Kraft kağıt ve patpat zırhlama",
-                    "Askılı tekstil taşıma dolabı",
-                    "Asansör kurulumuna uygun araç",
+                    "Söküm ve kurulum sorumlusu",
+                    "Ambalaj malzemesini belirleme",
+                    "Giysi taşıma yöntemini görüşme",
+                    "Asansör kurulumunu değerlendirme",
                     "Ufak eşyaları müşteri koliler",
                 ],
                 popular: true,
@@ -53,12 +53,12 @@ export default function PricingTable({
                 type: "3+1 Daire Taşıma",
                 price: "Teklif alın",
                 team: "Eşya listesine göre planlanır",
-                vehicle: "Büyük Boy Geniş Hacimli Filo",
+                vehicle: "Envantere göre araç planı",
                 duration: "Adres ve kapsama göre görüşülür",
                 features: [
-                    "Tüm oda mobilyalarının montajı",
-                    "Çift kat patpat ambalajlama",
-                    "Modüler dış cephe asansörü imkanı",
+                    "Kurulacak mobilyaları listeleme",
+                    "Eşyaya uygun ambalaj kapsamı",
+                    "Gerekirse dış cephe asansörü değerlendirmesi",
                     "Varsa poliçenin kapsamını inceleme",
                     "Ufak eşyaları müşteri koliler",
                 ],
@@ -68,12 +68,12 @@ export default function PricingTable({
                 type: "4+1 & Villa Taşıma",
                 price: "Teklif alın",
                 team: "Eşya listesine göre planlanır",
-                vehicle: "Maksimum Boy Çelik Kasa Kamyon",
+                vehicle: "Hacim ve yükleme planı",
                 duration: "Adres ve kapsama göre görüşülür",
                 features: [
                     "Kişiye özel operasyon planı",
-                    "Ağır mobilya ve piyano taşıma",
-                    "Çift asansör kurulum desteği",
+                    "Ağır eşyanın özel ihtiyacını görüşme",
+                    "İki adresin kurulum ihtiyacı",
                     "Montaj ve yerleşim takvimini görüşme",
                     "Ufak eşyaları müşteri koliler",
                 ],
@@ -82,59 +82,59 @@ export default function PricingTable({
         ],
         toplamali: [
             {
-                type: "1+1 VIP Anahtar Teslim",
+                type: "1+1 Toplama Kapsamı",
                 price: "Teklif alın",
                 team: "Eşya listesine göre planlanır",
-                vehicle: "Kompakt Kapalı Kasa Araç",
+                vehicle: "Eşya hacmine uygun araç",
                 duration: "Adres ve kapsama göre görüşülür",
                 features: [
-                    "A'dan Z'ye tüm evi ekibimiz toplar",
-                    "Mutfak eşyaları kraft kağıtla sarılır",
-                    "Giysiler askılı dolaplara aktarılır",
-                    "Tüm mobilya montajı ve yerleşimi",
+                    "Küçük eşyaların toplama kapsamı",
+                    "Mutfak eşyası ambalaj planı",
+                    "Tekstil hazırlığını paylaşma",
+                    "Mobilya kurulumu ve yer seçimi",
                     "Paketleme kapsamını görüşme",
                 ],
                 popular: false,
             },
             {
-                type: "2+1 VIP Anahtar Teslim",
+                type: "2+1 Toplama Kapsamı",
                 price: "Teklif alın",
                 team: "Eşya listesine göre planlanır",
-                vehicle: "Orta Boy Çelik Kasalı Kamyon",
+                vehicle: "Ölçü ve erişime göre araç",
                 duration: "Adres ve kapsama göre görüşülür",
                 features: [
-                    "Tüm mutfak, salon ve odalar kutulanır",
-                    "Porselen & cam eşyalar özel kolilenir",
-                    "Marangozlu gardırop ve baza kurulumu",
-                    "Beyaz eşya tesisat bağlantıları",
+                    "Odaların koli listesini hazırlama",
+                    "Porselen ve cam ambalajını görüşme",
+                    "Gardırop ve baza kurulum kapsamı",
+                    "Cihaz bağlantısında servis ihtiyacı",
                     "Paketleme kapsamını görüşme",
                 ],
                 popular: true,
             },
             {
-                type: "3+1 VIP Anahtar Teslim",
+                type: "3+1 Toplama Kapsamı",
                 price: "Teklif alın",
                 team: "Eşya listesine göre planlanır",
-                vehicle: "Büyük Boy Geniş Hacimli Filo",
+                vehicle: "Envantere göre araç planı",
                 duration: "Adres ve kapsama göre görüşülür",
                 features: [
-                    "Eviniz A'dan Z'ye paketlenir ve açılır",
-                    "Kıyafetler yeni gardıroba yerleştirilir",
-                    "Tüm ambalaj atıkları toplanıp atılır",
-                    "Dış cephe asansörü ve çift ekip",
+                    "Toplama ve açma işlerini ayırma",
+                    "Giysi yerleştirme beklentisi",
+                    "Ambalaj atığı sorumlusu",
+                    "Asansör ve personel ihtiyacı",
                     "Paketleme kapsamını görüşme",
                 ],
                 popular: false,
             },
             {
-                type: "4+1 & Villa VIP Teslim",
+                type: "4+1 & Villa Toplama Kapsamı",
                 price: "Teklif alın",
                 team: "Eşya listesine göre planlanır",
-                vehicle: "Çift Kamyon veya Maksimum Filo",
+                vehicle: "Araç ihtiyacını görüşme",
                 duration: "Adres ve kapsama göre görüşülür",
                 features: [
-                    "Özel ahşap sandıklama ve paketleme",
-                    "Avize, perde, tablo montaj uzmanı",
+                    "Hassas eşya için ambalaj değerlendirmesi",
+                    "Avize ve perde için kurulum sorumlusu",
                     "Yerleştirme kapsamını görüşme",
                     "Taşıma sorumlusunu belirleme",
                     "Paketleme kapsamını görüşme",
@@ -174,7 +174,7 @@ export default function PricingTable({
                     <h2 className="text-4xl md:text-7xl lg:text-8xl font-heading font-black tracking-tighter leading-[0.95] text-white">
                         2026 Nakliyat <br />
                         <span className="font-serif text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-orange-400 to-amber-400 italic font-normal">
-                            Fiyat Tarifesi.
+                            Teklif Planı.
                         </span>
                     </h2>
 
@@ -203,9 +203,9 @@ export default function PricingTable({
                                         : "text-white/50 hover:text-white"
                                 }`}
                             >
-                                <span>Anahtar Teslim VIP</span>
+                                <span>Toplama Desteği</span>
                                 <span className="bg-amber-400 text-slate-950 text-[9px] px-2.5 py-0.5 rounded-full font-black uppercase tracking-wider">
-                                    Tavsiye
+                                    Ek Kapsam
                                 </span>
                             </button>
                         </div>
@@ -215,11 +215,11 @@ export default function PricingTable({
                         <div className="inline-block p-4 rounded-2xl bg-white/[0.03] border border-white/5 text-xs text-slate-300 max-w-xl mx-auto leading-relaxed">
                             {packageType === "standart" ? (
                                 <span>
-                                    💡 <strong className="text-white">Standart Paket:</strong> Ufak tefek kıyafet ve mutfak gereçlerini siz kolilersiniz; mobilyalarınızı, beyaz eşyalarınızı uzman marangozumuz demonte edip koruyucu ambalajla taşır.
+                                    💡 <strong className="text-white">Kendi Hazırlığınız:</strong> Küçük eşyaları kendiniz kolileyecekseniz bunu belirtin. Mobilya, beyaz eşya, ambalaj ve söküm işlerinde kimden hangi desteği beklediğinizi ayrı yazın.
                                 </span>
                             ) : (
                                 <span>
-                                    ⭐ <strong className="text-white">Anahtar Teslim VIP:</strong> Paketleme kapsamını görüşme! Tüm mutfak bardakları, elbiseler, kitaplar ve aksesuarlar ekibimizce özel kolilenir ve yeni evde yerleştirilir.
+                                    ⭐ <strong className="text-white">Toplama Desteği:</strong> Mutfak, kıyafet ve kitapların hazırlanmasını da istiyorsanız eşya listesini paylaşın. Toplama, koli açma ve yerleştirme işlerinin uygunluğunu ve ayrı bedellerini teklif öncesinde görüşün.
                                 </span>
                             )}
                         </div>
@@ -316,7 +316,7 @@ export default function PricingTable({
                             <div className="space-y-1.5 border-l-2 border-primary-500/40 pl-4">
                                 <h4 className="text-white font-black">2. Eşya Hacmi (Oda Sayısı)</h4>
                                 <p className="text-slate-400 text-xs leading-relaxed">
-                                    Eşyaların toplam metreküp hacmi, tahsis edilecek kamyonun boyutunu ve çalışacak marangozlu personel sayısını belirler.
+                                    Eşya hacmi ve ağır parçalar, araç ile personel ihtiyacının değerlendirilmesine yardımcı olur. Sökülecek mobilyaları ayrıca belirtin.
                                 </p>
                             </div>
                             <div className="space-y-1.5 border-l-2 border-primary-500/40 pl-4">
@@ -328,7 +328,7 @@ export default function PricingTable({
                             <div className="space-y-1.5 border-l-2 border-primary-500/40 pl-4">
                                 <h4 className="text-white font-black">4. Paketleme Kapsamı</h4>
                                 <p className="text-slate-400 text-xs leading-relaxed">
-                                    Standart veya Anahtar Teslim seçimine göre kraft kağıt, havalı naylon ve askılı koli malzemesi maliyete dahil edilir.
+                                    Kullanılacak ambalaj türlerini, malzemeyi kimin sağlayacağını ve hazırlık işçiliğinin toplam bedelde bulunup bulunmadığını sorun.
                                 </p>
                             </div>
                         </div>

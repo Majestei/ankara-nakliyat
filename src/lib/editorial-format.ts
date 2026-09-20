@@ -1,10 +1,10 @@
 // A deliberately small format for our reviewed, local editorial copy.
-// Escape source HTML; only same-site absolute paths can become links.
+// Escape source HTML; allow same-site paths and the official address-service sources.
 export function editorialInline(text: string): string {
     const escaped = text.replace(/&/g, '&amp;').replace(/</g, '&lt;')
         .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
     return escaped
-        .replace(/\[([^\]\n]+)\]\((\/(?!\/)[a-zA-Z0-9_/#?=&%.-]*)\)/g, '<a href="$2">$1</a>')
+        .replace(/\[([^\]\n]+)\]\(((?:\/(?!\/)|https:\/\/(?:www\.)?(?:nvi\.gov\.tr|turkiye\.gov\.tr)\/)[a-zA-Z0-9_/#?=&%.-]*)\)/g, '<a href="$2">$1</a>')
         .replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>');
 }
 

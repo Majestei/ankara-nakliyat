@@ -677,8 +677,33 @@ a[href^="tel:"] {
     color: #ea580c;
 }
 
+/* Keep below-the-fold HTML searchable while postponing offscreen paint/layout.
+   The first section stays fully laid out for its scroll-linked illustration. */
+@supports (content-visibility: auto) {
+    .home-sections > section:not(:first-child) {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 1000px;
+    }
+}
+
+.home-aurora { opacity: 0.05; }
+.home-aurora-second { transform: scale(1.2); }
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+    .home-aurora-first { animation: home-aurora-first 15s linear infinite; }
+    .home-aurora-second { animation: home-aurora-second 20s linear infinite; }
+}
+@keyframes home-aurora-first {
+    0%, 100% { transform: scale(1) rotate(0); opacity: 0.05; }
+    50% { transform: scale(1.2) rotate(45deg); opacity: 0.1; }
+}
+@keyframes home-aurora-second {
+    0%, 100% { transform: scale(1.2) rotate(0); opacity: 0.05; }
+    50% { transform: scale(1) rotate(-45deg); opacity: 0.08; }
+}
+
 /* Print styles for SEO */
 @media print {
+    .home-sections > section { content-visibility: visible; }
     header, footer, .fixed {
         display: none !important;
     }

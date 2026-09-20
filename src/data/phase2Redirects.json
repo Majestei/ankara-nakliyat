@@ -906,5 +906,1217 @@
   {
     "source": "/islemler/ankara/yenimahalle/yuva",
     "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/altindag/aydinlikevler",
+    "destination": "/islemler/ankara/altindag"
+  },
+  {
+    "source": "/islemler/ankara/altindag/hacettepe",
+    "destination": "/islemler/ankara/altindag"
+  },
+  {
+    "source": "/islemler/ankara/ayas/camiatik",
+    "destination": "/islemler/ankara/ayas"
+  },
+  {
+    "source": "/islemler/ankara/ayas/hacimemi",
+    "destination": "/islemler/ankara/ayas"
+  },
+  {
+    "source": "/islemler/ankara/bala/kartaltepe",
+    "destination": "/islemler/ankara/bala"
+  },
+  {
+    "source": "/islemler/ankara/beypazari/basagac",
+    "destination": "/islemler/ankara/beypazari"
+  },
+  {
+    "source": "/islemler/ankara/camlidere/korler",
+    "destination": "/islemler/ankara/camlidere"
+  },
+  {
+    "source": "/islemler/ankara/cankaya/ayranci",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/islemler/ankara/cankaya/cebeci",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/islemler/ankara/cankaya/dikmen",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/islemler/ankara/cankaya/esat",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/islemler/ankara/cankaya/kizilay",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/islemler/ankara/cankaya/malazgirt",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/islemler/ankara/cankaya/yasamkent",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/islemler/ankara/cubuk/barbaros",
+    "destination": "/islemler/ankara/cubuk"
+  },
+  {
+    "source": "/islemler/ankara/cubuk/yavuz-selim",
+    "destination": "/islemler/ankara/cubuk"
+  },
+  {
+    "source": "/islemler/ankara/elmadag/lalabel",
+    "destination": "/islemler/ankara/elmadag"
+  },
+  {
+    "source": "/islemler/ankara/elmadag/tatlica",
+    "destination": "/islemler/ankara/elmadag"
+  },
+  {
+    "source": "/islemler/ankara/elmadag/yenimahalle",
+    "destination": "/islemler/ankara/elmadag"
+  },
+  {
+    "source": "/islemler/ankara/etimesgut/guzelkent",
+    "destination": "/islemler/ankara/etimesgut"
+  },
+  {
+    "source": "/islemler/ankara/etimesgut/seker",
+    "destination": "/islemler/ankara/etimesgut"
+  },
+  {
+    "source": "/islemler/ankara/evren/cikinagil",
+    "destination": "/islemler/ankara/evren"
+  },
+  {
+    "source": "/islemler/ankara/evren/modern",
+    "destination": "/islemler/ankara/evren"
+  },
+  {
+    "source": "/islemler/ankara/golbasi/tuluntas",
+    "destination": "/islemler/ankara/golbasi"
+  },
+  {
+    "source": "/islemler/ankara/gudul/asagi",
+    "destination": "/islemler/ankara/gudul"
+  },
+  {
+    "source": "/islemler/ankara/gudul/yeni",
+    "destination": "/islemler/ankara/gudul"
+  },
+  {
+    "source": "/islemler/ankara/gudul/yukari",
+    "destination": "/islemler/ankara/gudul"
+  },
+  {
+    "source": "/islemler/ankara/haymana/caldag",
+    "destination": "/islemler/ankara/haymana"
+  },
+  {
+    "source": "/islemler/ankara/haymana/medrese",
+    "destination": "/islemler/ankara/haymana"
+  },
+  {
+    "source": "/islemler/ankara/kahramankazan/kayi",
+    "destination": "/islemler/ankara/kahramankazan"
+  },
+  {
+    "source": "/islemler/ankara/kalecik/ahikemal",
+    "destination": "/islemler/ankara/kalecik"
+  },
+  {
+    "source": "/islemler/ankara/kalecik/yenice",
+    "destination": "/islemler/ankara/kalecik"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/aktepe",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/kuscagiz",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/pinarbasi",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/sehitkubilay",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/yayla",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kizilcahamam/akcay",
+    "destination": "/islemler/ankara/kizilcahamam"
+  },
+  {
+    "source": "/islemler/ankara/kizilcahamam/karsiyaka",
+    "destination": "/islemler/ankara/kizilcahamam"
+  },
+  {
+    "source": "/islemler/ankara/kizilcahamam/yenice",
+    "destination": "/islemler/ankara/kizilcahamam"
+  },
+  {
+    "source": "/islemler/ankara/mamak/abidinpasa",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/basak",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/derbent",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/fahri-koruturk",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/gulveren",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/harman",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/kartaltepe",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/safaktepe",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/saimekadin",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/tepecik",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/nallihan/nasuhpasa",
+    "destination": "/islemler/ankara/nallihan"
+  },
+  {
+    "source": "/islemler/ankara/polatli/yeni",
+    "destination": "/islemler/ankara/polatli"
+  },
+  {
+    "source": "/islemler/ankara/pursaklar/merkez",
+    "destination": "/islemler/ankara/pursaklar"
+  },
+  {
+    "source": "/islemler/ankara/pursaklar/yunus-emre",
+    "destination": "/islemler/ankara/pursaklar"
+  },
+  {
+    "source": "/islemler/ankara/sereflikochisar/istiklal",
+    "destination": "/islemler/ankara/sereflikochisar"
+  },
+  {
+    "source": "/islemler/ankara/sereflikochisar/kale",
+    "destination": "/islemler/ankara/sereflikochisar"
+  },
+  {
+    "source": "/islemler/ankara/sincan/gokcek",
+    "destination": "/islemler/ankara/sincan"
+  },
+  {
+    "source": "/islemler/ankara/sincan/tandogan",
+    "destination": "/islemler/ankara/sincan"
+  },
+  {
+    "source": "/islemler/ankara/sincan/ulubatli-hasan",
+    "destination": "/islemler/ankara/sincan"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/avcilar",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/burc",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/cayyolu-2",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/ilkyerlesim",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/isinlar",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/ivedik",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/ivedikosb",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/kardelen",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/kentkoop",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/memlik",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/tepealti",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/makaleler/akyurt-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/akyurt/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/akyurt-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/akyurt/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/akyurt-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/akyurt/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/akyurt-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/akyurt"
+  },
+  {
+    "source": "/makaleler/altindag-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/altindag"
+  },
+  {
+    "source": "/makaleler/altindag-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/altindag/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/altindag-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/altindag/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/altindag-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/altindag"
+  },
+  {
+    "source": "/makaleler/ayas-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/ayas/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/ayas-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/ayas/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/ayas-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/ayas/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/ayas-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/ayas"
+  },
+  {
+    "source": "/makaleler/ayas-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/ayas/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/bala-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/bala"
+  },
+  {
+    "source": "/makaleler/bala-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/bala/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/bala-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/bala"
+  },
+  {
+    "source": "/makaleler/bala-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/bala/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/bala-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/bala/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/bala-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/bala/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/bala-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/bala"
+  },
+  {
+    "source": "/makaleler/bala-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/bala/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/beypazari-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/beypazari/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/beypazari-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/beypazari"
+  },
+  {
+    "source": "/makaleler/beypazari-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/beypazari/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/camlidere-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/camlidere"
+  },
+  {
+    "source": "/makaleler/camlidere-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/camlidere"
+  },
+  {
+    "source": "/makaleler/camlidere-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/camlidere/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/camlidere-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/camlidere/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/camlidere-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/camlidere/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/camlidere-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/camlidere"
+  },
+  {
+    "source": "/makaleler/camlidere-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/camlidere"
+  },
+  {
+    "source": "/makaleler/cubuk-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/cubuk"
+  },
+  {
+    "source": "/makaleler/cubuk-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/cubuk/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/cubuk-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/cubuk/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/cubuk-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/cubuk/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/cubuk-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/cubuk"
+  },
+  {
+    "source": "/makaleler/cubuk-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/cubuk/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/elmadag-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/elmadag/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/elmadag-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/elmadag/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/elmadag-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/elmadag/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/elmadag-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/elmadag"
+  },
+  {
+    "source": "/makaleler/elmadag-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/elmadag"
+  },
+  {
+    "source": "/makaleler/etimesgut-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/etimesgut/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/evren-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/evren"
+  },
+  {
+    "source": "/makaleler/evren-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/evren/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/evren-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/evren/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/evren-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/evren/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/evren-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/evren"
+  },
+  {
+    "source": "/makaleler/evren-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/evren/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/golbasi-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/golbasi"
+  },
+  {
+    "source": "/makaleler/golbasi-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/golbasi/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/golbasi-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/golbasi"
+  },
+  {
+    "source": "/makaleler/gudul-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/gudul"
+  },
+  {
+    "source": "/makaleler/gudul-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/gudul/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/gudul-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/gudul/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/gudul-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/gudul/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/gudul-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/gudul/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/gudul-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/gudul/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/haymana-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/haymana"
+  },
+  {
+    "source": "/makaleler/haymana-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/haymana/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/haymana-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/haymana/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/haymana-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/haymana"
+  },
+  {
+    "source": "/makaleler/haymana-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/haymana"
+  },
+  {
+    "source": "/makaleler/kahramankazan-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/kahramankazan/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kahramankazan-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/kahramankazan/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/kahramankazan-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/kahramankazan/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kahramankazan-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/kahramankazan"
+  },
+  {
+    "source": "/makaleler/kalecik-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/kalecik"
+  },
+  {
+    "source": "/makaleler/kalecik-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/kalecik"
+  },
+  {
+    "source": "/makaleler/kalecik-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/kalecik/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/kalecik-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/kalecik/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kalecik-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/kalecik"
+  },
+  {
+    "source": "/makaleler/kalecik-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/kalecik"
+  },
+  {
+    "source": "/makaleler/kalecik-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/kalecik/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kecioren-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/kecioren/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kecioren-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/makaleler/kizilcahamam-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/kizilcahamam"
+  },
+  {
+    "source": "/makaleler/kizilcahamam-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/kizilcahamam"
+  },
+  {
+    "source": "/makaleler/kizilcahamam-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/kizilcahamam/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/kizilcahamam-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/kizilcahamam/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kizilcahamam-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/kizilcahamam"
+  },
+  {
+    "source": "/makaleler/mamak-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/makaleler/mamak-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/makaleler/mamak-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/mamak/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/mamak-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/makaleler/nallihan-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/nallihan"
+  },
+  {
+    "source": "/makaleler/nallihan-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/nallihan"
+  },
+  {
+    "source": "/makaleler/nallihan-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/nallihan/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/nallihan-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/nallihan/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/nallihan-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/nallihan"
+  },
+  {
+    "source": "/makaleler/nallihan-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/nallihan"
+  },
+  {
+    "source": "/makaleler/polatli-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/polatli/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/polatli-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/polatli/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/pursaklar-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/pursaklar/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/pursaklar-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/pursaklar"
+  },
+  {
+    "source": "/makaleler/sereflikochisar-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/sereflikochisar"
+  },
+  {
+    "source": "/makaleler/sereflikochisar-evden-eve-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/sereflikochisar/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/sereflikochisar-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/sereflikochisar/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/sereflikochisar-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/sereflikochisar/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/sereflikochisar-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/sereflikochisar"
+  },
+  {
+    "source": "/makaleler/sereflikochisar-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/sereflikochisar"
+  },
+  {
+    "source": "/makaleler/sincan-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/sincan"
+  },
+  {
+    "source": "/makaleler/sincan-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/sincan/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/sincan-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/sincan"
+  },
+  {
+    "source": "/makaleler/sincan-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/sincan/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/yenimahalle-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/makaleler/yenimahalle-ofis-tasima-firmalari",
+    "destination": "/islemler/ankara/yenimahalle/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/yenimahalle-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/makaleler/yenimahalle-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/yenimahalle/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/blog/altindag-bolgesinde-paketleme-hizmetleri-icin-5-altin-tavsiye",
+    "destination": "/blog/altindag-icin-paketleme-hizmetleri-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/altindag-bolgesinde-sehir-ici-nakliyat-icin-5-altin-tavsiye",
+    "destination": "/blog/altindag-ev-ve-is-yeri-sahipleri-icin-sehir-ici-nakliyat-ipuclari"
+  },
+  {
+    "source": "/blog/altindag-sehir-ici-nakliyat-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/altindag-ev-ve-is-yeri-sahipleri-icin-sehir-ici-nakliyat-ipuclari"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-sehir-ici-nakliyat-altindag-deneyimi",
+    "destination": "/blog/altindag-ev-ve-is-yeri-sahipleri-icin-sehir-ici-nakliyat-ipuclari"
+  },
+  {
+    "source": "/blog/altindag-ev-ve-is-yeri-sahipleri-icin-nakliyat-sigortasi-ipuclari",
+    "destination": "/blog/altindag-icin-nakliyat-sigortasi-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/altindag-nakliyat-sigortasi-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/altindag-icin-nakliyat-sigortasi-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/altindag-uzmanindan-nakliyat-sigortasi-sirlari",
+    "destination": "/blog/altindag-icin-nakliyat-sigortasi-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-parca-esya-tasima-altindag-deneyimi",
+    "destination": "/blog/altindag-ev-ve-is-yeri-sahipleri-icin-parca-esya-tasima-ipuclari"
+  },
+  {
+    "source": "/blog/altindag-icin-evden-eve-nakliyat-surecinde-dikkat-edilmesi-gerekenler",
+    "destination": "/blog/tasinma-rehberi-altindag-ve-evden-eve-nakliyat"
+  },
+  {
+    "source": "/blog/altindag-evden-eve-nakliyat-maliyetleri-nasil-dusurulur",
+    "destination": "/blog/tasinma-rehberi-altindag-ve-evden-eve-nakliyat"
+  },
+  {
+    "source": "/blog/altindag-icin-asansorlu-tasimacilik-surecinde-dikkat-edilmesi-gerekenler",
+    "destination": "/blog/tasinma-rehberi-altindag-ve-asansorlu-tasimacilik"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-asansorlu-tasimacilik-altindag-deneyimi",
+    "destination": "/blog/tasinma-rehberi-altindag-ve-asansorlu-tasimacilik"
+  },
+  {
+    "source": "/blog/altindag-sokaklarinda-ofis-tasima-zorluklari-ve-cozumleri",
+    "destination": "/blog/altindag-ofis-tasima-maliyetleri-nasil-dusurulur"
+  },
+  {
+    "source": "/blog/cankaya-icin-asansorlu-tasimacilik-surecinde-dikkat-edilmesi-gerekenler",
+    "destination": "/blog/tasinma-rehberi-cankaya-ve-asansorlu-tasimacilik"
+  },
+  {
+    "source": "/blog/cankaya-asansorlu-tasimacilik-maliyetleri-nasil-dusurulur",
+    "destination": "/blog/tasinma-rehberi-cankaya-ve-asansorlu-tasimacilik"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-evden-eve-nakliyat-cankaya-deneyimi",
+    "destination": "/blog/cankaya-bolgesinde-evden-eve-nakliyat-icin-5-altin-tavsiye"
+  },
+  {
+    "source": "/blog/cankaya-sokaklarinda-nakliyat-sigortasi-zorluklari-ve-cozumleri",
+    "destination": "/blog/cankaya-ev-ve-is-yeri-sahipleri-icin-nakliyat-sigortasi-ipuclari"
+  },
+  {
+    "source": "/blog/cankaya-ev-ve-is-yeri-sahipleri-icin-ofis-tasima-ipuclari",
+    "destination": "/blog/tasinma-rehberi-cankaya-ve-ofis-tasima"
+  },
+  {
+    "source": "/blog/cankaya-ev-ve-is-yeri-sahipleri-icin-sehirler-arasi-nakliyat-ipuclari",
+    "destination": "/blog/tasinma-rehberi-cankaya-ve-sehirler-arasi-nakliyat"
+  },
+  {
+    "source": "/blog/cankaya-uzmanindan-sehirler-arasi-nakliyat-sirlari",
+    "destination": "/blog/tasinma-rehberi-cankaya-ve-sehirler-arasi-nakliyat"
+  },
+  {
+    "source": "/blog/cankaya-paketleme-hizmetleri-maliyetleri-nasil-dusurulur",
+    "destination": "/blog/cankaya-icin-paketleme-hizmetleri-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/cankaya-parca-esya-tasima-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/cankaya-sokaklarinda-parca-esya-tasima-zorluklari-ve-cozumleri"
+  },
+  {
+    "source": "/blog/cankaya-sehir-ici-nakliyat-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/tasinma-rehberi-cankaya-ve-sehir-ici-nakliyat"
+  },
+  {
+    "source": "/blog/cankaya-uzmanindan-sehir-ici-nakliyat-sirlari",
+    "destination": "/blog/tasinma-rehberi-cankaya-ve-sehir-ici-nakliyat"
+  },
+  {
+    "source": "/blog/etimesgut-tasinma-kontrol-listesi-nakliyat-sigortasi",
+    "destination": "/blog/etimesgut-bolgesinde-nakliyat-sigortasi-icin-5-altin-tavsiye"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-nakliyat-sigortasi-etimesgut-deneyimi",
+    "destination": "/blog/etimesgut-bolgesinde-nakliyat-sigortasi-icin-5-altin-tavsiye"
+  },
+  {
+    "source": "/blog/etimesgut-paketleme-hizmetleri-maliyetleri-nasil-dusurulur",
+    "destination": "/blog/etimesgut-bolgesinde-paketleme-hizmetleri-icin-5-altin-tavsiye"
+  },
+  {
+    "source": "/blog/etimesgut-sokaklarinda-paketleme-hizmetleri-zorluklari-ve-cozumleri",
+    "destination": "/blog/etimesgut-bolgesinde-paketleme-hizmetleri-icin-5-altin-tavsiye"
+  },
+  {
+    "source": "/blog/etimesgut-bolgesinde-sehirler-arasi-nakliyat-icin-5-altin-tavsiye",
+    "destination": "/blog/tasinma-rehberi-etimesgut-ve-sehirler-arasi-nakliyat"
+  },
+  {
+    "source": "/blog/etimesgut-sokaklarinda-sehirler-arasi-nakliyat-zorluklari-ve-cozumleri",
+    "destination": "/blog/tasinma-rehberi-etimesgut-ve-sehirler-arasi-nakliyat"
+  },
+  {
+    "source": "/blog/etimesgut-uzmanindan-sehirler-arasi-nakliyat-sirlari",
+    "destination": "/blog/tasinma-rehberi-etimesgut-ve-sehirler-arasi-nakliyat"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-sehirler-arasi-nakliyat-etimesgut-deneyimi",
+    "destination": "/blog/tasinma-rehberi-etimesgut-ve-sehirler-arasi-nakliyat"
+  },
+  {
+    "source": "/blog/etimesgut-tasinma-kontrol-listesi-asansorlu-tasimacilik",
+    "destination": "/blog/etimesgut-ev-ve-is-yeri-sahipleri-icin-asansorlu-tasimacilik-ipuclari"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-evden-eve-nakliyat-etimesgut-deneyimi",
+    "destination": "/blog/etimesgut-ev-ve-is-yeri-sahipleri-icin-evden-eve-nakliyat-ipuclari"
+  },
+  {
+    "source": "/blog/etimesgut-ev-ve-is-yeri-sahipleri-icin-sehir-ici-nakliyat-ipuclari",
+    "destination": "/blog/etimesgut-icin-sehir-ici-nakliyat-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/etimesgut-sehir-ici-nakliyat-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/etimesgut-icin-sehir-ici-nakliyat-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/etimesgut-uzmanindan-sehir-ici-nakliyat-sirlari",
+    "destination": "/blog/etimesgut-icin-sehir-ici-nakliyat-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-sehir-ici-nakliyat-etimesgut-deneyimi",
+    "destination": "/blog/etimesgut-icin-sehir-ici-nakliyat-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-asansorlu-tasimacilik-golbasi-deneyimi",
+    "destination": "/blog/golbasi-bolgesinde-asansorlu-tasimacilik-icin-5-altin-tavsiye"
+  },
+  {
+    "source": "/blog/golbasi-sehir-ici-nakliyat-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/golbasi-bolgesinde-sehir-ici-nakliyat-icin-5-altin-tavsiye"
+  },
+  {
+    "source": "/blog/golbasi-sokaklarinda-sehir-ici-nakliyat-zorluklari-ve-cozumleri",
+    "destination": "/blog/golbasi-bolgesinde-sehir-ici-nakliyat-icin-5-altin-tavsiye"
+  },
+  {
+    "source": "/blog/golbasi-tasinma-kontrol-listesi-sehir-ici-nakliyat",
+    "destination": "/blog/golbasi-bolgesinde-sehir-ici-nakliyat-icin-5-altin-tavsiye"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-sehir-ici-nakliyat-golbasi-deneyimi",
+    "destination": "/blog/golbasi-bolgesinde-sehir-ici-nakliyat-icin-5-altin-tavsiye"
+  },
+  {
+    "source": "/blog/golbasi-tasinma-kontrol-listesi-paketleme-hizmetleri",
+    "destination": "/blog/golbasi-paketleme-hizmetleri-sirasinda-esyalarinizi-nasil-korursunuz"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-evden-eve-nakliyat-golbasi-deneyimi",
+    "destination": "/blog/golbasi-sokaklarinda-evden-eve-nakliyat-zorluklari-ve-cozumleri"
+  },
+  {
+    "source": "/blog/golbasi-sokaklarinda-parca-esya-tasima-zorluklari-ve-cozumleri",
+    "destination": "/blog/tasinma-rehberi-golbasi-ve-parca-esya-tasima"
+  },
+  {
+    "source": "/blog/kecioren-bolgesinde-evden-eve-nakliyat-icin-5-altin-tavsiye",
+    "destination": "/blog/kecioren-icin-evden-eve-nakliyat-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/kecioren-ev-ve-is-yeri-sahipleri-icin-nakliyat-sigortasi-ipuclari",
+    "destination": "/blog/tasinma-rehberi-kecioren-ve-nakliyat-sigortasi"
+  },
+  {
+    "source": "/blog/kecioren-bolgesinde-nakliyat-sigortasi-icin-5-altin-tavsiye",
+    "destination": "/blog/tasinma-rehberi-kecioren-ve-nakliyat-sigortasi"
+  },
+  {
+    "source": "/blog/kecioren-nakliyat-sigortasi-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/tasinma-rehberi-kecioren-ve-nakliyat-sigortasi"
+  },
+  {
+    "source": "/blog/kecioren-bolgesinde-parca-esya-tasima-icin-5-altin-tavsiye",
+    "destination": "/blog/tasinma-rehberi-kecioren-ve-parca-esya-tasima"
+  },
+  {
+    "source": "/blog/kecioren-uzmanindan-parca-esya-tasima-sirlari",
+    "destination": "/blog/tasinma-rehberi-kecioren-ve-parca-esya-tasima"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-parca-esya-tasima-kecioren-deneyimi",
+    "destination": "/blog/tasinma-rehberi-kecioren-ve-parca-esya-tasima"
+  },
+  {
+    "source": "/blog/kecioren-sehirler-arasi-nakliyat-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/kecioren-ev-ve-is-yeri-sahipleri-icin-sehirler-arasi-nakliyat-ipuclari"
+  },
+  {
+    "source": "/blog/kecioren-tasinma-kontrol-listesi-sehirler-arasi-nakliyat",
+    "destination": "/blog/kecioren-ev-ve-is-yeri-sahipleri-icin-sehirler-arasi-nakliyat-ipuclari"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-sehirler-arasi-nakliyat-kecioren-deneyimi",
+    "destination": "/blog/kecioren-ev-ve-is-yeri-sahipleri-icin-sehirler-arasi-nakliyat-ipuclari"
+  },
+  {
+    "source": "/blog/mamak-ev-ve-is-yeri-sahipleri-icin-asansorlu-tasimacilik-ipuclari",
+    "destination": "/blog/mamak-icin-asansorlu-tasimacilik-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/mamak-asansorlu-tasimacilik-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/mamak-icin-asansorlu-tasimacilik-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/mamak-bolgesinde-asansorlu-tasimacilik-icin-5-altin-tavsiye",
+    "destination": "/blog/mamak-icin-asansorlu-tasimacilik-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/mamak-sokaklarinda-evden-eve-nakliyat-zorluklari-ve-cozumleri",
+    "destination": "/blog/mamak-bolgesinde-evden-eve-nakliyat-icin-5-altin-tavsiye"
+  },
+  {
+    "source": "/blog/mamak-bolgesinde-ofis-tasima-icin-5-altin-tavsiye",
+    "destination": "/blog/mamak-icin-ofis-tasima-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/mamak-ev-ve-is-yeri-sahipleri-icin-parca-esya-tasima-ipuclari",
+    "destination": "/blog/tasinma-rehberi-mamak-ve-parca-esya-tasima"
+  },
+  {
+    "source": "/blog/mamak-bolgesinde-parca-esya-tasima-icin-5-altin-tavsiye",
+    "destination": "/blog/tasinma-rehberi-mamak-ve-parca-esya-tasima"
+  },
+  {
+    "source": "/blog/mamak-bolgesinde-sehirler-arasi-nakliyat-icin-5-altin-tavsiye",
+    "destination": "/blog/mamak-icin-sehirler-arasi-nakliyat-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/mamak-tasinma-kontrol-listesi-sehirler-arasi-nakliyat",
+    "destination": "/blog/mamak-icin-sehirler-arasi-nakliyat-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-sehirler-arasi-nakliyat-mamak-deneyimi",
+    "destination": "/blog/mamak-icin-sehirler-arasi-nakliyat-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/mamak-nakliyat-sigortasi-maliyetleri-nasil-dusurulur",
+    "destination": "/blog/mamak-icin-nakliyat-sigortasi-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/mamak-sokaklarinda-nakliyat-sigortasi-zorluklari-ve-cozumleri",
+    "destination": "/blog/mamak-icin-nakliyat-sigortasi-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-nakliyat-sigortasi-mamak-deneyimi",
+    "destination": "/blog/mamak-icin-nakliyat-sigortasi-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/mamak-uzmanindan-paketleme-hizmetleri-sirlari",
+    "destination": "/blog/mamak-paketleme-hizmetleri-maliyetleri-nasil-dusurulur"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-paketleme-hizmetleri-mamak-deneyimi",
+    "destination": "/blog/mamak-paketleme-hizmetleri-maliyetleri-nasil-dusurulur"
+  },
+  {
+    "source": "/blog/mamak-uzmanindan-sehir-ici-nakliyat-sirlari",
+    "destination": "/blog/mamak-sokaklarinda-sehir-ici-nakliyat-zorluklari-ve-cozumleri"
+  },
+  {
+    "source": "/blog/polatli-uzmanindan-nakliyat-sigortasi-sirlari",
+    "destination": "/blog/polatli-bolgesinde-nakliyat-sigortasi-icin-5-altin-tavsiye"
+  },
+  {
+    "source": "/blog/polatli-sokaklarinda-parca-esya-tasima-zorluklari-ve-cozumleri",
+    "destination": "/blog/polatli-icin-parca-esya-tasima-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/polatli-paketleme-hizmetleri-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/polatli-paketleme-hizmetleri-maliyetleri-nasil-dusurulur"
+  },
+  {
+    "source": "/blog/polatli-tasinma-kontrol-listesi-paketleme-hizmetleri",
+    "destination": "/blog/polatli-paketleme-hizmetleri-maliyetleri-nasil-dusurulur"
+  },
+  {
+    "source": "/blog/polatli-tasinma-kontrol-listesi-ofis-tasima",
+    "destination": "/blog/polatli-sokaklarinda-ofis-tasima-zorluklari-ve-cozumleri"
+  },
+  {
+    "source": "/blog/pursaklar-bolgesinde-nakliyat-sigortasi-icin-5-altin-tavsiye",
+    "destination": "/blog/pursaklar-ev-ve-is-yeri-sahipleri-icin-nakliyat-sigortasi-ipuclari"
+  },
+  {
+    "source": "/blog/pursaklar-bolgesinde-paketleme-hizmetleri-icin-5-altin-tavsiye",
+    "destination": "/blog/pursaklar-icin-paketleme-hizmetleri-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/pursaklar-sokaklarinda-paketleme-hizmetleri-zorluklari-ve-cozumleri",
+    "destination": "/blog/pursaklar-icin-paketleme-hizmetleri-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-paketleme-hizmetleri-pursaklar-deneyimi",
+    "destination": "/blog/pursaklar-icin-paketleme-hizmetleri-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/pursaklar-ofis-tasima-maliyetleri-nasil-dusurulur",
+    "destination": "/blog/pursaklar-ev-ve-is-yeri-sahipleri-icin-ofis-tasima-ipuclari"
+  },
+  {
+    "source": "/blog/pursaklar-ev-ve-is-yeri-sahipleri-icin-sehirler-arasi-nakliyat-ipuclari",
+    "destination": "/blog/pursaklar-icin-sehirler-arasi-nakliyat-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/pursaklar-sokaklarinda-sehirler-arasi-nakliyat-zorluklari-ve-cozumleri",
+    "destination": "/blog/pursaklar-icin-sehirler-arasi-nakliyat-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-evden-eve-nakliyat-pursaklar-deneyimi",
+    "destination": "/blog/pursaklar-evden-eve-nakliyat-maliyetleri-nasil-dusurulur"
+  },
+  {
+    "source": "/blog/pursaklar-sokaklarinda-parca-esya-tasima-zorluklari-ve-cozumleri",
+    "destination": "/blog/pursaklar-parca-esya-tasima-maliyetleri-nasil-dusurulur"
+  },
+  {
+    "source": "/blog/sincan-ev-ve-is-yeri-sahipleri-icin-asansorlu-tasimacilik-ipuclari",
+    "destination": "/blog/sincan-icin-asansorlu-tasimacilik-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/sincan-bolgesinde-asansorlu-tasimacilik-icin-5-altin-tavsiye",
+    "destination": "/blog/sincan-icin-asansorlu-tasimacilik-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/sincan-paketleme-hizmetleri-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/sincan-ev-ve-is-yeri-sahipleri-icin-paketleme-hizmetleri-ipuclari"
+  },
+  {
+    "source": "/blog/sincan-uzmanindan-paketleme-hizmetleri-sirlari",
+    "destination": "/blog/sincan-ev-ve-is-yeri-sahipleri-icin-paketleme-hizmetleri-ipuclari"
+  },
+  {
+    "source": "/blog/sincan-sehirler-arasi-nakliyat-maliyetleri-nasil-dusurulur",
+    "destination": "/blog/sincan-ev-ve-is-yeri-sahipleri-icin-sehirler-arasi-nakliyat-ipuclari"
+  },
+  {
+    "source": "/blog/sincan-sehirler-arasi-nakliyat-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/sincan-ev-ve-is-yeri-sahipleri-icin-sehirler-arasi-nakliyat-ipuclari"
+  },
+  {
+    "source": "/blog/sincan-uzmanindan-sehirler-arasi-nakliyat-sirlari",
+    "destination": "/blog/sincan-ev-ve-is-yeri-sahipleri-icin-sehirler-arasi-nakliyat-ipuclari"
+  },
+  {
+    "source": "/blog/sincan-uzmanindan-evden-eve-nakliyat-sirlari",
+    "destination": "/blog/sincan-icin-evden-eve-nakliyat-surecinde-dikkat-edilmesi-gerekenler"
+  },
+  {
+    "source": "/blog/sincan-tasinma-kontrol-listesi-nakliyat-sigortasi",
+    "destination": "/blog/sincan-sokaklarinda-nakliyat-sigortasi-zorluklari-ve-cozumleri"
+  },
+  {
+    "source": "/blog/stresten-uzak-bir-evden-eve-nakliyat-yenimahalle-deneyimi",
+    "destination": "/blog/yenimahalle-ev-ve-is-yeri-sahipleri-icin-evden-eve-nakliyat-ipuclari"
+  },
+  {
+    "source": "/blog/yenimahalle-sokaklarinda-evden-eve-nakliyat-zorluklari-ve-cozumleri",
+    "destination": "/blog/yenimahalle-ev-ve-is-yeri-sahipleri-icin-evden-eve-nakliyat-ipuclari"
+  },
+  {
+    "source": "/blog/yenimahalle-icin-asansorlu-tasimacilik-surecinde-dikkat-edilmesi-gerekenler",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-asansorlu-tasimacilik"
+  },
+  {
+    "source": "/blog/yenimahalle-ev-ve-is-yeri-sahipleri-icin-asansorlu-tasimacilik-ipuclari",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-asansorlu-tasimacilik"
+  },
+  {
+    "source": "/blog/yenimahalle-bolgesinde-asansorlu-tasimacilik-icin-5-altin-tavsiye",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-asansorlu-tasimacilik"
+  },
+  {
+    "source": "/blog/yenimahalle-uzmanindan-asansorlu-tasimacilik-sirlari",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-asansorlu-tasimacilik"
+  },
+  {
+    "source": "/blog/yenimahalle-ev-ve-is-yeri-sahipleri-icin-nakliyat-sigortasi-ipuclari",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-nakliyat-sigortasi"
+  },
+  {
+    "source": "/blog/yenimahalle-nakliyat-sigortasi-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-nakliyat-sigortasi"
+  },
+  {
+    "source": "/blog/yenimahalle-uzmanindan-nakliyat-sigortasi-sirlari",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-nakliyat-sigortasi"
+  },
+  {
+    "source": "/blog/yenimahalle-ev-ve-is-yeri-sahipleri-icin-ofis-tasima-ipuclari",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-ofis-tasima"
+  },
+  {
+    "source": "/blog/yenimahalle-ev-ve-is-yeri-sahipleri-icin-paketleme-hizmetleri-ipuclari",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-paketleme-hizmetleri"
+  },
+  {
+    "source": "/blog/yenimahalle-paketleme-hizmetleri-maliyetleri-nasil-dusurulur",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-paketleme-hizmetleri"
+  },
+  {
+    "source": "/blog/yenimahalle-paketleme-hizmetleri-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-paketleme-hizmetleri"
+  },
+  {
+    "source": "/blog/yenimahalle-tasinma-kontrol-listesi-paketleme-hizmetleri",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-paketleme-hizmetleri"
+  },
+  {
+    "source": "/blog/yenimahalle-ev-ve-is-yeri-sahipleri-icin-parca-esya-tasima-ipuclari",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-parca-esya-tasima"
+  },
+  {
+    "source": "/blog/yenimahalle-bolgesinde-parca-esya-tasima-icin-5-altin-tavsiye",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-parca-esya-tasima"
+  },
+  {
+    "source": "/blog/yenimahalle-parca-esya-tasima-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-parca-esya-tasima"
+  },
+  {
+    "source": "/blog/yenimahalle-tasinma-kontrol-listesi-parca-esya-tasima",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-parca-esya-tasima"
+  },
+  {
+    "source": "/blog/yenimahalle-ev-ve-is-yeri-sahipleri-icin-sehirler-arasi-nakliyat-ipuclari",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-sehirler-arasi-nakliyat"
+  },
+  {
+    "source": "/blog/yenimahalle-bolgesinde-sehirler-arasi-nakliyat-icin-5-altin-tavsiye",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-sehirler-arasi-nakliyat"
+  },
+  {
+    "source": "/blog/yenimahalle-sehirler-arasi-nakliyat-maliyetleri-nasil-dusurulur",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-sehirler-arasi-nakliyat"
+  },
+  {
+    "source": "/blog/yenimahalle-sehirler-arasi-nakliyat-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-sehirler-arasi-nakliyat"
+  },
+  {
+    "source": "/blog/yenimahalle-sokaklarinda-sehirler-arasi-nakliyat-zorluklari-ve-cozumleri",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-sehirler-arasi-nakliyat"
+  },
+  {
+    "source": "/blog/yenimahalle-tasinma-kontrol-listesi-sehirler-arasi-nakliyat",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-sehirler-arasi-nakliyat"
+  },
+  {
+    "source": "/blog/yenimahalle-uzmanindan-sehirler-arasi-nakliyat-sirlari",
+    "destination": "/blog/tasinma-rehberi-yenimahalle-ve-sehirler-arasi-nakliyat"
+  },
+  {
+    "source": "/blog/yenimahalle-sehir-ici-nakliyat-maliyetleri-nasil-dusurulur",
+    "destination": "/blog/yenimahalle-bolgesinde-sehir-ici-nakliyat-icin-5-altin-tavsiye"
+  },
+  {
+    "source": "/blog/yenimahalle-sehir-ici-nakliyat-sirasinda-esyalarinizi-nasil-korursunuz",
+    "destination": "/blog/yenimahalle-bolgesinde-sehir-ici-nakliyat-icin-5-altin-tavsiye"
+  },
+  {
+    "source": "/blog/yenimahalle-sokaklarinda-sehir-ici-nakliyat-zorluklari-ve-cozumleri",
+    "destination": "/blog/yenimahalle-bolgesinde-sehir-ici-nakliyat-icin-5-altin-tavsiye"
+  },
+  {
+    "source": "/blog/yenimahalle-tasinma-kontrol-listesi-sehir-ici-nakliyat",
+    "destination": "/blog/yenimahalle-bolgesinde-sehir-ici-nakliyat-icin-5-altin-tavsiye"
   }
 ]

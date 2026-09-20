@@ -9,6 +9,8 @@ assert.equal(editorialHtml('## Başlık\n\n### Alt başlık\n\nMetin'), '<h2>Ba�
 assert.equal(editorialHtml('- Bir\n- İki\n\n1. İlk\n2. Son'), '<ul><li>Bir</li><li>İki</li></ul>\n<ol><li>İlk</li><li>Son</li></ol>');
 assert.equal(editorialHtml('## Başlık\nAçıklama'), '<h2>Başlık</h2><p>Açıklama</p>');
 assert.equal(editorialInline('[Depo](/hizmetler/depolama) ve **liste**'), '<a href="/hizmetler/depolama">Depo</a> ve <strong>liste</strong>');
+assert.equal(editorialInline('[Adres bildirimi](https://www.turkiye.gov.tr/adres-degisikligi-bildirimi)'), '<a href="https://www.turkiye.gov.tr/adres-degisikligi-bildirimi">Adres bildirimi</a>');
+assert.ok(!editorialInline('[x](https://www.turkiye.gov.tr.evil.test/path)').includes('<a '));
 for (const unsafe of ['[x](javascript:alert(1))', '[x](//evil.test)', '[x](https://evil.test)', '[x](/a" onclick="bad)']) {
     assert.ok(!editorialInline(unsafe).includes('<a '), unsafe);
 }

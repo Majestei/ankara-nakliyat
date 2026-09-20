@@ -1162,19 +1162,22 @@ export const districtServiceData: Record<string, DistrictServiceData> = {
     }
 };
 
-// Fallback generator for other districts with rich custom facts
+// Legacy copy is kept for rollback, not as verification of local facts or capacity.
 export function getDistrictServiceContent(districtSlug: string, serviceSlug: "evden-eve-nakliyat" | "ofis-tasima" | "nakliyat-fiyatlari", districtName: string): DistrictServiceDetail {
+    const planning = getVerifiedPlanningContent(serviceSlug, districtName);
     if (districtServiceData[districtSlug] && districtServiceData[districtSlug][serviceSlug]) {
-        const content = districtServiceData[districtSlug][serviceSlug];
         const serviceLabel = serviceSlug === "ofis-tasima" ? "ofis taşıma" : serviceSlug === "nakliyat-fiyatlari" ? "nakliyat fiyatları" : "evden eve nakliyat";
-        return { ...content,
+        return { ...planning,
             h1: `${districtName} ${serviceLabel.charAt(0).toLocaleUpperCase("tr-TR") + serviceLabel.slice(1)}: Hazırlık ve Teklif`,
             description: districtSlug === 'akyurt' && serviceSlug === 'nakliyat-fiyatlari'
                 ? 'Akyurt evden eve nakliyat fiyatını hangi işler belirler? Eşya hacmi, kat, paketleme ve kurulum kapsamıyla teklifleri karşılaştırın; güncel bedeli görüşün.'
                 : `${districtName} ${serviceLabel} için eşya, adres, kat ve tarih bilgileriyle planlama. Dahil işleri ve teklif koşullarını önceden görüşün.`
         };
     }
+    return planning;
+}
 
+function getVerifiedPlanningContent(serviceSlug: "evden-eve-nakliyat" | "ofis-tasima" | "nakliyat-fiyatlari", districtName: string): DistrictServiceDetail {
     const shared = {
         localChallenge: { title: "Adres ve Erişim", desc: `${districtName} için çıkış ve varış adresinin kat, park, bina girişi ve yükleme mesafesini birlikte değerlendirin.` },
         logisticsSolution: { title: "Teklif Öncesi Plan", desc: "Eşya listesi, tarih, paketleme, söküm ve kurulum kapsamını yazılı olarak netleştirin." },

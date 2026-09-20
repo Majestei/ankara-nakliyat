@@ -121,7 +121,9 @@ def run(args):
         for record in read(ROOT / 'src/data' / filename):
             source[ORIGIN + '/' + prefix + '/' + record['slug']] = dict(record, source_file=filename, type=prefix)
     if args.reviewed:
-        for filename in sorted((ROOT / 'src/data').glob('phase2*Overrides*.json')) + [ROOT / 'src/data/phase2AdditionalBlog.json']:
+        aggregate = (ROOT / 'src/data/editorialOverrides.ts').read_text(encoding='utf-8')
+        files = re.findall(r"import\s+\w+\s+from\s+'\./([^']+\.json)'", aggregate)
+        for filename in [ROOT / 'src/data' / name for name in files]:
             for revision in read(filename):
                 u = ORIGIN + '/' + revision['type'] + '/' + revision['slug']
                 if u not in source:

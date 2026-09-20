@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,10 +13,14 @@ import { firmaBilgileri } from "@/data/siteData";
 
 const CustomCursor = dynamic(() => import("@/components/CustomCursor"), { ssr: false });
 
-const inter = Inter({
-    subsets: ["latin", "latin-ext"],
+const inter = localFont({
+    src: "./fonts/inter-tr-latin.woff2",
+    weight: "100 900",
+    style: "normal",
     display: "swap",
     variable: "--font-inter",
+    fallback: ["Arial", "sans-serif"],
+    adjustFontFallback: false,
 });
 
 const poppins = Poppins({

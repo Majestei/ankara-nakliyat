@@ -129,7 +129,7 @@ export default function ContractGuaranteeSection() {
                                     <div className="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center shrink-0">
                                         <IconCheck className="w-3.5 h-3.5 text-emerald-400" />
                                     </div>
-                                    <span>Sürpriz ve gizli ek masraf yok</span>
+                                    <span>Ek iş ve fiyat değişikliği koşullarını netleştirin</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <div className="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center shrink-0">
@@ -147,7 +147,7 @@ export default function ContractGuaranteeSection() {
                                     <div className="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center shrink-0">
                                         <IconCheck className="w-3.5 h-3.5 text-emerald-400" />
                                     </div>
-                                    <span>Kadrolu marangoz ve tesisat ustası desteği</span>
+                                    <span>Söküm, kurulum ve servis sorumlularını belirleyin</span>
                                 </div>
                             </div>
 

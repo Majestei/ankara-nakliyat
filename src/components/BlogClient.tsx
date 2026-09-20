@@ -136,7 +136,7 @@ export default function BlogClient({ posts: blogPosts }: { posts: BlogSummary[] 
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/50 to-transparent">Blogu.</span>
                     </h1>
                     <p className="text-[#8892B0] text-lg sm:text-xl font-light leading-relaxed max-w-3xl mb-12">
-                        Eşya paketleme sırlarından, sigortalı nakliyat süreçlerine kadar stressiz ve güvenli bir taşınma deneyimi için {blogPosts.length} adet uzman tavsiyesi.
+                        Paketleme, teslim planı ve teklif karşılaştırması için {blogPosts.length} rehber. İhtiyacınıza uygun konuyu seçerek taşınma öncesi sorularınızı hazırlayın.
                     </p>
 
                     {/* Search Bar */}

@@ -9,10 +9,6 @@ import {
     IconPhone, IconShield, IconTruck,
     IconBox, IconCog, IconArrow, IconStar, IconCheck
 } from "@/components/Icons";
-import PricingTable from "@/components/PricingTable";
-import TrustBadgesSection from "@/components/TrustBadgesSection";
-import ContractGuaranteeSection from "@/components/ContractGuaranteeSection";
-import MovingChecklistSection from "@/components/MovingChecklistSection";
 
 // ── SPATIAL UI COMPONENTS ──
 
@@ -115,11 +111,11 @@ function PodCard({ item, name, index }: { item: any, name: string, index: number
 
             <div style={{ transform: "translateZ(40px)" }}>
                 <p className="text-white/40 text-lg font-medium leading-relaxed italic mb-8">
-                    &ldquo;{name}&apos;da {item.shortDesc.toLowerCase()}&rdquo;
+                    {item.shortDesc}
                 </p>
                 <div className="flex items-center gap-4">
                     <div className="h-px flex-1 bg-white/10" />
-                    <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/20 shrink-0">Premium Service</span>
+                    <Link href={item.id === 'evden-eve-nakliyat' ? '/evden-eve-nakliyat' : `/hizmetler/${item.id}`} className="text-[10px] font-black uppercase tracking-[0.2em] text-primary-400 shrink-0">Kapsamı incele</Link>
                 </div>
             </div>
 
@@ -198,7 +194,7 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                     <div className="space-y-4">
                         <div className="flex items-center gap-4">
                             <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
-                            <span className="text-white/20 font-black text-[8px] uppercase tracking-widest">Active Units: 14+</span>
+                            <span className="text-white/20 font-black text-[8px] uppercase tracking-widest">Adres ve Eşya Planı</span>
                         </div>
                         <div className="flex items-center gap-4">
                             <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
@@ -215,15 +211,15 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                         <div className="max-w-4xl">
                             <span className="text-primary-500 font-black text-[10px] md:text-xs uppercase tracking-[0.5em] lg:tracking-[1em] mb-4 md:mb-10 block">{mahalle.name} Hizmetleri</span>
                             <h2 className="text-5xl md:text-7xl lg:text-9xl font-heading font-black text-white leading-none tracking-tighter">
-                                Yerel <br /> <span className="text-white/10">Uzmanlık.</span>
+                                Taşınma <br /> <span className="text-white/10">Hazırlığı.</span>
                             </h2>
                         </div>
                         <div className="w-full lg:w-1/2 p-6 md:p-10 bg-white/5 border border-white/10 rounded-2xl md:rounded-[3rem] backdrop-blur-3xl space-y-4 text-white/70 text-sm md:text-base leading-relaxed">
                             <p>
-                                <strong className="text-white font-bold">{ilce.name} {mahalle.name}</strong> bölgesinde ev ve ofis taşınma operasyonlarında sokak yapısına, site yönetim izinlerine ve bina kat yüksekliklerine hakim uzman kadromuzla hizmet veriyoruz.
+                                <strong className="text-white font-bold">{ilce.name} {mahalle.name}</strong> için taşınma planı hazırlarken açık adresi, eşya listesini ve tarihi paylaşın. Mahalle adı tek başına araç erişimini, kat koşullarını veya taşıma süresini belirlemez.
                             </p>
                             <p>
-                                Taşınma öncesinde adresinize özel araç yanaşma ve dış cephe asansörü kurulum planı yapılır. Eşyalarınız kalın kraft havalı naylonlarla ambalajlanırken, gardıroplarınız marangozlarımızca sökülüp yeni adresinizde dilediğiniz odaya monte edilir.
+                                Çıkış ve varış için bina girişi, yükleme alanı ve kullanılabilir asansör bilgilerini ayrı hazırlayın. Paketleme, mobilya sökümü ve yeniden kurulum beklentinizi yazın; hizmet uygunluğunu ve dahil işleri teklif görüşmesinde teyit edin.
                             </p>
                         </div>
                     </div>
@@ -242,7 +238,7 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                                 {mahalle.name} Bölgesinde Taşınma Dinamikleri
                             </h3>
                             <p className="text-slate-400 text-sm md:text-base">
-                                Her mahallenin sokak genişliği, kat yüksekliği ve otopark nizamı farklıdır. Eşyalarınızı rastgele değil, bölgenin koşullarına özel ekipmanla taşıyoruz.
+                                Aşağıdaki kontrol, mahallenizdeki her bina için aynı koşulların bulunduğunu varsaymaz. Kendi adresinizin fotoğraf ve ölçülerini kullanarak ihtiyaçları belirleyin.
                             </p>
                         </div>
 
@@ -250,7 +246,7 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                             <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
                                 <h4 className="text-primary-400 font-bold text-base mb-2">1. Sokak &amp; Araç Yanaşması</h4>
                                 <p className="text-xs leading-relaxed text-slate-400">
-                                    {mahalle.name} sokaklarındaki parklanma ve trafik akışına göre sabah erken saatlerde doğru araç açısıyla yanaşma yapılır.
+                                    {mahalle.name} adresinizde aracın durabileceği noktayı, kapıya mesafesini ve bina yönetiminin taşıma saatlerini öğrenin. Gerekli izinleri önceden görüşün.
                                 </p>
                             </div>
                             <div className="bg-white/5 p-6 rounded-2xl border border-white/10">
@@ -292,16 +288,16 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                             </div>
                             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-white relative">
                                 <span className="text-5xl font-black text-primary-500/30 block mb-4">02</span>
-                                <h4 className="text-xl font-bold mb-2">Marangozluk &amp; Zırhlı Ambalaj</h4>
+                                <h4 className="text-xl font-bold mb-2">Paketleme ve Söküm Listesi</h4>
                                 <p className="text-slate-400 text-xs leading-relaxed">
-                                    Kırılacaklar kraft balonlu naylonla zırhlanır, mobilyalar kadrolu marangozumuzca çizilmeden demonte edilir.
+                                    Kırılacak parçaları ve sökülecek mobilyaları listeleyin. Malzeme, hazırlık işini yapacak kişi ve kurulum kapsamını ayrı teyit edin.
                                 </p>
                             </div>
                             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-white relative">
                                 <span className="text-5xl font-black text-primary-500/30 block mb-4">03</span>
-                                <h4 className="text-xl font-bold mb-2">Asansörlü İndirme &amp; Kurulum</h4>
+                                <h4 className="text-xl font-bold mb-2">Yükleme ve Teslim Kontrolü</h4>
                                 <p className="text-slate-400 text-xs leading-relaxed">
-                                    Dış cephe asansörüyle yüklenen eşyalar kapalı kasalı araçla sevk edilir; yeni evinizde mobilyalar kurulur ve teslim edilir.
+                                    Taşıma yöntemi adres uygunluğuna göre belirlenir. Teslimde eşya listesini kontrol edin; varsa eksikleri ve kurulum işlerini kayıt altına alın.
                                 </p>
                             </div>
                         </div>
@@ -345,21 +341,18 @@ export default function MahalleClient({ ilce, mahalle, digerMahalleler, isIstanb
                 </div>
             </section>
 
-            {/* ── 2026 MAHALLE PRICING TABLE ── */}
-            <PricingTable
-                title={`${ilce.name} ${mahalle.name} Nakliyat Fiyatları (2026)`}
-                subtitle={`${ilce.name} ${mahalle.name} için eşya, erişim ve tarih bilgilerinize göre teklif alın. Dahil hizmetleri ve ödeme koşullarını görüşün.`}
-                locationName={`${ilce.name} ${mahalle.name}`}
-            />
-
-            {/* ── INTERACTIVE MOVING CHECKLIST ── */}
-            <MovingChecklistSection />
-
-            {/* ── INSTITUTIONAL TRUST BADGES ── */}
-            <TrustBadgesSection />
-
-            {/* ── CONTRACT GUARANTEE ── */}
-            <ContractGuaranteeSection />
+            <section className="py-20 bg-slate-900 border-t border-white/10">
+                <div className="container-custom max-w-4xl text-white space-y-6">
+                    <h2 className="text-3xl md:text-4xl font-heading font-black">{ilce.name} {mahalle.name} için teklif hazırlığı</h2>
+                    <p className="text-slate-300 leading-relaxed">Eşya listesini, yaklaşık koli sayısını ve iki adresteki katları not edin. Fotoğraflarda kapı, merdiven ve araç durma noktasını gösterin; kişisel belgeleri kadraj dışında tutun. Paketleme ve kurulumdan hangilerini talep ettiğinizi belirtin. Bu bilgiler aynı işi kapsayan teklifleri karşılaştırmanıza yardımcı olur.</p>
+                    <div className="grid sm:grid-cols-3 gap-4">
+                        <Link href={`/islemler/ankara/${ilce.slug}/nakliyat-fiyatlari`} className="p-6 bg-white/5 border border-white/10 rounded-2xl text-primary-300">{ilce.name} fiyat ve kapsam kontrolü</Link>
+                        <Link href="/hizmetler/paketleme" className="p-6 bg-white/5 border border-white/10 rounded-2xl text-primary-300">Eşyayı hazırlama ve ambalaj seçimi</Link>
+                        <Link href="/hizmetler/nakliyat-sigortasi" className="p-6 bg-white/5 border border-white/10 rounded-2xl text-primary-300">Varsa poliçe ve teslim koşulları</Link>
+                    </div>
+                    <p className="text-slate-400 text-sm">Mahalle adı kesin hizmet uygunluğu, şube veya depo adresi beyanı değildir. Araç, personel, ekipman ve tarih uygunluğunu açık adresinizle görüşün.</p>
+                </div>
+            </section>
 
             {/* ── THE KINETIC HUB (Diğer Mahalleler) ── */}
             <section className="py-24 md:py-40 bg-white border-t border-slate-100">
