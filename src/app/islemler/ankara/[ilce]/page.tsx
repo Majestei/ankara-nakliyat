@@ -14,7 +14,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const ilce = ankaraIlceleri.find((i) => i.slug === params.ilce);
     if (!ilce) return {};
     const pageTitle = `${ilce.name} Evden Eve Nakliyat | Özdemir Nakliyat`;
-    const description = `${ilce.name} evden eve nakliyat hizmeti. Eşya miktarı, bina erişimi, paketleme ve taşıma tarihi bilgilerinize göre kapsamı görüşün ve teklif alın.`;
+    const description = ilce.slug === 'kahramankazan'
+        ? 'Kahramankazan evden eve nakliyat için eşya listesi, bina erişimi ve teslim planı. Paketleme, söküm ve kurulum kapsamını netleştirerek teklif alın.'
+        : `${ilce.name} evden eve nakliyat hizmeti. Eşya miktarı, bina erişimi, paketleme ve taşıma tarihi bilgilerinize göre kapsamı görüşün ve teklif alın.`;
     const url = `https://ankaraozdemirnakliyat.com/islemler/ankara/${params.ilce}`;
 
     return {

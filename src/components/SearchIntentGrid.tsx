@@ -95,7 +95,7 @@ export default function SearchIntentGrid() {
                     </h2>
 
                     <p className="text-slate-400 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed">
-                        Sadece komple ev taşıma değil; acil nakliyeciden parça eşyaya, asansör kiralama ve kurumsal ofis nakliyesine kadar aradığınız her uzmanlık tek çatı altında.
+                        Komple ev, parça eşya veya ofis taşımanız için ilgili hizmeti inceleyin. Araç, asansör ve tarih uygunluğunu adres bilgilerinize göre görüşün.
                     </p>
                 </div>
 

@@ -59,7 +59,7 @@ export default function PricingTable({
                     "Tüm oda mobilyalarının montajı",
                     "Çift kat patpat ambalajlama",
                     "Modüler dış cephe asansörü imkanı",
-                    "Resmi poliçeli hasar teminatı",
+                    "Varsa poliçenin kapsamını inceleme",
                     "Ufak eşyaları müşteri koliler",
                 ],
                 popular: false,
@@ -74,7 +74,7 @@ export default function PricingTable({
                     "Kişiye özel operasyon planı",
                     "Ağır mobilya ve piyano taşıma",
                     "Çift asansör kurulum desteği",
-                    "Aynı gün montaj ve yerleşim",
+                    "Montaj ve yerleşim takvimini görüşme",
                     "Ufak eşyaları müşteri koliler",
                 ],
                 popular: false,
@@ -322,7 +322,7 @@ export default function PricingTable({
                             <div className="space-y-1.5 border-l-2 border-primary-500/40 pl-4">
                                 <h4 className="text-white font-black">3. Kilometre Mesafesi</h4>
                                 <p className="text-slate-400 text-xs leading-relaxed">
-                                    İki adres arasındaki mesafe ve Ankara çevre yolu bağlantıları hesaplanarak net yakıt ve zaman maliyeti belirlenir.
+                                    İki adres arasındaki mesafeyi, uygun güzergâhı ve teslim aralığını paylaşın; taşıma bedelinin hangi işleri içerdiğini görüşün.
                                 </p>
                             </div>
                             <div className="space-y-1.5 border-l-2 border-primary-500/40 pl-4">

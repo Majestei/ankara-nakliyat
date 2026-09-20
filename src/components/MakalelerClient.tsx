@@ -140,7 +140,7 @@ export default function MakalelerClient({ posts: makalelerData }: { posts: Artic
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/50 to-transparent">Makaleleri.</span>
                     </h1>
                     <p className="text-[#8892B0] text-lg sm:text-xl font-light leading-relaxed max-w-3xl mb-12">
-                        Türkiye&apos;nin dört bir yanındaki ilçelerde sunduğumuz evden eve nakliyat, asansörlü taşıma ve depolama hizmetleri hakkında detaylı SEO analizleri ve rehberler. Toplam {makalelerData.length} lokasyon kaydı.
+                        Ankara ilçelerinde taşınma hazırlığı, hizmet seçimi ve teklif kapsamı için rehberler. İhtiyacınıza uygun başlığı seçin.
                     </p>
 
                     {/* Search Bar */}

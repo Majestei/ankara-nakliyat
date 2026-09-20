@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import Link from "next/link";
+import { editorialHtml } from "@/lib/editorial-format";
 import { publishedArticles as makalelerData } from "@/data/publishedArticles";
 
 export const dynamicParams = false;
@@ -144,49 +145,11 @@ export default async function MakaleDetail({ params }: { params: { slug: string 
                         prose-a:text-[#F5B913] hover:prose-a:text-[#FFD95B]
                         selection:bg-[#F5B913] selection:text-black"
                 >
-                    {/* Render the markdown-like content safely. For this demo, we'll convert simple MD to HTML or just render the text. */}
-                    {/* Since our script generates basic MD (##, **, 1. 2.), we will do a simple manual replace for safety without a heavy MD library. */}
                     <div
-                        className="text-[#E2E8F0] text-lg md:text-xl leading-[2.2] font-light"
-                        dangerouslySetInnerHTML={{
-                        __html: post.content
-                            .replace(/## (.*)/g, '<h2 class="text-3xl md:text-4xl mt-16 mb-8 text-white font-black">$1</h2>')
-                            .replace(/### (.*)/g, '<h3 class="text-2xl md:text-3xl mt-12 mb-6 text-white/90 font-black">$1</h3>')
-                            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                            .replace(/- \*\*(.*?)\*\* (.*)/g, '<li class="mb-4"><strong class="text-white">$1</strong> $2</li>')
-                            .replace(/1\. \*\*(.*?)\*\*(.*)/g, '<div class="mb-6"><strong class="text-[#F5B913] text-2xl block mb-2">$1</strong><p class="text-[#E2E8F0] leading-[1.9]">$2</p></div>')
-                            .replace(/2\. \*\*(.*?)\*\*(.*)/g, '<div class="mb-6"><strong class="text-[#F5B913] text-2xl block mb-2">$1</strong><p class="text-[#E2E8F0] leading-[1.9]">$2</p></div>')
-                            .replace(/3\. \*\*(.*?)\*\*(.*)/g, '<div class="mb-6"><strong class="text-[#F5B913] text-2xl block mb-2">$1</strong><p class="text-[#E2E8F0] leading-[1.9]">$2</p></div>')
-                            .replace(/4\. \*\*(.*?)\*\*(.*)/g, '<div class="mb-6"><strong class="text-[#F5B913] text-2xl block mb-2">$1</strong><p class="text-[#E2E8F0] leading-[1.9]">$2</p></div>')
-                            .replace(/5\. \*\*(.*?)\*\*(.*)/g, '<div class="mb-6"><strong class="text-[#F5B913] text-2xl block mb-2">$1</strong><p class="text-[#E2E8F0] leading-[1.9]">$2</p></div>')
-                            .replace(/\n\n/g, '<br/><br/>')
-                    }} />
+                        className="text-[#E2E8F0] text-lg md:text-xl leading-[2.2] font-light [&_h2]:text-3xl [&_h2]:mt-16 [&_h2]:mb-8 [&_h2]:font-black [&_h3]:text-2xl [&_h3]:mt-12 [&_h3]:mb-6 [&_p]:mb-6 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6 [&_li]:mb-4"
+                        dangerouslySetInnerHTML={{ __html: editorialHtml(post.content) }}
+                    />
                 </article>
-
-                {/* FAQ UI Block */}
-                <div className="mt-16 bg-[#050813] border border-white/5 rounded-3xl p-8 md:p-12">
-                    <h2 className="text-2xl font-bold text-white mb-8">Sıkça Sorulan Sorular</h2>
-                    <div className="space-y-6">
-                        <div className="border-b border-white/10 pb-6">
-                            <h3 className="text-lg font-bold text-[#F5B913] mb-3">{post.location} nakliyat fiyatları ne kadar?</h3>
-                            <p className="text-[#8892B0] leading-relaxed">
-                                {post.location} bölgesinde evden eve nakliyat fiyatları eşya yoğunluğu, kat durumu ve asansör gereksinimine göre belirlenmektedir. En net fiyatı almak için ücretsiz ekspertiz talep edebilirsiniz.
-                            </p>
-                        </div>
-                        <div className="border-b border-white/10 pb-6">
-                            <h3 className="text-lg font-bold text-[#F5B913] mb-3">{post.location} asansörlü taşıma hizmetiniz var mı?</h3>
-                            <p className="text-[#8892B0] leading-relaxed">
-                                {post.location} için asansör gereksinimi; kat yüksekliği, zemin, bina cephesi ve kurulum alanının uygunluğuna göre değerlendirilir.
-                            </p>
-                        </div>
-                        <div className="pb-2">
-                            <h3 className="text-lg font-bold text-[#F5B913] mb-3">Eşyalarım sigortalanıyor mu?</h3>
-                            <p className="text-[#8892B0] leading-relaxed">
-                                Varsa sigorta poliçesinin teminatlarını, limitlerini ve istisnalarını taşıma öncesinde görüşün. Paketleme ve hasar bildirim koşullarını yazılı olarak netleştirin.
-                            </p>
-                        </div>
-                    </div>
-                </div>
 
                 {/* Related Services (Silo) */}
                 <div className="mt-16 bg-[#050813] border border-white/5 rounded-3xl p-8 md:p-12">
@@ -216,7 +179,7 @@ export default async function MakaleDetail({ params }: { params: { slug: string 
                         <div className="absolute inset-0 bg-gradient-to-br from-[#F5B913]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         <h3 className="text-2xl font-bold text-white mb-4">Hemen Teklif Alın</h3>
                         <p className="text-[#8892B0] mb-8 max-w-md mx-auto">
-                            {post.location} bölgesinde size özel fiyatlandırma ve ücretsiz ekspertiz avantajından yararlanın.
+                            {post.location} için eşya listenizi, adres ve tarih bilgilerinizi paylaşarak teklif kapsamını görüşün.
                         </p>
                         <Link href="/iletisim" className="inline-block px-8 py-4 bg-[#F5B913] text-black font-bold uppercase tracking-wider text-sm rounded-xl hover:bg-white hover:scale-105 transition-all">
                             İletişime Geç

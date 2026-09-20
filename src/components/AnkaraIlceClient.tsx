@@ -5,7 +5,7 @@ import Image from "next/image";
 import React, { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring, useMotionValue, AnimatePresence } from "framer-motion";
 import { firmaBilgileri, hizmetler, ilceIcerikleri, ankaraIlceleri } from "@/data/siteData";
-import { neighborhoodsByDistrict } from "@/data/neighborhoodData";
+import { neighborhoodsByDistrict, consolidatedNeighborhoodsByDistrict } from "@/data/neighborhoodData";
 import {
     IconPhone, IconShield, IconMoney, IconTruck,
     IconBox, IconCog, IconMapPin, IconArrow, IconPlus, IconStar, IconCheck
@@ -125,7 +125,12 @@ function PodCard({ item, ilceName, ilceSlug, index }: { item: any, ilceName: str
 
             <div style={{ transform: "translateZ(40px)" }} className="relative z-10 pointer-events-none">
                 <p className="text-white/40 text-lg font-medium leading-relaxed italic mb-8">
-                    &ldquo;{ilceName}&apos;da {item.shortDesc.toLowerCase()}&rdquo;
+                    {item.id === "evden-eve-nakliyat" && `${ilceName} bağlantılı ev taşımasında eşya listesini, iki adresi ve tarihi paylaşarak kapsamı görüşün.`}
+                    {item.id === "sehir-ici-nakliyat" && `${ilceName} için alım ve teslim adreslerini, bina erişimini ve tarih bilgisini paylaşın; hizmet uygunluğunu teyit edin.`}
+                    {item.id === "sehirler-arasi-nakliyat" && `${ilceName} bağlantılı şehirler arası taşınmada çıkış ve varış adresleriyle rota ve teslim koşullarını görüşün.`}
+                    {item.id === "ofis-tasima" && `${ilceName} için ofis envanterini, iş takvimini ve kurulum ihtiyaçlarını birlikte değerlendirin.`}
+                    {item.id === "parca-esya-tasima" && `${ilceName} için taşınacak parçaların adet, ölçü ve fotoğraflarıyla alım-teslim kapsamını sorun.`}
+                    {item.id === "asansorlu-tasima" && `${ilceName} adresindeki kat, cephe ve zemin bilgileriyle asansör kurulum uygunluğunu değerlendirin.`}
                 </p>
                 <div className="flex items-center gap-4">
                     <div className="h-px flex-1 bg-white/10" />
@@ -437,6 +442,11 @@ export default function AnkaraIlceClient({ ilce, digerIlceler }: { ilce: any, di
                             <p className="text-slate-500 max-w-2xl mx-auto font-medium text-sm md:text-base">
                                 {ilce.name} için mevcut mahalle rehberlerini inceleyin. Taşıma ve asansör uygunluğunu açık adresinizle görüşün.
                             </p>
+                            {!!consolidatedNeighborhoodsByDistrict[ilce.slug]?.length && (
+                                <p className="text-slate-600 max-w-3xl mx-auto mt-4 text-sm leading-relaxed">
+                                    {consolidatedNeighborhoodsByDistrict[ilce.slug].map(item => item.name).join(', ')} için taşıma hazırlığı bu ilçe rehberinde ele alınır. Mahalle adının yanında bina girişi, kat, araç yanaşma noktası ve tarihi paylaşın; adresiniz için hizmet uygunluğunu görüşün.
+                                </p>
+                            )}
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                             {neighborhoodsByDistrict[ilce.slug].map((mahalle, i) => {

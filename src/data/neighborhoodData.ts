@@ -1,10 +1,12 @@
 
+import phase2Redirects from './phase2Redirects.json';
+
 export interface Neighborhood {
     name: string;
     slug: string;
 }
 
-export const neighborhoodsByDistrict: Record<string, Neighborhood[]> = {
+const sourceNeighborhoodsByDistrict: Record<string, Neighborhood[]> = {
     // ANKARA (25 Districts)
     "akyurt": [
         { name: "Yıldırım", slug: "yildirim" }, { name: "Beyazıt", slug: "beyazit" }, { name: "Balıkhisar", slug: "balikhisar" }, { name: "Büğdüz", slug: "bugduz" }, { name: "Güzelhisar", slug: "guzelhisar" }
@@ -201,3 +203,15 @@ export const neighborhoodsByDistrict: Record<string, Neighborhood[]> = {
         { name: "Merkezefendi", slug: "merkezefendi" }, { name: "Telsiz", slug: "telsiz" }, { name: "Veliefendi", slug: "veliefendi" }, { name: "Beştelsiz", slug: "bestelsiz" }
     ]
 };
+
+const retiredNeighborhoodPaths = new Set(phase2Redirects.map(rule => rule.source));
+export const neighborhoodsByDistrict: Record<string, Neighborhood[]> = Object.fromEntries(
+    Object.entries(sourceNeighborhoodsByDistrict).map(([district, neighborhoods]) => [
+        district, neighborhoods.filter(item => !retiredNeighborhoodPaths.has(`/islemler/ankara/${district}/${item.slug}`)),
+    ])
+);
+export const consolidatedNeighborhoodsByDistrict: Record<string, Neighborhood[]> = Object.fromEntries(
+    Object.entries(sourceNeighborhoodsByDistrict).map(([district, neighborhoods]) => [
+        district, neighborhoods.filter(item => retiredNeighborhoodPaths.has(`/islemler/ankara/${district}/${item.slug}`)),
+    ])
+);

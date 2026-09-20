@@ -1,5 +1,7 @@
 "use client";
 
+import { editorialInline } from "@/lib/editorial-format";
+
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
 import { BlogPost } from "@/data/blogData";
@@ -49,7 +51,7 @@ export default function BlogPostClient({ post, relatedPosts, toc }: Props) {
             </div>
 
             {/* Parallax Editorial Hero */}
-            <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center px-6 md:px-12 lg:px-24 z-10 perspective-1000">
+            <section className="relative min-h-[600px] pt-36 md:pt-40 pb-20 flex items-center justify-center px-6 md:px-12 lg:px-24 z-10 perspective-1000">
                 <motion.div
                     style={{ y: heroY, opacity: heroOpacity }}
                     className="max-w-7xl mx-auto relative text-center w-full"
@@ -66,19 +68,19 @@ export default function BlogPostClient({ post, relatedPosts, toc }: Props) {
                     </motion.div>
 
                     <motion.h1
-                        initial={{ opacity: 0, y: 40 }}
+                        initial={false}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                        className="text-6xl sm:text-8xl md:text-[7rem] lg:text-[8rem] font-black text-slate-900 leading-[0.95] tracking-tighter mb-10 drop-shadow-sm"
+                        className="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.05] tracking-tighter mb-10 drop-shadow-sm"
                     >
                         {post.title}
                     </motion.h1>
 
                     <motion.p
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={false}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                        className="text-slate-600 text-2xl md:text-3xl lg:text-4xl leading-snug max-w-5xl mx-auto font-light tracking-tight"
+                        className="text-slate-600 text-xl md:text-2xl lg:text-3xl leading-snug max-w-5xl mx-auto font-light tracking-tight"
                     >
                         {post.excerpt}
                     </motion.p>
@@ -109,7 +111,7 @@ export default function BlogPostClient({ post, relatedPosts, toc }: Props) {
                                         <span className="text-white font-black text-3xl">CG</span>
                                     </div>
                                     <h3 className="font-black text-slate-900 text-xl mb-1 tracking-tight">Ankara Özdemir Nakliyat</h3>
-                                    <p className="text-sm text-slate-500 mb-8 leading-relaxed font-semibold">Uzman Lojistik Operasyon Ekibi</p>
+                                    <p className="text-sm text-slate-500 mb-8 leading-relaxed font-semibold">Taşınma planlama rehberi</p>
                                     <div className="flex gap-4">
                                         {["Fb", "Tw", "In"].map((platform, i) => (
                                             <button key={i} className="flex-1 h-12 rounded-2xl bg-white/80 backdrop-blur-md flex items-center justify-center text-slate-600 hover:bg-[#0055FF] hover:text-white transition-all duration-300 text-xs font-black border border-white shadow-sm hover:shadow-[0_5px_15px_rgba(0,85,255,0.3)]">
@@ -139,7 +141,7 @@ export default function BlogPostClient({ post, relatedPosts, toc }: Props) {
                         {/* Center Article Body (Glassmorphism + Drop Cap) */}
                         <main className="lg:col-span-6">
                             <motion.div
-                                initial={{ opacity: 0, y: 50 }}
+                                initial={false}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -153,11 +155,15 @@ export default function BlogPostClient({ post, relatedPosts, toc }: Props) {
                                     prose-li:text-slate-800 prose-li:text-lg md:prose-li:text-xl prose-ul:list-none prose-ul:pl-0">
 
                                     {post.content.split("\n\n").map((paragraph, i) => {
+                                        if (paragraph.startsWith("### ")) {
+                                            const [heading, ...body] = paragraph.split("\n");
+                                            return <section key={i}><h3 className="text-2xl md:text-3xl mt-12 mb-6 text-slate-900 font-black">{heading.slice(4)}</h3>{body.length > 0 && <p dangerouslySetInnerHTML={{ __html: editorialInline(body.join(" ")) }} />}</section>;
+                                        }
                                         // H2 Headings
                                         if (paragraph.startsWith("## ")) {
                                             return (
                                                 <motion.h2
-                                                    initial={{ opacity: 0, x: -20 }}
+                                                    initial={false}
                                                     whileInView={{ opacity: 1, x: 0 }}
                                                     viewport={{ once: true, margin: "-100px" }}
                                                     transition={{ duration: 0.8 }}
@@ -174,7 +180,7 @@ export default function BlogPostClient({ post, relatedPosts, toc }: Props) {
                                             const items = paragraph.split("\n").filter((l) => l.startsWith("- "));
                                             return (
                                                 <motion.div
-                                                    initial={{ opacity: 0, y: 20 }}
+                                                    initial={false}
                                                     whileInView={{ opacity: 1, y: 0 }}
                                                     viewport={{ once: true }}
                                                     transition={{ duration: 0.8 }}
@@ -185,7 +191,7 @@ export default function BlogPostClient({ post, relatedPosts, toc }: Props) {
                                                         {items.map((item, j) => (
                                                             <li key={j} className="flex gap-6 items-start text-slate-700">
                                                                 <span className="w-3 h-3 mt-3 rounded-full bg-gradient-to-tr from-[#0055FF] to-cyan-300 shrink-0 shadow-[0_0_15px_rgba(0,85,255,0.5)]"></span>
-                                                                <span className="leading-relaxed font-bold text-xl">{item.replace("- ", "")}</span>
+                                                                <span className="leading-relaxed font-bold text-xl" dangerouslySetInnerHTML={{ __html: editorialInline(item.replace("- ", "")) }} />
                                                             </li>
                                                         ))}
                                                     </ul>
@@ -200,7 +206,7 @@ export default function BlogPostClient({ post, relatedPosts, toc }: Props) {
                                                 <div key={i} className="my-24 space-y-16">
                                                     {items.map((item, j) => (
                                                         <motion.div
-                                                            initial={{ opacity: 0, y: 20 }}
+                                                            initial={false}
                                                             whileInView={{ opacity: 1, y: 0 }}
                                                             viewport={{ once: true }}
                                                             transition={{ duration: 0.8, delay: j * 0.1 }}
@@ -211,7 +217,7 @@ export default function BlogPostClient({ post, relatedPosts, toc }: Props) {
                                                                 0{j + 1}
                                                             </span>
                                                             <div className="pt-2">
-                                                                <p className="m-0 leading-[1.8] text-slate-700 font-medium" dangerouslySetInnerHTML={{ __html: item.replace(/^\d+\.\s*/, "").replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") }} />
+                                                                <p className="m-0 leading-[1.8] text-slate-700 font-medium" dangerouslySetInnerHTML={{ __html: editorialInline(item.replace(/^\d+\.\s*/, "")) }} />
                                                             </div>
                                                         </motion.div>
                                                     ))}
@@ -224,13 +230,13 @@ export default function BlogPostClient({ post, relatedPosts, toc }: Props) {
 
                                         return (
                                             <motion.p
-                                                initial={{ opacity: 0 }}
+                                                initial={false}
                                                 whileInView={{ opacity: 1 }}
                                                 viewport={{ once: true }}
                                                 transition={{ duration: 1 }}
                                                 key={i}
                                                 className={`text-slate-700 ${isFirstParagraph ? "first-letter:text-[120px] md:first-letter:text-[140px] first-letter:font-black first-letter:text-transparent first-letter:bg-clip-text first-letter:bg-gradient-to-br first-letter:from-[#0055FF] first-letter:to-cyan-400 first-letter:mr-6 first-letter:float-left first-letter:leading-[0.8]" : ""}`}
-                                                dangerouslySetInnerHTML={{ __html: paragraph.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>") }}
+                                                dangerouslySetInnerHTML={{ __html: editorialInline(paragraph) }}
                                             />
                                         );
                                     })}
@@ -261,8 +267,8 @@ export default function BlogPostClient({ post, relatedPosts, toc }: Props) {
                                     <div className="absolute inset-0 bg-[url('/images/noise.svg')] opacity-20 mix-blend-overlay"></div>
 
                                     <div className="relative z-10 transform translate-z-10">
-                                        <h3 className="text-4xl font-black mb-6 tracking-tighter leading-none">VIP<br/>Taşıma.</h3>
-                                        <p className="text-blue-100 text-base mb-10 leading-relaxed font-semibold">Nakliyatta First-Class deneyim. Eşyalarınız maksimum güvenceyle taşınsın.</p>
+                                        <h3 className="text-4xl font-black mb-6 tracking-tighter leading-none">Taşınma<br/>Planınız.</h3>
+                                        <p className="text-blue-100 text-base mb-10 leading-relaxed font-semibold">Eşya listesi, adres ve tarih bilgilerinizi paylaşın; taşıma kapsamını birlikte değerlendirelim.</p>
                                         <a href={`tel:${firmaBilgileri.phone.replace(/\s/g, "")}`} className="flex items-center justify-center gap-3 w-full py-5 bg-white text-[#0055FF] rounded-2xl font-black text-xs uppercase tracking-[0.2em] hover:bg-slate-900 hover:text-white transition-all duration-500 shadow-[0_10px_30px_rgba(0,0,0,0.2)]">
                                             <IconPhone className="w-4 h-4" /> Bize Ulaşın
                                         </a>

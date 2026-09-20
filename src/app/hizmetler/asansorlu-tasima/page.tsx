@@ -41,28 +41,28 @@ export default function AsansorluTasimaPage() {
             <section className="section-padding bg-white">
                 <div className="container-custom max-w-4xl">
                     <div className="prose prose-lg text-slate-600 leading-relaxed space-y-8">
-                        <p className="text-xl font-medium text-slate-800"><strong>Ankara Özdemir Nakliyat</strong> modüler ve hidrolik dış cephe asansör filosuyla, ev ve ofis eşyalarınızı bina dışından doğrudan araç kasasına indirip yüklüyor. Dar apartman merdivenleri, site bina yönetim yasakları veya küçük bina asansörleri taşınmanıza engel olamaz.</p>
+                        <p className="text-xl font-medium text-slate-800"><strong>Ankara Özdemir Nakliyat</strong> ile asansörlü taşıma ihtiyacını görüşürken merdiven ve kapı ölçülerini, cephe fotoğrafını ve aracın durabileceği alanı paylaşın. Dış cephe asansörü her adrese uygun değildir; teknik uygunluk ve gerekli izinler belirlenmeden bu yönteme göre randevu kesinleştirmeyin.</p>
 
-                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">2026 Ankara Asansörlü Nakliyat & Kiralama Fiyatları</h2>
+                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Asansör Kurulumu ve Teklif Kapsamı</h2>
                         <div className="grid md:grid-cols-3 gap-6 not-prose mb-8">
                             <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
-                                <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Standart Katlar</span>
-                                <h3 className="text-xl font-bold text-slate-900 mb-2">1 - 5. Kat Arası</h3>
+                                <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Çıkış Adresi</span>
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">Yükleme Noktası</h3>
                                 <div className="text-2xl font-black text-slate-900 mb-2">Teklif İsteyin</div>
-                                <p className="text-xs text-slate-500">Ev taşıma fiyatına ek asansör bedeli veya saatlik tek seferlik kurulum.</p>
+                                <p className="text-xs text-slate-500">Kat, pencere açıklığı ve eşyanın çıkış yolunu belirtin; kuruluma uygun alanı görüşün.</p>
                             </div>
                             <div className="p-6 bg-primary-50/50 rounded-2xl border-2 border-primary-500/30 relative">
-                                <span className="absolute -top-3 right-4 bg-primary-500 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded-full">En Çok Tercih Edilen</span>
-                                <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Yüksek Katlar</span>
-                                <h3 className="text-xl font-bold text-slate-900 mb-2">6 - 15. Kat Arası</h3>
+                                <span className="absolute -top-3 right-4 bg-primary-500 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded-full">Adres Bazında İnceleme</span>
+                                <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Varış Adresi</span>
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">Boşaltma Noktası</h3>
                                 <div className="text-2xl font-black text-slate-900 mb-2">Teklif İsteyin</div>
-                                <p className="text-xs text-slate-500">Teleskopik 45 metre hidrolik sepetli asansör, operatör dahil.</p>
+                                <p className="text-xs text-slate-500">İkinci adreste de ekipman gerekiyorsa iki kurulumun, operatörün ve beklemenin ücretini ayrı sorun.</p>
                             </div>
                             <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
-                                <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Ultra Yüksek</span>
-                                <h3 className="text-xl font-bold text-slate-900 mb-2">16. Kat ve Üzeri</h3>
+                                <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Kapsam Değişikliği</span>
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">Alternatif Taşıma Yolu</h3>
                                 <div className="text-2xl font-black text-slate-900 mb-2">Teklif İsteyin</div>
-                                <p className="text-xs text-slate-500">70 metreye kadar erişen ağır yük asansörü ve çift emniyet halatı.</p>
+                                <p className="text-xs text-slate-500">Cephe veya zemin uygun değilse uygulanabilecek yöntemi ve bunun fiyat etkisini teklif öncesinde belirleyin.</p>
                             </div>
                         </div>
 
@@ -73,13 +73,13 @@ export default function AsansorluTasimaPage() {
                             </p>
                         </div>
 
-                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Asansörlü Taşımanın Sağladığı 4 Temel Avantaj</h2>
+                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Asansörlü Taşıma Kararından Önce Dört Kontrol</h2>
                         <div className="grid md:grid-cols-2 gap-4">
                             {[
-                                { title: "Yüksek Katlarda Uygunluk", desc: "Ekipmanın erişim sınırı, cephe mesafesi, zemin ve yükleme alanı adres özelinde teyit edilmelidir." },
-                                { title: "%50 Daha Hızlı Süreç", desc: "Geleneksel merdiven taşımacılığı 6 saat sürerken asansör sistemiyle 2-3 saatte tamamlanır." },
+                                { title: "Varış Adresida Uygunluk", desc: "Ekipmanın erişim sınırı, cephe mesafesi, zemin ve yükleme alanı adres özelinde teyit edilmelidir." },
+                                { title: "Kurulum ve Çalışma Süresi", desc: "Süre eşya miktarı, iki adresin erişimi, kurulum ve bina çalışma saatlerine bağlıdır; sabit saat garantisi yerine uygulanabilir takvim isteyin." },
                                 { title: "Yükleme Planı", desc: "Dış cephe kullanımı bina içi geçişleri azaltabilir; ambalajlama, sabitleme ve kurulum koşulları ayrıca değerlendirilir." },
-                                { title: "Site Yönetimi ve Komşularla Sorunsuz", desc: "Apartman ortak alanları, bina asansörü ve merdiven boşluğu işgal edilmez, şikayet oluşmaz." },
+                                { title: "Bina Yönetimi ve Geçişler", desc: "Yükleme alanını ve ortak alan kullanımını bina yönetimiyle görüşün. Yaya ve araç geçişlerine ilişkin önlemleri uygulama ekibinin değerlendirmesini isteyin." },
                             ].map((item, i) => (
                                 <div key={i} className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
                                     <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>

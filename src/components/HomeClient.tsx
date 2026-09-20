@@ -152,8 +152,8 @@ export default function HomeClient() {
                                 </h2>
 
                                 <p className="text-white/30 text-base md:text-3xl font-medium leading-tight max-w-xl mx-auto lg:mx-0 px-4">
-                                    Sadece eşya taşımıyoruz — hayatınızın yeni sayfasına geçerken <br />
-                                    <span className="text-white">kusursuz bir deneyim inşa ediyoruz.</span>
+                                    Eşya listenizi ve taşınma tarihini paylaşın. <br />
+                                    <span className="text-white">İki adres için taşıma kapsamını birlikte planlayalım.</span>
                                 </p>
                             </div>
 
@@ -213,7 +213,7 @@ export default function HomeClient() {
                             Hizmet <br /> <span className="font-serif text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-orange-600 italic font-normal">Evrenimiz.</span>
                         </h2>
                         <p className="text-slate-400 text-lg md:text-2xl font-medium max-w-2xl leading-relaxed">
-                            Lojistik standartlarını yeniden tanımlayan, her biri alanında uzmanlaşmış özel taşıma birimlerimizle tanışın.
+                            Ev, ofis ve parça eşya taşımasında ihtiyaç duyduğunuz işleri seçin; paketleme, erişim ve teslim koşullarını inceleyin.
                         </p>
                     </div>
 

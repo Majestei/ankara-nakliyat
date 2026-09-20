@@ -1,0 +1,910 @@
+[
+  {
+    "source": "/makaleler/cankaya-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/makaleler/cankaya-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/cankaya/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/cankaya-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/makaleler/cankaya-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/cankaya/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/cankaya-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/cankaya/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/cankaya-esya-depolama-firmalari",
+    "destination": "/hizmetler/depolama"
+  },
+  {
+    "source": "/makaleler/cankaya-esya-depolama-fiyatlari",
+    "destination": "/hizmetler/depolama"
+  },
+  {
+    "source": "/makaleler/kecioren-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/makaleler/kecioren-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/kecioren/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kecioren-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/kecioren/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/yenimahalle-ofis-tasima-fiyatlari",
+    "destination": "/islemler/ankara/yenimahalle/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/yenimahalle-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/makaleler/yenimahalle-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/yenimahalle/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/yenimahalle-esya-depolama-firmalari",
+    "destination": "/hizmetler/depolama"
+  },
+  {
+    "source": "/makaleler/mamak-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/mamak/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/mamak-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/mamak/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/mamak-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/makaleler/mamak-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/mamak/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/mamak-esya-depolama-firmalari",
+    "destination": "/hizmetler/depolama"
+  },
+  {
+    "source": "/makaleler/etimesgut-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/etimesgut"
+  },
+  {
+    "source": "/makaleler/etimesgut-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/etimesgut/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/etimesgut-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/etimesgut"
+  },
+  {
+    "source": "/makaleler/etimesgut-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/etimesgut/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/etimesgut-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/etimesgut"
+  },
+  {
+    "source": "/makaleler/etimesgut-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/etimesgut/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/etimesgut-esya-depolama-firmalari",
+    "destination": "/hizmetler/depolama"
+  },
+  {
+    "source": "/makaleler/sincan-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/sincan/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/sincan-esya-depolama-fiyatlari",
+    "destination": "/hizmetler/depolama"
+  },
+  {
+    "source": "/makaleler/altindag-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/altindag/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/altindag-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/altindag/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/altindag-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/altindag"
+  },
+  {
+    "source": "/makaleler/altindag-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/altindag/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/pursaklar-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/pursaklar"
+  },
+  {
+    "source": "/makaleler/pursaklar-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/pursaklar/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/pursaklar-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/pursaklar"
+  },
+  {
+    "source": "/makaleler/pursaklar-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/pursaklar/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/pursaklar-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/pursaklar/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/pursaklar-esya-depolama-firmalari",
+    "destination": "/hizmetler/depolama"
+  },
+  {
+    "source": "/makaleler/golbasi-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/golbasi/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/golbasi-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/golbasi"
+  },
+  {
+    "source": "/makaleler/golbasi-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/golbasi/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/golbasi-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/golbasi/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/golbasi-esya-depolama-firmalari",
+    "destination": "/hizmetler/depolama"
+  },
+  {
+    "source": "/makaleler/polatli-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/polatli"
+  },
+  {
+    "source": "/makaleler/polatli-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/polatli/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/polatli-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/polatli"
+  },
+  {
+    "source": "/makaleler/cubuk-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/cubuk"
+  },
+  {
+    "source": "/makaleler/cubuk-esya-depolama-firmalari",
+    "destination": "/hizmetler/depolama"
+  },
+  {
+    "source": "/makaleler/cubuk-esya-depolama-fiyatlari",
+    "destination": "/hizmetler/depolama"
+  },
+  {
+    "source": "/makaleler/kahramankazan-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/kahramankazan"
+  },
+  {
+    "source": "/makaleler/kahramankazan-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/kahramankazan/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kahramankazan-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/kahramankazan/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kahramankazan-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/kahramankazan"
+  },
+  {
+    "source": "/makaleler/kahramankazan-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/kahramankazan/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/beypazari-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/beypazari"
+  },
+  {
+    "source": "/makaleler/beypazari-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/beypazari"
+  },
+  {
+    "source": "/makaleler/beypazari-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/beypazari/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/beypazari-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/beypazari"
+  },
+  {
+    "source": "/makaleler/beypazari-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/beypazari/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/elmadag-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/elmadag"
+  },
+  {
+    "source": "/makaleler/elmadag-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/elmadag/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/elmadag-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/elmadag/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/sereflikochisar-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/sereflikochisar"
+  },
+  {
+    "source": "/makaleler/sereflikochisar-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/sereflikochisar/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/sereflikochisar-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/sereflikochisar/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/sereflikochisar-esya-depolama-firmalari",
+    "destination": "/hizmetler/depolama"
+  },
+  {
+    "source": "/makaleler/sereflikochisar-esya-depolama-fiyatlari",
+    "destination": "/hizmetler/depolama"
+  },
+  {
+    "source": "/makaleler/akyurt-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/akyurt"
+  },
+  {
+    "source": "/makaleler/akyurt-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/akyurt/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/akyurt-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/akyurt"
+  },
+  {
+    "source": "/makaleler/akyurt-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/akyurt/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/akyurt-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/akyurt/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/nallihan-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/nallihan/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/nallihan-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/nallihan/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/nallihan-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/nallihan/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/haymana-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/haymana/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/haymana-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/haymana/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kizilcahamam-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/kizilcahamam/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kizilcahamam-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/kizilcahamam"
+  },
+  {
+    "source": "/makaleler/kizilcahamam-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/kizilcahamam/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kizilcahamam-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/kizilcahamam/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/bala-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/bala"
+  },
+  {
+    "source": "/makaleler/bala-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/bala/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/kalecik-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/kalecik/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/ayas-asansorlu-tasimacilik-firmalari",
+    "destination": "/islemler/ankara/ayas"
+  },
+  {
+    "source": "/makaleler/ayas-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/ayas/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/ayas-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/ayas"
+  },
+  {
+    "source": "/makaleler/ayas-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/ayas/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/camlidere-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/camlidere/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/camlidere-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/camlidere/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/camlidere-sehirler-arasi-nakliyat-fiyatlari",
+    "destination": "/islemler/ankara/camlidere/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/camlidere-esya-depolama-firmalari",
+    "destination": "/hizmetler/depolama"
+  },
+  {
+    "source": "/makaleler/gudul-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/gudul/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/gudul-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/gudul"
+  },
+  {
+    "source": "/makaleler/gudul-sehirler-arasi-nakliyat-firmalari",
+    "destination": "/islemler/ankara/gudul"
+  },
+  {
+    "source": "/makaleler/evren-asansorlu-tasimacilik-fiyatlari",
+    "destination": "/islemler/ankara/evren/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/makaleler/evren-parca-esya-tasima-firmalari",
+    "destination": "/islemler/ankara/evren"
+  },
+  {
+    "source": "/makaleler/evren-parca-esya-tasima-fiyatlari",
+    "destination": "/islemler/ankara/evren/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/blog/cubuk-nakliyat-fiyatlari-2026",
+    "destination": "/islemler/ankara/cubuk/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/blog/kahramankazan-nakliyat-fiyatlari-2026",
+    "destination": "/islemler/ankara/kahramankazan/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/blog/bala-nakliyat-fiyatlari-2026",
+    "destination": "/islemler/ankara/bala/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/blog/kizilcahamam-nakliyat-fiyatlari-2026",
+    "destination": "/islemler/ankara/kizilcahamam/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/blog/nallihan-nakliyat-fiyatlari-2026",
+    "destination": "/islemler/ankara/nallihan/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/blog/cankaya-nakliyat-fiyatlari-2026",
+    "destination": "/islemler/ankara/cankaya/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/blog/elmadag-nakliyat-fiyatlari-2026",
+    "destination": "/islemler/ankara/elmadag/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/blog/kecioren-nakliyat-fiyatlari-2026",
+    "destination": "/islemler/ankara/kecioren/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/blog/pursaklar-nakliyat-fiyatlari-2026",
+    "destination": "/islemler/ankara/pursaklar/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/blog/sereflikochisar-nakliyat-fiyatlari-2026",
+    "destination": "/islemler/ankara/sereflikochisar/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/blog/yenimahalle-nakliyat-fiyatlari-2026",
+    "destination": "/islemler/ankara/yenimahalle/nakliyat-fiyatlari"
+  },
+  {
+    "source": "/blog/cankaya-cayyolu-nakliyat-rehberi",
+    "destination": "/islemler/ankara/cankaya/cayyolu"
+  },
+  {
+    "source": "/blog/etimesgut-eryaman-nakliyat-rehberi",
+    "destination": "/islemler/ankara/etimesgut/eryaman"
+  },
+  {
+    "source": "/blog/sincan-plevne-nakliyat-rehberi",
+    "destination": "/islemler/ankara/sincan/plevne"
+  },
+  {
+    "source": "/blog/yenimahalle-yakacik-nakliyat-rehberi",
+    "destination": "/islemler/ankara/yenimahalle/yakacik"
+  },
+  {
+    "source": "/blog/camlidere-beyler-nakliyat-rehberi",
+    "destination": "/islemler/ankara/camlidere/beyler"
+  },
+  {
+    "source": "/blog/cankaya-cukurambar-nakliyat-rehberi",
+    "destination": "/islemler/ankara/cankaya/cukurambar"
+  },
+  {
+    "source": "/blog/mamak-kibris-koyu-nakliyat-rehberi",
+    "destination": "/islemler/ankara/mamak/kibris-koyu"
+  },
+  {
+    "source": "/blog/pursaklar-saray-nakliyat-rehberi",
+    "destination": "/islemler/ankara/pursaklar/saray"
+  },
+  {
+    "source": "/blog/sincan-yenikent-nakliyat-rehberi",
+    "destination": "/islemler/ankara/sincan/yenikent"
+  },
+  {
+    "source": "/blog/yenimahalle-kayalar-nakliyat-rehberi",
+    "destination": "/islemler/ankara/yenimahalle/kayalar"
+  },
+  {
+    "source": "/blog/yenimahalle-mehmet-akif-ersoy-nakliyat-rehberi",
+    "destination": "/islemler/ankara/yenimahalle/mehmet-akif-ersoy"
+  },
+  {
+    "source": "/blog/mamak-nakliyat",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/blog/pursaklar-nakliyat",
+    "destination": "/islemler/ankara/pursaklar"
+  },
+  {
+    "source": "/blog/cankaya-nakliyat-hizmetleri",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/blog/etimesgut-ofis-ve-is-yeri-tasimaciligi-2026",
+    "destination": "/islemler/ankara/etimesgut/ofis-tasima"
+  },
+  {
+    "source": "/makaleler/en-iyi-polatli-evden-eve-nakliyat-firmalari",
+    "destination": "/islemler/ankara/polatli"
+  },
+  {
+    "source": "/islemler/ankara/akyurt/balikhisar",
+    "destination": "/islemler/ankara/akyurt"
+  },
+  {
+    "source": "/islemler/ankara/akyurt/bugduz",
+    "destination": "/islemler/ankara/akyurt"
+  },
+  {
+    "source": "/islemler/ankara/akyurt/guzelhisar",
+    "destination": "/islemler/ankara/akyurt"
+  },
+  {
+    "source": "/islemler/ankara/akyurt/yildirim",
+    "destination": "/islemler/ankara/akyurt"
+  },
+  {
+    "source": "/islemler/ankara/altindag/onder",
+    "destination": "/islemler/ankara/altindag"
+  },
+  {
+    "source": "/islemler/ankara/ayas/feruz",
+    "destination": "/islemler/ankara/ayas"
+  },
+  {
+    "source": "/islemler/ankara/ayas/omeroglu",
+    "destination": "/islemler/ankara/ayas"
+  },
+  {
+    "source": "/islemler/ankara/bala/ergin",
+    "destination": "/islemler/ankara/bala"
+  },
+  {
+    "source": "/islemler/ankara/bala/goztepe",
+    "destination": "/islemler/ankara/bala"
+  },
+  {
+    "source": "/islemler/ankara/bala/sentepe",
+    "destination": "/islemler/ankara/bala"
+  },
+  {
+    "source": "/islemler/ankara/beypazari/ayvasik",
+    "destination": "/islemler/ankara/beypazari"
+  },
+  {
+    "source": "/islemler/ankara/beypazari/kurtulus",
+    "destination": "/islemler/ankara/beypazari"
+  },
+  {
+    "source": "/islemler/ankara/camlidere/yayalar",
+    "destination": "/islemler/ankara/camlidere"
+  },
+  {
+    "source": "/islemler/ankara/cankaya/akpinar",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/islemler/ankara/cankaya/balgat",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/islemler/ankara/cankaya/beysukent",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/islemler/ankara/cankaya/gaziosmanpasa",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/islemler/ankara/cankaya/mursel-uluc",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/islemler/ankara/cankaya/yildiz",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/islemler/ankara/cankaya/yuzuncuyil",
+    "destination": "/islemler/ankara/cankaya"
+  },
+  {
+    "source": "/islemler/ankara/cubuk/yildirim-beyazit",
+    "destination": "/islemler/ankara/cubuk"
+  },
+  {
+    "source": "/islemler/ankara/elmadag/hasanoglan",
+    "destination": "/islemler/ankara/elmadag"
+  },
+  {
+    "source": "/islemler/ankara/etimesgut/30-agustos",
+    "destination": "/islemler/ankara/etimesgut"
+  },
+  {
+    "source": "/islemler/ankara/etimesgut/baglica",
+    "destination": "/islemler/ankara/etimesgut"
+  },
+  {
+    "source": "/islemler/ankara/etimesgut/istasyon",
+    "destination": "/islemler/ankara/etimesgut"
+  },
+  {
+    "source": "/islemler/ankara/etimesgut/kazim-karabekir",
+    "destination": "/islemler/ankara/etimesgut"
+  },
+  {
+    "source": "/islemler/ankara/etimesgut/piyade",
+    "destination": "/islemler/ankara/etimesgut"
+  },
+  {
+    "source": "/islemler/ankara/etimesgut/topcu",
+    "destination": "/islemler/ankara/etimesgut"
+  },
+  {
+    "source": "/islemler/ankara/etimesgut/yapracik",
+    "destination": "/islemler/ankara/etimesgut"
+  },
+  {
+    "source": "/islemler/ankara/golbasi/bahcelievler",
+    "destination": "/islemler/ankara/golbasi"
+  },
+  {
+    "source": "/islemler/ankara/golbasi/gaziosmanpasa",
+    "destination": "/islemler/ankara/golbasi"
+  },
+  {
+    "source": "/islemler/ankara/golbasi/karsiyaka",
+    "destination": "/islemler/ankara/golbasi"
+  },
+  {
+    "source": "/islemler/ankara/golbasi/kizilcasar",
+    "destination": "/islemler/ankara/golbasi"
+  },
+  {
+    "source": "/islemler/ankara/golbasi/segmenler",
+    "destination": "/islemler/ankara/golbasi"
+  },
+  {
+    "source": "/islemler/ankara/haymana/seyran",
+    "destination": "/islemler/ankara/haymana"
+  },
+  {
+    "source": "/islemler/ankara/kahramankazan/ataturk",
+    "destination": "/islemler/ankara/kahramankazan"
+  },
+  {
+    "source": "/islemler/ankara/kahramankazan/fatih",
+    "destination": "/islemler/ankara/kahramankazan"
+  },
+  {
+    "source": "/islemler/ankara/kahramankazan/satikadin",
+    "destination": "/islemler/ankara/kahramankazan"
+  },
+  {
+    "source": "/islemler/ankara/kalecik/caykaya",
+    "destination": "/islemler/ankara/kalecik"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/23-nisan",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/adnan-menderes",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/bademlik",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/baglum",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/esertepe",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/etlik",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/incirli",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/kalaba",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/kanuni",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/karargahtepe",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/kosk",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/osmangazi",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/sanatoryum",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/sancaktepe",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/sefkat",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/tepebasi",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kecioren/yesiltepe",
+    "destination": "/islemler/ankara/kecioren"
+  },
+  {
+    "source": "/islemler/ankara/kizilcahamam/ismetpasa",
+    "destination": "/islemler/ankara/kizilcahamam"
+  },
+  {
+    "source": "/islemler/ankara/mamak/akdere",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/bahcelerici",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/balkiraz",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/demirlibahce",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/dostlar",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/durali-alic",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/ege-mahallesi",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/gokceyurt",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/hurel",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/kayas",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/kazim-orbay",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/kostence",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/kucuk-kayas",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/lalahan",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/mutlu",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/sahap-gurler",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/mamak/uregil",
+    "destination": "/islemler/ankara/mamak"
+  },
+  {
+    "source": "/islemler/ankara/nallihan/aliaga",
+    "destination": "/islemler/ankara/nallihan"
+  },
+  {
+    "source": "/islemler/ankara/nallihan/yazi",
+    "destination": "/islemler/ankara/nallihan"
+  },
+  {
+    "source": "/islemler/ankara/polatli/basri",
+    "destination": "/islemler/ankara/polatli"
+  },
+  {
+    "source": "/islemler/ankara/polatli/fatih",
+    "destination": "/islemler/ankara/polatli"
+  },
+  {
+    "source": "/islemler/ankara/polatli/gulveren",
+    "destination": "/islemler/ankara/polatli"
+  },
+  {
+    "source": "/islemler/ankara/polatli/sehitlik",
+    "destination": "/islemler/ankara/polatli"
+  },
+  {
+    "source": "/islemler/ankara/pursaklar/fatih",
+    "destination": "/islemler/ankara/pursaklar"
+  },
+  {
+    "source": "/islemler/ankara/pursaklar/mimar-sinan",
+    "destination": "/islemler/ankara/pursaklar"
+  },
+  {
+    "source": "/islemler/ankara/pursaklar/yavuz-selim",
+    "destination": "/islemler/ankara/pursaklar"
+  },
+  {
+    "source": "/islemler/ankara/sereflikochisar/sanayi",
+    "destination": "/islemler/ankara/sereflikochisar"
+  },
+  {
+    "source": "/islemler/ankara/sincan/aksemsettin",
+    "destination": "/islemler/ankara/sincan"
+  },
+  {
+    "source": "/islemler/ankara/sincan/andicen",
+    "destination": "/islemler/ankara/sincan"
+  },
+  {
+    "source": "/islemler/ankara/sincan/malazgirt",
+    "destination": "/islemler/ankara/sincan"
+  },
+  {
+    "source": "/islemler/ankara/sincan/marasal-cakmak",
+    "destination": "/islemler/ankara/sincan"
+  },
+  {
+    "source": "/islemler/ankara/sincan/mevlana",
+    "destination": "/islemler/ankara/sincan"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/ergazi",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/ergenekon",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/inonu",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/kaletepe",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/karsiyaka",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/kuzey-yildizi",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/macunkoy",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/ostim",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/pamuklar",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/turgut-ozal",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/ugur-mumcu",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/varlik",
+    "destination": "/islemler/ankara/yenimahalle"
+  },
+  {
+    "source": "/islemler/ankara/yenimahalle/yuva",
+    "destination": "/islemler/ankara/yenimahalle"
+  }
+]

@@ -10,8 +10,8 @@ const canonicalOrigin = 'https://ankaraozdemirnakliyat.com';
 const output = resolve(option('--out', 'docs/seo/recovery/2026-09-16/redirect-qa-local.json'));
 const isLocal = /^(localhost|127\.0\.0\.1)$/.test(new URL(origin).hostname);
 const readJson = async path => JSON.parse(await readFile(path, 'utf8'));
-const migrations = await readJson('docs/seo/recovery/2026-09-16/migration-map.json');
-const configured = await readJson('src/data/recoveryRedirects.json');
+const migrations = [...await readJson('docs/seo/recovery/2026-09-16/migration-map.json'), ...await readJson('docs/seo/recovery/2026-09-16/phase2-migration/reviewed-map.json')];
+const configured = [...await readJson('src/data/recoveryRedirects.json'), ...await readJson('src/data/phase2Redirects.json')];
 const historic = await readJson('src/data/redirects.json');
 const aliases = [
   { source: '/hizmetler/evden-eve-nakliyat', destination: '/evden-eve-nakliyat' },

@@ -1,5 +1,6 @@
 import historical from '../../src/data/redirects.json';
 import recovery from '../../src/data/recoveryRedirects.json';
+import phase2 from '../../src/data/phase2Redirects.json';
 
 const aliases = [
   { source: '/hizmetler/evden-eve-nakliyat', destination: '/evden-eve-nakliyat' },
@@ -8,7 +9,7 @@ const aliases = [
   { source: '/sitemap-3.xml', destination: '/sitemap.xml' },
   { source: '/islemler/ankara', destination: '/islemler' },
 ];
-const redirects = new Map([...historical, ...aliases, ...recovery].map(r => [r.source, r.destination]));
+const redirects = new Map([...historical, ...aliases, ...recovery, ...phase2].map(r => [r.source, r.destination]));
 
 export default {
   async fetch(request) {

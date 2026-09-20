@@ -1,3 +1,4 @@
+import { reviewedEditorial } from './editorialOverrides';
 import blogDataGen from "./blogDataGen.json";
 
 export interface BlogPost {
@@ -12,4 +13,4 @@ export interface BlogPost {
     readTime: string;
 }
 
-export const blogPosts: BlogPost[] = blogDataGen;
+export const blogPosts: BlogPost[] = blogDataGen.map(post => reviewedEditorial('blog', post));

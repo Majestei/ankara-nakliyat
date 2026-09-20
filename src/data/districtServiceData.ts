@@ -1169,7 +1169,9 @@ export function getDistrictServiceContent(districtSlug: string, serviceSlug: "ev
         const serviceLabel = serviceSlug === "ofis-tasima" ? "ofis taşıma" : serviceSlug === "nakliyat-fiyatlari" ? "nakliyat fiyatları" : "evden eve nakliyat";
         return { ...content,
             h1: `${districtName} ${serviceLabel.charAt(0).toLocaleUpperCase("tr-TR") + serviceLabel.slice(1)}: Hazırlık ve Teklif`,
-            description: `${districtName} ${serviceLabel} için eşya, adres, kat ve tarih bilgileriyle planlama. Dahil işleri ve teklif koşullarını önceden görüşün.`
+            description: districtSlug === 'akyurt' && serviceSlug === 'nakliyat-fiyatlari'
+                ? 'Akyurt evden eve nakliyat fiyatını hangi işler belirler? Eşya hacmi, kat, paketleme ve kurulum kapsamıyla teklifleri karşılaştırın; güncel bedeli görüşün.'
+                : `${districtName} ${serviceLabel} için eşya, adres, kat ve tarih bilgileriyle planlama. Dahil işleri ve teklif koşullarını önceden görüşün.`
         };
     }
 

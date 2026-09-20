@@ -111,6 +111,8 @@ def crawl(args):
     redirects=json.loads((ROOT/'src/data/redirects.json').read_text(encoding='utf8'))
     recovery=ROOT/'src/data/recoveryRedirects.json'
     if recovery.exists():redirects+=json.loads(recovery.read_text(encoding='utf8'))
+    phase2=ROOT/'src/data/phase2Redirects.json'
+    if phase2.exists():redirects+=json.loads(phase2.read_text(encoding='utf8'))
     (directory/'redirects-source.json').write_text(json.dumps(redirects,ensure_ascii=False),encoding='utf8')
     for r in redirects:seeds.update((ORIGIN+r['source'],ORIGIN+r['destination']))
     seeds.update(ORIGIN+p for p in ['/hizmetler/evden-eve-nakliyat','/hizmetler/sigorta','/sitemap-2.xml','/sitemap-3.xml'])

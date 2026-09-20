@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import redirectsData from '@/data/redirects.json';
 import recoveryRedirects from '@/data/recoveryRedirects.json';
+import phase2Redirects from '@/data/phase2Redirects.json';
 
 // Create a Map for O(1) lookups
 const redirectMap = new Map<string, string>();
@@ -12,7 +13,7 @@ const existingAliases = [
     { source: '/sitemap-3.xml', destination: '/sitemap.xml' },
     { source: '/islemler/ankara', destination: '/islemler' },
 ];
-[...redirectsData, ...existingAliases, ...recoveryRedirects].forEach((r: { source: string; destination: string }) => {
+[...redirectsData, ...existingAliases, ...recoveryRedirects, ...phase2Redirects].forEach((r: { source: string; destination: string }) => {
     redirectMap.set(r.source, r.destination);
 });
 

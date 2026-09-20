@@ -62,12 +62,12 @@ export default function SehirlerArasiPage() {
                         <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Şehirler Arası Nakliyat Hizmetlerimiz</h2>
                         <div className="grid md:grid-cols-2 gap-4">
                             {[
-                                { title: "Komple Ev Taşıma", desc: "Tüm eşyalarınız tek araçta, kapıdan kapıya güvenli teslimat." },
-                                { title: "Parsiyel Taşıma", desc: "Birkaç parça eşya için ekonomik parsiyel taşıma seçeneği." },
+                                { title: "Komple Ev Taşıma", desc: "Eşya listesini paylaşın; aracın size ayrılıp ayrılmadığını ve alım-teslim kapsamını görüşün." },
+                                { title: "Parsiyel Taşıma", desc: "Az miktarda eşya için araç paylaşımı, olası aktarma ve teslim aralığını ayrı ayrı sorun." },
                                 { title: "Süreç İletişimi", desc: "Yükleme ve teslim için iletişim kişisini, bilgilendirme yöntemini ve zaman planını görüşün." },
                                 { title: "Poliçe Koşulları", desc: "Varsa poliçenin kapsamı, limitleri ve istisnaları teklif öncesinde incelenmelidir." },
-                                { title: "Profesyonel Paketleme", desc: "Uzun yol şartlarına uygun darbe emici malzemelerle özel paketleme." },
-                                { title: "Mobilya Montaj", desc: "Hedef şehirde mobilyalarınız uzman marangozlarımızca kurulur." },
+                                { title: "Paketleme Kapsamı", desc: "Eşyanın hassasiyetine ve taşıma koşullarına uygun ambalaj yöntemini, malzemeyi ve sorumlu tarafı belirleyin." },
+                                { title: "Mobilya Kurulumu", desc: "Varış adresindeki söküm-kurulum işlerini, gereken kişiyi ve teklif kapsamını önceden netleştirin." },
                             ].map((item, i) => (
                                 <div key={i} className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
                                     <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
@@ -76,24 +76,22 @@ export default function SehirlerArasiPage() {
                             ))}
                         </div>
 
-                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Popüler Güzergahlar ve Tahmini Süreler</h2>
+                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Rota ve Teslim Planında Netleştirilecekler</h2>
                         <div className="overflow-x-auto">
                             <table className="w-full text-sm border-collapse">
                                 <thead>
                                     <tr className="bg-slate-100">
-                                        <th className="text-left p-3 font-bold text-slate-900 rounded-tl-xl">Güzergah</th>
-                                        <th className="text-left p-3 font-bold text-slate-900">Mesafe</th>
-                                        <th className="text-left p-3 font-bold text-slate-900 rounded-tr-xl">Tahmini Süre</th>
+                                        <th className="text-left p-3 font-bold text-slate-900 rounded-tl-xl">Planlama Başlığı</th>
+                                        <th className="text-left p-3 font-bold text-slate-900">Paylaşılacak Bilgi</th>
+                                        <th className="text-left p-3 font-bold text-slate-900 rounded-tr-xl">Görüşülecek Koşul</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {[
-                                        ["Ankara → İstanbul", "~450 km", "5-6 saat"],
-                                        ["Ankara → İzmir", "~600 km", "7-8 saat"],
-                                        ["Ankara → Antalya", "~550 km", "6-7 saat"],
-                                        ["Ankara → Bursa", "~400 km", "4-5 saat"],
-                                        ["Ankara → Konya", "~260 km", "3-4 saat"],
-                                        ["Ankara → Eskişehir", "~230 km", "3 saat"],
+                                        ["Çıkış ve varış", "İki açık adres, katlar ve bina erişimi", "İstenen rotada hizmet uygunluğu"],
+                                        ["Takvim", "Alım tarihi ve kabul edilen teslim aralığı", "Gecikme veya tarih değişikliğinde iletişim"],
+                                        ["Araç planı", "Eşya listesi ve yaklaşık hacim", "Komple araç, paylaşımlı yük ve aktarma durumu"],
+                                        ["Teslim", "Karşılayacak kişi ve bina giriş saatleri", "Boşaltma, yerleştirme ve kurulum kapsamı"],
                                     ].map(([route, dist, time], i) => (
                                         <tr key={i} className="border-b border-slate-100">
                                             <td className="p-3 font-medium text-slate-800">{route}</td>
@@ -105,25 +103,25 @@ export default function SehirlerArasiPage() {
                             </table>
                         </div>
 
-                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">2026 Ankara Çıkışlı Şehirler Arası Fiyat Tahminleri</h2>
+                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Ankara Çıkışlı Taşıma İçin Teklif Hazırlığı</h2>
                         <div className="grid md:grid-cols-3 gap-6 not-prose mb-8">
                             <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
-                                <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Popüler Hat</span>
+                                <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Rota Uygunluğu</span>
                                 <h3 className="text-xl font-bold text-slate-900 mb-2">Ankara ➔ İstanbul</h3>
                                 <div className="text-2xl font-black text-slate-900 mb-2">Teklif İsteyin</div>
                                 <p className="text-xs text-slate-500">İstanbul varış adresi, yükleme erişimi ve teslim tarihiyle rota uygunluğunu ve güncel teklifi görüşün.</p>
                             </div>
                             <div className="p-6 bg-primary-50/50 rounded-2xl border-2 border-primary-500/30 relative">
                                 <span className="absolute -top-3 right-4 bg-primary-500 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded-full">Ege & Akdeniz</span>
-                                <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Güneş Hattı</span>
+                                <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Tarih ve Eşya Listesi</span>
                                 <h3 className="text-xl font-bold text-slate-900 mb-2">Ankara ➔ İzmir / Antalya</h3>
                                 <div className="text-2xl font-black text-slate-900 mb-2">Teklif İsteyin</div>
-                                <p className="text-xs text-slate-500">Özel süspansiyonlu uzun yol çelik araçlar, 24 saat içinde kapıda teslim.</p>
+                                <p className="text-xs text-slate-500">İzmir veya Antalya için teslim adresini ve kabul edilen tarih aralığını paylaşın; araç planını ve hizmet uygunluğunu teyit edin.</p>
                             </div>
                             <div className="p-6 bg-slate-50 rounded-2xl border border-slate-200">
-                                <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Tüm Türkiye</span>
-                                <h3 className="text-xl font-bold text-slate-900 mb-2">Diğer 81 İl Seferleri</h3>
-                                <div className="text-2xl font-black text-slate-900 mb-2">Özel Fiyat</div>
+                                <span className="text-xs font-bold text-primary-600 uppercase tracking-wider block mb-1">Diğer Güzergâhlar</span>
+                                <h3 className="text-xl font-bold text-slate-900 mb-2">Farklı Varış Şehirleri</h3>
+                                <div className="text-2xl font-black text-slate-900 mb-2">Uygunluğu Görüşün</div>
                                 <p className="text-xs text-slate-500">Diğer varış şehirleri için adres, eşya miktarı ve tarih paylaşarak rota uygunluğunu teyit edin.</p>
                             </div>
                         </div>

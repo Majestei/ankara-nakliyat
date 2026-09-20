@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence, useScroll, useTransform, useSpring, useMotionValue, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence, useSpring, useMotionValue, useReducedMotion } from "framer-motion";
 import { IconPhone, IconStar, IconTruck, IconClock, IconUsers, IconShield, IconArrow, IconMapPin, IconGlobe } from "@/components/Icons";
 
 const heroSlides = [
@@ -35,26 +35,27 @@ const heroSlides = [
 
 // ── SHARED PREMIUM COMPONENTS ──
 
-const AuroraBackground = () => {
-    const shouldReduceMotion = useReducedMotion();
+const AuroraBackground = ({ animated }: { animated: boolean }) => {
     return (
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
             <motion.div
-                animate={shouldReduceMotion ? {} : {
+                initial={false}
+                animate={animated ? {
                     scale: [1, 1.2, 1],
                     opacity: [0.05, 0.1, 0.05],
                     rotate: [0, 45, 0]
-                }}
-                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                } : { scale: 1, opacity: 0.05, rotate: 0 }}
+                transition={animated ? { duration: 15, repeat: Infinity, ease: "linear" } : { duration: 0 }}
                 className="absolute -top-[20%] -left-[10%] w-[100%] h-[100%] bg-primary-500/30 blur-[150px] rounded-full hidden md:block"
             />
             <motion.div
-                animate={shouldReduceMotion ? {} : {
+                initial={false}
+                animate={animated ? {
                     scale: [1.2, 1, 1.2],
                     opacity: [0.05, 0.08, 0.05],
                     rotate: [0, -45, 0]
-                }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                } : { scale: 1.2, opacity: 0.05, rotate: 0 }}
+                transition={animated ? { duration: 20, repeat: Infinity, ease: "linear" } : { duration: 0 }}
                 className="absolute -bottom-[20%] -right-[10%] w-[100%] h-[100%] bg-orange-500/20 blur-[150px] rounded-full hidden md:block"
             />
         </div>
@@ -128,8 +129,45 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isMounted, setIsMounted] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
+    const [hasWideViewport, setHasWideViewport] = useState(false);
+    const [hasDesktopViewport, setHasDesktopViewport] = useState(false);
     const shouldReduceMotion = useReducedMotion();
     const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+    const parallaxY = useMotionValue(0);
+
+    useEffect(() => {
+        const wideViewport = window.matchMedia("(min-width: 768px)");
+        const desktopViewport = window.matchMedia("(min-width: 1024px)");
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const updateParallax = () => {
+            parallaxY.set(Math.min(window.scrollY, 1000) * 0.3);
+        };
+        const updateMotion = () => {
+            const allowParallax = wideViewport.matches && !reducedMotion.matches;
+            setHasWideViewport(wideViewport.matches);
+            setHasDesktopViewport(desktopViewport.matches);
+            window.removeEventListener("scroll", updateParallax);
+            if (allowParallax) {
+                updateParallax();
+                window.addEventListener("scroll", updateParallax, { passive: true });
+            } else {
+                parallaxY.set(0);
+            }
+        };
+        updateMotion();
+        wideViewport.addEventListener("change", updateMotion);
+        desktopViewport.addEventListener("change", updateMotion);
+        reducedMotion.addEventListener("change", updateMotion);
+        return () => {
+            window.removeEventListener("scroll", updateParallax);
+            wideViewport.removeEventListener("change", updateMotion);
+            desktopViewport.removeEventListener("change", updateMotion);
+            reducedMotion.removeEventListener("change", updateMotion);
+        };
+    }, [parallaxY]);
+
+    const animateDecorations = hasWideViewport && !shouldReduceMotion;
+    const animatePods = hasDesktopViewport && !shouldReduceMotion;
 
     useEffect(() => {
         setIsMounted(true);
@@ -165,15 +203,13 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
     const mouseYSpring = useSpring(mouseY, { stiffness: 100, damping: 30 });
 
     const handleMouseMove = (e: React.MouseEvent) => {
+        if (!animatePods) return;
         const { clientX, clientY } = e;
         const xPct = (clientX / window.innerWidth - 0.5) * 50;
         const yPct = (clientY / window.innerHeight - 0.5) * 50;
         mouseX.set(xPct);
         mouseY.set(yPct);
     };
-
-    const { scrollY } = useScroll();
-    const parallaxY = useTransform(scrollY, [0, 1000], [0, 300]);
 
     return (
         <section
@@ -183,7 +219,7 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
             onMouseMove={handleMouseMove}
         >
             <PerspectiveGrid />
-            <AuroraBackground />
+            <AuroraBackground animated={animateDecorations} />
             <CinematicOverlay />
 
             {/* Background Images with Cinematic Blur */}
@@ -303,12 +339,13 @@ export default function HeroSection({ phone, stats }: HeroSectionProps) {
                                     whileHover={{ scale: 1.05, z: 50 }}
                                 >
                                     <motion.div
-                                        animate={{
+                                        initial={false}
+                                        animate={animatePods ? {
                                             y: [0, i % 2 === 0 ? -12 : 12, 0],
                                             rotateZ: [0, i % 2 === 0 ? 1.5 : -1.5, 0],
                                             rotateY: [0, i % 2 === 0 ? 10 : -10, 0]
-                                        }}
-                                        transition={{ duration: 6 + i, repeat: Infinity, ease: "easeInOut" }}
+                                        } : { y: 0, rotateZ: 0, rotateY: 0 }}
+                                        transition={animatePods ? { duration: 6 + i, repeat: Infinity, ease: "easeInOut" } : { duration: 0 }}
                                         className="p-8 bg-white/[0.03] border border-white/10 backdrop-blur-3xl rounded-[3.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)] flex flex-col items-center w-full max-w-[220px] group hover:bg-white/[0.08] hover:border-primary-500/50 transition-all duration-700 cursor-default relative overflow-hidden"
                                     >
                                         <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />

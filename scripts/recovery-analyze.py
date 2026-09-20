@@ -115,6 +115,8 @@ def analyze(phase,similarity):
   p=out/'similarity-nearest.json'
   if p.exists():nearest=json.loads(p.read_text(encoding='utf8'))
  migration_path=DOC/'migration-map.json';migration=json.loads(migration_path.read_text(encoding='utf8')) if migration_path.exists() else []
+ phase2=DOC/'phase2-migration/reviewed-map.json'
+ if phase2.exists():migration+=json.loads(phase2.read_text(encoding='utf8'))
  planned={key(ORIGIN+r['source']):r for r in migration if r.get('approved')}
  inventory=[];winners=[]
  for r in rows:

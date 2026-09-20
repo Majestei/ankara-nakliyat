@@ -27,25 +27,25 @@ export default function ParcaEsyaPage() {
             title: "Tek Parça Eşya",
             price: "Teklif İsteyin",
             items: "Buzdolabı, çamaşır makinesi, tekli koltuk veya baza",
-            features: ["Ambalajlama dahil", "1-2 personel desteği", "Aynı gün teslimat"],
+            features: ["Ambalaj kapsamını belirtin", "Yükleme desteğini görüşün", "Tarih uygunluğunu teyit edin"],
         },
         {
             title: "2-4 Parça Mobilya",
             price: "Teklif İsteyin",
             items: "Koltuk takımı, TV ünitesi veya yemek masası seti",
-            features: ["Marangozlu demontaj/montaj", "Patpat balonlu koruma", "Taşıma koşullarını görüşün"],
+            features: ["Söküm ve kurulumu belirtin", "Yüzeye uygun korumayı görüşün", "Taşıma koşullarını görüşün"],
         },
         {
             title: "Öğrenci & Bekar Evi",
             price: "Teklif İsteyin",
             items: "1 oda eşyası, yatak, çalışma masası, mini buzdolabı ve koli",
-            features: ["Kompakt kamyonet tahsisi", "Ekonomik öğrenci indirimi", "Kapıdan kapıya taşıma"],
+            features: ["Eşya ölçülerini paylaşın", "Bütçe ve kapsamı karşılaştırın", "İki adresin erişimini belirtin"],
         },
         {
             title: "Saatlik Kamyonet Nakliye",
             price: "Teklif İsteyin",
-            items: "Ankara içi acil şoförlü kapalı kasa araç",
-            features: ["Trafik ve yakıt dahil", "Hızlı yükleme ve boşaltma", "25 ilçeye anında erişim"],
+            items: "Ankara içi araç ve yükleme desteği ihtiyacı",
+            features: ["Araç ve yakıt kapsamını sorun", "Bekleme koşullarını görüşün", "Adres ve saat uygunluğunu teyit edin"],
         },
     ];
 
@@ -62,7 +62,7 @@ export default function ParcaEsyaPage() {
                         Ankara Parça Eşya & <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-orange-500">Küçük Nakliye</span>
                     </h1>
                     <p className="text-slate-600 max-w-2xl mx-auto text-lg leading-relaxed">
-                        Tek bir parça mobilya veya birkaç koli için komple kamyon tutmanıza gerek yok. Kamyonet filomuzla bütçe dostu, aynı gün parça eşya nakliyesi.
+                        Tek mobilya, beyaz eşya veya birkaç koli için adet ve ölçüleri paylaşın. Araç seçeneğini, yükleme desteğini ve teslim tarihini iki adresin koşullarına göre görüşelim.
                     </p>
                 </div>
             </section>
@@ -71,10 +71,10 @@ export default function ParcaEsyaPage() {
                 <div className="container-custom max-w-4xl">
                     <div className="prose prose-lg text-slate-600 leading-relaxed space-y-8">
                         <p className="text-xl font-medium text-slate-800">
-                            <strong>Ankara Özdemir Nakliyat</strong> olarak Ankara&apos;nın 25 ilçesinde tek bir koltuktan birkaç parça beyaz eşyaya, bekar evi taşımacılığından acil kamyonet ihtiyacına kadar her ölçekte <strong>küçük nakliye</strong> hizmeti sunuyoruz.
+                            <strong>Ankara Özdemir Nakliyat</strong> ile <strong>küçük nakliye</strong> teklifi görüşürken eşyanın yalnız sayısını değil, kapıdan geçecek ölçüsünü ve taşınacağı katları da belirtin. Sadece araç mı, ambalaj ve taşıma desteği de mi gerektiğini açıklayın; teslim gününü önceden netleştirin.
                         </p>
 
-                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">2026 Ankara Parça Eşya Taşıma Fiyatları</h2>
+                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Parça Eşya Taşıma Teklifinde Neler Belirtilmeli?</h2>
                         <div className="grid sm:grid-cols-2 gap-6 not-prose mb-8">
                             {parcaFiyatlari.map((tier, i) => (
                                 <div key={i} className="p-6 bg-slate-50 border border-slate-200 rounded-2xl flex flex-col justify-between">
@@ -97,24 +97,24 @@ export default function ParcaEsyaPage() {
                             ))}
                         </div>
 
-                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Hangi Eşyaları Taşıyoruz?</h2>
+                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Eşya Listenize Neleri Yazabilirsiniz?</h2>
                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 not-prose">
                             {["Koltuk & Kanepe", "Buzdolabı & Çamaşır Mak.", "Baza & Yatak", "Gardırop (Demonte/Montaj)", "Yemek Masası & Sandalye", "Öğrenci Odası Eşyaları", "Ofis Masası & Sandalyesi", "Piyano & Çelik Kasa", "Koli & Çeyiz Eşyası"].map((item, i) => (
                                 <div key={i} className="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center font-medium text-slate-800 text-sm">{item}</div>
                             ))}
                         </div>
 
-                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Neden Ankara Küçük Nakliye Hizmetimiz?</h2>
+                        <h2 className="text-3xl font-heading font-bold text-slate-900 mt-12 mb-6">Tek Parça İçin Teklifleri Nasıl Karşılaştırabilirsiniz?</h2>
                         <ul className="space-y-3">
-                            <li>✅ <strong>Bütçe Dostu:</strong> Sadece taşınan eşya hacmi kadar ödeme yaparsınız, komple araç parası vermezsiniz.</li>
-                            <li>✅ <strong>Aynı Gün Teslimat:</strong> Çankaya, Keçiören, Yenimahalle, Mamak ve Etimesgut başta olmak üzere 2 saat içinde araç tahsisi.</li>
-                            <li>✅ <strong>Profesyonel Ambalaj:</strong> Tek parça bile olsa kraft kağıt ve patpat naylon ile sarılmadan araca yüklenmez.</li>
+                            <li>✅ <strong>Araç seçimi:</strong> Paylaşımlı veya ayrı araç seçeneğinin bulunup bulunmadığını sorun. Hacim dışında yol, bekleme ve personel bedellerini de karşılaştırın.</li>
+                            <li>✅ <strong>Teslim zamanı:</strong> Aynı gün talebiniz varsa yükleme ve teslim saatlerini ayrı ayrı teyit edin. Adresler arası mesafe tek başına randevu uygunluğunu göstermez.</li>
+                            <li>✅ <strong>Koruma kapsamı:</strong> Cam, ahşap ve elektronik yüzeylerin nasıl korunacağını; ambalajı kimin sağlayacağını ve ücretini yazılı teklifte belirtin.</li>
                             <li>✅ <strong>Taşıma Koşulları:</strong> Dahil işleri, teslim planını ve varsa poliçe kapsamını teklif öncesinde yazılı olarak inceleyin.</li>
                         </ul>
 
                         <div className="mt-12 p-8 bg-gradient-to-br from-primary-600 to-orange-600 rounded-3xl text-white text-center shadow-xl not-prose">
                             <h3 className="text-2xl font-bold mb-2">Acil Parça Eşya veya Kamyonet Mi Lazım?</h3>
-                            <p className="mb-6 opacity-90 text-sm">Hemen arayın, en yakın mobil ekibimizi adresinize yönlendirelim.</p>
+                            <p className="mb-6 opacity-90 text-sm">Eşyanın ölçüsünü, iki adresi ve istediğiniz tarihi paylaşın; araç ve ekip uygunluğunu görüşelim.</p>
                             <a href={`tel:${firmaBilgileri.phone.replace(/\s/g, "")}`} className="inline-block bg-white text-primary-600 font-bold px-8 py-3.5 rounded-full shadow-lg hover:bg-slate-50 transition-all hover:scale-105">
                                 Hemen Arayın: {firmaBilgileri.phone}
                             </a>
